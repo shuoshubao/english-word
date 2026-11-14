@@ -1,0 +1,73 @@
+import { Empty } from 'antd';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import WordListView from '../components/WordListView';
+import { vocabularyCatalog } from '../data/catalog';
+import { loadCollocationLevel } from '../utils/collocations';
+import { whenReady } from '../utils/state';
+import { loadTopicCategory } from '../utils/topic';
+import { loadRootCategory } from '../utils/word-roots';
+import { ensureBookWords } from '../utils/words';
+
+// 词书详情 / 主题 / 词根 / 固定搭配 共用: 根据 mode 加载词表, 交给 WordListView 渲染
+export default function Book({ mode = 'book' }) {
+    const params = useParams();
+    const [words, setWords] = useState(null);
+    const [notFound, setNotFound] = useState(false);
+
+    const key = params.id || params.title || params.level;
+
+    useEffect(() => {
+        let alive = true;
+        const resolve = async () => {
+            if (mode === 'book') {
+                const book = vocabularyCatalog.find(item => item.id === params.id);
+                if (!book) {
+                    setNotFound(true);
+                    return [];
+                }
+                return ensureBookWords(book.id);
+            }
+            if (mode === 'topic') {
+                return (await loadTopicCategory(decodeURIComponent(params.title))).words;
+            }
+            if (mode === 'root') {
+                return (await loadRootCategory(decodeURIComponent(params.title))).words;
+            }
+            if (mode === 'collocation') {
+                return loadCollocationLevel(decodeURIComponent(params.level));
+            }
+            return [];
+        };
+        setWords(null);
+        setNotFound(false);
+        whenReady()
+            .then(resolve)
+            .then(list => {
+                if (alive) setWords(list);
+            });
+        return () => {
+            alive = false;
+        };
+    }, [mode, key]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    if (notFound) {
+        return <Empty className="py-20" description="找不到这个词库" />;
+    }
+    if (!words) {
+        return <div className="text-center text-[#999] py-20">正在载入...</div>;
+    }
+    if (!words.length) {
+        return <Empty className="py-20" description="暂无单词" />;
+    }
+
+    const special = mode !== 'book';
+    return (
+        <WordListView
+            words={words}
+            filterable={!special}
+            showMeaningToggle={special}
+            meaningKey={special ? `EnglishWord:show-meaning:${mode}:${key}` : undefined}
+        />
+    );
+}

@@ -1,0 +1,86 @@
+// 全局样式(Sass): 变量 + reset + body + 高亮行动画
+// Tailwind 工具类走 index.css 的 @import 'tailwindcss'; 这里只放 Tailwind 不方便表达的部分
+
+$bg: #f4f3f9;
+$primary: #6652d1;
+$ink: #1f1a33;
+
+:root {
+    --primary: #{$primary};
+    --ink: #{$ink};
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body {
+    background: $bg;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+// 定位高亮行: antd Table 行用 rowClassName 挂上, 需要 @keyframes 故放这里
+$blink: #ece7fb;
+
+.row-blink > td {
+    animation: row-blink 0.6s ease-in-out 3;
+}
+
+@keyframes row-blink {
+    0%,
+    100% {
+        background: transparent;
+    }
+    50% {
+        background: $blink;
+    }
+}
+
+// 日历: fullCellRender 完全接管日期格子, 屏蔽 antd 默认的格子分割线/今天/选中底色
+// antd Calendar 的面板 prefixCls 是 ant-picker(RCPickerPanel 收到的是 prefixCls 而非 calendarPrefixCls)
+.ant-picker-content thead th {
+    font-size: 14px;
+    color: #1f1a33;
+    padding: 12px 0 !important;
+    font-weight: 600;
+}
+
+.ant-picker-content .ant-picker-cell::before {
+    background: transparent !important;
+}
+
+.ant-picker-content .ant-picker-cell {
+    height: 56px !important;
+    padding: 0 !important;
+}
+
+.ant-picker-content .ant-picker-cell .ant-picker-cell-inner {
+    background: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.ant-picker-content .ant-picker-cell-today .ant-picker-cell-inner::before {
+    border: none !important;
+    background: transparent !important;
+}
+
+.ant-picker-content .ant-picker-calendar-date-today {
+    background: transparent !important;
+}
+
+.ant-picker-content .ant-picker-cell-selected .ant-picker-cell-inner {
+    background: transparent !important;
+}

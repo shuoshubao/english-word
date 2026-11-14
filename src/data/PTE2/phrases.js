@@ -1,0 +1,1921 @@
+// 源: qwerty-learner public/dicts/Common-Phrases-PTE-Unofficial.json
+export default [
+    {
+        word: 'afford to do sth.',
+        translation: 'phrase. 负担得起做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'agree to do sth.',
+        translation: 'phrase. 同意做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'arrange to do sth.',
+        translation: 'phrase. 安排做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'ask to do sth.',
+        translation: 'phrase. 要求做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'beg to do sth.',
+        translation: 'phrase. 请求做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'care to do sth.',
+        translation: 'phrase. 想要做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'choose to do sth.',
+        translation: 'phrase. 决定做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'decide to do sth.',
+        translation: 'phrase. 决定做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'demand to do sth.',
+        translation: 'phrase. 要求做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'determine to do sth.',
+        translation: 'phrase. 决心做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'expect to do sth.',
+        translation: 'phrase. 期待做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'fear to do sth.',
+        translation: 'phrase. 害怕做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'help to do sth.',
+        translation: 'phrase. 帮助做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'hope to do sth.',
+        translation: 'phrase. 希望做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'learn to do sth.',
+        translation: 'phrase. 学习做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'manage to do sth.',
+        translation: 'phrase. 设法做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'offer to do sth.',
+        translation: 'phrase. 主动提出做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'plan to do sth.',
+        translation: 'phrase. 计划做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'prepare to do sth.',
+        translation: 'phrase. 准备做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'pretend to do sth.',
+        translation: 'phrase. 假装做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'promise to do sth.',
+        translation: 'phrase. 答应做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'refuse to do sth.',
+        translation: 'phrase. 拒绝做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'want to do sth.',
+        translation: 'phrase. 想要做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'wish to do sth.',
+        translation: 'phrase. 希望做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'aim to do sth.',
+        translation: 'phrase. 打算做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'fail to do sth.',
+        translation: 'phrase. 未能做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'long to do sth.',
+        translation: 'phrase. 渴望做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'happen to do sth.',
+        translation: 'phrase. 碰巧做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'hesitate to do sth.',
+        translation: 'phrase. 犹豫做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'struggle to do sth.',
+        translation: 'phrase. 努力做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'advise sb. to do sth.',
+        translation: 'phrase. 建议某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'allow sb. to do sth.',
+        translation: 'phrase. 允许某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'ask sb. to do sth.',
+        translation: 'phrase. 请（叫）某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'bear sb. to do sth.',
+        translation: 'phrase. 忍受某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'beg sb. to do sth.',
+        translation: 'phrase. 请求某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'cause sb. to do sth.',
+        translation: 'phrase. 导致某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'command sb. to do sth.',
+        translation: 'phrase. 命令某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'drive sb. to do sth.',
+        translation: 'phrase. 驱使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'elect sb. to do sth.',
+        translation: 'phrase. 选举某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'encourage sb. to do sth.',
+        translation: 'phrase. 鼓励某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'expect sb. to do sth.',
+        translation: 'phrase. 期望某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'forbid sb. to do sth.',
+        translation: 'phrase. 禁止某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'force sb. to do sth.',
+        translation: 'phrase. 强迫某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'get sb. to do sth.',
+        translation: 'phrase. 使（要）某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'hate sb. to do sth.',
+        translation: 'phrase. 讨厌某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'help sb. to do sth.',
+        translation: 'phrase. 帮助某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'intend sb. to do sth.',
+        translation: 'phrase. 打算要某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'invite sb. to do sth.',
+        translation: 'phrase. 邀请某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'like sb. to do sth.',
+        translation: 'phrase. 喜欢某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'leave sb. to do sth.',
+        translation: 'phrase. 留下某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'mean sb. to do sth.',
+        translation: 'phrase. 打算要某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'need sb. to do sth.',
+        translation: 'phrase. 需要某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'oblige sb. to do sth.',
+        translation: 'phrase. 迫使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'order sb. to do sth.',
+        translation: 'phrase. 命令某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'permit sb. to do sth.',
+        translation: 'phrase. 允许某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'persuade sb. to do sth.',
+        translation: 'phrase. 说服某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'prefer sb. to do sth.',
+        translation: 'phrase. 宁愿某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'request sb. to do sth.',
+        translation: 'phrase. 要求某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'remind sb. to do sth.',
+        translation: 'phrase. 提醒某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'teach sb. to do sth.',
+        translation: 'phrase. 教某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'tell sb. to do sth.',
+        translation: 'phrase. 告诉某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'train sb. to do sth.',
+        translation: 'phrase. 训练某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'trouble sb. to do sth.',
+        translation: 'phrase. 麻烦某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'want sb. to do sth.',
+        translation: 'phrase. 想要某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'warn sb. to do sth.',
+        translation: 'phrase. 警告某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'wish sb. to do sth.',
+        translation: 'phrase. 希望某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'admit doing sth.',
+        translation: 'phrase. 承认做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'advise doing sth.',
+        translation: 'phrase. 建议做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'allow doing sth.',
+        translation: 'phrase. 允许做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'appreciate doing sth.',
+        translation: 'phrase. 感激做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'avoid doing sth.',
+        translation: 'phrase. 避免做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'consider doing sth.',
+        translation: 'phrase. 考虑做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'delay doing sth.',
+        translation: 'phrase. 推迟做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'deny doing sth.',
+        translation: 'phrase. 否认做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'discuss doing sth.',
+        translation: 'phrase. 讨论做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'dislike doing sth.',
+        translation: 'phrase. 不喜欢做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'enjoy doing sth.',
+        translation: 'phrase. 喜爱做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'escape doing sth.',
+        translation: 'phrase. 逃脱做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'excuse doing sth.',
+        translation: 'phrase. 原谅做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'fancy doing sth.',
+        translation: 'phrase. 设想做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'finish doing sth.',
+        translation: 'phrase. 完成做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'forbid doing sth.',
+        translation: 'phrase. 禁止做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'forgive doing sth.',
+        translation: 'phrase. 原谅做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'give up doing sth.',
+        translation: 'phrase. 放弃做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'imagine doing sth.',
+        translation: 'phrase. 想象做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'keep doing sth.',
+        translation: 'phrase. 保持做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'mention doing sth.',
+        translation: 'phrase. 提及做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'mind doing sth.',
+        translation: 'phrase. 介意做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'miss doing sth.',
+        translation: 'phrase. 错过做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'pardon doing sth.',
+        translation: 'phrase. 原谅做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'permit doing sth.',
+        translation: 'phrase. 允许做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'practice doing sth.',
+        translation: 'phrase. 练习做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'prevent doing sth.',
+        translation: 'phrase. 阻止做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'prohibit doing sth.',
+        translation: 'phrase. 禁止做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'put off doing sth.',
+        translation: 'phrase. 推迟做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'report doing sth.',
+        translation: 'phrase. 报告做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'risk doing sth.',
+        translation: 'phrase. 冒险做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'stop doing sth.',
+        translation: 'phrase. 停止做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'suggest doing sth.',
+        translation: 'phrase. 建议做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'understand doing sth.',
+        translation: 'phrase. 理解做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'bring sb. doing sth.',
+        translation: 'phrase. 引起某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'catch sb. doing sth.',
+        translation: 'phrase. 碰上（撞上）某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'discover sb. doing sth.',
+        translation: 'phrase. 发现某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'feel sb. doing sth.',
+        translation: 'phrase. 感觉某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'find sb. doing sth.',
+        translation: 'phrase. 碰上（撞上）某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'get sb. doing sth.',
+        translation: 'phrase. 使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'have sb. doing sth.',
+        translation: 'phrase. 使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'hear sb. doing sth.',
+        translation: 'phrase. 听见某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'keep sb. doing sth.',
+        translation: 'phrase. 使某人不停地做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'listen to sb. doing sth.',
+        translation: 'phrase. 听某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'look at sb. doing sth.',
+        translation: 'phrase. 看着某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'notice sb. doing sth.',
+        translation: 'phrase. 注意到某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'observe sb. doing sth.',
+        translation: 'phrase. 观察某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'prevent sb. doing sth.',
+        translation: 'phrase. 阻止某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'see sb. doing sth.',
+        translation: 'phrase. 看见某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'send sb. doing sth.',
+        translation: 'phrase. 使某人（突然）做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'set sb. doing sth.',
+        translation: 'phrase. 使（引起）某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'start sb. doing sth.',
+        translation: 'phrase. 使某人开始做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'stop sb. doing sth.',
+        translation: 'phrase. 阻止某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'watch sb. doing sth.',
+        translation: 'phrase. 观察某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'feel sb. do sth.',
+        translation: 'phrase. 感觉某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'have sb. do sth.',
+        translation: 'phrase. 使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'hear sb. do sth.',
+        translation: 'phrase. 听见某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'let sb. do sth.',
+        translation: 'phrase. 让某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'listen to sb. do sth.',
+        translation: 'phrase. 听着某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'look at sb. do sth.',
+        translation: 'phrase. 看着某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'make sb. do sth.',
+        translation: 'phrase. 使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'notice sb. do sth.',
+        translation: 'phrase. 注意某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'observe sb. do sth.',
+        translation: 'phrase. 观察某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'see sb. do sth.',
+        translation: 'phrase. 看见某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'watch sb. do sth.',
+        translation: 'phrase. 观察某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'accuse sb. of sth.',
+        translation: 'phrase. 控告某人犯某事（罪），指责某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'cheat sb. of sth.',
+        translation: 'phrase. 骗取某人某物',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'cure sb. of sth.',
+        translation: 'phrase. 治好某人的病，改掉某人的坏习惯',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'inform sb. of sth.',
+        translation: 'phrase. 通知某人某情况（事）',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'remind sb. of sth.',
+        translation: 'phrase. 使某人想起某情况（事）',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'rid sb. of sth.',
+        translation: 'phrase. 使某人摆脱某物',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'rob sb. of sth.',
+        translation: 'phrase. 抢劫某人的某东西',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'warn sb. of sth.',
+        translation: 'phrase. 警告某人有某情况',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'blame sb. for doing sth.',
+        translation: 'phrase. 指责某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'criticize sb. for doing sth.',
+        translation: 'phrase. 批评某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'forgive sb. for doing sth.',
+        translation: 'phrase. 原谅某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'excuse sb. for doing sth.',
+        translation: 'phrase. 原谅某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'pardon sb. for doing sth.',
+        translation: 'phrase. 原谅某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'punish sb. for doing sth.',
+        translation: 'phrase. 惩罚某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'scold sb. for doing sth.',
+        translation: 'phrase. 指责（责备）某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'thank sb. for doing sth.',
+        translation: 'phrase. 感谢某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'cheat sb. into doing sth.',
+        translation: 'phrase. 欺骗某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'trick sb. into doing sth.',
+        translation: 'phrase. 欺骗某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'fool sb. into doing sth.',
+        translation: 'phrase. 欺骗某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'force sb. into doing sth.',
+        translation: 'phrase. 迫使某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'argue sb. into doing sth.',
+        translation: 'phrase. 说服某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'talk sb. into doing sth.',
+        translation: 'phrase. 说服某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'terrify sb. into doing sth.',
+        translation: 'phrase. 威胁某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'frighten sb. into doing sth.',
+        translation: 'phrase. 吓唬某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'persuade sb. into doing sth.',
+        translation: 'phrase. 说服某人做某事',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be angry about',
+        translation: 'phrase. 为……生气',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be anxious about',
+        translation: 'phrase. 为……担忧',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be careful about',
+        translation: 'phrase. 当心……',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be certain about',
+        translation: 'phrase. 确信……',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be curious about',
+        translation: 'phrase. 对……好奇',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be disappointed about',
+        translation: 'phrase. 对……失望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be excited about',
+        translation: 'phrase. 对……感到兴奋',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be glad about',
+        translation: 'phrase. 对……感到高兴',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be happy about',
+        translation: 'phrase. 为……感到高兴',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be hopeful about',
+        translation: 'phrase. 对……抱有希望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be mad about',
+        translation: 'phrase. 对……入迷',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be nervous about',
+        translation: 'phrase. 为……感到不安',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be particular about',
+        translation: 'phrase. 对……讲究',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be sad about',
+        translation: 'phrase. 为……而难过',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be serious about',
+        translation: 'phrase. 对……认真',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be sure about',
+        translation: 'phrase. 对……有把握',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be worried about',
+        translation: 'phrase. 为……担忧',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be angry at',
+        translation: 'phrase. 为……生气',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be bad at',
+        translation: 'phrase. 不善于……',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be clever at',
+        translation: 'phrase. 擅长于……',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be disappointed at',
+        translation: 'phrase. 对……失望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be expert at',
+        translation: 'phrase. 在……方面是内行',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be good at',
+        translation: 'phrase. 善于……',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be mad at',
+        translation: 'phrase. 对……发怒',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be quick at',
+        translation: 'phrase. 在……方面敏捷',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be skillful at',
+        translation: 'phrase. 在……方面熟练',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be slow at',
+        translation: 'phrase. 在……方面迟钝',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be anxious for',
+        translation: 'phrase. 渴望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be bad for',
+        translation: 'phrase. 对……有害，对……不利',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be bound for',
+        translation: 'phrase. 前往',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be celebrated for',
+        translation: 'phrase. 以……出名',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be convenient for',
+        translation: 'phrase. 对……方便，在……附近',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be eager for',
+        translation: 'phrase. 渴望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be famous for',
+        translation: 'phrase. 因……闻名',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be fit for',
+        translation: 'phrase. 合适，适合',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be good for',
+        translation: 'phrase. 对……有益（方便）',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be grateful for',
+        translation: 'phrase. 感谢',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be hungry for',
+        translation: 'phrase. 渴望得到',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be late for',
+        translation: 'phrase. 迟到',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be necessary for',
+        translation: 'phrase. 对……有必要',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be ready for',
+        translation: 'phrase. 为……准备好',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be sorry for',
+        translation: 'phrase. 因……抱歉',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be suitable for',
+        translation: 'phrase. 对……合适（适宜）',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be thankful for',
+        translation: 'phrase. 因……而感激',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be well-known for',
+        translation: 'phrase. 以……出名',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be absent from',
+        translation: 'phrase. 缺席，不在',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be different from',
+        translation: 'phrase. 与……不同',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be far from',
+        translation: 'phrase. 离……远，远远不',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be free from',
+        translation: 'phrase. 没有，免受',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be safe from',
+        translation: 'phrase. 没有……的危险',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be tired from',
+        translation: 'phrase. 因……而疲劳',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be concerned in',
+        translation: 'phrase. 与……有关',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be disappointed in',
+        translation: 'phrase. 对（某人）感到失望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be engaged in',
+        translation: 'phrase. 从事于，忙于',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be experienced in',
+        translation: 'phrase. 在……方面有经验',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be expert in',
+        translation: 'phrase. 在……方面是行家',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be fortunate in',
+        translation: 'phrase. 在……方面幸运',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be honest in',
+        translation: 'phrase. 在……方面诚实',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be interested in',
+        translation: 'phrase. 对……感兴趣',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be lack in',
+        translation: 'phrase. 缺乏',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be rich in',
+        translation: 'phrase. 富于，在……方面富有',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be skillful in',
+        translation: 'phrase. 擅长于',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be successful in',
+        translation: 'phrase. 在……方面成功',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be weak in',
+        translation: 'phrase. 在……方面不行',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be afraid of',
+        translation: 'phrase. 害怕',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be ashamed of',
+        translation: 'phrase. 为……感到羞愧',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be aware of',
+        translation: 'phrase. 意识到，知道',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be capable of',
+        translation: 'phrase. 能够，可以',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be careful of',
+        translation: 'phrase. 小心，留心',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be certain of',
+        translation: 'phrase. 确信，对……有把握',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be fond of',
+        translation: 'phrase. 喜欢',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be free of',
+        translation: 'phrase. 没有，摆脱',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be full of',
+        translation: 'phrase. 充满',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be glad of',
+        translation: 'phrase. 为……而高兴',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be nervous of',
+        translation: 'phrase. 害怕',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be proud of',
+        translation: 'phrase. 为……自豪',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be short of',
+        translation: 'phrase. 缺乏',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be shy of',
+        translation: 'phrase. 不好意思',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be sick of',
+        translation: 'phrase. 对……厌倦',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be sure of',
+        translation: 'phrase. 肯定，有把握',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be tired of',
+        translation: 'phrase. 对……厌烦',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be worthy of',
+        translation: 'phrase. 只得，配得上',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be angry with',
+        translation: 'phrase. 对（某人）生气',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be bored with',
+        translation: 'phrase. 对……厌烦',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be busy with',
+        translation: 'phrase. 忙于',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be careful with',
+        translation: 'phrase. 小心',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be concerned with',
+        translation: 'phrase. 关于，与……有关',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be content with',
+        translation: 'phrase. 以……为满足',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be delighted with',
+        translation: 'phrase. 对……感到高兴',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be disappointed with',
+        translation: 'phrase. 对（某人）失望',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be familiar with',
+        translation: 'phrase. 熟悉，精通',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be honest with',
+        translation: 'phrase. 对（某人）真诚',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be ill with',
+        translation: 'phrase. 患……病',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be patient with',
+        translation: 'phrase. 对（某人）有耐心',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be pleased with',
+        translation: 'phrase. 对……满意（高兴）',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be popular with',
+        translation: 'phrase. 受……欢迎',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be satisfied with',
+        translation: 'phrase. 对……满意',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be strict with',
+        translation: 'phrase. 对（某人）严格',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be accustomed to',
+        translation: 'phrase. 习惯于',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be blind to',
+        translation: 'phrase. 对……视而不见',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be close to',
+        translation: 'phrase. 靠近，接近',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be cruel to',
+        translation: 'phrase. 对……残酷，对……无情',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be devoted to',
+        translation: 'phrase. 献身，专心于',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be equal to',
+        translation: 'phrase. 等于，能胜任',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be familiar to',
+        translation: 'phrase. 为（某人）所熟悉',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be harmful to',
+        translation: 'phrase. 对……有危害',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be important to',
+        translation: 'phrase. 对……重要',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be open to',
+        translation: 'phrase. 对……开放，易受到',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be opposed to',
+        translation: 'phrase. 反对，不赞成',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be opposite to',
+        translation: 'phrase. 在……对面，和……相反',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be polite to',
+        translation: 'phrase. 对……有礼貌',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be related to',
+        translation: 'phrase. 与……有关（是亲戚）',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be respectful to',
+        translation: 'phrase. 尊敬',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be rude to',
+        translation: 'phrase. 对……无礼',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be similar to',
+        translation: 'phrase. 与……相似',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be true to',
+        translation: 'phrase. 忠实于，信守',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be used to',
+        translation: 'phrase. 习惯于',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    },
+    {
+        word: 'be useful to',
+        translation: 'phrase. 对……有用',
+        phonetic: '',
+        partOfSpeech: 'phrase',
+        examples: []
+    }
+];
