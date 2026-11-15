@@ -7,8 +7,7 @@ const youdaoUrl = (text, lang) => `${PROXY}/youdao/dictvoice?audio=${encodeURICo
 const baiduTtsUrl = (text, lang) => `${PROXY}/fanyi/gettts?lan=${lang}&text=${encodeURIComponent(text)}&spd=5&source=web`;
 
 let current = null; // 当前播放中的 Audio
-let currentSrc = null; // 当前播放的 blob URL, 播完/中断后回收
-const blobCache = new Map(); // url -> objectURL(同 URL 复用, 提高二次点击速度)
+const blobCache = new Map(); // url -> objectURL(同一 URL 复用, 不重复请求; 会话内保留, 不 revoke)
 const inflight = new Set(); // 正在下载的去重, 连点同一句只发一次
 
 const stopCurrent = () => {
@@ -20,20 +19,12 @@ const stopCurrent = () => {
         }
         current = null;
     }
-    if (currentSrc) {
-        try {
-            URL.revokeObjectURL(currentSrc);
-        } catch {
-            // ignore
-        }
-        currentSrc = null;
-    }
 };
 
 const play = async (url, onEnd) => {
     try {
         stopCurrent();
-        // 已有缓存 blob 直接播, 避免重复请求
+        // 已有缓存直接播, 不重复请求
         let objectUrl = blobCache.get(url);
         if (!objectUrl) {
             if (inflight.has(url)) {
@@ -53,14 +44,9 @@ const play = async (url, onEnd) => {
         }
         const audio = new Audio(objectUrl);
         current = audio;
-        currentSrc = objectUrl;
         const finish = () => {
             if (current === audio) {
                 current = null;
-                if (currentSrc) {
-                    URL.revokeObjectURL(currentSrc);
-                    currentSrc = null;
-                }
             }
             if (onEnd) onEnd();
         };
@@ -69,7 +55,6 @@ const play = async (url, onEnd) => {
         await audio.play();
     } catch (error) {
         console.warn('发音播放失败', error);
-        blobCache.delete(url);
         if (onEnd) onEnd();
     }
 };
