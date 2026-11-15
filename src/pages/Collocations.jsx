@@ -32,7 +32,7 @@ export default function Collocations() {
                     <div className="flex gap-3 mt-2 text-[11px]">
                         <Text type="success">认识 {item.known}</Text>
                         <Text type="danger">不识 {item.unknown}</Text>
-                        <span className="text-[#888]">未读 {item.unread}</span>
+                        <Text type="secondary">未读 {item.unread}</Text>
                     </div>
                 </Card>
             ))}

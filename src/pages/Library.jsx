@@ -91,7 +91,7 @@ export default function Library() {
                                 <span className="text-[11px] text-[#333]">不认识</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[#888] font-semibold">{book.unread}</span>
+                                <Text type="secondary" className="font-semibold">{book.unread}</Text>
                                 <span className="text-[11px] text-[#333]">未读</span>
                             </div>
                         </div>

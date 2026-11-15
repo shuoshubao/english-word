@@ -32,7 +32,7 @@ export default function Topic() {
                     <div className="flex gap-3 mt-2 text-[11px]">
                         <Text type="success">认识 {t.known}</Text>
                         <Text type="danger">不识 {t.unknown}</Text>
-                        <span className="text-[#888]">未读 {t.unread}</span>
+                        <Text type="secondary">未读 {t.unread}</Text>
                     </div>
                 </Card>
             ))}

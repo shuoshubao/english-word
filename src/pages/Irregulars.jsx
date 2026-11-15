@@ -1,6 +1,8 @@
 import { ShakeOutlined, SoundOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Segmented, Table, Tooltip } from 'antd';
+import { Button, Checkbox, Segmented, Table, Tooltip, Typography } from 'antd';
 import { useEffect, useRef, useState } from 'react';
+
+const { Text } = Typography;
 import books from '../data/irregular-verbs';
 import { speak, speakZh } from '../utils/audio';
 
@@ -143,7 +145,7 @@ export default function Irregulars() {
         { title: 'pt. 过去式', dataIndex: 'past', render: v => <span className="text-[#555]">{v}</span> },
         { title: 'pp. 过去分词', dataIndex: 'participle', render: v => <span className="text-[#555]">{v}</span> },
         { title: '类型', dataIndex: 'type', width: 90, render: v => <span>{v}</span> },
-        { title: '词义', dataIndex: 'cn', render: v => <span className="text-[#888]">{v}</span> },
+        { title: '词义', dataIndex: 'cn', render: v => <Text type="secondary">{v}</Text> },
         {
             title: '已学',
             width: 70,

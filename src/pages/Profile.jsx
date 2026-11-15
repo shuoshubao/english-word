@@ -1,7 +1,7 @@
 import { DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
 import { App, Button, Calendar, Card, Select, Typography } from 'antd';
 import dayjs from 'dayjs';
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { vocabularyCatalog } from '../data/catalog';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
 import { merge, reset } from '../utils/state';
@@ -32,7 +32,6 @@ const buildActivity = state => {
 export default function Profile() {
     const state = useLearningState();
     const { message, modal } = App.useApp();
-    const fileRef = useRef(null);
     const [monthDate, setMonthDate] = useState(() => new Date(new Date().getFullYear(), new Date().getMonth(), 1));
     const [mode, setMode] = useState('month');
     const [voice, setVoice] = useState(getVoiceSource);
@@ -49,24 +48,19 @@ export default function Profile() {
         message.success('已导出');
     };
 
-    const importProgress = event => {
-        const file = event.target.files?.[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = () => {
-            try {
-                const value = JSON.parse(reader.result);
-                const p = value.progress;
-                const looksValid = p && typeof p === 'object' && (Array.isArray(p.favorites) || PROGRESS_KEYS.some(k => p[k]));
-                if (!looksValid) throw new Error('invalid');
-                merge(toFlatProgress(p));
-                message.success('学习进度已合并');
-            } catch {
-                message.error('请导入学习进度文件');
-            }
-        };
-        reader.readAsText(file);
-        event.target.value = '';
+    const importProgress = async () => {
+        try {
+            const [handle] = await window.showOpenFilePicker({ types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }] });
+            const file = await handle.getFile();
+            const value = JSON.parse(await file.text());
+            const p = value.progress;
+            const looksValid = p && typeof p === 'object' && (Array.isArray(p.favorites) || PROGRESS_KEYS.some(k => p[k]));
+            if (!looksValid) throw new Error('invalid');
+            merge(toFlatProgress(p));
+            message.success('学习进度已合并');
+        } catch {
+            message.error('请导入学习进度文件');
+        }
     };
 
     const confirmReset = () => {
@@ -168,10 +162,9 @@ export default function Profile() {
                     <Button size="large" icon={<ExportOutlined />} onClick={exportProgress}>
                         导出进度
                     </Button>
-                    <Button size="large" icon={<ImportOutlined />} onClick={() => fileRef.current?.click()}>
+                    <Button size="large" icon={<ImportOutlined />} onClick={importProgress}>
                         导入进度
                     </Button>
-                    <input ref={fileRef} type="file" accept="application/json" hidden onChange={importProgress} />
                     <Button size="large" danger icon={<DeleteOutlined />} onClick={confirmReset}>
                         清除数据
                     </Button>
