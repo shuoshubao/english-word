@@ -1,6 +1,12 @@
 import {
+    CheckCircleFilled,
+    CloseCircleFilled,
     DislikeFilled,
     DislikeOutlined,
+    EditOutlined,
+    EditTwoTone,
+    EyeInvisibleOutlined,
+    EyeOutlined,
     HeartFilled,
     HeartOutlined,
     LikeFilled,
@@ -9,7 +15,7 @@ import {
     ShakeOutlined,
     SoundOutlined
 } from '@ant-design/icons';
-import { Button, Listy, Progress, Segmented, Space, Table, Tooltip } from 'antd';
+import { Button, Input, Listy, Progress, Segmented, Space, Table, Tooltip } from 'antd';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { speak, speakSentence } from '../utils/audio';
 import { hasRecord } from '../utils/records';
@@ -37,7 +43,7 @@ const toLines = text =>
         .filter(Boolean);
 
 // 桌面版单词列表: 顶部工具栏 + antd Table(例句可展开)
-export default function WordListView({ words, filterable = true, showMeaningToggle = false, meaningKey }) {
+export default function WordListView({ words, filterable = true, showMeaningToggle = false, meaningKey, quizEnabled = false }) {
     const state = useLearningState();
     const [order, setOrder] = useState(words);
     const [filter, setFilter] = useState('all');
@@ -46,6 +52,9 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
     const [revealed, setRevealed] = useState(() => new Set());
     const [highlightId, setHighlightId] = useState(null);
     const [showAll, setShowAll] = useState(() => (meaningKey ? localStorage.getItem(meaningKey) === '1' : false));
+    const [quizMode, setQuizMode] = useState(() => quizEnabled && localStorage.getItem('EnglishWord:exam') === '1');
+    const [answers, setAnswers] = useState({}); // wordId -> { value, status: 'correct'|'wrong'|null }
+    const [revealedWords, setRevealedWords] = useState(() => new Set()); // 默写模式下被眼睛点开显示单词的行
     const focusIndexRef = useRef(-1);
     const blinkTimer = useRef(null);
 
@@ -54,6 +63,37 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         setPage(1);
         focusIndexRef.current = -1;
     }, [words]);
+
+    const toggleQuiz = () => {
+        setQuizMode(prev => {
+            localStorage.setItem('EnglishWord:exam', prev ? '0' : '1');
+            return !prev;
+        });
+        setAnswers({});
+        setRevealedWords(new Set());
+    };
+
+    const toggleRevealWord = id => {
+        setRevealedWords(prev => {
+            const next = new Set(prev);
+            if (next.has(id)) next.delete(id);
+            else next.add(id);
+            return next;
+        });
+    };
+
+    const setAnswer = (id, value) => setAnswers(prev => ({ ...prev, [id]: { ...prev[id], value, status: null } }));
+    // 校验归一化: 忽略大小写、去掉问号、把智能撇号 ’(U+2019) 归一成直撇号 '(U+0027)
+    const normalizeWord = text =>
+        String(text || '')
+            .trim()
+            .toLowerCase()
+            .replace(/\u2019/g, "'")
+            .replace(/[?？]/g, '');
+    const checkAnswer = (id, word) => {
+        const correct = normalizeWord(answers[id]?.value) === normalizeWord(word);
+        setAnswers(prev => ({ ...prev, [id]: { ...prev[id], status: correct ? 'correct' : 'wrong' } }));
+    };
 
     const list = useMemo(() => {
         if (!filterable || filter === 'all') return order;
@@ -135,14 +175,68 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
             title: '单词',
             dataIndex: 'word',
             width: 240,
-            render: (word, record) => (
-                <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speak(record.word)}>
-                    <SoundOutlined style={{ color: '#6652d1' }} />
-                    <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
-                    {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
-                </span>
-            )
+            render: (word, record) => {
+                if (quizMode) {
+                    if (revealedWords.has(record.id)) {
+                        return (
+                            <div className="flex items-center gap-2">
+                                <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speak(record.word)}>
+                                    <SoundOutlined style={{ color: '#6652d1' }} />
+                                    <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
+                                    {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
+                                </span>
+                                <Tooltip title="收起单词">
+                                    <Button type="text" size="small" icon={<EyeInvisibleOutlined />} onClick={() => toggleRevealWord(record.id)} />
+                                </Tooltip>
+                            </div>
+                        );
+                    }
+                    return (
+                        <Tooltip title="查看单词">
+                            <Button type="text" size="small" icon={<EyeOutlined />} onClick={() => toggleRevealWord(record.id)} />
+                        </Tooltip>
+                    );
+                }
+                return (
+                    <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speak(record.word)}>
+                        <SoundOutlined style={{ color: '#6652d1' }} />
+                        <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
+                        {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
+                    </span>
+                );
+            }
         },
+        ...(quizMode
+            ? [
+                  {
+                      title: '默写',
+                      key: 'quiz',
+                      width: 240,
+                      render: (_, record) => {
+                          const a = answers[record.id];
+                          const status = a?.status;
+                          return (
+                              <div className="flex items-center gap-2">
+                                  <Input
+                                      size="small"
+                                      placeholder="拼写英文单词"
+                                      style={{ width: 160 }}
+                                      value={a?.value || ''}
+                                      status={status === 'wrong' ? 'error' : undefined}
+                                      onChange={e => setAnswer(record.id, e.target.value)}
+                                      onPressEnter={() => checkAnswer(record.id, record.word)}
+                                      onBlur={() => checkAnswer(record.id, record.word)}
+                                  />
+                                  <span className="flex w-5 shrink-0 items-center justify-center">
+                                      {status === 'correct' ? <CheckCircleFilled style={{ color: '#52c41a' }} /> : null}
+                                      {status === 'wrong' ? <CloseCircleFilled style={{ color: '#ff4d4f' }} /> : null}
+                                  </span>
+                              </div>
+                          );
+                      }
+                  }
+              ]
+            : []),
         {
             title: '词性',
             dataIndex: 'partOfSpeech',
@@ -153,7 +247,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
             title: '中文释义',
             key: 'meaning',
             render: (_, record) => {
-                const show = showAll || hasRecord(state.known, record.id) || revealed.has(record.id);
+                const show = quizMode || showAll || hasRecord(state.known, record.id) || revealed.has(record.id);
                 if (!show) {
                     return (
                         <Button type="primary" size="small" onClick={() => reveal(record.id)}>
@@ -226,6 +320,11 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     />
                 ) : null}
                 <div className="ml-auto flex items-center gap-2">
+                    {quizEnabled ? (
+                        <Tooltip title={quizMode ? '退出默写' : '默写单词'}>
+                            <Button icon={<EditTwoTone />} type={quizMode ? 'primary' : 'default'} onClick={toggleQuiz} />
+                        </Tooltip>
+                    ) : null}
                     {showMeaningToggle ? (
                         <Button type={showAll ? 'primary' : 'default'} onClick={toggleMeaning}>
                             {showAll ? '隐藏释义' : '显示释义'}
@@ -245,26 +344,30 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                 columns={columns}
                 dataSource={list}
                 size="middle"
-                expandable={{
-                    rowExpandable: record => Boolean(record.examples && record.examples.length),
-                    expandedRowRender: record => (
-                        <div className="ml-[100px] pr-4 bg-white">
-                            <Listy
-                                items={record.examples}
-                                rowKey={(ex, i) => i}
-                                itemRender={ex => (
-                                    <div className="flex items-start gap-1 cursor-pointer rounded-lg" onClick={() => ex.en && speakSentence(ex.en)}>
-                                        <SoundOutlined className="mt-1 shrink-0 text-[#6652d1] text-sm" />
-                                        <div className="min-w-0 flex-1">
-                                            <div className="text-[13px] leading-relaxed text-[#1f1a33]">{ex.en}</div>
-                                            {ex.cn ? <div className="text-[12px]">{ex.cn}</div> : null}
-                                        </div>
-                                    </div>
-                                )}
-                            />
-                        </div>
-                    )
-                }}
+                expandable={
+                    quizMode
+                        ? undefined
+                        : {
+                              rowExpandable: record => Boolean(record.examples && record.examples.length),
+                              expandedRowRender: record => (
+                                  <div className="ml-[100px] pr-4 bg-white">
+                                      <Listy
+                                          items={record.examples}
+                                          rowKey={(ex, i) => i}
+                                          itemRender={ex => (
+                                              <div className="flex items-start gap-1 cursor-pointer rounded-lg" onClick={() => ex.en && speakSentence(ex.en)}>
+                                                  <SoundOutlined className="mt-1 shrink-0 text-[#6652d1] text-sm" />
+                                                  <div className="min-w-0 flex-1">
+                                                      <div className="text-[13px] leading-relaxed text-[#1f1a33]">{ex.en}</div>
+                                                      {ex.cn ? <div className="text-[12px]">{ex.cn}</div> : null}
+                                                  </div>
+                                              </div>
+                                          )}
+                                      />
+                                  </div>
+                              )
+                          }
+                }
                 pagination={{
                     current: page,
                     pageSize,

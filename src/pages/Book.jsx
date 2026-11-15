@@ -68,6 +68,7 @@ export default function Book({ mode = 'book' }) {
             filterable={!special}
             showMeaningToggle={special}
             meaningKey={special ? `EnglishWord:show-meaning:${mode}:${key}` : undefined}
+            quizEnabled={!special}
         />
     );
 }
