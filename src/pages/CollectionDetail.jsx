@@ -1,4 +1,4 @@
-import { Empty } from 'antd';
+import { Empty, Spin } from 'antd';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import WordListView from '../components/WordListView';
@@ -29,7 +29,11 @@ export default function CollectionDetail() {
     }, [collection, stage]);
 
     if (!words) {
-        return <div className="text-center text-[#333] py-20">正在载入...</div>;
+        return (
+            <div className="py-20 flex justify-center">
+                <Spin />
+            </div>
+        );
     }
     if (!words.length) {
         return <Empty className="py-20" description={`这个阶段还没有${collection === 'favorites' ? '收藏' : '生词'}`} />;

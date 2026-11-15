@@ -1,5 +1,5 @@
 import { BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Layout, Menu, Tooltip } from 'antd';
+import { Button, Layout, Menu, Tooltip, Typography } from 'antd';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { vocabularyCatalog } from './data/catalog';
 import Book from './pages/Book';
@@ -13,6 +13,7 @@ import Roots from './pages/Roots';
 import Topic from './pages/Topic';
 
 const { Header, Content } = Layout;
+const { Title } = Typography;
 
 const NAV = [
     { key: '/', label: '词库', icon: <BookOutlined /> },
@@ -92,7 +93,9 @@ export default function App() {
                         <Tooltip title="返回">
                             <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
                         </Tooltip>
-                        <h1 className="m-0 text-[22px] font-bold text-[#1f1a33]">{title}</h1>
+                        <Title level={4} style={{ margin: 0 }}>
+                            {title}
+                        </Title>
                     </div>
                 ) : null}
 

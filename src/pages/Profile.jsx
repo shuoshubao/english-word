@@ -1,5 +1,5 @@
 import { DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Select, Typography } from 'antd';
+import { App, Button, Calendar, Card, Select, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import { vocabularyCatalog } from '../data/catalog';
@@ -80,7 +80,7 @@ export default function Profile() {
     return (
         <div className="max-w-250 mx-auto">
             <Card className="text-center" title="今日学习">
-                <div className="text-4xl font-semibold text-[#6652d1]">{todayCount}</div>
+                <Statistic value={todayCount} valueStyle={{ color: '#6652d1' }} />
             </Card>
 
             <div className="grid grid-cols-3 gap-3 mt-3">

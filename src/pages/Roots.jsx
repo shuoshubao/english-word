@@ -1,6 +1,8 @@
-import { Card } from 'antd';
+import { Card, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { listRoots } from '../utils/word-roots';
+
+const { Title } = Typography;
 
 export default function Roots() {
     const navigate = useNavigate();
@@ -15,7 +17,9 @@ export default function Roots() {
         <div className="flex flex-col gap-6">
             {groups.map(group => (
                 <div key={group.title}>
-                    <div className="text-base font-semibold text-[#1f1a33] mb-3">{group.title}</div>
+                    <Title level={5} className="mb-3">
+                        {group.title}
+                    </Title>
                     <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
                         {group.items.map(root => (
                             <Card key={root.title} hoverable onClick={() => navigate(`/roots/${encodeURIComponent(root.title)}`)} className="cursor-pointer">

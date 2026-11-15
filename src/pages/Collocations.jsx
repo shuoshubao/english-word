@@ -1,4 +1,4 @@
-import { Card, Typography } from 'antd';
+import { Card, Spin, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { listCollocationsWithStats } from '../utils/collocations';
@@ -20,7 +20,11 @@ export default function Collocations() {
     }, []);
 
     if (loading) {
-        return <div className="text-center text-[#333] py-20">正在载入...</div>;
+        return (
+            <div className="py-20 flex justify-center">
+                <Spin />
+            </div>
+        );
     }
 
     return (

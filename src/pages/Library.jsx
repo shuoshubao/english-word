@@ -6,7 +6,7 @@ import { hasRecord } from '../utils/records';
 import { useLearningState } from '../utils/useStore';
 import { ensureStages, getBookWords } from '../utils/words';
 
-const { Text } = Typography;
+const { Title, Text } = Typography;
 
 const STAGE_KEY = 'EnglishWord:selected-stage';
 
@@ -91,7 +91,9 @@ export default function Library() {
                                 <span className="text-[11px] text-[#333]">不认识</span>
                             </div>
                             <div className="flex flex-col">
-                                <Text type="secondary" className="font-semibold">{book.unread}</Text>
+                                <Text type="secondary" className="font-semibold">
+                                    {book.unread}
+                                </Text>
                                 <span className="text-[11px] text-[#333]">未读</span>
                             </div>
                         </div>
@@ -99,7 +101,9 @@ export default function Library() {
                 ))}
             </div>
 
-            <div className="mt-7 text-base font-semibold text-[#1f1a33] mb-3">专项练习</div>
+            <Title level={5} className="mt-7 mb-3">
+                专项练习
+            </Title>
             <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
                 {entries.map(e => (
                     <Card key={e.to} hoverable onClick={() => navigate(e.to)} className="cursor-pointer">
