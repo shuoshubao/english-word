@@ -1,7 +1,9 @@
-import { Card } from 'antd';
+import { Card, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { listTopicsWithStats } from '../utils/topic';
+
+const { Text } = Typography;
 
 export default function Topic() {
     const navigate = useNavigate();
@@ -28,8 +30,8 @@ export default function Topic() {
                     <div className="text-base font-semibold text-[#1f1a33]">{t.title}</div>
                     <div className="text-xs text-[#333] mt-1">{t.count} 词</div>
                     <div className="flex gap-3 mt-2 text-[11px]">
-                        <span className="text-[#18a058]">认识 {t.known}</span>
-                        <span className="text-[#d03050]">不识 {t.unknown}</span>
+                        <Text type="success">认识 {t.known}</Text>
+                        <Text type="danger">不识 {t.unknown}</Text>
                         <span className="text-[#888]">未读 {t.unread}</span>
                     </div>
                 </Card>

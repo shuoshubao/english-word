@@ -1,10 +1,12 @@
-import { Card, Progress, Segmented } from 'antd';
+import { Card, Progress, Segmented, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { stages, vocabularyCatalog } from '../data/catalog';
 import { hasRecord } from '../utils/records';
 import { useLearningState } from '../utils/useStore';
 import { ensureStages, getBookWords } from '../utils/words';
+
+const { Text } = Typography;
 
 const STAGE_KEY = 'EnglishWord:selected-stage';
 
@@ -77,11 +79,15 @@ export default function Library() {
                         <Progress percent={book.percent} strokeColor="#6652d1" trailColor="#ece9f8" size="small" />
                         <div className="flex justify-between mt-2 text-center">
                             <div className="flex flex-col">
-                                <span className="text-[#18a058] font-semibold">{book.known}</span>
+                                <Text type="success" className="font-semibold">
+                                    {book.known}
+                                </Text>
                                 <span className="text-[11px] text-[#333]">认识</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[#d03050] font-semibold">{book.unknown}</span>
+                                <Text type="danger" className="font-semibold">
+                                    {book.unknown}
+                                </Text>
                                 <span className="text-[11px] text-[#333]">不认识</span>
                             </div>
                             <div className="flex flex-col">
