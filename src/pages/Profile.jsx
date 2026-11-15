@@ -1,12 +1,12 @@
-import { useState, useRef, useMemo } from 'react';
-import { App, Button, Select, Calendar, Card } from 'antd';
-import { ImportOutlined, ExportOutlined, DeleteOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
+import { App, Button, Calendar, Card, Select } from 'antd';
 import dayjs from 'dayjs';
-import { useLearningState } from '../utils/useStore';
-import { merge, reset } from '../utils/state';
-import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
-import { toNestedProgress, toFlatProgress } from '../utils/storage';
+import { useMemo, useRef, useState } from 'react';
 import { vocabularyCatalog } from '../data/catalog';
+import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
+import { merge, reset } from '../utils/state';
+import { toFlatProgress, toNestedProgress } from '../utils/storage';
+import { useLearningState } from '../utils/useStore';
 
 const PROGRESS_KEYS = ['primary', 'junior', 'senior', 'cet4', 'cet6'];
 vocabularyCatalog.forEach(book => {
@@ -90,15 +90,15 @@ export default function Profile() {
             <div className="grid grid-cols-3 gap-3 mt-3">
                 <Card className="text-center">
                     <div className="text-2xl font-semibold text-[#18a058]">{state.known.length}</div>
-                    <div className="text-xs text-[#999] mt-1">已认识</div>
+                    <div className="text-xs text-[#333] mt-1">已认识</div>
                 </Card>
                 <Card className="text-center">
                     <div className="text-2xl font-semibold text-[#d03050]">{state.unknown.length}</div>
-                    <div className="text-xs text-[#999] mt-1">不认识</div>
+                    <div className="text-xs text-[#333] mt-1">不认识</div>
                 </Card>
                 <Card className="text-center">
                     <div className="text-2xl font-semibold text-[#e07714]">{state.favorites.length}</div>
-                    <div className="text-xs text-[#999] mt-1">收藏</div>
+                    <div className="text-xs text-[#333] mt-1">收藏</div>
                 </Card>
             </div>
 

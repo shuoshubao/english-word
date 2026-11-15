@@ -71,25 +71,22 @@ export default function Library() {
                         hoverable
                         onClick={() => navigate(`/book/${book.id}`)}
                         className="cursor-pointer"
+                        title={book.title}
+                        extra={<span className="text-xs text-[#333]">共 {book.total} 词</span>}
                     >
-                        <div className="flex items-center justify-between text-xs text-[#999]">
-                            <span className="text-[#6652d1] font-medium">{book.stage}</span>
-                            <span>共 {book.total} 词</span>
-                        </div>
-                        <div className="mt-2 text-base font-semibold text-[#1f1a33] truncate">{book.title}</div>
                         <Progress percent={book.percent} strokeColor="#6652d1" trailColor="#ece9f8" size="small" />
                         <div className="flex justify-between mt-2 text-center">
                             <div className="flex flex-col">
                                 <span className="text-[#18a058] font-semibold">{book.known}</span>
-                                <span className="text-[11px] text-[#999]">认识</span>
+                                <span className="text-[11px] text-[#333]">认识</span>
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-[#d03050] font-semibold">{book.unknown}</span>
-                                <span className="text-[11px] text-[#999]">不认识</span>
+                                <span className="text-[11px] text-[#333]">不认识</span>
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-[#888] font-semibold">{book.unread}</span>
-                                <span className="text-[11px] text-[#999]">未读</span>
+                                <span className="text-[11px] text-[#333]">未读</span>
                             </div>
                         </div>
                     </Card>
@@ -101,7 +98,7 @@ export default function Library() {
                 {entries.map(e => (
                     <Card key={e.to} hoverable onClick={() => navigate(e.to)} className="cursor-pointer">
                         <div className="text-base font-semibold text-[#1f1a33]">{e.title}</div>
-                        <div className="text-xs text-[#999] mt-1">{e.sub}</div>
+                        <div className="text-xs text-[#333] mt-1">{e.sub}</div>
                     </Card>
                 ))}
             </div>

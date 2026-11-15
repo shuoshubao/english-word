@@ -1,5 +1,5 @@
+import { Card, Empty } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { Empty, Card } from 'antd';
 import { stages, vocabularyCatalog } from '../data/catalog';
 import { useLearningState } from '../utils/useStore';
 
@@ -42,7 +42,7 @@ export default function Collection({ collection, emptyText }) {
                     className="cursor-pointer"
                 >
                     <div className="text-base font-semibold text-[#1f1a33]">{item.stage}</div>
-                    <div className="mt-2 text-xs text-[#999]">
+                    <div className="mt-2 text-xs text-[#333]">
                         <span className="text-[#6652d1] text-3xl font-semibold mr-1.5">{item.count}</span>/ {item.total} 词
                     </div>
                 </Card>

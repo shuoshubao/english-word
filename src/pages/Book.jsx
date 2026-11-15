@@ -55,7 +55,7 @@ export default function Book({ mode = 'book' }) {
         return <Empty className="py-20" description="找不到这个词库" />;
     }
     if (!words) {
-        return <div className="text-center text-[#999] py-20">正在载入...</div>;
+        return <div className="text-center text-[#333] py-20">正在载入...</div>;
     }
     if (!words.length) {
         return <Empty className="py-20" description="暂无单词" />;

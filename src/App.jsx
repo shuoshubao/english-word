@@ -16,7 +16,7 @@ const { Header, Content } = Layout;
 
 const NAV = [
     { key: '/', label: '词库', icon: <BookOutlined /> },
-    { key: '/words', label: '生词本', icon: <FileTextOutlined /> },
+    { key: '/words', label: '生词', icon: <FileTextOutlined /> },
     { key: '/favorites', label: '收藏', icon: <HeartOutlined /> },
     { key: '/profile', label: '我的', icon: <UserOutlined /> }
 ];
@@ -73,7 +73,7 @@ export default function App() {
     return (
         <Layout className="bg-white!" style={{ minHeight: '100vh' }}>
             <Header
-                className="sticky top-0 z-50 flex items-center px-4 border-b border-[#ededf3] shadow-[0_1px_8px_rgba(102,82,209,0.04)]"
+                className="sticky top-0 z-50 flex items-center px-6! border-b border-[#ededf3] shadow-[0_1px_8px_rgba(102,82,209,0.04)]"
                 style={{ background: '#fff' }}
             >
                 <Menu
@@ -86,12 +86,12 @@ export default function App() {
                 />
             </Header>
 
-            <Content className="max-w-[1200px] w-full mx-auto p-6" style={{ background: '#fff' }}>
+            <Content className="w-full mx-auto p-6" style={{ background: '#fff' }}>
                 {!isTab ? (
                     <div className="flex items-center gap-4 mb-5">
                         <Tooltip title="返回">
-                        <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
-                    </Tooltip>
+                            <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
+                        </Tooltip>
                         <h1 className="m-0 text-[22px] font-bold text-[#1f1a33]">{title}</h1>
                     </div>
                 ) : null}

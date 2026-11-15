@@ -209,7 +209,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         <div>
             <div className="flex flex-wrap items-center gap-4 mb-4">
                 <div className="flex items-center gap-2">
-                    <span className="text-sm text-[#666] whitespace-nowrap">
+                    <span className="text-sm text-[#333] whitespace-nowrap">
                         已认识 {knownCount} / {order.length}
                     </span>
                     <Progress percent={percent} showInfo={false} strokeColor="#6652d1" style={{ width: 140 }} />

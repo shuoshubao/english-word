@@ -18,12 +18,7 @@ export default function Roots() {
                     <div className="text-base font-semibold text-[#1f1a33] mb-3">{group.title}</div>
                     <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
                         {group.items.map(root => (
-                            <Card
-                                key={root.title}
-                                hoverable
-                                onClick={() => navigate(`/roots/${encodeURIComponent(root.title)}`)}
-                                className="cursor-pointer"
-                            >
+                            <Card key={root.title} hoverable onClick={() => navigate(`/roots/${encodeURIComponent(root.title)}`)} className="cursor-pointer">
                                 <div className="text-base font-semibold text-[#1f1a33]">{root.title}</div>
                             </Card>
                         ))}
