@@ -1,7 +1,7 @@
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
 import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import BaiduPanDebug from '../components/BaiduPanDebug';
 import { vocabularyCatalog } from '../data/catalog';
 import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../utils/baidu-pan';
@@ -62,6 +62,10 @@ export default function Profile() {
     const [authCode, setAuthCode] = useState('');
     const [authStatus, setAuthStatus] = useState('');
 
+    useEffect(() => {
+        checkAuthStatus(baiduPanInfo).then(ok => setAuthStatus(ok ? 'ok' : 'fail'));
+    }, []);
+
     const activity = useMemo(() => buildActivity(state), [state]);
     const todayCount = activity[formatDate(new Date())] || 0;
 
@@ -112,12 +116,6 @@ export default function Profile() {
         } catch {
             message.error('请检查表单');
         }
-    };
-
-    const checkAuth = async () => {
-        setAuthStatus('checking');
-        const ok = await checkAuthStatus(baiduPanInfo);
-        setAuthStatus(ok ? 'ok' : 'fail');
     };
 
     const openOobAuth = () => {
@@ -303,9 +301,9 @@ export default function Profile() {
 
                 <div className="border-t border-[#eee] pt-4 mt-2 flex flex-col gap-3">
                     <div className="flex items-center gap-2">
-                        <Button size="small" loading={authStatus === 'checking'} onClick={checkAuth}>
-                            校验授权
-                        </Button>
+                        <Text type="secondary" className="text-xs">
+                            授权状态:
+                        </Text>
                         {authStatus === 'ok' ? (
                             <Text type="success" className="text-xs">
                                 已授权
@@ -314,7 +312,11 @@ export default function Profile() {
                             <Text type="danger" className="text-xs">
                                 未授权
                             </Text>
-                        ) : null}
+                        ) : (
+                            <Text type="secondary" className="text-xs">
+                                校验中...
+                            </Text>
+                        )}
                     </div>
                     <div className="border-t border-[#eee] pt-3">
                         <Text type="secondary" className="text-xs block mb-2">
