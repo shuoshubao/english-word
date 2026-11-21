@@ -2,14 +2,14 @@
 // - 小学(Primary)静态打进主包; 初中/高中/四六级/PTE 放分包, 运行时「分包异步化」按需加载.
 // - data/<Stage>/*.js 每条词形如 { word, translation, phonetic, partOfSpeech, examples? }, 不含 id;
 //   加载时在 decorate 里合成 id = `${category}__${word}`(与改版前一致, 保证已有学习进度不丢).
-import p31 from './Primary/3-1.js';
-import p32 from './Primary/3-2.js';
-import p41 from './Primary/4-1.js';
-import p42 from './Primary/4-2.js';
-import p51 from './Primary/5-1.js';
-import p52 from './Primary/5-2.js';
-import p61 from './Primary/6-1.js';
-import p62 from './Primary/6-2.js';
+import p31 from '@/data/Primary/3-1.js';
+import p32 from '@/data/Primary/3-2.js';
+import p41 from '@/data/Primary/4-1.js';
+import p42 from '@/data/Primary/4-2.js';
+import p51 from '@/data/Primary/5-1.js';
+import p52 from '@/data/Primary/5-2.js';
+import p61 from '@/data/Primary/6-1.js';
+import p62 from '@/data/Primary/6-2.js';
 
 export const vocabularyCatalog = [
     {

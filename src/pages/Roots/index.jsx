@@ -1,6 +1,6 @@
 import { Card, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { listRoots } from '../../utils/word-roots';
+import { listRoots } from '@/utils/word-roots';
 
 const { Title } = Typography;
 

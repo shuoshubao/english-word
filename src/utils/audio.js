@@ -1,7 +1,7 @@
 // 发音: 统一经 vercel 代理(fetch+blob 播放), 规避第三方域无 CORS 头与媒体 Range 请求问题.
 // 单词按设置走有道 dictvoice 或百度 gettts; 例句按设置走百度智能云或豆包 TTS
-import { getSentenceTtsSource, hasSentenceTtsConfig, readSentenceTtsInfo, synthesizeSentence } from './sentence-tts';
-import { getVoiceSource } from './settings';
+import { getSentenceTtsSource, hasSentenceTtsConfig, readSentenceTtsInfo, synthesizeSentence } from '@/utils/sentence-tts';
+import { getVoiceSource } from '@/utils/settings';
 
 const PROXY = 'https://truethy.vercel.app/proxy';
 const youdaoUrl = text => `${PROXY}/youdao/dictvoice?audio=${encodeURIComponent(text)}&type=2`;

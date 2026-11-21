@@ -1,13 +1,13 @@
 import { Empty, Spin } from 'antd';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import WordListView from '../../components/WordListView';
-import { vocabularyCatalog } from '../../data/catalog';
-import { loadCollocationLevel } from '../../utils/collocations';
-import { whenReady } from '../../utils/state';
-import { loadTopicCategory } from '../../utils/topic';
-import { loadRootCategory } from '../../utils/word-roots';
-import { ensureBookWords } from '../../utils/words';
+import WordListView from '@/components/WordListView';
+import { vocabularyCatalog } from '@/data/catalog';
+import { loadCollocationLevel } from '@/utils/collocations';
+import { whenReady } from '@/utils/state';
+import { loadTopicCategory } from '@/utils/topic';
+import { loadRootCategory } from '@/utils/word-roots';
+import { ensureBookWords } from '@/utils/words';
 
 // 词书详情 / 主题 / 词根 / 固定搭配 共用: 根据 mode 加载词表, 交给 WordListView 渲染
 export default function Book({ mode = 'book' }) {

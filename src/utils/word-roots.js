@@ -1,7 +1,7 @@
 // 词根词缀词组: 按 title 取分类的 id 列表, 运行时还原词条
-import rootList from '../data/word-roots/index';
-import { vocabularyCatalog } from '../data/catalog';
-import { getWordIndex, ensureStages } from './words';
+import rootList from '@/data/word-roots/index';
+import { vocabularyCatalog } from '@/data/catalog';
+import { getWordIndex, ensureStages } from '@/utils/words';
 
 let stagesLoaded = false;
 

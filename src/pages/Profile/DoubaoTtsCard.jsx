@@ -1,7 +1,7 @@
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { App, Button, Card, Form, Input, Select, Tooltip } from 'antd';
 import { useState } from 'react';
-import { DEFAULT_VOICE, DOUBAO_INFO_KEY, readDoubaoInfo } from '../../utils/doubao-tts';
+import { DEFAULT_VOICE, DOUBAO_INFO_KEY, readDoubaoInfo } from '@/utils/doubao-tts';
 
 // 语音合成大模型 2.0 音色
 const VOICES = [

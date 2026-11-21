@@ -2,17 +2,17 @@ import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutli
 import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Segmented, Select, Statistic, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
-import BaiduPanDebug from './BaiduPanDebug';
-import BaiduTtsCard from './BaiduTtsCard';
-import DoubaoTtsCard from './DoubaoTtsCard';
-import TtsSamplePanel from './TtsSamplePanel';
-import { vocabularyCatalog } from '../../data/catalog';
-import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../../utils/baidu-pan';
-import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../../utils/settings';
-import { getSentenceTtsSource, setSentenceTtsSource } from '../../utils/sentence-tts';
-import { merge, reset } from '../../utils/state';
-import { toFlatProgress, toNestedProgress } from '../../utils/storage';
-import { useLearningState } from '../../utils/useStore';
+import BaiduPanDebug from '@/pages/Profile/BaiduPanDebug';
+import BaiduTtsCard from '@/pages/Profile/BaiduTtsCard';
+import DoubaoTtsCard from '@/pages/Profile/DoubaoTtsCard';
+import TtsSamplePanel from '@/pages/Profile/TtsSamplePanel';
+import { vocabularyCatalog } from '@/data/catalog';
+import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '@/utils/baidu-pan';
+import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '@/utils/settings';
+import { getSentenceTtsSource, setSentenceTtsSource } from '@/utils/sentence-tts';
+import { merge, reset } from '@/utils/state';
+import { toFlatProgress, toNestedProgress } from '@/utils/storage';
+import { useLearningState } from '@/utils/useStore';
 
 const { Text } = Typography;
 

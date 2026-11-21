@@ -1,9 +1,9 @@
 import { ReloadOutlined, SoundOutlined, SoundTwoTone } from '@ant-design/icons';
 import { App, Tooltip, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
-import { speakSentence } from '../../utils/audio';
-import { hasSentenceTtsConfig, readSentenceTtsInfo } from '../../utils/sentence-tts';
-import { TTS_SAMPLE_GROUPS } from './tts-samples';
+import { speakSentence } from '@/utils/audio';
+import { hasSentenceTtsConfig, readSentenceTtsInfo } from '@/utils/sentence-tts';
+import { TTS_SAMPLE_GROUPS } from '@/pages/Profile/tts-samples';
 
 const { Text } = Typography;
 

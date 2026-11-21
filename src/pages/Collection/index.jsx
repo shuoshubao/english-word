@@ -1,7 +1,7 @@
 import { Card, Empty } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { stages, vocabularyCatalog } from '../../data/catalog';
-import { useLearningState } from '../../utils/useStore';
+import { stages, vocabularyCatalog } from '@/data/catalog';
+import { useLearningState } from '@/utils/useStore';
 
 // 记录 id 前缀(category) -> 阶段名
 const CATEGORY_STAGE = { primary: '小学', middle: '初中', high: '高中', cet4: 'CET4', cet6: 'CET6' };

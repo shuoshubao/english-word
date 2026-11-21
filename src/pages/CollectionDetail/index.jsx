@@ -1,10 +1,10 @@
 import { Empty, Spin } from 'antd';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import WordListView from '../../components/WordListView';
-import { hasRecord } from '../../utils/records';
-import { getState, whenReady } from '../../utils/state';
-import { ensureStages, getWordIndex } from '../../utils/words';
+import WordListView from '@/components/WordListView';
+import { hasRecord } from '@/utils/records';
+import { getState, whenReady } from '@/utils/state';
+import { ensureStages, getWordIndex } from '@/utils/words';
 
 // 生词本 / 收藏 的阶段详情: 一次性取该阶段被标记的词(冻结列表), 之后标记变化只改状态不移除卡片
 export default function CollectionDetail() {

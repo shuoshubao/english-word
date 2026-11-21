@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 
 // 百度 dlink 会 302 到 CDN 域名(无 CORS 头), 由服务端 fetch 跟随重定向后返回内容
@@ -35,6 +36,11 @@ const baiduDl = () => ({
 
 export default defineConfig({
     plugins: [react(), tailwindcss(), baiduDl()],
+    resolve: {
+        alias: {
+            '@': fileURLToPath(new URL('./src', import.meta.url))
+        }
+    },
     base: './',
     server: {
         proxy: {

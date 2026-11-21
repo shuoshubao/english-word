@@ -2,8 +2,8 @@ import { FileOutlined } from '@ant-design/icons';
 import { App, Button, Card, Empty, Skeleton, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
 import { Tree } from 'react-arborist';
-import { listAllFiles, readFileText } from '../../utils/baidu-pan';
-import MonacoJsonViewer from './MonacoJsonViewer';
+import { listAllFiles, readFileText } from '@/utils/baidu-pan';
+import MonacoJsonViewer from '@/pages/Profile/MonacoJsonViewer';
 
 const { Text } = Typography;
 const BAIDU_PAN_KEY = 'BaiduPanInfo';

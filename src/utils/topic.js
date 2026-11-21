@@ -1,9 +1,9 @@
 // 主题分类词表加载: 按 word 跨词书查完整词条, 跨书合并去重
-import topicList from '../data/topic/index';
-import { vocabularyCatalog } from '../data/catalog';
-import { getBookWords, ensureStages } from './words';
-import * as stateStore from './state';
-import { hasRecord } from './records';
+import topicList from '@/data/topic/index';
+import { vocabularyCatalog } from '@/data/catalog';
+import { getBookWords, ensureStages } from '@/utils/words';
+import * as stateStore from '@/utils/state';
+import { hasRecord } from '@/utils/records';
 
 let builtIndex = null; // word(lowercase) -> 合并后的词条
 

@@ -1,6 +1,6 @@
 // 学习状态全局管理: favorites / known / unknown([{ id, time }] 记录数组), 改动后通知订阅者刷新
-import { loadState, saveState, clearState } from './storage';
-import { hasRecord, removeRecord, upsertRecord, toRecords } from './records';
+import { loadState, saveState, clearState } from '@/utils/storage';
+import { hasRecord, removeRecord, upsertRecord, toRecords } from '@/utils/records';
 
 export const blankState = { favorites: [], known: [], unknown: [] };
 

@@ -1,7 +1,7 @@
 // 词库数据访问
 // - 主包小学词书可同步取; 初中/高中/四六级在分包, 必须先 ensureBookWords 异步加载, 之后才能同步取.
 // - getWordIndex 只索引"已加载"的词书(生词本/收藏页会先 ensureStages 把需要的阶段拉起来).
-import { vocabularyCatalog, loadBookWordsSync, loadBookWordsAsync, isMainBook } from '../data/catalog';
+import { vocabularyCatalog, loadBookWordsSync, loadBookWordsAsync, isMainBook } from '@/data/catalog';
 
 const bookCache = {};
 

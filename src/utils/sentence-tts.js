@@ -1,6 +1,6 @@
 // 句子发音音源: baidu / doubao, 两家配置各自保留, 切换只改当前使用的音源
-import { hasTtsConfig, readTtsInfo, synthesize as synthesizeBaidu } from './baidu-tts';
-import { hasDoubaoConfig, readDoubaoInfo, synthesize as synthesizeDoubao } from './doubao-tts';
+import { hasTtsConfig, readTtsInfo, synthesize as synthesizeBaidu } from '@/utils/baidu-tts';
+import { hasDoubaoConfig, readDoubaoInfo, synthesize as synthesizeDoubao } from '@/utils/doubao-tts';
 
 const SOURCE_KEY = 'SentenceTtsSource';
 

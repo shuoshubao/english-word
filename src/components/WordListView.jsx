@@ -16,10 +16,10 @@ import {
 } from '@ant-design/icons';
 import { Button, Input, Listy, Progress, Segmented, Space, Table, Tooltip } from 'antd';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { speak, speakSentence } from '../utils/audio';
-import { hasRecord } from '../utils/records';
-import { setKnowledge, toggleFavorite } from '../utils/state';
-import { useLearningState } from '../utils/useStore';
+import { speak, speakSentence } from '@/utils/audio';
+import { hasRecord } from '@/utils/records';
+import { setKnowledge, toggleFavorite } from '@/utils/state';
+import { useLearningState } from '@/utils/useStore';
 
 const PAGE_SIZE = 20;
 

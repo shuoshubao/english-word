@@ -1,7 +1,7 @@
 // 固定搭配: 自带释义, 不依赖词书
-import collocationData from '../data/collocations/index';
-import * as stateStore from './state';
-import { hasRecord } from './records';
+import collocationData from '@/data/collocations/index';
+import * as stateStore from '@/utils/state';
+import { hasRecord } from '@/utils/records';
 
 export const listCollocationLevels = () => collocationData.map(c => c.level);
 

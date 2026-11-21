@@ -1,7 +1,7 @@
 // 持久化: localStorage. 对外(存储/导出)用「阶段嵌套 + word」结构, 内存用扁平 id 结构
 //   (id = category__word), 读写边界互转.
-import { toRecords } from './records';
-import { vocabularyCatalog } from '../data/catalog';
+import { toRecords } from '@/utils/records';
+import { vocabularyCatalog } from '@/data/catalog';
 
 const STORAGE_KEY = 'EnglishWord:state';
 
