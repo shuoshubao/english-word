@@ -52,6 +52,16 @@ export default defineConfig({
                 target: 'https://d.pcs.baidu.com',
                 changeOrigin: true,
                 rewrite: path => path.replace(/^\/baidu-upload/, '')
+            },
+            '/baidu-aip': {
+                target: 'https://aip.baidubce.com',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/baidu-aip/, '')
+            },
+            '/baidu-tts': {
+                target: 'https://tsn.baidu.com',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/baidu-tts/, '')
             }
         }
     },

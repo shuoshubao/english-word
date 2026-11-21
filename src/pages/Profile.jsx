@@ -1,5 +1,5 @@
-import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, Statistic, Typography } from 'antd';
+import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, Statistic, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 import BaiduPanDebug from '../components/BaiduPanDebug';
@@ -271,7 +271,29 @@ export default function Profile() {
             </Card>
 
             <Card
-                title="百度网盘"
+                title={
+                    <span className="flex items-center gap-1.5">
+                        百度网盘
+                        <Tooltip
+                            title={
+                                <>
+                                    <span>请到</span>
+                                    <a
+                                        href="https://pan.baidu.com/union/console/applist"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="text-[#91caff] underline mx-0.5"
+                                    >
+                                        百度网盘开放平台
+                                    </a>
+                                    <span>获取 AppID / AppKey / SecretKey / SignKey</span>
+                                </>
+                            }
+                        >
+                            <QuestionCircleOutlined className="text-[#98a2b3] text-xs cursor-help" />
+                        </Tooltip>
+                    </span>
+                }
                 extra={
                     <div className="flex gap-2">
                         <Button size="small" icon={<CloudDownloadOutlined />} loading={baiduBusy === 'sync'} onClick={syncFromCloud}>
