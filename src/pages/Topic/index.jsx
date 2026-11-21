@@ -1,7 +1,7 @@
 import { Card, Spin, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { listTopicsWithStats } from '../utils/topic';
+import { listTopicsWithStats } from '../../utils/topic';
 
 const { Text } = Typography;
 

@@ -1,10 +1,10 @@
 import { Card, Progress, Segmented, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { stages, vocabularyCatalog } from '../data/catalog';
-import { hasRecord } from '../utils/records';
-import { useLearningState } from '../utils/useStore';
-import { ensureStages, getBookWords } from '../utils/words';
+import { stages, vocabularyCatalog } from '../../data/catalog';
+import { hasRecord } from '../../utils/records';
+import { useLearningState } from '../../utils/useStore';
+import { ensureStages, getBookWords } from '../../utils/words';
 
 const { Text } = Typography;
 

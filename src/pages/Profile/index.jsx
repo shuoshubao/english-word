@@ -2,14 +2,14 @@ import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutli
 import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, Statistic, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
-import BaiduPanDebug from '../components/BaiduPanDebug';
-import BaiduTtsCard from '../components/BaiduTtsCard';
-import { vocabularyCatalog } from '../data/catalog';
-import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../utils/baidu-pan';
-import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
-import { merge, reset } from '../utils/state';
-import { toFlatProgress, toNestedProgress } from '../utils/storage';
-import { useLearningState } from '../utils/useStore';
+import BaiduPanDebug from './BaiduPanDebug';
+import BaiduTtsCard from './BaiduTtsCard';
+import { vocabularyCatalog } from '../../data/catalog';
+import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../../utils/baidu-pan';
+import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../../utils/settings';
+import { merge, reset } from '../../utils/state';
+import { toFlatProgress, toNestedProgress } from '../../utils/storage';
+import { useLearningState } from '../../utils/useStore';
 
 const { Text } = Typography;
 

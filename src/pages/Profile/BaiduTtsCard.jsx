@@ -1,10 +1,31 @@
 import { QuestionCircleOutlined, ReloadOutlined, SoundOutlined } from '@ant-design/icons';
 import { App, Button, Card, Form, Input, Select, Tooltip, Typography } from 'antd';
 import { useState } from 'react';
-import { speakSentence } from '../utils/audio';
-import { hasTtsConfig, readTtsInfo, saveTtsInfo, TTS_SPEEDS, TTS_VOICES } from '../utils/baidu-tts';
+import { speakSentence } from '../../utils/audio';
+import { hasTtsConfig, readTtsInfo } from '../../utils/baidu-tts';
 
 const { Text } = Typography;
+
+const TTS_INFO_KEY = 'BaiduTtsInfo';
+// 基础音库发音人: 英文句子用这几个即可(接口 lan 固定 zh, 中英混合模式)
+const TTS_VOICES = [
+    { value: 0, label: '度小美 (女)' },
+    { value: 1, label: '度小宇 (男)' },
+    { value: 3, label: '度逍遥' },
+    { value: 4, label: '度丫丫' }
+];
+const TTS_SPEEDS = [
+    { value: 3, label: '偏慢' },
+    { value: 5, label: '正常' },
+    { value: 7, label: '偏快' }
+];
+const saveTtsInfo = info => {
+    try {
+        localStorage.setItem(TTS_INFO_KEY, JSON.stringify(info));
+    } catch {
+        // 隐私模式下 localStorage 可能不可写, 静默忽略
+    }
+};
 
 // TTS 调试句库: 5 批 x 5 句, 每批长短句混排(覆盖标点/数字/破折号), 点「换一批」切换
 const TTS_SAMPLE_GROUPS = [

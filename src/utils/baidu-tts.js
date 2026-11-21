@@ -11,20 +11,6 @@ const INFO_KEY = 'BaiduTtsInfo';
 const TOKEN_KEY = 'BaiduTtsToken';
 const CUID_KEY = 'BaiduTtsCuid';
 
-// 基础音库发音人: 英文句子用这几个即可(接口 lan 固定 zh, 中英混合模式)
-export const TTS_VOICES = [
-    { value: 0, label: '度小美 (女)' },
-    { value: 1, label: '度小宇 (男)' },
-    { value: 3, label: '度逍遥' },
-    { value: 4, label: '度丫丫' }
-];
-
-export const TTS_SPEEDS = [
-    { value: 3, label: '偏慢' },
-    { value: 5, label: '正常' },
-    { value: 7, label: '偏快' }
-];
-
 const read = (key, fallback) => {
     try {
         return JSON.parse(localStorage.getItem(key)) || fallback;
@@ -42,7 +28,6 @@ const write = (key, value) => {
 };
 
 export const readTtsInfo = () => read(INFO_KEY, {});
-export const saveTtsInfo = info => write(INFO_KEY, info);
 
 export const hasTtsConfig = info => Boolean(info?.apiKey && info?.secretKey);
 

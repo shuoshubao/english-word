@@ -3,8 +3,8 @@ import { Button, Checkbox, Segmented, Table, Tooltip, Typography } from 'antd';
 import { useEffect, useRef, useState } from 'react';
 
 const { Text } = Typography;
-import books from '../data/irregular-verbs';
-import { speak, speakZh } from '../utils/audio';
+import books from '../../data/irregular-verbs';
+import { speak, speakZh } from '../../utils/audio';
 
 const PAGE_SIZE = 20;
 const STAGES = ['小学', '初中', '高中', '四级', '六级'];

@@ -2,7 +2,7 @@ import { FileOutlined } from '@ant-design/icons';
 import { App, Button, Card, Empty, Skeleton, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
 import { Tree } from 'react-arborist';
-import { listAllFiles, readFileText } from '../utils/baidu-pan';
+import { listAllFiles, readFileText } from '../../utils/baidu-pan';
 import MonacoJsonViewer from './MonacoJsonViewer';
 
 const { Text } = Typography;
