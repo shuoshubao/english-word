@@ -1,6 +1,7 @@
 // 发音: 统一经 vercel 代理(fetch+blob 播放), 规避第三方域无 CORS 头与媒体 Range 请求问题.
-// 单词/释义按设置走有道 dictvoice 或百度 gettts; 例句走百度 gettts(有道只收录单词, 整句会 500)
+// 单词/释义按设置走有道 dictvoice 或百度 gettts; 例句优先走百度智能云正式 TTS, 未配置时回退 gettts
 import { getVoiceSource } from './settings';
+import { hasTtsConfig, readTtsInfo, synthesize } from './baidu-tts';
 
 const PROXY = 'https://truethy.vercel.app/proxy';
 const youdaoUrl = (text, lang) => `${PROXY}/youdao/dictvoice?audio=${encodeURIComponent(text)}&type=2${lang === 'zh' ? '&le=zh' : ''}`;
@@ -21,26 +22,32 @@ const stopCurrent = () => {
     }
 };
 
-const play = async (url, onEnd) => {
+// 统一播放: key 命中缓存直接播; load() 负责产出音频 blob; onFail 在加载失败时调用(用于 TTS 回退)
+const playByKey = async (key, load, onEnd, onFail) => {
     try {
         stopCurrent();
-        // 已有缓存直接播, 不重复请求
-        let objectUrl = blobCache.get(url);
+        let objectUrl = blobCache.get(key);
         if (!objectUrl) {
-            if (inflight.has(url)) {
+            if (inflight.has(key)) {
                 return; // 正在下载同一句, 忽略连点
             }
-            inflight.add(url);
-            const res = await fetch(url);
-            if (!res.ok) {
-                inflight.delete(url);
-                if (onEnd) onEnd();
+            inflight.add(key);
+            let blob;
+            try {
+                blob = await load();
+            } catch (error) {
+                inflight.delete(key);
+                console.warn('音频加载失败', error);
+                if (onFail) {
+                    onFail();
+                } else if (onEnd) {
+                    onEnd();
+                }
                 return;
             }
-            const blob = await res.blob();
             objectUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
-            blobCache.set(url, objectUrl);
-            inflight.delete(url);
+            blobCache.set(key, objectUrl);
+            inflight.delete(key);
         }
         const audio = new Audio(objectUrl);
         current = audio;
@@ -59,6 +66,17 @@ const play = async (url, onEnd) => {
     }
 };
 
+const play = (url, onEnd) =>
+    playByKey(
+        url,
+        async () => {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.blob();
+        },
+        onEnd
+    );
+
 // 按发音来源设置选择有道或百度; lang: 'en' 单词 / 'zh' 中文释义
 const sourceUrl = (text, lang) => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text, lang) : youdaoUrl(text, lang));
 
@@ -73,13 +91,24 @@ const playText = (text, lang, onEnd) => {
 // 英文单词发音(按"发音来源"设置走有道或百度)
 export const speak = (word, onEnd) => playText(word, 'en', onEnd);
 
-// 例句朗读: 固定百度 gettts(支持整句, 有道整句会 500)
-export const speakSentence = (text, onEnd) => {
+// 例句朗读: 配置了百度智能云 TTS 则走正式接口, 否则回退百度翻译 gettts(有道整句会 500)
+export const speakSentence = (text, onEnd, overrideInfo) => {
     if (!text) {
         if (onEnd) onEnd();
         return;
     }
-    play(baiduTtsUrl(text, 'en'), onEnd);
+    const info = overrideInfo || readTtsInfo();
+    if (!hasTtsConfig(info)) {
+        play(baiduTtsUrl(text, 'en'), onEnd);
+        return;
+    }
+    const key = `tts-${info.voice || 0}-${info.speed || 5}-${text}`;
+    playByKey(
+        key,
+        () => synthesize(text, info),
+        onEnd,
+        () => play(baiduTtsUrl(text, 'en'), onEnd) // 正式 TTS 失败时回退 gettts
+    );
 };
 
 // 中文释义朗读前的清洗:

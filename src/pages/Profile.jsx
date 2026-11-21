@@ -3,6 +3,7 @@ import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, S
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 import BaiduPanDebug from '../components/BaiduPanDebug';
+import BaiduTtsCard from '../components/BaiduTtsCard';
 import { vocabularyCatalog } from '../data/catalog';
 import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
@@ -269,6 +270,8 @@ export default function Profile() {
                     </Button>
                 </div>
             </Card>
+
+            <BaiduTtsCard />
 
             <Card
                 title={
