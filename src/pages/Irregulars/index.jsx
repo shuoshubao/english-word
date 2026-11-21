@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const { Text } = Typography;
 import books from '../../data/irregular-verbs';
-import { speak, speakZh } from '../../utils/audio';
+import { speak } from '../../utils/audio';
 
 const PAGE_SIZE = 20;
 const STAGES = ['小学', '初中', '高中', '四级', '六级'];
@@ -62,13 +62,12 @@ export default function Irregulars() {
         });
     };
 
-    // 顺序朗读一行: 原形 -> 过去式 -> 过去分词 -> 中文
+    // 顺序朗读一行: 原形 -> 过去式 -> 过去分词
     const playItem = (item, done) => {
         const parts = [
             { text: item.word, fn: speak },
             { text: item.past, fn: speak },
-            { text: item.participle, fn: speak },
-            { text: item.cn, fn: speakZh }
+            { text: item.participle, fn: speak }
         ];
         let i = 0;
         const next = () => {
