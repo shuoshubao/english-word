@@ -103,13 +103,13 @@ export const speak = (word, onEnd) => {
 
 // 英文句子(例句/调试句)朗读: 按当前音源走百度或豆包, 失败不回退
 // 缓存由 playByKey 统一处理, key 含音源+凭证+音色+语速+文本, 命中不再请求接口.
-export const speakSentence = (text, onEnd, onError, infoOverride) => {
+export const speakSentence = (text, onEnd, onError, sourceOverride) => {
     if (!text) {
         if (onEnd) onEnd();
         return;
     }
-    const source = getSentenceTtsSource();
-    const info = infoOverride || readSentenceTtsInfo(source);
+    const source = sourceOverride || getSentenceTtsSource();
+    const info = readSentenceTtsInfo(source);
     if (!hasSentenceTtsConfig(source, info)) {
         if (onEnd) onEnd();
         return;

@@ -35,7 +35,8 @@ export default function TtsSamplePanel({ source, version }) {
             error => {
                 if (playingRef.current === index) setPlayingIndex(-1);
                 message.error(`合成失败: ${error.message}`);
-            }
+            },
+            source
         );
     };
 
