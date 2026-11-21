@@ -34,7 +34,7 @@ export default function MonacoJsonViewer({ value = '', height = 320, language = 
                 editorRef.current = monaco.editor.create(hostRef.current, {
                     value: valueRef.current,
                     language,
-                    theme: 'vs',
+                    theme: 'vs-dark',
                     readOnly: true,
                     domReadOnly: true,
                     automaticLayout: true,
