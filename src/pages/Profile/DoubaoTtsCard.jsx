@@ -8,9 +8,7 @@ const { Text } = Typography;
 
 const INFO_KEY = 'DoubaoTtsInfo';
 const isLocal = window.location.hostname === 'localhost';
-const API = isLocal
-    ? '/doubao-tts/api/v3/tts/unidirectional/sse'
-    : 'https://truethy.vercel.app/proxy/doubaotts/api/v3/tts/unidirectional/sse';
+const API = isLocal ? '/doubao-tts/api/v3/tts/unidirectional/sse' : 'https://truethy.vercel.app/proxy/doubaotts/api/v3/tts/unidirectional/sse';
 
 const DEFAULT_VOICE = 'zh_female_vv_uranus_bigtts';
 
@@ -45,7 +43,7 @@ const saveInfo = info => {
     }
 };
 
-const hasConfig = info => Boolean(info?.appId && info?.accessToken);
+const hasConfig = info => Boolean(info?.apiKey);
 
 const base64ToBytes = data => {
     const binary = atob(data);
@@ -74,8 +72,7 @@ const synthesize = async (text, info) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-Api-App-Id': info.appId,
-            'X-Api-Access-Key': info.accessToken,
+            'X-Api-Key': info.apiKey,
             'X-Api-Resource-Id': 'seed-tts-2.0',
             'X-Api-Request-Id': reqid
         },
@@ -138,7 +135,7 @@ const synthesize = async (text, info) => {
 };
 
 const audioCache = new Map();
-const audioKey = (text, info) => `${info?.appId || ''}|${info?.accessToken || ''}|${info?.voice || ''}|${info?.speed || ''}|${text}`;
+const audioKey = (text, info) => `${info?.apiKey || ''}|${info?.voice || ''}|${info?.speed || ''}|${text}`;
 const getAudio = (text, info) => {
     const key = audioKey(text, info);
     let task = audioCache.get(key);
@@ -171,8 +168,13 @@ export default function DoubaoTtsCard() {
     const save = async () => {
         try {
             const values = await form.validateFields();
-            saveInfo(values);
-            setInfo(values);
+            const next = {
+                apiKey: values.apiKey.trim(),
+                voice: values.voice,
+                speed: values.speed
+            };
+            saveInfo(next);
+            setInfo(next);
             message.success('豆包语音合成配置已保存');
         } catch {
             message.error('请检查表单');
@@ -188,6 +190,7 @@ export default function DoubaoTtsCard() {
         const done = () => setPlayingIndex(-1);
         const text = samples[index];
         const values = form.getFieldsValue();
+        if (typeof values.apiKey === 'string') values.apiKey = values.apiKey.trim();
         if (!hasConfig(values)) {
             done();
             return;
@@ -212,14 +215,14 @@ export default function DoubaoTtsCard() {
                             <>
                                 <span>请到</span>
                                 <a
-                                    href="https://console.volcengine.com/speech/app"
+                                    href="https://console.volcengine.com/speech/new/setting/apikeys?projectName=default"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="text-[#91caff] underline mx-0.5"
                                 >
                                     火山引擎控制台
                                 </a>
-                                <span>旧版控制台创建应用, 获取 AppID 和 Access Token</span>
+                                <span>获取 API Key</span>
                             </>
                         }
                     >
@@ -229,11 +232,8 @@ export default function DoubaoTtsCard() {
             }
         >
             <Form form={form} layout="vertical" autoComplete="off" initialValues={{ voice: DEFAULT_VOICE, speed: 0, ...info }}>
-                <Form.Item name="appId" label="AppID" rules={[{ required: true, whitespace: true, message: '请输入 AppID' }]}>
-                    <Input placeholder="火山引擎应用 AppID" />
-                </Form.Item>
-                <Form.Item name="accessToken" label="Access Token" rules={[{ required: true, whitespace: true, message: '请输入 Access Token' }]}>
-                    <Input.Password placeholder="火山引擎 Access Token" />
+                <Form.Item name="apiKey" label="API Key" rules={[{ required: true, whitespace: true, message: '请输入 API Key' }]}>
+                    <Input.Password placeholder="火山引擎 API Key" />
                 </Form.Item>
                 <div className="grid grid-cols-2 gap-3">
                     <Form.Item name="voice" label="音色">

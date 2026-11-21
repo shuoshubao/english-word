@@ -83,7 +83,6 @@ const TTS_LIBRARIES = [
     }
 ];
 const voicesOf = library => TTS_LIBRARIES.find(item => item.value === library)?.voices || TTS_LIBRARIES[0].voices;
-const libraryOf = voice => TTS_LIBRARIES.find(item => item.voices.some(v => v.value === Number(voice)))?.value || TTS_LIBRARIES[0].value;
 const speedOf = speed => (speed === undefined || speed === null || speed === '' ? 5 : Number(speed));
 const saveTtsInfo = info => {
     try {
@@ -116,10 +115,8 @@ export default function BaiduTtsCard() {
     const { message } = App.useApp();
     const [form] = Form.useForm();
     const [ttsInfo, setTtsInfo] = useState(readTtsInfo);
-    const initialLibrary = TTS_LIBRARIES.some(item => item.value === ttsInfo.library) ? ttsInfo.library : libraryOf(ttsInfo.voice);
-    const initialVoice = voicesOf(initialLibrary).some(item => item.value === Number(ttsInfo.voice))
-        ? Number(ttsInfo.voice)
-        : voicesOf(initialLibrary)[0].value;
+    const initialLibrary = ttsInfo.library || TTS_LIBRARIES[0].value;
+    const initialVoice = ttsInfo.voice ?? voicesOf(initialLibrary)[0].value;
     const watchedLibrary = Form.useWatch('library', form) || initialLibrary;
     const watchedSpeed = Form.useWatch('speed', form);
     const [playing, setPlaying] = useState(-1);
