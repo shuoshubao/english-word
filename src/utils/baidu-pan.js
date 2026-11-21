@@ -16,6 +16,7 @@ const DIR = `${APP_DIR}/progress`;
 // 百度官方不允许本地地址做授权回调, 本地只能用 oob 手动复制授权码; 线上用标准回调
 const OOB_REDIRECT = 'oob';
 const STATE_KEY = 'BaiduPanOAuthState';
+const RETURN_KEY = 'BaiduPanOAuthReturn';
 const TOKEN_KEY = 'BaiduPanToken';
 // 与百度控制台「授权回调页」一致: origin + pathname, 不含 hash/query
 const REDIRECT_URI = () => `${window.location.origin}${window.location.pathname}`;
@@ -169,6 +170,8 @@ export const startRedirectAuth = info => {
     if (!info?.appKey) throw new Error('请先保存 AppKey');
     const state = Math.random().toString(36).slice(2);
     sessionStorage.setItem(STATE_KEY, state);
+    // 回调会丢掉 hash, 记下当前路由, 授权完成后恢复
+    sessionStorage.setItem(RETURN_KEY, window.location.hash || '#/');
     const params = {
         response_type: 'code',
         client_id: info.appKey,
@@ -195,12 +198,12 @@ export const exchangeCode = async (info, code) => {
     writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
 };
 
-// 检测回调 code, 校验 state 后换取 token; 返回是否处理了回调
+// 检测回调 code, 校验 state 后换取 token; 返回需要恢复的路由, 没有回调返回 null
 let authInFlight = false;
 export const finishAuth = async () => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    if (!code || authInFlight) return false;
+    if (!code || authInFlight) return null;
     authInFlight = true;
     try {
         const state = params.get('state');
@@ -215,10 +218,12 @@ export const finishAuth = async () => {
             redirect_uri: REDIRECT_URI()
         });
         writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
+        const returnHash = sessionStorage.getItem(RETURN_KEY) || '#/';
         sessionStorage.removeItem(STATE_KEY);
-        // 清掉 URL 上的 code/state, 避免泄漏和重复处理
-        window.history.replaceState(null, '', window.location.pathname + window.location.hash);
-        return true;
+        sessionStorage.removeItem(RETURN_KEY);
+        // 清掉 URL 上的 code/state, 由调用方 navigate 回原路由
+        window.history.replaceState(null, '', window.location.pathname);
+        return returnHash.replace(/^#/, '') || '/';
     } finally {
         authInFlight = false;
     }

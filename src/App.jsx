@@ -71,8 +71,11 @@ export default function App() {
     // 百度网盘 OAuth 回调: 回调会整页重载到根路径, 需在顶层检测 code 换取 token
     useEffect(() => {
         finishAuth()
-            .then(ok => {
-                if (ok) message.success('百度网盘已授权');
+            .then(path => {
+                if (path) {
+                    message.success('百度网盘已授权');
+                    navigate(path, { replace: true });
+                }
             })
             .catch(error => message.error(`百度网盘授权失败: ${error.message}`));
     }, [message]);

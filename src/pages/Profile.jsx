@@ -60,6 +60,7 @@ export default function Profile() {
     const [baiduBusy, setBaiduBusy] = useState('');
     const [authModalOpen, setAuthModalOpen] = useState(false);
     const [authCode, setAuthCode] = useState('');
+    const [authLoading, setAuthLoading] = useState(false);
     const [authStatus, setAuthStatus] = useState('');
 
     useEffect(() => {
@@ -137,6 +138,7 @@ export default function Profile() {
     };
 
     const submitAuthCode = async () => {
+        setAuthLoading(true);
         try {
             await exchangeCode(baiduPanInfo, authCode);
             setAuthModalOpen(false);
@@ -145,6 +147,8 @@ export default function Profile() {
             message.success('百度网盘已授权');
         } catch (error) {
             message.error(`授权失败: ${error.message}`);
+        } finally {
+            setAuthLoading(false);
         }
     };
 
@@ -348,7 +352,7 @@ export default function Profile() {
                 footer={
                     <div className="flex justify-end gap-2">
                         <Button onClick={() => setAuthModalOpen(false)}>取消</Button>
-                        <Button type="primary" onClick={submitAuthCode}>
+                        <Button type="primary" loading={authLoading} onClick={submitAuthCode}>
                             完成授权
                         </Button>
                     </div>
