@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import BaiduPanDebug from '../components/BaiduPanDebug';
 import { vocabularyCatalog } from '../data/catalog';
-import { downloadBackup, exchangeCode, isLocal, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
+import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
 import { merge, reset } from '../utils/state';
 import { toFlatProgress, toNestedProgress } from '../utils/storage';
@@ -60,7 +60,7 @@ export default function Profile() {
     const [baiduBusy, setBaiduBusy] = useState('');
     const [authModalOpen, setAuthModalOpen] = useState(false);
     const [authCode, setAuthCode] = useState('');
-    const [authBusy, setAuthBusy] = useState(false);
+    const [authStatus, setAuthStatus] = useState('');
 
     const activity = useMemo(() => buildActivity(state), [state]);
     const todayCount = activity[formatDate(new Date())] || 0;
@@ -114,28 +114,39 @@ export default function Profile() {
         }
     };
 
-    const openAuth = () => {
+    const checkAuth = async () => {
+        setAuthStatus('checking');
+        const ok = await checkAuthStatus(baiduPanInfo);
+        setAuthStatus(ok ? 'ok' : 'fail');
+    };
+
+    const openOobAuth = () => {
         try {
-            startAuth(baiduPanInfo);
-            if (isLocal) {
-                setAuthCode('');
-                setAuthModalOpen(true);
-            }
+            startOobAuth(baiduPanInfo);
+            setAuthCode('');
+            setAuthModalOpen(true);
+        } catch (error) {
+            message.error(error.message);
+        }
+    };
+
+    const openRedirectAuth = () => {
+        try {
+            startRedirectAuth(baiduPanInfo);
         } catch (error) {
             message.error(error.message);
         }
     };
 
     const submitAuthCode = async () => {
-        setAuthBusy(true);
         try {
             await exchangeCode(baiduPanInfo, authCode);
             setAuthModalOpen(false);
+            setAuthCode('');
+            setAuthStatus('ok');
             message.success('百度网盘已授权');
         } catch (error) {
             message.error(`授权失败: ${error.message}`);
-        } finally {
-            setAuthBusy(false);
         }
     };
 
@@ -284,19 +295,45 @@ export default function Profile() {
                         <Input.Password placeholder="应用 SignKey" />
                     </Form.Item>
                     <Form.Item>
-                        <div className="flex gap-2">
-                            <Button type="primary" onClick={saveBaiduPan}>
-                                保存
-                            </Button>
-                            <Button onClick={openAuth}>授权</Button>
-                        </div>
+                        <Button type="primary" onClick={saveBaiduPan}>
+                            保存
+                        </Button>
                     </Form.Item>
                 </Form>
 
-                <div className="border-t border-[#eee] pt-4 mt-2">
-                    <Text type="secondary" className="text-xs block">
-                        首次使用点 [授权] 按提示完成百度登录并同意
-                    </Text>
+                <div className="border-t border-[#eee] pt-4 mt-2 flex flex-col gap-3">
+                    <div className="flex items-center gap-2">
+                        <Button size="small" loading={authStatus === 'checking'} onClick={checkAuth}>
+                            校验授权
+                        </Button>
+                        {authStatus === 'ok' ? (
+                            <Text type="success" className="text-xs">
+                                已授权
+                            </Text>
+                        ) : authStatus === 'fail' ? (
+                            <Text type="danger" className="text-xs">
+                                未授权
+                            </Text>
+                        ) : null}
+                    </div>
+                    <div className="border-t border-[#eee] pt-3">
+                        <Text type="secondary" className="text-xs block mb-2">
+                            {isLocal ? '' : '方式一: '}点 [获取授权码] 在新窗口登录百度并同意授权, 复制页面显示的授权码, 在弹窗中完成授权
+                        </Text>
+                        <Button size="small" onClick={openOobAuth}>
+                            获取授权码
+                        </Button>
+                    </div>
+                    {!isLocal ? (
+                        <div className="border-t border-[#eee] pt-3">
+                            <Text type="secondary" className="text-xs block mb-2">
+                                方式二: 点 [跳转授权] 跳转到百度登录并同意, 完成后自动返回本页.
+                            </Text>
+                            <Button size="small" onClick={openRedirectAuth}>
+                                跳转授权
+                            </Button>
+                        </div>
+                    ) : null}
                 </div>
             </Card>
 
@@ -309,14 +346,14 @@ export default function Profile() {
                 footer={
                     <div className="flex justify-end gap-2">
                         <Button onClick={() => setAuthModalOpen(false)}>取消</Button>
-                        <Button type="primary" loading={authBusy} onClick={submitAuthCode}>
+                        <Button type="primary" onClick={submitAuthCode}>
                             完成授权
                         </Button>
                     </div>
                 }
             >
                 <Text type="secondary" className="text-xs block mb-2">
-                    在新窗口登录百度并同意授权, 复制页面显示的授权码粘贴到下方.
+                    复制百度页面显示的授权码粘贴到下方.
                 </Text>
                 <Input value={authCode} onChange={e => setAuthCode(e.target.value)} placeholder="粘贴百度授权码" />
             </Modal>

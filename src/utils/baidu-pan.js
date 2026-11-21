@@ -151,28 +151,36 @@ const readInfo = () => {
     }
 };
 
-// 打开授权页: 本地 oob(新窗口显示授权码), 线上标准回调(同窗口跳转, 带 state)
-export const startAuth = info => {
+// 方式一: oob 授权, 新窗口显示授权码, 手动粘贴. 本地/线上都可用.
+export const startOobAuth = info => {
     if (!info?.appKey) throw new Error('请先保存 AppKey');
     const params = {
         response_type: 'code',
         client_id: info.appKey,
         scope: 'basic,netdisk',
-        display: 'page'
+        display: 'page',
+        redirect_uri: OOB_REDIRECT
     };
-    if (isLocal) {
-        params.redirect_uri = OOB_REDIRECT;
-        window.open(`${AUTHORIZE_URL}?${new URLSearchParams(params)}`, '_blank');
-        return;
-    }
+    window.open(`${AUTHORIZE_URL}?${new URLSearchParams(params)}`, '_blank');
+};
+
+// 方式二: 标准授权码回调, 同窗口跳转, 带 state. 仅线上可用(百度不允许本地回调地址).
+export const startRedirectAuth = info => {
+    if (!info?.appKey) throw new Error('请先保存 AppKey');
     const state = Math.random().toString(36).slice(2);
     sessionStorage.setItem(STATE_KEY, state);
-    params.redirect_uri = REDIRECT_URI();
-    params.state = state;
+    const params = {
+        response_type: 'code',
+        client_id: info.appKey,
+        scope: 'basic,netdisk',
+        display: 'page',
+        redirect_uri: REDIRECT_URI(),
+        state
+    };
     window.location.href = `${AUTHORIZE_URL}?${new URLSearchParams(params)}`;
 };
 
-// 本地: 用 oob 授权码换取 token
+// 用 oob 授权码换取 token
 export const exchangeCode = async (info, code) => {
     if (!info?.appKey || !info?.secretKey) throw new Error('请先保存 AppKey 和 SecretKey');
     const clean = (code || '').trim();
@@ -229,6 +237,18 @@ const validToken = async info => {
     });
     writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
     return data.access_token;
+};
+
+// 校验当前是否已授权: 确保 token 有效后调 uinfo 让百度确认, 失败返回 false
+export const checkAuthStatus = async info => {
+    try {
+        const accessToken = await validToken(info);
+        const params = new URLSearchParams({ method: 'uinfo', access_token: accessToken });
+        const data = await getJson(`${NETDISK}/nas?${params}`);
+        return Boolean(data?.uk);
+    } catch {
+        return false;
+    }
 };
 
 // ---- files ----
