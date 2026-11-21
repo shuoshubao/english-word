@@ -171,12 +171,12 @@ export default function Profile() {
         }, 'backup');
 
     return (
-        <div className="max-w-250 mx-auto">
+        <div className="flex flex-col gap-3 max-w-250 mx-auto">
             <Card className="text-center" title="今日学习">
                 <Statistic value={todayCount} styles={{ content: { color: '#6652d1' } }} />
             </Card>
 
-            <div className="grid grid-cols-3 gap-3 mt-3">
+            <div className="grid grid-cols-3 gap-3">
                 <Card className="text-center">
                     <Text type="success" className="text-2xl font-semibold">
                         {state.known.length}
@@ -237,7 +237,6 @@ export default function Profile() {
             </Card>
 
             <Card
-                className="mt-4!"
                 title="设置"
                 extra={
                     <Select
@@ -265,7 +264,6 @@ export default function Profile() {
             </Card>
 
             <Card
-                className="mt-4!"
                 title="百度网盘"
                 extra={
                     <div className="flex gap-2">

@@ -20,8 +20,7 @@ const ERROR_LABEL = { files: '拉取文件', read: '读取文件' };
 // 已读取过的文件内容按 fsId 缓存，避免重复点击时再次请求网盘
 const fileContentCache = new Map();
 
-const formatSize = size =>
-    size < 1024 ? `${size} B` : size < 1024 * 1024 ? `${(size / 1024).toFixed(1)} KB` : `${(size / 1024 / 1024).toFixed(1)} MB`;
+const formatSize = size => (size < 1024 ? `${size} B` : size < 1024 * 1024 ? `${(size / 1024).toFixed(1)} KB` : `${(size / 1024 / 1024).toFixed(1)} MB`);
 
 export default function BaiduPanDebug() {
     const { message } = App.useApp();
@@ -83,7 +82,7 @@ export default function BaiduPanDebug() {
     }, [fileContent]);
 
     return (
-        <Card className="mt-4!" title="百度网盘调试">
+        <Card title="百度网盘调试">
             <div className="flex flex-col gap-4">
                 <Card
                     size="small"
@@ -122,14 +121,26 @@ export default function BaiduPanDebug() {
                                             <div
                                                 style={nodeStyle}
                                                 className={`group flex h-full w-full cursor-pointer items-center gap-1.5 rounded-md pr-1 ${
-                                                    activeFile?.fsId === node.data.fsId ? 'bg-[rgba(102,82,209,0.14)] text-[#6652d1]' : 'text-[#182230] hover:bg-[#f7f9fc]'
+                                                    activeFile?.fsId === node.data.fsId
+                                                        ? 'bg-[rgba(102,82,209,0.14)] text-[#6652d1]'
+                                                        : 'text-[#182230] hover:bg-[#f7f9fc]'
                                                 }`}
                                                 onClick={() => (isDir ? node.toggle() : openFile(node))}
                                             >
                                                 <span className="inline-flex text-[#667085]">
                                                     {isDir ? (
-                                                        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style={{ transform: node.isOpen ? 'rotate(90deg)' : 'none' }}>
-                                                            <path fillRule="evenodd" clipRule="evenodd" d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z" />
+                                                        <svg
+                                                            viewBox="0 0 16 16"
+                                                            width="16"
+                                                            height="16"
+                                                            fill="currentColor"
+                                                            style={{ transform: node.isOpen ? 'rotate(90deg)' : 'none' }}
+                                                        >
+                                                            <path
+                                                                fillRule="evenodd"
+                                                                clipRule="evenodd"
+                                                                d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
+                                                            />
                                                         </svg>
                                                     ) : (
                                                         <FileOutlined />
