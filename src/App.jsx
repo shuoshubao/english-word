@@ -1,4 +1,4 @@
-import { BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Layout, Menu, Tooltip, Typography } from 'antd';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { vocabularyCatalog } from './data/catalog';
@@ -11,6 +11,7 @@ import Library from './pages/Library';
 import Profile from './pages/Profile';
 import Roots from './pages/Roots';
 import Topic from './pages/Topic';
+import Topics from './pages/Topics';
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -19,10 +20,13 @@ const NAV = [
     { key: '/', label: '词库', icon: <BookOutlined /> },
     { key: '/words', label: '生词', icon: <FileTextOutlined /> },
     { key: '/favorites', label: '收藏', icon: <HeartOutlined /> },
+    { key: '/topics', label: '专题', icon: <AppstoreOutlined /> },
     { key: '/profile', label: '我的', icon: <UserOutlined /> }
 ];
 
 const TAB_PATHS = NAV.map(n => n.key);
+// 专题 tab 下的子页面, 高亮归属到 /topics
+const TOPIC_SUBROUTES = ['topic', 'roots', 'collocations', 'irregulars'];
 
 // 根据路由推导页面标题
 const titleOf = pathname => {
@@ -31,9 +35,11 @@ const titleOf = pathname => {
     if (parts.length === 0) return '词库';
     switch (parts[0]) {
         case 'words':
-            return '生词本';
+            return '生词';
         case 'favorites':
             return '收藏';
+        case 'topics':
+            return '专题';
         case 'profile':
             return '我的';
         case 'book': {
@@ -65,6 +71,8 @@ export default function App() {
     let selectedKey = '/';
     if (segs[0] === 'collection') {
         selectedKey = segs[1] === 'favorites' ? '/favorites' : '/words';
+    } else if (TOPIC_SUBROUTES.includes(segs[0])) {
+        selectedKey = '/topics';
     } else {
         const firstSeg = `/${segs[0] || ''}`;
         selectedKey = TAB_PATHS.includes(firstSeg) ? firstSeg : '/';
@@ -103,6 +111,7 @@ export default function App() {
                     <Route path="/" element={<Library />} />
                     <Route path="/words" element={<Collection collection="unknown" emptyText='在词库里把单词标记为"不认识", 就会集中出现在这里复习' />} />
                     <Route path="/favorites" element={<Collection collection="favorites" emptyText='点单词的"收藏", 随时回来复习你的词汇本' />} />
+                    <Route path="/topics" element={<Topics />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/book/:id" element={<Book mode="book" />} />
                     <Route path="/topic" element={<Topic />} />

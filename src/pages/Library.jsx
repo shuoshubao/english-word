@@ -6,7 +6,7 @@ import { hasRecord } from '../utils/records';
 import { useLearningState } from '../utils/useStore';
 import { ensureStages, getBookWords } from '../utils/words';
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 const STAGE_KEY = 'EnglishWord:selected-stage';
 
@@ -53,13 +53,6 @@ export default function Library() {
         setStage(s);
     };
 
-    const entries = [
-        { title: '主题分类', sub: '按场景批量记忆', to: '/topic' },
-        { title: '不规则动词', sub: '原形/过去式/过去分词时态表', to: '/irregulars' },
-        { title: '词根词缀', sub: '按前缀/后缀/词组批量记忆', to: '/roots' },
-        { title: '固定搭配', sub: 'be good at / look forward to 等短语', to: '/collocations' }
-    ];
-
     return (
         <div>
             <div className="mb-5">
@@ -97,18 +90,6 @@ export default function Library() {
                                 <span className="text-[11px] text-[#333]">未读</span>
                             </div>
                         </div>
-                    </Card>
-                ))}
-            </div>
-
-            <Title level={5} className="mt-7 mb-3">
-                专项练习
-            </Title>
-            <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
-                {entries.map(e => (
-                    <Card key={e.to} hoverable onClick={() => navigate(e.to)} className="cursor-pointer">
-                        <div className="text-base font-semibold text-[#1f1a33]">{e.title}</div>
-                        <div className="text-xs text-[#333] mt-1">{e.sub}</div>
                     </Card>
                 ))}
             </div>
