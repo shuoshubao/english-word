@@ -1,5 +1,5 @@
 import MonacoJsonViewer from '@/pages/Profile/MonacoJsonViewer';
-import { listAllFiles, readFileText } from '@/utils/baidu-pan';
+import { listAllFiles, readFileBlob } from '@/utils/baidu-pan';
 import { FileOutlined } from '@ant-design/icons';
 import { App, Button, Card, Empty, Skeleton, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
@@ -17,8 +17,37 @@ const readBaiduPanInfo = () => {
 };
 
 const ERROR_LABEL = { files: '拉取文件', read: '读取文件' };
-// 已读取过的文件内容按 fsId 缓存，避免重复点击时再次请求网盘
+// 已读取过的文件内容按 fsId 缓存, 避免重复点击时再次请求网盘。图片存 objectURL, 文本存字符串
 const fileContentCache = new Map();
+
+// 仅用于代码高亮, 未识别的扩展名按纯文本展示, 不影响文件能否打开
+const LANGUAGES = {
+    json: 'json', jsonc: 'json', md: 'markdown', markdown: 'markdown',
+    js: 'javascript', jsx: 'javascript', mjs: 'javascript', cjs: 'javascript',
+    ts: 'typescript', tsx: 'typescript', html: 'html', htm: 'html',
+    css: 'css', scss: 'scss', less: 'less', xml: 'xml', svg: 'xml',
+    yaml: 'yaml', yml: 'yaml', sql: 'sql', sh: 'shell', bash: 'shell',
+    py: 'python', java: 'java', go: 'go', rs: 'rust', php: 'php', rb: 'ruby'
+};
+// CDN 的 Content-Type 缺失时会退回 octet-stream/json, 用文件头签名兜底识别图片, 不依赖扩展名
+const isImageBlob = async blob => {
+    if (blob.type.startsWith('image/')) return true;
+    if (blob.type && blob.type !== 'application/octet-stream' && blob.type !== 'application/json') return false;
+    const head = new Uint8Array(await blob.slice(0, 16).arrayBuffer());
+    const ascii = (offset, str) => [...str].every((c, i) => head[offset + i] === c.charCodeAt(0));
+    return (
+        (head[0] === 0x89 && ascii(1, 'PNG')) ||
+        (head[0] === 0xff && head[1] === 0xd8 && head[2] === 0xff) ||
+        ascii(0, 'GIF8') ||
+        (ascii(0, 'RIFF') && ascii(8, 'WEBP')) ||
+        (head[0] === 0x42 && head[1] === 0x4d)
+    );
+};
+
+const languageOf = name => {
+    const dot = name.lastIndexOf('.');
+    return dot < 0 ? 'plaintext' : LANGUAGES[name.slice(dot + 1).toLowerCase()] || 'plaintext';
+};
 
 const formatSize = size => (size < 1024 ? `${size} B` : size < 1024 * 1024 ? `${(size / 1024).toFixed(1)} KB` : `${(size / 1024 / 1024).toFixed(1)} MB`);
 
@@ -27,7 +56,7 @@ export default function BaiduPanDebug() {
     const [busy, setBusy] = useState('');
     const [fileTree, setFileTree] = useState(null);
     const [activeFile, setActiveFile] = useState(null);
-    const [fileContent, setFileContent] = useState('');
+    const [fileContent, setFileContent] = useState(null);
     const readSeq = useRef(0);
 
     const run = async (action, key) => {
@@ -51,7 +80,7 @@ export default function BaiduPanDebug() {
             readSeq.current += 1;
             setFileTree(tree);
             setActiveFile(null);
-            setFileContent('');
+            setFileContent(null);
             message.success(`已拉取 ${tree.length} 个顶层项`);
         }, 'files');
 
@@ -64,20 +93,25 @@ export default function BaiduPanDebug() {
             return;
         }
         return run(async () => {
-            const text = await readFileText(readBaiduPanInfo(), file.fsId);
-            fileContentCache.set(file.fsId, text);
+            const blob = await readFileBlob(readBaiduPanInfo(), file.fsId);
+            // 按实际内容判断图片, 其余一律按文本读取, 无需逐个列举扩展名
+            const content = (await isImageBlob(blob))
+                ? { image: true, value: URL.createObjectURL(blob) }
+                : { image: false, value: await blob.text() };
+            fileContentCache.set(file.fsId, content);
             if (seq === readSeq.current) {
-                setFileContent(text);
+                setFileContent(content);
             }
         }, 'read');
     };
 
     // 尽量按 JSON 缩进展示, 非合法 JSON 则原样输出
     const prettyContent = useMemo(() => {
+        const text = fileContent && !fileContent.image ? fileContent.value : '';
         try {
-            return JSON.stringify(JSON.parse(fileContent), null, 2);
+            return JSON.stringify(JSON.parse(text), null, 2);
         } catch {
-            return fileContent;
+            return text;
         }
     }, [fileContent]);
 
@@ -159,10 +193,14 @@ export default function BaiduPanDebug() {
                                     <div className="h-full p-3">
                                         <Skeleton active title={false} paragraph={{ rows: 8 }} />
                                     </div>
+                                ) : fileContent?.image ? (
+                                    <div className="flex items-center justify-center h-full p-3 overflow-auto">
+                                        <img src={fileContent.value} alt={activeFile?.name} className="max-w-full max-h-full object-contain" />
+                                    </div>
                                 ) : activeFile ? (
-                                    <MonacoJsonViewer value={prettyContent} />
+                                    <MonacoJsonViewer value={prettyContent} language={languageOf(activeFile.name)} />
                                 ) : (
-                                    <div className="flex items-center justify-center h-full text-[#999] text-sm">点击左侧 JSON 文件查看内容</div>
+                                    <div className="flex items-center justify-center h-full text-[#999] text-sm">点击左侧文件查看内容</div>
                                 )}
                             </div>
                         </div>

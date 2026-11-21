@@ -17,10 +17,11 @@ export const loadMonacoEditor = async () => {
     return monacoPromise;
 };
 
-// 只读 JSON 查看器: 语法高亮 + 折叠 + 行号, 不含编辑能力
-export default function MonacoJsonViewer({ value = '', height = 320 }) {
+// 只读文本查看器: 语法高亮 + 折叠 + 行号, 不含编辑能力
+export default function MonacoJsonViewer({ value = '', height = 320, language = 'json' }) {
     const hostRef = useRef(null);
     const editorRef = useRef(null);
+    const monacoRef = useRef(null);
     const valueRef = useRef(value);
     valueRef.current = value;
 
@@ -29,9 +30,10 @@ export default function MonacoJsonViewer({ value = '', height = 320 }) {
         loadMonacoEditor()
             .then(monaco => {
                 if (disposed || !hostRef.current) return;
+                monacoRef.current = monaco;
                 editorRef.current = monaco.editor.create(hostRef.current, {
                     value: valueRef.current,
-                    language: 'json',
+                    language,
                     theme: 'vs',
                     readOnly: true,
                     domReadOnly: true,
@@ -65,8 +67,11 @@ export default function MonacoJsonViewer({ value = '', height = 320 }) {
 
     useEffect(() => {
         const editor = editorRef.current;
-        if (editor && editor.getValue() !== value) editor.setValue(value);
-    }, [value]);
+        if (!editor) return;
+        if (editor.getValue() !== value) editor.setValue(value);
+        const model = editor.getModel();
+        if (model && monacoRef.current) monacoRef.current.editor.setModelLanguage(model, language);
+    }, [value, language]);
 
     return <div ref={hostRef} style={{ width: '100%', height }} />;
 }

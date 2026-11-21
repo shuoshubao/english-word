@@ -279,7 +279,7 @@ export const listBackups = async info => {
     return (data.list || []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
 };
 
-// 递归拉取应用目录下的所有文件夹和文件, 构建树形结构(只保留 json 文件)
+// 递归拉取应用目录下的所有文件夹和文件, 构建树形结构
 export const listAllFiles = async info => {
     const token = await validToken(info);
     const walk = async dir => {
@@ -309,7 +309,7 @@ export const listAllFiles = async info => {
                     isDir: true,
                     children: await walk(item.path)
                 });
-            } else if (/\.json$/i.test(item.server_filename)) {
+            } else {
                 nodes.push({
                     id: String(item.fs_id),
                     name: item.server_filename,
@@ -328,7 +328,7 @@ export const listAllFiles = async info => {
 // 把带签名的 dlink 交给服务端代理 fetch(自动跟随 302 且无 CORS 限制)
 const proxyDlink = dlink => `${DL}?url=${encodeURIComponent(dlink)}`;
 
-const downloadFile = async (info, fsId) => {
+const fetchFileResponse = async (info, fsId) => {
     const token = await validToken(info);
     const params = new URLSearchParams({
         method: 'filemetas',
@@ -343,13 +343,17 @@ const downloadFile = async (info, fsId) => {
     const withToken = dlink + (dlink.includes('?') ? '&' : '?') + `access_token=${token}`;
     const response = await fetch(proxyDlink(withToken));
     if (!response.ok) throw new Error(`下载失败 (${response.status})`);
-    return response.text();
+    return response;
 };
+
+const downloadFile = async (info, fsId) => (await fetchFileResponse(info, fsId)).text();
 
 export const downloadBackup = async (info, fsId) => JSON.parse(await downloadFile(info, fsId));
 
 // 调试用: 读取文件原始文本
 export const readFileText = (info, fsId) => downloadFile(info, fsId);
+// 调试用: 读取文件二进制(图片等)
+export const readFileBlob = async (info, fsId) => (await fetchFileResponse(info, fsId)).blob();
 
 // 百度接口不会自动创建父目录, 先确保 progress 目录存在
 const ensureDir = async (token, dir) => {
