@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import BaiduPanDebug from '../components/BaiduPanDebug';
 import { vocabularyCatalog } from '../data/catalog';
-import { downloadBackup, exchangeCode, isLocal, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
+import { downloadBackup, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
 import { merge, reset } from '../utils/state';
 import { toFlatProgress, toNestedProgress } from '../utils/storage';
@@ -58,7 +58,6 @@ export default function Profile() {
     const [baiduPanForm] = Form.useForm();
     const [baiduPanInfo] = useState(readBaiduPanInfo);
     const [baiduBusy, setBaiduBusy] = useState('');
-    const [authCode, setAuthCode] = useState('');
 
     const activity = useMemo(() => buildActivity(state), [state]);
     const todayCount = activity[formatDate(new Date())] || 0;
@@ -119,16 +118,6 @@ export default function Profile() {
         }
     };
 
-    const submitAuthCode = async () => {
-        try {
-            await exchangeCode(baiduPanInfo, authCode);
-            setAuthCode('');
-            message.success('百度网盘已授权');
-        } catch (error) {
-            message.error(`授权失败: ${error.message}`);
-        }
-    };
-
     const runBaidu = async (action, key) => {
         setBaiduBusy(key);
         try {
@@ -172,32 +161,16 @@ export default function Profile() {
 
     return (
         <div className="flex flex-col gap-3 max-w-250 mx-auto">
-            <Card className="text-center" title="今日学习">
-                <Statistic value={todayCount} styles={{ content: { color: '#6652d1' } }} />
+            <Card title="数据概览">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <Statistic className="text-center" title="今日学习" value={todayCount} styles={{ content: { color: '#6652d1' } }} />
+                    <Statistic className="text-center" title="已认识" value={state.known.length} styles={{ content: { color: '#52c41a' } }} />
+                    <Statistic className="text-center" title="不认识" value={state.unknown.length} styles={{ content: { color: '#ff4d4f' } }} />
+                    <Statistic className="text-center" title="收藏" value={state.favorites.length} styles={{ content: { color: '#faad14' } }} />
+                </div>
             </Card>
 
-            <div className="grid grid-cols-3 gap-3">
-                <Card className="text-center">
-                    <Text type="success" className="text-2xl font-semibold">
-                        {state.known.length}
-                    </Text>
-                    <div className="text-xs text-[#333] mt-1">已认识</div>
-                </Card>
-                <Card className="text-center">
-                    <Text type="danger" className="text-2xl font-semibold">
-                        {state.unknown.length}
-                    </Text>
-                    <div className="text-xs text-[#333] mt-1">不认识</div>
-                </Card>
-                <Card className="text-center">
-                    <Text type="warning" className="text-2xl font-semibold">
-                        {state.favorites.length}
-                    </Text>
-                    <div className="text-xs text-[#333] mt-1">收藏</div>
-                </Card>
-            </div>
-
-            <Card className="mt-3!">
+            <Card title="学习日历">
                 <div className="max-w-[560px] mx-auto">
                     <Calendar
                         fullscreen={false}
@@ -277,16 +250,16 @@ export default function Profile() {
                 }
             >
                 <Form form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo}>
-                    <Form.Item name="appId" label="AppID">
+                    <Form.Item name="appId" label="AppID" rules={[{ required: true, message: '请输入 AppID' }]}>
                         <InputNumber style={{ width: '100%' }} min={0} precision={0} placeholder="应用 AppID" />
                     </Form.Item>
-                    <Form.Item name="appKey" label="AppKey">
+                    <Form.Item name="appKey" label="AppKey" rules={[{ required: true, whitespace: true, message: '请输入 AppKey' }]}>
                         <Input placeholder="应用 AppKey" />
                     </Form.Item>
-                    <Form.Item name="secretKey" label="SecretKey">
+                    <Form.Item name="secretKey" label="SecretKey" rules={[{ required: true, whitespace: true, message: '请输入 SecretKey' }]}>
                         <Input.Password placeholder="应用 SecretKey" />
                     </Form.Item>
-                    <Form.Item name="signKey" label="SignKey">
+                    <Form.Item name="signKey" label="SignKey" rules={[{ required: true, whitespace: true, message: '请输入 SignKey' }]}>
                         <Input.Password placeholder="应用 SignKey" />
                     </Form.Item>
                     <Form.Item>
@@ -294,32 +267,15 @@ export default function Profile() {
                             <Button type="primary" onClick={saveBaiduPan}>
                                 保存
                             </Button>
-                            {!isLocal ? <Button onClick={openAuth}>授权</Button> : null}
+                            <Button onClick={openAuth}>授权</Button>
                         </div>
                     </Form.Item>
                 </Form>
 
                 <div className="border-t border-[#eee] pt-4 mt-2">
-                    {isLocal ? (
-                        <>
-                            <Text type="secondary" className="text-xs block mb-2">
-                                首次使用需授权: 点 [获取授权码] 在新窗口登录百度并同意授权, 复制页面显示的授权码粘贴到下方, 再点 [完成授权]
-                            </Text>
-                            <div className="flex gap-2 items-center">
-                                <Button size="small" onClick={openAuth}>
-                                    获取授权码
-                                </Button>
-                                <Input size="small" value={authCode} onChange={e => setAuthCode(e.target.value)} placeholder="粘贴百度授权码" />
-                                <Button size="small" onClick={submitAuthCode}>
-                                    完成授权
-                                </Button>
-                            </div>
-                        </>
-                    ) : (
-                        <Text type="secondary" className="text-xs block">
-                            首次使用点"授权"跳转到百度登录并同意, 完成后自动返回本页.
-                        </Text>
-                    )}
+                    <Text type="secondary" className="text-xs block">
+                        首次使用点 [授权] 跳转到百度登录并同意, 完成后自动返回本页
+                    </Text>
                 </div>
             </Card>
 
