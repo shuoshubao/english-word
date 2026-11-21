@@ -1,8 +1,8 @@
-import { QuestionCircleOutlined, ReloadOutlined, SoundOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined, ReloadOutlined, SoundOutlined, SoundTwoTone } from '@ant-design/icons';
 import { App, Button, Card, Form, Input, Select, Tooltip, Typography } from 'antd';
-import { useState } from 'react';
-import { speakSentence } from '../../utils/audio';
-import { hasTtsConfig, readTtsInfo } from '../../utils/baidu-tts';
+import { useRef, useState } from 'react';
+import { playBuffer, speakSentenceFallback } from '../../utils/audio';
+import { hasTtsConfig, readTtsInfo, synthesize } from '../../utils/baidu-tts';
 
 const { Text } = Typography;
 
@@ -26,6 +26,10 @@ const saveTtsInfo = info => {
         // 隐私模式下 localStorage 可能不可写, 静默忽略
     }
 };
+
+// 已合成音频缓存: key 含 text + 凭证 + 音色语速, 命中不再请求接口
+const audioCache = new Map();
+const audioKey = (text, info) => `${info?.apiKey || ''}|${info?.secretKey || ''}|${info?.voice || 0}|${info?.speed || 5}|${text}`;
 
 // TTS 调试句库: 5 批 x 5 句, 每批长短句混排(覆盖标点/数字/破折号), 点「换一批」切换
 const TTS_SAMPLE_GROUPS = [
@@ -71,6 +75,11 @@ export default function BaiduTtsCard() {
     const [form] = Form.useForm();
     const [ttsInfo, setTtsInfo] = useState(readTtsInfo);
     const [playing, setPlaying] = useState(-1);
+    const playingRef = useRef(-1);
+    const setPlayingIndex = index => {
+        playingRef.current = index;
+        setPlaying(index);
+    };
     const [batch, setBatch] = useState(0);
     const samples = TTS_SAMPLE_GROUPS[batch];
 
@@ -87,13 +96,35 @@ export default function BaiduTtsCard() {
 
     const nextBatch = () => {
         setBatch(current => (current + 1) % TTS_SAMPLE_GROUPS.length);
-        setPlaying(-1);
+        setPlayingIndex(-1);
     };
 
-    const testTts = index => {
-        setPlaying(index);
-        // 取表单当前值: 音色/语速改了没保存, 也按选中的配置发音
-        speakSentence(samples[index], () => setPlaying(-1), form.getFieldsValue());
+    const testTts = async index => {
+        const done = () => setPlayingIndex(-1);
+        const text = samples[index];
+        // 取表单当前值: 音色/语速/凭证改了没保存, 也按选中的配置发音
+        const info = form.getFieldsValue();
+        const key = audioKey(text, info);
+        const cached = audioCache.get(key);
+        if (cached) {
+            setPlayingIndex(index);
+            playBuffer(cached, done);
+            return;
+        }
+        if (!hasTtsConfig(info)) {
+            setPlayingIndex(index);
+            speakSentenceFallback(text, done);
+            return;
+        }
+        setPlayingIndex(index);
+        try {
+            const blob = await synthesize(text, info);
+            const objectUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
+            audioCache.set(key, objectUrl);
+            if (playingRef.current === index) playBuffer(objectUrl, done);
+        } catch {
+            if (playingRef.current === index) speakSentenceFallback(text, done);
+        }
     };
 
     return (
@@ -157,12 +188,14 @@ export default function BaiduTtsCard() {
                     {samples.map((sentence, index) => (
                         <div key={sentence} className="flex items-start gap-2 py-1.5">
                             <span className="flex-1 text-[13px] leading-relaxed text-[#344054]">{sentence}</span>
-                            <SoundOutlined
-                                className={`mt-0.5 text-base cursor-pointer shrink-0 ${
-                                    playing === index ? 'text-[#6652d1] animate-pulse' : 'text-[#98a2b3] hover:text-[#6652d1]'
-                                }`}
-                                onClick={() => testTts(index)}
-                            />
+                            {playing === index ? (
+                                <SoundTwoTone className="mt-0.5 text-base cursor-pointer shrink-0" onClick={() => testTts(index)} />
+                            ) : (
+                                <SoundOutlined
+                                    className="mt-0.5 text-base cursor-pointer shrink-0 text-[#98a2b3] hover:text-[#6652d1]"
+                                    onClick={() => testTts(index)}
+                                />
+                            )}
                         </div>
                     ))}
                 </div>

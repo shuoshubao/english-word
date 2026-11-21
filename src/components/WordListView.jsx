@@ -3,7 +3,6 @@ import {
     CloseCircleFilled,
     DislikeFilled,
     DislikeOutlined,
-    EditOutlined,
     EditTwoTone,
     EyeInvisibleOutlined,
     EyeOutlined,
@@ -186,14 +185,14 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                                     {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
                                 </span>
                                 <Tooltip title="收起单词">
-                                    <Button type="text" size="small" icon={<EyeInvisibleOutlined />} onClick={() => toggleRevealWord(record.id)} />
+                                    <Button type="text" icon={<EyeInvisibleOutlined />} onClick={() => toggleRevealWord(record.id)} />
                                 </Tooltip>
                             </div>
                         );
                     }
                     return (
                         <Tooltip title="查看单词">
-                            <Button type="text" size="small" icon={<EyeOutlined />} onClick={() => toggleRevealWord(record.id)} />
+                            <Button type="text" icon={<EyeOutlined />} onClick={() => toggleRevealWord(record.id)} />
                         </Tooltip>
                     );
                 }
@@ -218,7 +217,6 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                           return (
                               <div className="flex items-center gap-2">
                                   <Input
-                                      size="small"
                                       placeholder="拼写英文单词"
                                       style={{ width: 160 }}
                                       value={a?.value || ''}
@@ -250,7 +248,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                 const show = quizMode || showAll || hasRecord(state.known, record.id) || revealed.has(record.id);
                 if (!show) {
                     return (
-                        <Button type="primary" size="small" onClick={() => reveal(record.id)}>
+                        <Button type="primary" onClick={() => reveal(record.id)}>
                             查看释义
                         </Button>
                     );
@@ -270,7 +268,6 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                 return (
                     <Space size={6}>
                         <Button
-                            size="small"
                             icon={known ? <LikeFilled /> : <LikeOutlined />}
                             style={known ? { background: '#e6f7ef', color: '#18a058', borderColor: '#b7e8cf' } : undefined}
                             onClick={() => setKnowledge(record, known ? null : 'known')}
@@ -278,7 +275,6 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                             认识
                         </Button>
                         <Button
-                            size="small"
                             icon={unknown ? <DislikeFilled /> : <DislikeOutlined />}
                             style={unknown ? { background: '#fdecec', color: '#d03050', borderColor: '#f5c2c7' } : undefined}
                             onClick={() => setKnowledge(record, unknown ? null : 'unknown')}
@@ -286,7 +282,6 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                             不认识
                         </Button>
                         <Button
-                            size="small"
                             icon={favorite ? <HeartFilled /> : <HeartOutlined />}
                             style={favorite ? { background: '#fff3e6', color: '#e07714', borderColor: '#f3d6b3' } : undefined}
                             onClick={() => toggleFavorite(record)}

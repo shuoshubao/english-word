@@ -1,7 +1,7 @@
 // 发音: 统一经 vercel 代理(fetch+blob 播放), 规避第三方域无 CORS 头与媒体 Range 请求问题.
 // 单词/释义按设置走有道 dictvoice 或百度 gettts; 例句优先走百度智能云正式 TTS, 未配置时回退 gettts
-import { getVoiceSource } from './settings';
 import { hasTtsConfig, readTtsInfo, synthesize } from './baidu-tts';
+import { getVoiceSource } from './settings';
 
 const PROXY = 'https://truethy.vercel.app/proxy';
 const youdaoUrl = (text, lang) => `${PROXY}/youdao/dictvoice?audio=${encodeURIComponent(text)}&type=2${lang === 'zh' ? '&le=zh' : ''}`;
@@ -76,6 +76,23 @@ const play = (url, onEnd) =>
         },
         onEnd
     );
+
+// 播放已缓存的 objectURL, 复用同一套播放状态管理(供组件级缓存命中时直接播放)
+export const playBuffer = (objectUrl, onEnd) => {
+    stopCurrent();
+    const audio = new Audio(objectUrl);
+    current = audio;
+    const finish = () => {
+        if (current === audio) current = null;
+        if (onEnd) onEnd();
+    };
+    audio.onended = finish;
+    audio.onerror = finish;
+    audio.play().catch(finish);
+};
+
+// 英文句子走百度翻译 gettts(不经正式 TTS), 供配置缺失或合成失败时回退
+export const speakSentenceFallback = (text, onEnd) => play(baiduTtsUrl(text, 'en'), onEnd);
 
 // 按发音来源设置选择有道或百度; lang: 'en' 单词 / 'zh' 中文释义
 const sourceUrl = (text, lang) => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text, lang) : youdaoUrl(text, lang));
