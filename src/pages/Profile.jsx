@@ -1,5 +1,5 @@
-import { DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Select, Statistic, Typography } from 'antd';
+import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
+import { App, Button, Calendar, Card, Form, Input, InputNumber, Select, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import { vocabularyCatalog } from '../data/catalog';
@@ -14,6 +14,24 @@ const PROGRESS_KEYS = ['primary', 'junior', 'senior', 'cet4', 'cet6'];
 vocabularyCatalog.forEach(book => {
     if (book.category && !PROGRESS_KEYS.includes(book.category)) PROGRESS_KEYS.push(book.category);
 });
+
+const BAIDU_PAN_KEY = 'BaiduPanInfo';
+
+const readBaiduPanInfo = () => {
+    try {
+        return JSON.parse(localStorage.getItem(BAIDU_PAN_KEY)) || {};
+    } catch {
+        return {};
+    }
+};
+
+const saveBaiduPanInfo = values => {
+    try {
+        localStorage.setItem(BAIDU_PAN_KEY, JSON.stringify(values));
+    } catch {
+        // 隐私模式下 localStorage 可能不可写, 静默忽略
+    }
+};
 
 const pad = v => String(v).padStart(2, '0');
 const formatDate = date => `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
@@ -35,6 +53,8 @@ export default function Profile() {
     const [monthDate, setMonthDate] = useState(() => new Date(new Date().getFullYear(), new Date().getMonth(), 1));
     const [mode, setMode] = useState('month');
     const [voice, setVoice] = useState(getVoiceSource);
+    const [baiduPanForm] = Form.useForm();
+    const [baiduPanInfo] = useState(readBaiduPanInfo);
 
     const activity = useMemo(() => buildActivity(state), [state]);
     const todayCount = activity[formatDate(new Date())] || 0;
@@ -76,6 +96,20 @@ export default function Profile() {
             }
         });
     };
+
+    const saveBaiduPan = async () => {
+        try {
+            const values = await baiduPanForm.validateFields();
+            saveBaiduPanInfo(values);
+            message.success('百度网盘配置已保存');
+        } catch {
+            message.error('请检查表单');
+        }
+    };
+
+    // TODO: 服务端功能完成后替换这两个占位处理
+    const syncFromCloud = () => message.info('同步到本地: 服务端功能待实现');
+    const backupToCloud = () => message.info('备份到云端: 服务端功能待实现');
 
     return (
         <div className="max-w-250 mx-auto">
@@ -169,6 +203,41 @@ export default function Profile() {
                         清除数据
                     </Button>
                 </div>
+            </Card>
+
+            <Card
+                className="mt-4!"
+                title="百度网盘"
+                extra={
+                    <div className="flex gap-2">
+                        <Button size="small" icon={<CloudDownloadOutlined />} onClick={syncFromCloud}>
+                            同步到本地
+                        </Button>
+                        <Button size="small" icon={<CloudUploadOutlined />} onClick={backupToCloud}>
+                            备份到云端
+                        </Button>
+                    </div>
+                }
+            >
+                <Form form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo}>
+                    <Form.Item name="appId" label="AppID">
+                        <InputNumber style={{ width: '100%' }} min={0} precision={0} placeholder="应用 AppID" />
+                    </Form.Item>
+                    <Form.Item name="appKey" label="AppKey">
+                        <Input placeholder="应用 AppKey" />
+                    </Form.Item>
+                    <Form.Item name="secretKey" label="SecretKey">
+                        <Input.Password placeholder="应用 SecretKey" />
+                    </Form.Item>
+                    <Form.Item name="signKey" label="SignKey">
+                        <Input.Password placeholder="应用 SignKey" />
+                    </Form.Item>
+                    <Form.Item>
+                        <Button type="primary" onClick={saveBaiduPan}>
+                            保存
+                        </Button>
+                    </Form.Item>
+                </Form>
             </Card>
         </div>
     );
