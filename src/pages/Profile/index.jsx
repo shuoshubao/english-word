@@ -114,15 +114,9 @@ export default function Profile() {
         });
     };
 
-    const saveBaiduPan = async () => {
-        try {
-            const values = await baiduPanForm.validateFields();
-            saveBaiduPanInfo(values);
-            setBaiduPanInfo(values);
-            message.success('百度网盘配置已保存');
-        } catch {
-            message.error('请检查表单');
-        }
+    const handlePanValuesChange = (changed, allValues) => {
+        saveBaiduPanInfo(allValues);
+        setBaiduPanInfo(allValues);
     };
 
     const openOobAuth = () => {
@@ -333,7 +327,7 @@ export default function Profile() {
                     </Space>
                 }
             >
-                <Form form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo}>
+                <Form form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo} onValuesChange={handlePanValuesChange}>
                     <Form.Item name="appId" label="AppID" rules={[{ required: true, message: '请输入 AppID' }]}>
                         <InputNumber style={{ width: '100%' }} min={0} precision={0} placeholder="应用 AppID" />
                     </Form.Item>
@@ -345,11 +339,6 @@ export default function Profile() {
                     </Form.Item>
                     <Form.Item name="signKey" label="SignKey" rules={[{ required: true, whitespace: true, message: '请输入 SignKey' }]}>
                         <Input.Password placeholder="应用 SignKey" />
-                    </Form.Item>
-                    <Form.Item>
-                        <Button type="primary" onClick={saveBaiduPan}>
-                            保存
-                        </Button>
                     </Form.Item>
                 </Form>
 

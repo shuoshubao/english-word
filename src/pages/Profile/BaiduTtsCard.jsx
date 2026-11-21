@@ -1,6 +1,6 @@
 import { readTtsInfo } from '@/utils/baidu-tts';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Card, Form, Input, Select, Space, Tooltip } from 'antd';
+import { Card, Form, Input, Select, Space, Tooltip } from 'antd';
 import { useState } from 'react';
 
 const TTS_INFO_KEY = 'BaiduTtsInfo';
@@ -96,23 +96,21 @@ const saveTtsInfo = info => {
 };
 
 export default function BaiduTtsCard({ onSaved }) {
-    const { message } = App.useApp();
     const [form] = Form.useForm();
     const [ttsInfo, setTtsInfo] = useState(readTtsInfo);
     const initialLibrary = ttsInfo.library || TTS_LIBRARIES[0].value;
     const initialVoice = ttsInfo.voice ?? voicesOf(initialLibrary)[0].value;
     const watchedLibrary = Form.useWatch('library', form) || initialLibrary;
 
-    const saveTts = async () => {
-        try {
-            const values = await form.validateFields();
-            saveTtsInfo(values);
-            setTtsInfo(values);
-            if (onSaved) onSaved();
-            message.success('百度语音合成配置已保存');
-        } catch {
-            message.error('请检查表单');
+    const handleValuesChange = (changed, allValues) => {
+        let next = allValues;
+        if (changed.library) {
+            next = { ...allValues, voice: voicesOf(changed.library)[0].value };
+            form.setFieldsValue({ voice: next.voice });
         }
+        saveTtsInfo(next);
+        setTtsInfo(next);
+        if (onSaved) onSaved();
     };
 
     return (
@@ -147,6 +145,7 @@ export default function BaiduTtsCard({ onSaved }) {
                 layout="vertical"
                 autoComplete="off"
                 initialValues={{ ...ttsInfo, library: initialLibrary, voice: initialVoice, speed: speedOf(ttsInfo.speed) }}
+                onValuesChange={handleValuesChange}
             >
                 <Form.Item name="apiKey" label="API Key" rules={[{ required: true, whitespace: true, message: '请输入 API Key' }]}>
                     <Input placeholder="百度智能云 API Key" />
@@ -166,10 +165,7 @@ export default function BaiduTtsCard({ onSaved }) {
                             </Space>
                         }
                     >
-                        <Select
-                            options={TTS_LIBRARIES.map(({ value, label }) => ({ value, label }))}
-                            onChange={value => form.setFieldsValue({ voice: voicesOf(value)[0].value })}
-                        />
+                        <Select options={TTS_LIBRARIES.map(({ value, label }) => ({ value, label }))} />
                     </Form.Item>
                     <Form.Item name="voice" label="音色">
                         <Select options={voicesOf(watchedLibrary)} />
@@ -178,11 +174,6 @@ export default function BaiduTtsCard({ onSaved }) {
                         <Select options={TTS_SPEEDS} />
                     </Form.Item>
                 </div>
-                <Form.Item>
-                    <Button type="primary" onClick={saveTts}>
-                        保存
-                    </Button>
-                </Form.Item>
             </Form>
         </Card>
     );

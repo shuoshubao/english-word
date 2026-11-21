@@ -1,6 +1,6 @@
 import { DEFAULT_VOICE, DOUBAO_INFO_KEY, readDoubaoInfo } from '@/utils/doubao-tts';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Card, Form, Input, Select, Space, Tooltip } from 'antd';
+import { Card, Form, Input, Select, Space, Tooltip } from 'antd';
 import { useState } from 'react';
 
 // 语音合成大模型 2.0 音色
@@ -27,25 +27,18 @@ const saveInfo = info => {
 };
 
 export default function DoubaoTtsCard({ onSaved }) {
-    const { message } = App.useApp();
     const [form] = Form.useForm();
     const [info, setInfo] = useState(readDoubaoInfo);
 
-    const save = async () => {
-        try {
-            const values = await form.validateFields();
-            const next = {
-                apiKey: values.apiKey.trim(),
-                voice: values.voice,
-                speed: values.speed
-            };
-            saveInfo(next);
-            setInfo(next);
-            if (onSaved) onSaved();
-            message.success('豆包语音合成配置已保存');
-        } catch {
-            message.error('请检查表单');
-        }
+    const handleValuesChange = (changed, allValues) => {
+        const next = {
+            apiKey: typeof allValues.apiKey === 'string' ? allValues.apiKey.trim() : allValues.apiKey,
+            voice: allValues.voice,
+            speed: allValues.speed
+        };
+        saveInfo(next);
+        setInfo(next);
+        if (onSaved) onSaved();
     };
 
     return (
@@ -75,7 +68,13 @@ export default function DoubaoTtsCard({ onSaved }) {
                 </Space>
             }
         >
-            <Form form={form} layout="vertical" autoComplete="off" initialValues={{ voice: DEFAULT_VOICE, speed: 0, ...info }}>
+            <Form
+                form={form}
+                layout="vertical"
+                autoComplete="off"
+                initialValues={{ voice: DEFAULT_VOICE, speed: 0, ...info }}
+                onValuesChange={handleValuesChange}
+            >
                 <Form.Item name="apiKey" label="API Key" rules={[{ required: true, whitespace: true, message: '请输入 API Key' }]}>
                     <Input.Password placeholder="火山引擎 API Key" />
                 </Form.Item>
@@ -87,11 +86,6 @@ export default function DoubaoTtsCard({ onSaved }) {
                         <Select options={SPEEDS} />
                     </Form.Item>
                 </div>
-                <Form.Item>
-                    <Button type="primary" onClick={save}>
-                        保存
-                    </Button>
-                </Form.Item>
             </Form>
         </Card>
     );
