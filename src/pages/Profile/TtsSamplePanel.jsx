@@ -43,7 +43,7 @@ export default function TtsSamplePanel({ source, version }) {
         <div className="border-t border-[#eee] pt-4 mt-4">
             <div className="flex items-center gap-1.5 mb-3">
                 <Text type="secondary" className="text-xs">
-                    {hasConfig ? '点击句子右侧图标测试发音效果' : '未配置凭证时无法发音'}
+                    {hasConfig ? '测试以下例句的发音' : '未配置凭证时无法发音'}
                 </Text>
                 <Tooltip title="换一批">
                     <ReloadOutlined className="text-sm text-[#98a2b3] cursor-pointer hover:text-[#6652d1]" onClick={nextBatch} />

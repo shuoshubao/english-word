@@ -1,10 +1,10 @@
-import { Card, Progress, Segmented, Typography } from 'antd';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { stages, vocabularyCatalog } from '@/data/catalog';
 import { hasRecord } from '@/utils/records';
 import { useLearningState } from '@/utils/useStore';
 import { ensureStages, getBookWords } from '@/utils/words';
+import { Card, Progress, Segmented, Typography } from 'antd';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const { Text } = Typography;
 
@@ -69,7 +69,7 @@ export default function Library() {
                         title={book.title}
                         extra={<span className="text-xs text-[#333]">共 {book.total} 词</span>}
                     >
-                        <Progress percent={book.percent} strokeColor="#6652d1" trailColor="#ece9f8" size="small" />
+                        <Progress percent={book.percent} strokeColor="#6652d1" trailColor="#ece9f8" />
                         <div className="flex justify-between mt-2 text-center">
                             <div className="flex flex-col">
                                 <Text type="success" className="font-semibold">

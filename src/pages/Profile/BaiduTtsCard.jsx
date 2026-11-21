@@ -1,7 +1,7 @@
+import { readTtsInfo } from '@/utils/baidu-tts';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { App, Button, Card, Form, Input, Select, Tooltip } from 'antd';
 import { useState } from 'react';
-import { readTtsInfo } from '@/utils/baidu-tts';
 
 const TTS_INFO_KEY = 'BaiduTtsInfo';
 // per 参数即音色编号; 音库档次越高越自然, 臻品/大模型需在百度控制台开通
@@ -153,7 +153,7 @@ export default function BaiduTtsCard({ onSaved }) {
                 <Form.Item name="secretKey" label="Secret Key" rules={[{ required: true, whitespace: true, message: '请输入 Secret Key' }]}>
                     <Input.Password placeholder="百度智能云 Secret Key" />
                 </Form.Item>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-3 gap-3">
                     <Form.Item
                         name="library"
                         label={

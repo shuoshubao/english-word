@@ -1,9 +1,9 @@
+import MonacoJsonViewer from '@/pages/Profile/MonacoJsonViewer';
+import { listAllFiles, readFileText } from '@/utils/baidu-pan';
 import { FileOutlined } from '@ant-design/icons';
 import { App, Button, Card, Empty, Skeleton, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
 import { Tree } from 'react-arborist';
-import { listAllFiles, readFileText } from '@/utils/baidu-pan';
-import MonacoJsonViewer from '@/pages/Profile/MonacoJsonViewer';
 
 const { Text } = Typography;
 const BAIDU_PAN_KEY = 'BaiduPanInfo';
@@ -85,10 +85,9 @@ export default function BaiduPanDebug() {
         <Card title="百度网盘调试">
             <div className="flex flex-col gap-4">
                 <Card
-                    size="small"
                     title="获取所有文件"
                     extra={
-                        <Button size="small" loading={busy === 'files'} onClick={pullAllFiles}>
+                        <Button loading={busy === 'files'} onClick={pullAllFiles}>
                             拉取
                         </Button>
                     }
