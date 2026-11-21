@@ -3,12 +3,12 @@ const STORAGE_KEY = 'EnglishWord:settings';
 
 // 发音来源可选项
 export const VOICE_SOURCES = [
-    { id: 'youdao', name: '网易有道', desc: '网易有道发音' },
-    { id: 'baidu', name: '百度翻译', desc: '百度发音' }
+    { id: 'baidu', name: '百度翻译', desc: '百度发音' },
+    { id: 'youdao', name: '网易有道', desc: '网易有道发音' }
 ];
 
 const DEFAULTS = {
-    voiceSource: 'youdao'
+    voiceSource: 'baidu'
 };
 
 let settings = null;
