@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 import BaiduPanDebug from './BaiduPanDebug';
 import BaiduTtsCard from './BaiduTtsCard';
+import DoubaoTtsCard from './DoubaoTtsCard';
 import { vocabularyCatalog } from '../../data/catalog';
 import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../../utils/settings';
@@ -272,6 +273,8 @@ export default function Profile() {
             </Card>
 
             <BaiduTtsCard />
+
+            <DoubaoTtsCard />
 
             <Card
                 title={

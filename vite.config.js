@@ -62,6 +62,11 @@ export default defineConfig({
                 target: 'https://tsn.baidu.com',
                 changeOrigin: true,
                 rewrite: path => path.replace(/^\/baidu-tts/, '')
+            },
+            '/doubao-tts': {
+                target: 'https://openspeech.bytedance.com',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/doubao-tts/, '')
             }
         }
     },
