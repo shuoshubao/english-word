@@ -5,7 +5,7 @@ import { getVoiceSource } from './settings';
 
 const PROXY = 'https://truethy.vercel.app/proxy';
 const youdaoUrl = text => `${PROXY}/youdao/dictvoice?audio=${encodeURIComponent(text)}&type=2`;
-const baiduTtsUrl = text => `${PROXY}/fanyi/gettts?lan=en&text=${encodeURIComponent(text)}&spd=5&source=web`;
+const baiduTtsUrl = text => `${PROXY}/fanyi/gettts?lan=uk&text=${encodeURIComponent(text)}&spd=3&source=web`;
 
 let current = null; // 当前播放中的 Audio
 const blobCache = new Map(); // url -> objectURL(同一 URL 复用, 不重复请求; 会话内保留, 不 revoke)
