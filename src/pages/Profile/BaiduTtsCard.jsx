@@ -1,7 +1,7 @@
 import { QuestionCircleOutlined, ReloadOutlined, SoundOutlined, SoundTwoTone } from '@ant-design/icons';
 import { App, Button, Card, Form, Input, Select, Tooltip, Typography } from 'antd';
 import { useRef, useState } from 'react';
-import { playBuffer, speakSentenceFallback } from '../../utils/audio';
+import { playBuffer } from '../../utils/audio';
 import { hasTtsConfig, readTtsInfo, synthesize } from '../../utils/baidu-tts';
 
 const { Text } = Typography;
@@ -27,9 +27,24 @@ const saveTtsInfo = info => {
     }
 };
 
-// 已合成音频缓存: key 含 text + 凭证 + 音色语速, 命中不再请求接口
+// 音频缓存: key -> objectURL 的 Promise, 连点复用同一个请求
 const audioCache = new Map();
 const audioKey = (text, info) => `${info?.apiKey || ''}|${info?.secretKey || ''}|${info?.voice || 0}|${info?.speed || 5}|${text}`;
+const getAudio = (text, info) => {
+    const key = audioKey(text, info);
+    let task = audioCache.get(key);
+    if (!task) {
+        task = synthesize(text, info).then(
+            blob => URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' })),
+            error => {
+                audioCache.delete(key);
+                throw error;
+            }
+        );
+        audioCache.set(key, task);
+    }
+    return task;
+};
 
 // TTS 调试句库: 5 批 x 5 句, 每批长短句混排(覆盖标点/数字/破折号), 点「换一批」切换
 const TTS_SAMPLE_GROUPS = [
@@ -102,28 +117,18 @@ export default function BaiduTtsCard() {
     const testTts = async index => {
         const done = () => setPlayingIndex(-1);
         const text = samples[index];
-        // 取表单当前值: 音色/语速/凭证改了没保存, 也按选中的配置发音
+        // 取表单当前值, 使未保存的音色/语速也能即时试听
         const info = form.getFieldsValue();
-        const key = audioKey(text, info);
-        const cached = audioCache.get(key);
-        if (cached) {
-            setPlayingIndex(index);
-            playBuffer(cached, done);
-            return;
-        }
         if (!hasTtsConfig(info)) {
-            setPlayingIndex(index);
-            speakSentenceFallback(text, done);
+            done();
             return;
         }
         setPlayingIndex(index);
         try {
-            const blob = await synthesize(text, info);
-            const objectUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
-            audioCache.set(key, objectUrl);
+            const objectUrl = await getAudio(text, info);
             if (playingRef.current === index) playBuffer(objectUrl, done);
         } catch {
-            if (playingRef.current === index) speakSentenceFallback(text, done);
+            if (playingRef.current === index) done();
         }
     };
 
@@ -178,7 +183,7 @@ export default function BaiduTtsCard() {
             <div className="border-t border-[#eee] pt-4 mt-2">
                 <div className="flex items-center gap-1.5 mb-3">
                     <Text type="secondary" className="text-xs">
-                        {hasTtsConfig(ttsInfo) ? '点击句子右侧图标测试发音效果' : '未配置凭证时, 例句发音将回退到百度翻译'}
+                        {hasTtsConfig(ttsInfo) ? '点击句子右侧图标测试发音效果' : '未配置凭证时无法发音'}
                     </Text>
                     <Tooltip title="换一批">
                         <ReloadOutlined className="text-sm text-[#98a2b3] cursor-pointer hover:text-[#6652d1]" onClick={nextBatch} />

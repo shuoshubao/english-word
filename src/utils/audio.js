@@ -1,5 +1,5 @@
 // 发音: 统一经 vercel 代理(fetch+blob 播放), 规避第三方域无 CORS 头与媒体 Range 请求问题.
-// 单词按设置走有道 dictvoice 或百度 gettts; 例句优先走百度智能云正式 TTS, 未配置时回退 gettts
+// 单词按设置走有道 dictvoice 或百度 gettts; 例句走百度智能云 TTS
 import { hasTtsConfig, readTtsInfo, synthesize } from './baidu-tts';
 import { getVoiceSource } from './settings';
 
@@ -22,8 +22,8 @@ const stopCurrent = () => {
     }
 };
 
-// 统一播放: key 命中缓存直接播; load() 负责产出音频 blob; onFail 在加载失败时调用(用于 TTS 回退)
-const playByKey = async (key, load, onEnd, onFail) => {
+// 统一播放: key 命中缓存直接播; load() 负责产出音频 blob
+const playByKey = async (key, load, onEnd) => {
     try {
         stopCurrent();
         let objectUrl = blobCache.get(key);
@@ -38,11 +38,7 @@ const playByKey = async (key, load, onEnd, onFail) => {
             } catch (error) {
                 inflight.delete(key);
                 console.warn('音频加载失败', error);
-                if (onFail) {
-                    onFail();
-                } else if (onEnd) {
-                    onEnd();
-                }
+                if (onEnd) onEnd();
                 return;
             }
             objectUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
@@ -91,9 +87,6 @@ export const playBuffer = (objectUrl, onEnd) => {
     audio.play().catch(finish);
 };
 
-// 英文句子走百度翻译 gettts(不经正式 TTS), 供配置缺失或合成失败时回退
-export const speakSentenceFallback = (text, onEnd) => play(baiduTtsUrl(text), onEnd);
-
 // 按发音来源设置选择有道或百度
 const sourceUrl = text => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text) : youdaoUrl(text));
 
@@ -106,22 +99,18 @@ export const speak = (word, onEnd) => {
     play(sourceUrl(word), onEnd);
 };
 
-// 例句朗读: 配置了百度智能云 TTS 则走正式接口, 否则回退百度翻译 gettts(有道整句会 500)
-export const speakSentence = (text, onEnd, overrideInfo) => {
+// 英文句子(例句/调试句)朗读: 走百度智能云 TTS
+// 缓存由 playByKey 统一处理, key 含凭证+音色+语速+文本, 命中不再请求接口.
+export const speakSentence = (text, onEnd, infoOverride) => {
     if (!text) {
         if (onEnd) onEnd();
         return;
     }
-    const info = overrideInfo || readTtsInfo();
+    const info = infoOverride || readTtsInfo();
     if (!hasTtsConfig(info)) {
-        play(baiduTtsUrl(text), onEnd);
+        if (onEnd) onEnd();
         return;
     }
-    const key = `tts-${info.voice || 0}-${info.speed || 5}-${text}`;
-    playByKey(
-        key,
-        () => synthesize(text, info),
-        onEnd,
-        () => play(baiduTtsUrl(text), onEnd) // 正式 TTS 失败时回退 gettts
-    );
+    const key = `tts-${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed || 5}|${text}`;
+    playByKey(key, () => synthesize(text, info), onEnd);
 };
