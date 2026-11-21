@@ -1,10 +1,10 @@
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Form, Input, InputNumber, Select, Statistic, Typography } from 'antd';
+import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import BaiduPanDebug from '../components/BaiduPanDebug';
 import { vocabularyCatalog } from '../data/catalog';
-import { downloadBackup, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
+import { downloadBackup, exchangeCode, isLocal, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
 import { merge, reset } from '../utils/state';
 import { toFlatProgress, toNestedProgress } from '../utils/storage';
@@ -56,8 +56,11 @@ export default function Profile() {
     const [mode, setMode] = useState('month');
     const [voice, setVoice] = useState(getVoiceSource);
     const [baiduPanForm] = Form.useForm();
-    const [baiduPanInfo] = useState(readBaiduPanInfo);
+    const [baiduPanInfo, setBaiduPanInfo] = useState(readBaiduPanInfo);
     const [baiduBusy, setBaiduBusy] = useState('');
+    const [authModalOpen, setAuthModalOpen] = useState(false);
+    const [authCode, setAuthCode] = useState('');
+    const [authBusy, setAuthBusy] = useState(false);
 
     const activity = useMemo(() => buildActivity(state), [state]);
     const todayCount = activity[formatDate(new Date())] || 0;
@@ -104,6 +107,7 @@ export default function Profile() {
         try {
             const values = await baiduPanForm.validateFields();
             saveBaiduPanInfo(values);
+            setBaiduPanInfo(values);
             message.success('百度网盘配置已保存');
         } catch {
             message.error('请检查表单');
@@ -113,8 +117,25 @@ export default function Profile() {
     const openAuth = () => {
         try {
             startAuth(baiduPanInfo);
+            if (isLocal) {
+                setAuthCode('');
+                setAuthModalOpen(true);
+            }
         } catch (error) {
             message.error(error.message);
+        }
+    };
+
+    const submitAuthCode = async () => {
+        setAuthBusy(true);
+        try {
+            await exchangeCode(baiduPanInfo, authCode);
+            setAuthModalOpen(false);
+            message.success('百度网盘已授权');
+        } catch (error) {
+            message.error(`授权失败: ${error.message}`);
+        } finally {
+            setAuthBusy(false);
         }
     };
 
@@ -274,12 +295,31 @@ export default function Profile() {
 
                 <div className="border-t border-[#eee] pt-4 mt-2">
                     <Text type="secondary" className="text-xs block">
-                        首次使用点 [授权] 跳转到百度登录并同意, 完成后自动返回本页
+                        首次使用点 [授权] 按提示完成百度登录并同意
                     </Text>
                 </div>
             </Card>
 
             <BaiduPanDebug />
+
+            <Modal
+                title="百度网盘授权"
+                open={authModalOpen}
+                onCancel={() => setAuthModalOpen(false)}
+                footer={
+                    <div className="flex justify-end gap-2">
+                        <Button onClick={() => setAuthModalOpen(false)}>取消</Button>
+                        <Button type="primary" loading={authBusy} onClick={submitAuthCode}>
+                            完成授权
+                        </Button>
+                    </div>
+                }
+            >
+                <Text type="secondary" className="text-xs block mb-2">
+                    在新窗口登录百度并同意授权, 复制页面显示的授权码粘贴到下方.
+                </Text>
+                <Input value={authCode} onChange={e => setAuthCode(e.target.value)} placeholder="粘贴百度授权码" />
+            </Modal>
         </div>
     );
 }

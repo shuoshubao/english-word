@@ -13,7 +13,8 @@ const UPLOAD = `${apiBase('upload')}/rest/2.0/pcs`;
 const DL = isLocal ? '/baidu-dl' : `${VERCEL_PROXY}/dl`;
 const APP_DIR = '/apps/EnglishWord';
 const DIR = `${APP_DIR}/progress`;
-// 统一用标准授权码回调(redirect_uri=页面地址), 本地和线上流程一致
+// 百度官方不允许本地地址做授权回调, 本地只能用 oob 手动复制授权码; 线上用标准回调
+const OOB_REDIRECT = 'oob';
 const STATE_KEY = 'BaiduPanOAuthState';
 const TOKEN_KEY = 'BaiduPanToken';
 // 与百度控制台「授权回调页」一致: origin + pathname, 不含 hash/query
@@ -150,20 +151,40 @@ const readInfo = () => {
     }
 };
 
-// 打开授权页: 标准授权码回调, 同窗口跳转, 带 state
+// 打开授权页: 本地 oob(新窗口显示授权码), 线上标准回调(同窗口跳转, 带 state)
 export const startAuth = info => {
     if (!info?.appKey) throw new Error('请先保存 AppKey');
-    const state = Math.random().toString(36).slice(2);
-    sessionStorage.setItem(STATE_KEY, state);
     const params = {
         response_type: 'code',
         client_id: info.appKey,
         scope: 'basic,netdisk',
-        display: 'page',
-        redirect_uri: REDIRECT_URI(),
-        state
+        display: 'page'
     };
+    if (isLocal) {
+        params.redirect_uri = OOB_REDIRECT;
+        window.open(`${AUTHORIZE_URL}?${new URLSearchParams(params)}`, '_blank');
+        return;
+    }
+    const state = Math.random().toString(36).slice(2);
+    sessionStorage.setItem(STATE_KEY, state);
+    params.redirect_uri = REDIRECT_URI();
+    params.state = state;
     window.location.href = `${AUTHORIZE_URL}?${new URLSearchParams(params)}`;
+};
+
+// 本地: 用 oob 授权码换取 token
+export const exchangeCode = async (info, code) => {
+    if (!info?.appKey || !info?.secretKey) throw new Error('请先保存 AppKey 和 SecretKey');
+    const clean = (code || '').trim();
+    if (!clean) throw new Error('请粘贴授权码');
+    const data = await postForm(`${OAUTH}/token`, {
+        grant_type: 'authorization_code',
+        code: clean,
+        client_id: info.appKey,
+        client_secret: info.secretKey,
+        redirect_uri: OOB_REDIRECT
+    });
+    writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
 };
 
 // 检测回调 code, 校验 state 后换取 token; 返回是否处理了回调
