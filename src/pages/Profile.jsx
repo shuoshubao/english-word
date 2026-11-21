@@ -2,6 +2,7 @@ import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutli
 import { App, Button, Calendar, Card, Form, Input, InputNumber, Select, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
+import BaiduPanDebug from '../components/BaiduPanDebug';
 import { vocabularyCatalog } from '../data/catalog';
 import { downloadBackup, exchangeCode, isLocal, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
@@ -172,7 +173,7 @@ export default function Profile() {
     return (
         <div className="max-w-250 mx-auto">
             <Card className="text-center" title="今日学习">
-                <Statistic value={todayCount} valueStyle={{ color: '#6652d1' }} />
+                <Statistic value={todayCount} styles={{ content: { color: '#6652d1' } }} />
             </Card>
 
             <div className="grid grid-cols-3 gap-3 mt-3">
@@ -323,6 +324,8 @@ export default function Profile() {
                     )}
                 </div>
             </Card>
+
+            <BaiduPanDebug />
         </div>
     );
 }

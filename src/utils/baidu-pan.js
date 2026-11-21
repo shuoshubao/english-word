@@ -1,5 +1,5 @@
 // 百度网盘同步: 本地走 Vite 代理, 线上走 Vercel 转发
-// 目录: /apps/EnglishWord, 备份文件: <毫秒时间戳>.json
+// 应用根目录 /apps/EnglishWord, 备份存其下 progress/, 文件名: <毫秒时间戳>.json
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
 export const isLocal = window.location.hostname === 'localhost';
 // 本地前缀对应 vite.config.js 的 proxy, 线上 target 对应 Vercel proxy/config.js
@@ -9,7 +9,10 @@ const apiBase = key => (isLocal ? API_PREFIX[key] : `${VERCEL_PROXY}/${API_TARGE
 const NETDISK = `${apiBase('pan')}/rest/2.0/xpan`;
 const OAUTH = `${apiBase('open')}/oauth/2.0`;
 const UPLOAD = `${apiBase('upload')}/rest/2.0/pcs`;
-const DIR = '/apps/EnglishWord';
+// dlink 会 302 到 CDN 域名(无 CORS 头), 交给服务端代理跟随重定向后再返回
+const DL = isLocal ? '/baidu-dl' : `${VERCEL_PROXY}/dl`;
+const APP_DIR = '/apps/EnglishWord';
+const DIR = `${APP_DIR}/progress`;
 // 本地用 oob(授权后百度页面显示授权码, 手动粘贴), 线上用标准回调(redirect_uri=页面地址)
 const OOB_REDIRECT = 'oob';
 const STATE_KEY = 'BaiduPanOAuthState';
@@ -249,13 +252,56 @@ export const listBackups = async info => {
     return (data.list || []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
 };
 
-const proxyDlink = dlink => {
-    const url = new URL(dlink);
-    const base = url.hostname.endsWith('d.pcs.baidu.com') ? apiBase('upload') : apiBase('pan');
-    return base + url.pathname + url.search;
+// 递归拉取应用目录下的所有文件夹和文件, 构建树形结构(只保留 json 文件)
+export const listAllFiles = async info => {
+    const token = await validToken(info);
+    const walk = async dir => {
+        const items = [];
+        let start = 0;
+        for (;;) {
+            const params = new URLSearchParams({
+                method: 'list',
+                dir,
+                order: 'name',
+                limit: '1000',
+                start: String(start),
+                access_token: token
+            });
+            const data = await getJson(`${NETDISK}/file?${params}`);
+            const list = data.list || [];
+            items.push(...list);
+            if (list.length < 1000) break;
+            start += list.length;
+        }
+        const nodes = [];
+        for (const item of items) {
+            if (item.isdir) {
+                nodes.push({
+                    id: String(item.fs_id),
+                    name: item.server_filename,
+                    isDir: true,
+                    children: await walk(item.path)
+                });
+            } else if (/\.json$/i.test(item.server_filename)) {
+                nodes.push({
+                    id: String(item.fs_id),
+                    name: item.server_filename,
+                    isDir: false,
+                    fsId: item.fs_id,
+                    size: item.size,
+                    mtime: item.mtime
+                });
+            }
+        }
+        return nodes;
+    };
+    return walk(APP_DIR);
 };
 
-export const downloadBackup = async (info, fsId) => {
+// 把带签名的 dlink 交给服务端代理 fetch(自动跟随 302 且无 CORS 限制)
+const proxyDlink = dlink => `${DL}?url=${encodeURIComponent(dlink)}`;
+
+const downloadFile = async (info, fsId) => {
     const token = await validToken(info);
     const params = new URLSearchParams({
         method: 'filemetas',
@@ -266,16 +312,33 @@ export const downloadBackup = async (info, fsId) => {
     const meta = await getJson(`${NETDISK}/multimedia?${params}`);
     const dlink = meta.list?.[0]?.dlink;
     if (!dlink) throw new Error('获取下载地址失败');
+    // dlink 鉴权仍需要 access_token, 缺了会 403 error_code 31045
     const withToken = dlink + (dlink.includes('?') ? '&' : '?') + `access_token=${token}`;
     const response = await fetch(proxyDlink(withToken));
     if (!response.ok) throw new Error(`下载失败 (${response.status})`);
-    return response.json();
+    return response.text();
+};
+
+export const downloadBackup = async (info, fsId) => JSON.parse(await downloadFile(info, fsId));
+
+// 调试用: 读取文件原始文本
+export const readFileText = (info, fsId) => downloadFile(info, fsId);
+
+// 百度接口不会自动创建父目录, 先确保 progress 目录存在
+const ensureDir = async (token, dir) => {
+    const parent = dir.slice(0, dir.lastIndexOf('/')) || '/';
+    const name = dir.slice(dir.lastIndexOf('/') + 1);
+    const params = new URLSearchParams({ method: 'list', dir: parent, access_token: token });
+    const data = await getJson(`${NETDISK}/file?${params}`);
+    if ((data.list || []).some(f => f.isdir && f.server_filename === name)) return;
+    await postCreate(`${NETDISK}/file`, { method: 'create', access_token: token, path: dir, isdir: 1, rtype: 0 });
 };
 
 export const uploadBackup = async (info, content) => {
     const token = await validToken(info);
     const bytes = new TextEncoder().encode(content);
     const hash = md5(bytes);
+    await ensureDir(token, DIR);
     const path = `${DIR}/${Date.now()}.json`;
     const pre = await postQuery(`${NETDISK}/file`, {
         method: 'precreate',
