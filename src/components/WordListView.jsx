@@ -266,7 +266,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                 const unknown = hasRecord(state.unknown, record.id);
                 const favorite = hasRecord(state.favorites, record.id);
                 return (
-                    <Space size={6}>
+                    <Space>
                         <Button
                             icon={known ? <LikeFilled /> : <LikeOutlined />}
                             style={known ? { background: '#e6f7ef', color: '#18a058', borderColor: '#b7e8cf' } : undefined}

@@ -1,6 +1,6 @@
 import { DEFAULT_VOICE, DOUBAO_INFO_KEY, readDoubaoInfo } from '@/utils/doubao-tts';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Card, Form, Input, Select, Tooltip } from 'antd';
+import { App, Button, Card, Form, Input, Select, Space, Tooltip } from 'antd';
 import { useState } from 'react';
 
 // 语音合成大模型 2.0 音色
@@ -50,9 +50,10 @@ export default function DoubaoTtsCard({ onSaved }) {
 
     return (
         <Card
+            size="small"
             title={
-                <span className="flex items-center gap-1.5">
-                    豆包语音合成
+                <Space>
+                    <span>豆包语音合成</span>
                     <Tooltip
                         title={
                             <>
@@ -71,7 +72,7 @@ export default function DoubaoTtsCard({ onSaved }) {
                     >
                         <QuestionCircleOutlined className="text-[#98a2b3] text-xs cursor-help" />
                     </Tooltip>
-                </span>
+                </Space>
             }
         >
             <Form form={form} layout="vertical" autoComplete="off" initialValues={{ voice: DEFAULT_VOICE, speed: 0, ...info }}>

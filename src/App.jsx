@@ -1,8 +1,3 @@
-import { AppstoreOutlined, BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
-import { App as AntApp, Button, Layout, Menu, Tooltip, Typography } from 'antd';
-import { useEffect } from 'react';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { finishAuth } from '@/utils/baidu-pan';
 import { vocabularyCatalog } from '@/data/catalog';
 import Book from '@/pages/Book';
 import Collection from '@/pages/Collection';
@@ -14,6 +9,11 @@ import Profile from '@/pages/Profile';
 import Roots from '@/pages/Roots';
 import Topic from '@/pages/Topic';
 import Topics from '@/pages/Topics';
+import { finishAuth } from '@/utils/baidu-pan';
+import { AppstoreOutlined, BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
+import { App as AntApp, Button, Divider, Layout, Menu, Space, Tooltip, Typography } from 'antd';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -113,14 +113,17 @@ export default function App() {
 
             <Content className="w-full mx-auto p-6" style={{ background: '#fff' }}>
                 {!isTab ? (
-                    <div className="flex items-center gap-4 mb-5">
-                        <Tooltip title="返回">
-                            <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
-                        </Tooltip>
-                        <Title level={4} style={{ margin: 0 }}>
-                            {title}
-                        </Title>
-                    </div>
+                    <>
+                        <Space>
+                            <Tooltip title="返回">
+                                <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
+                            </Tooltip>
+                            <Title level={4} style={{ margin: 0 }}>
+                                {title}
+                            </Title>
+                        </Space>
+                        <Divider size="small" />
+                    </>
                 ) : null}
 
                 <Routes>

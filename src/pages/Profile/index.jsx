@@ -10,7 +10,7 @@ import { merge, reset } from '@/utils/state';
 import { toFlatProgress, toNestedProgress } from '@/utils/storage';
 import { useLearningState } from '@/utils/useStore';
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined, QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Divider, Form, Input, InputNumber, Modal, Segmented, Select, Statistic, Tooltip, Typography } from 'antd';
+import { App, Button, Calendar, Card, Divider, Form, Input, InputNumber, Modal, Segmented, Select, Space, Statistic, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -300,7 +300,7 @@ export default function Profile() {
 
             <Card
                 title={
-                    <span className="flex items-center gap-1.5">
+                    <Space>
                         百度网盘
                         <Tooltip
                             title={
@@ -320,17 +320,17 @@ export default function Profile() {
                         >
                             <QuestionCircleOutlined className="text-[#98a2b3] text-xs cursor-help" />
                         </Tooltip>
-                    </span>
+                    </Space>
                 }
                 extra={
-                    <div className="flex gap-2">
+                    <Space>
                         <Button icon={<CloudDownloadOutlined />} loading={baiduBusy === 'sync'} onClick={syncFromCloud}>
                             同步到本地
                         </Button>
                         <Button icon={<CloudUploadOutlined />} loading={baiduBusy === 'backup'} onClick={backupToCloud}>
                             备份到云端
                         </Button>
-                    </div>
+                    </Space>
                 }
             >
                 <Form form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo}>
@@ -354,7 +354,7 @@ export default function Profile() {
                 </Form>
 
                 <div className="border-t border-[#eee] pt-4 mt-2 flex flex-col gap-3">
-                    <div className="flex items-center gap-2">
+                    <Space>
                         <Text type="secondary" className="text-xs">
                             授权状态:
                         </Text>
@@ -371,7 +371,7 @@ export default function Profile() {
                                 校验中...
                             </Text>
                         )}
-                    </div>
+                    </Space>
                     <div className="border-t border-[#eee] pt-3">
                         <Text type="secondary" className="text-xs block mb-2">
                             {isLocal ? '' : '方式一: '}点 [获取授权码] 在新窗口登录百度并同意授权, 复制页面显示的授权码, 在弹窗中完成授权

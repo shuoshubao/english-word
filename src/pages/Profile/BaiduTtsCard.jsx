@@ -1,6 +1,6 @@
 import { readTtsInfo } from '@/utils/baidu-tts';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Card, Form, Input, Select, Tooltip } from 'antd';
+import { App, Button, Card, Form, Input, Select, Space, Tooltip } from 'antd';
 import { useState } from 'react';
 
 const TTS_INFO_KEY = 'BaiduTtsInfo';
@@ -117,9 +117,10 @@ export default function BaiduTtsCard({ onSaved }) {
 
     return (
         <Card
+            size="small"
             title={
-                <span className="flex items-center gap-1.5">
-                    百度语音合成
+                <Space>
+                    <span>百度语音合成</span>
                     <Tooltip
                         title={
                             <>
@@ -138,7 +139,7 @@ export default function BaiduTtsCard({ onSaved }) {
                     >
                         <QuestionCircleOutlined className="text-[#98a2b3] text-xs cursor-help" />
                     </Tooltip>
-                </span>
+                </Space>
             }
         >
             <Form
@@ -157,12 +158,12 @@ export default function BaiduTtsCard({ onSaved }) {
                     <Form.Item
                         name="library"
                         label={
-                            <span className="flex items-center gap-1">
+                            <Space>
                                 音库
                                 <Tooltip title="基础/精品开通后可用; 臻品/大模型需在百度控制台申请, 单价更高">
                                     <QuestionCircleOutlined className="text-[#98a2b3] text-xs cursor-help" />
                                 </Tooltip>
-                            </span>
+                            </Space>
                         }
                     >
                         <Select

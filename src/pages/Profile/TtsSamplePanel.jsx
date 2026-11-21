@@ -1,5 +1,5 @@
 import { ReloadOutlined, SoundOutlined, SoundTwoTone } from '@ant-design/icons';
-import { App, Tooltip, Typography } from 'antd';
+import { App, Space, Tooltip, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
 import { speakSentence } from '@/utils/audio';
 import { hasSentenceTtsConfig, readSentenceTtsInfo } from '@/utils/sentence-tts';
@@ -42,14 +42,14 @@ export default function TtsSamplePanel({ source, version }) {
 
     return (
         <div className="border-t border-[#eee] pt-4 mt-4">
-            <div className="flex items-center gap-1.5 mb-3">
+            <Space className="mb-3">
                 <Text type="secondary" className="text-xs">
                     {hasConfig ? '测试以下例句的发音' : '未配置凭证时无法发音'}
                 </Text>
                 <Tooltip title="换一批">
                     <ReloadOutlined className="text-sm text-[#98a2b3] cursor-pointer hover:text-[#6652d1]" onClick={nextBatch} />
                 </Tooltip>
-            </div>
+            </Space>
             <div className="flex flex-col gap-1">
                 {samples.map((sentence, index) => (
                     <div key={sentence} className="flex items-start gap-2 py-1.5">

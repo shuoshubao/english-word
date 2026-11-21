@@ -2,7 +2,7 @@ import { stages, vocabularyCatalog } from '@/data/catalog';
 import { hasRecord } from '@/utils/records';
 import { useLearningState } from '@/utils/useStore';
 import { ensureStages, getBookWords } from '@/utils/words';
-import { Card, Progress, Segmented, Typography } from 'antd';
+import { Card, Divider, Progress, Segmented, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -55,9 +55,9 @@ export default function Library() {
 
     return (
         <div>
-            <div className="mb-5">
-                <Segmented size="large" value={stage} options={stages} onChange={selectStage} />
-            </div>
+            <Segmented size="large" value={stage} options={stages} onChange={selectStage} />
+
+            <Divider size="small" />
 
             <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
                 {books.map(book => (
