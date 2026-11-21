@@ -69,7 +69,7 @@ const getAccessToken = async info => {
 export const synthesize = async (text, info) => {
     const token = await getAccessToken(info);
     const voice = Number(info?.voice) || 0;
-    const speed = Number(info?.speed) || 5;
+    const speed = info?.speed === undefined || info?.speed === null || info?.speed === '' ? 5 : Number(info.speed);
     // tex 走 URLSearchParams 序列化一次 + 传值前手动 encode 一次 = 接口要求的 2 次 urlencode
     // (代理对 form body 会 decode 一次再 encode 一次, 到百度仍是 2 次)
     const body = new URLSearchParams({

@@ -245,15 +245,23 @@ const validToken = async info => {
 };
 
 // 校验当前是否已授权: 确保 token 有效后调 uinfo 让百度确认, 失败返回 false
-export const checkAuthStatus = async info => {
-    try {
-        const accessToken = await validToken(info);
-        const params = new URLSearchParams({ method: 'uinfo', access_token: accessToken });
-        const data = await getJson(`${NETDISK}/nas?${params}`);
-        return Boolean(data?.uk);
-    } catch {
-        return false;
-    }
+// 合并并发调用, 避免 StrictMode 下重复挂载触发两次请求
+let authCheckInFlight = null;
+export const checkAuthStatus = info => {
+    if (authCheckInFlight) return authCheckInFlight;
+    authCheckInFlight = (async () => {
+        try {
+            const accessToken = await validToken(info);
+            const params = new URLSearchParams({ method: 'uinfo', access_token: accessToken });
+            const data = await getJson(`${NETDISK}/nas?${params}`);
+            return Boolean(data?.uk);
+        } catch {
+            return false;
+        } finally {
+            authCheckInFlight = null;
+        }
+    })();
+    return authCheckInFlight;
 };
 
 // ---- files ----
