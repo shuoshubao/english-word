@@ -1,13 +1,15 @@
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined, QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Select, Statistic, Tooltip, Typography } from 'antd';
+import { App, Button, Calendar, Card, Form, Input, InputNumber, Modal, Segmented, Select, Statistic, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 import BaiduPanDebug from './BaiduPanDebug';
 import BaiduTtsCard from './BaiduTtsCard';
 import DoubaoTtsCard from './DoubaoTtsCard';
+import TtsSamplePanel from './TtsSamplePanel';
 import { vocabularyCatalog } from '../../data/catalog';
 import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '../../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../../utils/settings';
+import { getSentenceTtsSource, setSentenceTtsSource } from '../../utils/sentence-tts';
 import { merge, reset } from '../../utils/state';
 import { toFlatProgress, toNestedProgress } from '../../utils/storage';
 import { useLearningState } from '../../utils/useStore';
@@ -64,6 +66,8 @@ export default function Profile() {
     const [authCode, setAuthCode] = useState('');
     const [authLoading, setAuthLoading] = useState(false);
     const [authStatus, setAuthStatus] = useState('');
+    const [ttsSource, setTtsSource] = useState(getSentenceTtsSource);
+    const [ttsVersion, setTtsVersion] = useState(0);
 
     useEffect(() => {
         checkAuthStatus(baiduPanInfo).then(ok => setAuthStatus(ok ? 'ok' : 'fail'));
@@ -272,9 +276,30 @@ export default function Profile() {
                 </div>
             </Card>
 
-            <BaiduTtsCard />
+            <Card title="句子发音">
+                <Segmented
+                    block
+                    value={ttsSource}
+                    options={[
+                        { label: '百度语音合成', value: 'baidu' },
+                        { label: '豆包语音合成', value: 'doubao' }
+                    ]}
+                    onChange={value => {
+                        setSentenceTtsSource(value);
+                        setTtsSource(value);
+                    }}
+                />
+                <Text type="secondary" className="text-xs block mt-2 mb-4">
+                    切换只改变使用的音源, 已保存的配置会保留
+                </Text>
 
-            <DoubaoTtsCard />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <BaiduTtsCard onSaved={() => setTtsVersion(v => v + 1)} />
+                    <DoubaoTtsCard onSaved={() => setTtsVersion(v => v + 1)} />
+                </div>
+
+                <TtsSamplePanel source={ttsSource} version={ttsVersion} />
+            </Card>
 
             <Card
                 title={

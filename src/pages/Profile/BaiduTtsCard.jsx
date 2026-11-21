@@ -1,11 +1,7 @@
-import { QuestionCircleOutlined, ReloadOutlined, SoundOutlined, SoundTwoTone } from '@ant-design/icons';
-import { App, Button, Card, Form, Input, Select, Slider, Tooltip, Typography } from 'antd';
-import { useRef, useState } from 'react';
-import { playBuffer } from '../../utils/audio';
-import { hasTtsConfig, readTtsInfo, synthesize } from '../../utils/baidu-tts';
-import { TTS_SAMPLE_GROUPS } from './tts-samples';
-
-const { Text } = Typography;
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import { App, Button, Card, Form, Input, Select, Tooltip } from 'antd';
+import { useState } from 'react';
+import { readTtsInfo } from '../../utils/baidu-tts';
 
 const TTS_INFO_KEY = 'BaiduTtsInfo';
 // per 参数即音色编号; 音库档次越高越自然, 臻品/大模型需在百度控制台开通
@@ -84,6 +80,13 @@ const TTS_LIBRARIES = [
 ];
 const voicesOf = library => TTS_LIBRARIES.find(item => item.value === library)?.voices || TTS_LIBRARIES[0].voices;
 const speedOf = speed => (speed === undefined || speed === null || speed === '' ? 5 : Number(speed));
+const TTS_SPEEDS = [
+    { value: 0, label: '最慢 (0)' },
+    { value: 3, label: '偏慢 (3)' },
+    { value: 5, label: '正常 (5)' },
+    { value: 8, label: '偏快 (8)' },
+    { value: 15, label: '最快 (15)' }
+];
 const saveTtsInfo = info => {
     try {
         localStorage.setItem(TTS_INFO_KEY, JSON.stringify(info));
@@ -92,75 +95,23 @@ const saveTtsInfo = info => {
     }
 };
 
-// 音频缓存: key -> objectURL 的 Promise, 连点复用同一个请求
-const audioCache = new Map();
-const audioKey = (text, info) => `${info?.apiKey || ''}|${info?.secretKey || ''}|${info?.voice || 0}|${speedOf(info?.speed)}|${text}`;
-const getAudio = (text, info) => {
-    const key = audioKey(text, info);
-    let task = audioCache.get(key);
-    if (!task) {
-        task = synthesize(text, info).then(
-            blob => URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' })),
-            error => {
-                audioCache.delete(key);
-                throw error;
-            }
-        );
-        audioCache.set(key, task);
-    }
-    return task;
-};
-
-export default function BaiduTtsCard() {
+export default function BaiduTtsCard({ onSaved }) {
     const { message } = App.useApp();
     const [form] = Form.useForm();
     const [ttsInfo, setTtsInfo] = useState(readTtsInfo);
     const initialLibrary = ttsInfo.library || TTS_LIBRARIES[0].value;
     const initialVoice = ttsInfo.voice ?? voicesOf(initialLibrary)[0].value;
     const watchedLibrary = Form.useWatch('library', form) || initialLibrary;
-    const watchedSpeed = Form.useWatch('speed', form);
-    const [playing, setPlaying] = useState(-1);
-    const playingRef = useRef(-1);
-    const setPlayingIndex = index => {
-        playingRef.current = index;
-        setPlaying(index);
-    };
-    const [batch, setBatch] = useState(0);
-    const samples = TTS_SAMPLE_GROUPS[batch];
 
     const saveTts = async () => {
         try {
             const values = await form.validateFields();
             saveTtsInfo(values);
             setTtsInfo(values);
+            if (onSaved) onSaved();
             message.success('百度语音合成配置已保存');
         } catch {
             message.error('请检查表单');
-        }
-    };
-
-    const nextBatch = () => {
-        setBatch(current => (current + 1) % TTS_SAMPLE_GROUPS.length);
-        setPlayingIndex(-1);
-    };
-
-    const testTts = async index => {
-        const done = () => setPlayingIndex(-1);
-        const text = samples[index];
-        // 取表单当前值, 使未保存的音色/语速也能即时试听
-        const info = form.getFieldsValue();
-        if (!hasTtsConfig(info)) {
-            done();
-            return;
-        }
-        setPlayingIndex(index);
-        try {
-            const objectUrl = await getAudio(text, info);
-            if (playingRef.current === index) playBuffer(objectUrl, done);
-        } catch (error) {
-            if (playingRef.current !== index) return;
-            done();
-            message.error(`合成失败: ${error.message}`);
         }
     };
 
@@ -222,8 +173,8 @@ export default function BaiduTtsCard() {
                     <Form.Item name="voice" label="音色">
                         <Select options={voicesOf(watchedLibrary)} />
                     </Form.Item>
-                    <Form.Item name="speed" label={`语速 (${speedOf(watchedSpeed)})`} className="col-span-2">
-                        <Slider min={0} max={15} marks={{ 0: '最慢', 5: '正常', 10: '偏快', 15: '最快' }} />
+                    <Form.Item name="speed" label="语速">
+                        <Select options={TTS_SPEEDS} />
                     </Form.Item>
                 </div>
                 <Form.Item>
@@ -232,32 +183,6 @@ export default function BaiduTtsCard() {
                     </Button>
                 </Form.Item>
             </Form>
-
-            <div className="border-t border-[#eee] pt-4 mt-2">
-                <div className="flex items-center gap-1.5 mb-3">
-                    <Text type="secondary" className="text-xs">
-                        {hasTtsConfig(ttsInfo) ? '点击句子右侧图标测试发音效果' : '未配置凭证时无法发音'}
-                    </Text>
-                    <Tooltip title="换一批">
-                        <ReloadOutlined className="text-sm text-[#98a2b3] cursor-pointer hover:text-[#6652d1]" onClick={nextBatch} />
-                    </Tooltip>
-                </div>
-                <div className="flex flex-col gap-1">
-                    {samples.map((sentence, index) => (
-                        <div key={sentence} className="flex items-start gap-2 py-1.5">
-                            <span className="flex-1 text-[13px] leading-relaxed text-[#344054]">{sentence}</span>
-                            {playing === index ? (
-                                <SoundTwoTone className="mt-0.5 text-base cursor-pointer shrink-0" onClick={() => testTts(index)} />
-                            ) : (
-                                <SoundOutlined
-                                    className="mt-0.5 text-base cursor-pointer shrink-0 text-[#98a2b3] hover:text-[#6652d1]"
-                                    onClick={() => testTts(index)}
-                                />
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </div>
         </Card>
     );
 }

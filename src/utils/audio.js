@@ -1,6 +1,6 @@
 // 发音: 统一经 vercel 代理(fetch+blob 播放), 规避第三方域无 CORS 头与媒体 Range 请求问题.
-// 单词按设置走有道 dictvoice 或百度 gettts; 例句走百度智能云 TTS
-import { hasTtsConfig, readTtsInfo, synthesize } from './baidu-tts';
+// 单词按设置走有道 dictvoice 或百度 gettts; 例句按设置走百度智能云或豆包 TTS
+import { getSentenceTtsSource, hasSentenceTtsConfig, readSentenceTtsInfo, synthesizeSentence } from './sentence-tts';
 import { getVoiceSource } from './settings';
 
 const PROXY = 'https://truethy.vercel.app/proxy';
@@ -23,7 +23,7 @@ const stopCurrent = () => {
 };
 
 // 统一播放: key 命中缓存直接播; load() 负责产出音频 blob
-const playByKey = async (key, load, onEnd) => {
+const playByKey = async (key, load, onEnd, onError) => {
     try {
         stopCurrent();
         let objectUrl = blobCache.get(key);
@@ -38,6 +38,7 @@ const playByKey = async (key, load, onEnd) => {
             } catch (error) {
                 inflight.delete(key);
                 console.warn('音频加载失败', error);
+                if (onError) onError(error);
                 if (onEnd) onEnd();
                 return;
             }
@@ -58,6 +59,7 @@ const playByKey = async (key, load, onEnd) => {
         await audio.play();
     } catch (error) {
         console.warn('发音播放失败', error);
+        if (onError) onError(error);
         if (onEnd) onEnd();
     }
 };
@@ -99,18 +101,23 @@ export const speak = (word, onEnd) => {
     play(sourceUrl(word), onEnd);
 };
 
-// 英文句子(例句/调试句)朗读: 走百度智能云 TTS
-// 缓存由 playByKey 统一处理, key 含凭证+音色+语速+文本, 命中不再请求接口.
-export const speakSentence = (text, onEnd, infoOverride) => {
+// 英文句子(例句/调试句)朗读: 按当前音源走百度或豆包, 失败不回退
+// 缓存由 playByKey 统一处理, key 含音源+凭证+音色+语速+文本, 命中不再请求接口.
+export const speakSentence = (text, onEnd, onError, infoOverride) => {
     if (!text) {
         if (onEnd) onEnd();
         return;
     }
-    const info = infoOverride || readTtsInfo();
-    if (!hasTtsConfig(info)) {
+    const source = getSentenceTtsSource();
+    const info = infoOverride || readSentenceTtsInfo(source);
+    if (!hasSentenceTtsConfig(source, info)) {
         if (onEnd) onEnd();
         return;
     }
-    const key = `tts-${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed || 5}|${text}`;
-    playByKey(key, () => synthesize(text, info), onEnd);
+    const credentials =
+        source === 'doubao'
+            ? `${info.apiKey}|${info.voice || ''}|${info.speed ?? 0}`
+            : `${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed ?? 5}`;
+    const key = `tts-${source}-${credentials}-${text}`;
+    playByKey(key, () => synthesizeSentence(text, source, info), onEnd, onError);
 };
