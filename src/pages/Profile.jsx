@@ -3,6 +3,7 @@ import { App, Button, Calendar, Card, Form, Input, InputNumber, Select, Statisti
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 import { vocabularyCatalog } from '../data/catalog';
+import { downloadBackup, exchangeCode, isLocal, listBackups, startAuth, uploadBackup } from '../utils/baidu-pan';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '../utils/settings';
 import { merge, reset } from '../utils/state';
 import { toFlatProgress, toNestedProgress } from '../utils/storage';
@@ -55,6 +56,8 @@ export default function Profile() {
     const [voice, setVoice] = useState(getVoiceSource);
     const [baiduPanForm] = Form.useForm();
     const [baiduPanInfo] = useState(readBaiduPanInfo);
+    const [baiduBusy, setBaiduBusy] = useState('');
+    const [authCode, setAuthCode] = useState('');
 
     const activity = useMemo(() => buildActivity(state), [state]);
     const todayCount = activity[formatDate(new Date())] || 0;
@@ -107,9 +110,64 @@ export default function Profile() {
         }
     };
 
-    // TODO: 服务端功能完成后替换这两个占位处理
-    const syncFromCloud = () => message.info('同步到本地: 服务端功能待实现');
-    const backupToCloud = () => message.info('备份到云端: 服务端功能待实现');
+    const openAuth = () => {
+        try {
+            startAuth(baiduPanInfo);
+        } catch (error) {
+            message.error(error.message);
+        }
+    };
+
+    const submitAuthCode = async () => {
+        try {
+            await exchangeCode(baiduPanInfo, authCode);
+            setAuthCode('');
+            message.success('百度网盘已授权');
+        } catch (error) {
+            message.error(`授权失败: ${error.message}`);
+        }
+    };
+
+    const runBaidu = async (action, key) => {
+        setBaiduBusy(key);
+        try {
+            await action();
+        } catch (error) {
+            if (error.message === 'AUTH_REQUIRED') {
+                message.warning('请先完成百度网盘授权');
+            } else {
+                message.error(`${key === 'sync' ? '同步' : '备份'}失败: ${error.message}`);
+            }
+        } finally {
+            setBaiduBusy('');
+        }
+    };
+
+    const syncFromCloud = () =>
+        runBaidu(async () => {
+            const files = await listBackups(baiduPanInfo);
+            if (!files.length) {
+                message.warning('云端还没有备份文件');
+                return;
+            }
+            const payload = await downloadBackup(baiduPanInfo, files[0].fs_id);
+            const progress = payload?.progress;
+            if (!progress || typeof progress !== 'object') throw new Error('备份文件格式不正确');
+            merge(toFlatProgress(progress));
+            message.success(`已同步 ${files[0].server_filename}`);
+        }, 'sync');
+
+    const backupToCloud = () =>
+        runBaidu(async () => {
+            const content = JSON.stringify({
+                app: '背单词',
+                version: 1,
+                exportedAt: new Date().toISOString(),
+                progress: toNestedProgress(state)
+            });
+            const name = await uploadBackup(baiduPanInfo, content);
+            message.success(`已备份为 ${name}`);
+        }, 'backup');
 
     return (
         <div className="max-w-250 mx-auto">
@@ -210,10 +268,10 @@ export default function Profile() {
                 title="百度网盘"
                 extra={
                     <div className="flex gap-2">
-                        <Button size="small" icon={<CloudDownloadOutlined />} onClick={syncFromCloud}>
+                        <Button size="small" icon={<CloudDownloadOutlined />} loading={baiduBusy === 'sync'} onClick={syncFromCloud}>
                             同步到本地
                         </Button>
-                        <Button size="small" icon={<CloudUploadOutlined />} onClick={backupToCloud}>
+                        <Button size="small" icon={<CloudUploadOutlined />} loading={baiduBusy === 'backup'} onClick={backupToCloud}>
                             备份到云端
                         </Button>
                     </div>
@@ -233,11 +291,37 @@ export default function Profile() {
                         <Input.Password placeholder="应用 SignKey" />
                     </Form.Item>
                     <Form.Item>
-                        <Button type="primary" onClick={saveBaiduPan}>
-                            保存
-                        </Button>
+                        <div className="flex gap-2">
+                            <Button type="primary" onClick={saveBaiduPan}>
+                                保存
+                            </Button>
+                            {!isLocal ? <Button onClick={openAuth}>授权</Button> : null}
+                        </div>
                     </Form.Item>
                 </Form>
+
+                <div className="border-t border-[#eee] pt-4 mt-2">
+                    {isLocal ? (
+                        <>
+                            <Text type="secondary" className="text-xs block mb-2">
+                                首次使用需授权: 点 [获取授权码] 在新窗口登录百度并同意授权, 复制页面显示的授权码粘贴到下方, 再点 [完成授权]
+                            </Text>
+                            <div className="flex gap-2 items-center">
+                                <Button size="small" onClick={openAuth}>
+                                    获取授权码
+                                </Button>
+                                <Input size="small" value={authCode} onChange={e => setAuthCode(e.target.value)} placeholder="粘贴百度授权码" />
+                                <Button size="small" onClick={submitAuthCode}>
+                                    完成授权
+                                </Button>
+                            </div>
+                        </>
+                    ) : (
+                        <Text type="secondary" className="text-xs block">
+                            首次使用点"授权"跳转到百度登录并同意, 完成后自动返回本页.
+                        </Text>
+                    )}
+                </div>
             </Card>
         </div>
     );

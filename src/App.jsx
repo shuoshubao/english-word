@@ -1,6 +1,8 @@
 import { AppstoreOutlined, BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Layout, Menu, Tooltip, Typography } from 'antd';
+import { App as AntApp, Button, Layout, Menu, Tooltip, Typography } from 'antd';
+import { useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { finishAuth } from './utils/baidu-pan';
 import { vocabularyCatalog } from './data/catalog';
 import Book from './pages/Book';
 import Collection from './pages/Collection';
@@ -64,6 +66,17 @@ const titleOf = pathname => {
 export default function App() {
     const location = useLocation();
     const navigate = useNavigate();
+    const { message } = AntApp.useApp();
+
+    // 百度网盘 OAuth 回调: 回调会整页重载到根路径, 需在顶层检测 code 换取 token
+    useEffect(() => {
+        finishAuth()
+            .then(ok => {
+                if (ok) message.success('百度网盘已授权');
+            })
+            .catch(error => message.error(`百度网盘授权失败: ${error.message}`));
+    }, [message]);
+
     const isTab = TAB_PATHS.includes(location.pathname);
     // 顶层菜单高亮: tab 用自身路径; 子路由按归属推导
     //   /collection/favorites/:stage -> /favorites, /collection/unknown/:stage -> /words
