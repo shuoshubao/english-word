@@ -82,7 +82,7 @@ const languageOf = name => {
 
 const formatSize = size => (size < 1024 ? `${size} B` : size < 1024 * 1024 ? `${(size / 1024).toFixed(1)} KB` : `${(size / 1024 / 1024).toFixed(1)} MB`);
 
-export default function BaiduPanDebug() {
+export default function DebugZone() {
     const { message } = App.useApp();
     const [busy, setBusy] = useState('');
     const [fileTree, setFileTree] = useState(null);
@@ -180,10 +180,10 @@ export default function BaiduPanDebug() {
     }, [fileContent]);
 
     return (
-        <Card title="百度网盘调试">
+        <Card title="调试区">
             <div className="flex flex-col gap-4">
                 <Card
-                    title="获取所有文件"
+                    title="网盘-获取所有文件"
                     extra={
                         <Button loading={busy === 'files'} onClick={pullAllFiles}>
                             拉取

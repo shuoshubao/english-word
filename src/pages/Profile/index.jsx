@@ -1,5 +1,5 @@
 import { vocabularyCatalog } from '@/data/catalog';
-import BaiduPanDebug from '@/pages/Profile/BaiduPanDebug';
+import DebugZone from '@/pages/Profile/DebugZone';
 import BaiduTtsCard from '@/pages/Profile/BaiduTtsCard';
 import DoubaoTtsCard from '@/pages/Profile/DoubaoTtsCard';
 import TtsSamplePanel from '@/pages/Profile/TtsSamplePanel';
@@ -381,7 +381,7 @@ export default function Profile() {
                 </div>
             </Card>
 
-            <BaiduPanDebug />
+            <DebugZone />
 
             <Modal
                 title="百度网盘授权"
