@@ -279,50 +279,36 @@ export const listBackups = async info => {
     return (data.list || []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
 };
 
-// 递归拉取应用目录下的所有文件夹和文件, 构建树形结构
-export const listAllFiles = async info => {
+// 拉取指定目录下的直接子项(不递归)。目录节点带空 children 占位, 供 react-arborist 识别为可展开
+export const listDir = async (info, dir = APP_DIR) => {
     const token = await validToken(info);
-    const walk = async dir => {
-        const items = [];
-        let start = 0;
-        for (;;) {
-            const params = new URLSearchParams({
-                method: 'list',
-                dir,
-                order: 'name',
-                limit: '1000',
-                start: String(start),
-                access_token: token
-            });
-            const data = await getJson(`${NETDISK}/file?${params}`);
-            const list = data.list || [];
-            items.push(...list);
-            if (list.length < 1000) break;
-            start += list.length;
-        }
-        const nodes = [];
-        for (const item of items) {
-            if (item.isdir) {
-                nodes.push({
-                    id: String(item.fs_id),
-                    name: item.server_filename,
-                    isDir: true,
-                    children: await walk(item.path)
-                });
-            } else {
-                nodes.push({
-                    id: String(item.fs_id),
-                    name: item.server_filename,
-                    isDir: false,
-                    fsId: item.fs_id,
-                    size: item.size,
-                    mtime: item.mtime
-                });
-            }
-        }
-        return nodes;
-    };
-    return walk(APP_DIR);
+    const items = [];
+    let start = 0;
+    while (true) {
+        const params = new URLSearchParams({
+            method: 'list',
+            dir,
+            order: 'name',
+            limit: '1000',
+            start: String(start),
+            access_token: token
+        });
+        const data = await getJson(`${NETDISK}/file?${params}`);
+        const list = data.list || [];
+        items.push(...list);
+        if (list.length < 1000) break;
+        start += list.length;
+    }
+    return items.map(item => ({
+        id: String(item.fs_id),
+        name: item.server_filename,
+        isDir: !!item.isdir,
+        path: item.path,
+        fsId: item.fs_id,
+        size: item.size,
+        mtime: item.mtime,
+        ...(item.isdir ? { children: [], loaded: false } : {})
+    }));
 };
 
 // 把带签名的 dlink 交给服务端代理 fetch(自动跟随 302 且无 CORS 限制)

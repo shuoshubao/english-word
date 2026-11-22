@@ -1,6 +1,6 @@
 import MonacoJsonViewer from '@/pages/Profile/MonacoJsonViewer';
-import { listAllFiles, readFileBlob } from '@/utils/baidu-pan';
-import { FileOutlined } from '@ant-design/icons';
+import { listDir, readFileBlob } from '@/utils/baidu-pan';
+import { FileOutlined, LoadingOutlined } from '@ant-design/icons';
 import { App, Button, Card, Empty, Skeleton, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
 import { Tree } from 'react-arborist';
@@ -16,9 +16,18 @@ const readBaiduPanInfo = () => {
     }
 };
 
-const ERROR_LABEL = { files: '拉取文件', read: '读取文件' };
+const ERROR_LABEL = { files: '拉取文件', read: '读取文件', dir: '加载目录' };
 // 已读取过的文件内容按 fsId 缓存, 避免重复点击时再次请求网盘。图片存 objectURL, 文本存字符串
 const fileContentCache = new Map();
+// 已展开目录的子项按 path 缓存, 再次展开不再请求网盘
+const dirCache = new Map();
+
+// 按 id 递归替换树中某个目录节点的 children, 其余节点引用保持不变
+const replaceNodeChildren = (nodes, id, children) =>
+    nodes.map(node => {
+        if (node.id === id) return { ...node, children, loaded: true };
+        return node.children?.length ? { ...node, children: replaceNodeChildren(node.children, id, children) } : node;
+    });
 
 // 仅用于代码高亮, 未识别的扩展名按纯文本展示, 不影响文件能否打开
 const LANGUAGES = {
@@ -57,7 +66,10 @@ export default function BaiduPanDebug() {
     const [fileTree, setFileTree] = useState(null);
     const [activeFile, setActiveFile] = useState(null);
     const [fileContent, setFileContent] = useState(null);
+    const [loadingDirId, setLoadingDirId] = useState(null);
     const readSeq = useRef(0);
+    const treeRef = useRef(null);
+    const fileTreeRef = useRef(null);
 
     const run = async (action, key) => {
         setBusy(key);
@@ -74,15 +86,47 @@ export default function BaiduPanDebug() {
         }
     };
 
+    const updateTree = next => {
+        fileTreeRef.current = next;
+        setFileTree(next);
+    };
+
+    // 首次只拉根目录一层; 重新拉取时一并清空目录缓存, 让子层重新加载
     const pullAllFiles = () =>
         run(async () => {
-            const tree = await listAllFiles(readBaiduPanInfo());
+            const tree = await listDir(readBaiduPanInfo());
+            dirCache.clear();
             readSeq.current += 1;
-            setFileTree(tree);
+            updateTree(tree);
             setActiveFile(null);
             setFileContent(null);
+            treeRef.current?.closeAll();
             message.success(`已拉取 ${tree.length} 个顶层项`);
         }, 'files');
+
+    const toggleDir = node => {
+        const dir = node.data;
+        // 已展开则直接收起
+        if (node.isOpen) {
+            node.close();
+            return;
+        }
+        // 子项已缓存: 注入后展开
+        if (dirCache.has(dir.path)) {
+            updateTree(replaceNodeChildren(fileTreeRef.current, dir.id, dirCache.get(dir.path)));
+            node.open();
+            return;
+        }
+        // 未加载: 拉该目录子项, 写缓存并注入树
+        setLoadingDirId(dir.id);
+        return run(async () => {
+            const children = await listDir(readBaiduPanInfo(), dir.path);
+            dirCache.set(dir.path, children);
+            updateTree(replaceNodeChildren(fileTreeRef.current, dir.id, children));
+            // data 更新后会重建 node, 用 ref 按 id 重新展开(展开状态按 id 保留)
+            treeRef.current?.open(dir.id);
+        }, 'dir').finally(() => setLoadingDirId(null));
+    };
 
     const openFile = node => {
         const file = node.data;
@@ -134,8 +178,10 @@ export default function BaiduPanDebug() {
                         <div className="grid grid-cols-1 sm:grid-cols-[minmax(200px,280px)_1fr] gap-3">
                             <div className="h-80 box-border rounded-lg border border-[#e8edf3] bg-white overflow-hidden p-1">
                                 <Tree
+                                    ref={treeRef}
                                     key="baidu-pan-tree"
                                     data={fileTree}
+                                    rowClassName="focus:outline-none"
                                     width="100%"
                                     height={304}
                                     indent={16}
@@ -158,23 +204,27 @@ export default function BaiduPanDebug() {
                                                         ? 'bg-[rgba(102,82,209,0.14)] text-[#6652d1]'
                                                         : 'text-[#182230] hover:bg-[#f7f9fc]'
                                                 }`}
-                                                onClick={() => (isDir ? node.toggle() : openFile(node))}
+                                                onClick={() => (isDir ? toggleDir(node) : openFile(node))}
                                             >
                                                 <span className="inline-flex text-[#667085]">
                                                     {isDir ? (
-                                                        <svg
-                                                            viewBox="0 0 16 16"
-                                                            width="16"
-                                                            height="16"
-                                                            fill="currentColor"
-                                                            style={{ transform: node.isOpen ? 'rotate(90deg)' : 'none' }}
-                                                        >
-                                                            <path
-                                                                fillRule="evenodd"
-                                                                clipRule="evenodd"
-                                                                d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
-                                                            />
-                                                        </svg>
+                                                        loadingDirId === node.data.id ? (
+                                                            <LoadingOutlined spin />
+                                                        ) : (
+                                                            <svg
+                                                                viewBox="0 0 16 16"
+                                                                width="16"
+                                                                height="16"
+                                                                fill="currentColor"
+                                                                style={{ transform: node.isOpen ? 'rotate(90deg)' : 'none' }}
+                                                            >
+                                                                <path
+                                                                    fillRule="evenodd"
+                                                                    clipRule="evenodd"
+                                                                    d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
+                                                                />
+                                                            </svg>
+                                                        )
                                                     ) : (
                                                         <FileOutlined />
                                                     )}
