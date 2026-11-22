@@ -1,6 +1,6 @@
 import { vocabularyCatalog } from '@/data/catalog';
-import DebugZone from '@/pages/Profile/DebugZone';
 import BaiduTtsCard from '@/pages/Profile/BaiduTtsCard';
+import DebugZone from '@/pages/Profile/DebugZone';
 import DoubaoTtsCard from '@/pages/Profile/DoubaoTtsCard';
 import TtsSamplePanel from '@/pages/Profile/TtsSamplePanel';
 import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, startOobAuth, startRedirectAuth, uploadBackup } from '@/utils/baidu-pan';
@@ -287,7 +287,7 @@ export default function Profile() {
                     />
                 }
             >
-                <div className="grid grid-cols-2 max-md:grid-cols-1">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <BaiduTtsCard active={ttsSource === 'baidu'} onSaved={() => setTtsVersion(v => v + 1)} />
                     <DoubaoTtsCard active={ttsSource === 'doubao'} onSaved={() => setTtsVersion(v => v + 1)} />
                 </div>

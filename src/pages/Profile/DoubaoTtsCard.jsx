@@ -42,8 +42,7 @@ export default function DoubaoTtsCard({ onSaved, active }) {
     };
 
     return (
-        <Card.Grid
-            hoverable={false}
+        <Card
             size="small"
             className="w-full!"
             style={active ? { boxShadow: '0 4px 16px rgba(102,82,209,0.18)' } : undefined}
@@ -90,6 +89,6 @@ export default function DoubaoTtsCard({ onSaved, active }) {
                     </Form.Item>
                 </div>
             </Form>
-        </Card.Grid>
+        </Card>
     );
 }
