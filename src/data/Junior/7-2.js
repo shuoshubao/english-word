@@ -113,7 +113,7 @@ export default [
         ]
     },
     {
-        word: 'play  chess',
+        word: 'play chess',
         translation: '下国际象棋',
         phonetic: 'ple tʃɛs',
         partOfSpeech: ''
@@ -135,7 +135,7 @@ export default [
         ]
     },
     {
-        word: 'speak  English',
+        word: 'speak English',
         translation: '说英语',
         phonetic: '',
         partOfSpeech: ''
@@ -3137,12 +3137,6 @@ export default [
         ]
     },
     {
-        word: 'South  Africa',
-        translation: '南非',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'pet',
         translation: 'n. 宠物',
         phonetic: 'pɛt',
@@ -3851,7 +3845,7 @@ export default [
         ]
     },
     {
-        word: 'drink  tea',
+        word: 'drink tea',
         translation: '喝茶',
         phonetic: '',
         partOfSpeech: ''

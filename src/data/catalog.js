@@ -70,7 +70,7 @@ export const vocabularyCatalog = [
         id: 'm7-2',
         stage: '初中',
         title: '七年级下册',
-        wordCount: 476
+        wordCount: 475
     },
     {
         id: 'm8-1',
@@ -88,7 +88,7 @@ export const vocabularyCatalog = [
         id: 'm9-1',
         stage: '初中',
         title: '九年级上册',
-        wordCount: 495
+        wordCount: 488
     },
     {
         id: 'h-bx1',
@@ -124,7 +124,7 @@ export const vocabularyCatalog = [
         id: 'h-xx6',
         stage: '高中',
         title: '选修六',
-        wordCount: 378
+        wordCount: 377
     },
     {
         id: 'h-xx7',

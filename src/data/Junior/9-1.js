@@ -1263,12 +1263,6 @@ export default [
         ]
     },
     {
-        word: 'Jacob   Marley',
-        translation: '雅各布 • 马利',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'restroom',
         translation: 'n. （美）洗手间；公共厕所',
         phonetic: "'rɛstrum",
@@ -3615,44 +3609,8 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Jayce  Coziar',
-        translation: '杰斯 • 克里亚',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'Jamie Ellsworth',
         translation: '杰米 • 埃尔斯沃恩',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Julie   Thompson',
-        translation: '朱莉 • 汤普森',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Whitcomb   Judson',
-        translation: '惠特科姆 • 贾德森',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Thomas  Watson',
-        translation: '托马斯 • 沃森',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'George   Crum',
-        translation: '乔治 • 克拉姆',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'James  Naismith',
-        translation: '詹姆斯 • 奈史密斯',
         phonetic: '',
         partOfSpeech: ''
     },

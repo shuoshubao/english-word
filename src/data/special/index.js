@@ -73,12 +73,12 @@ export default [
                 category: 'middle'
             },
             {
-                word: 'Charles  Dickens',
+                word: 'Charles Dickens',
                 translation: '查尔斯 • 狄更斯（英国作家）',
                 phonetic: '',
                 partOfSpeech: '',
                 examples: [],
-                id: 'middle__Charles  Dickens',
+                id: 'middle__Charles Dickens',
                 category: 'middle'
             },
             {
@@ -1571,7 +1571,70 @@ export default [
                 examples: [],
                 id: 'high__Pygmalion',
                 category: 'high'
-            }
+            },
+            {
+                word: 'Jacob Marley',
+                translation: '雅各布 • 马利',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__Jacob Marley',
+                category: 'middle'
+            },
+            {
+                word: 'Jayce Coziar',
+                translation: '杰斯 • 克里亚',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__Jayce Coziar',
+                category: 'middle'
+            },
+            {
+                word: 'Julie Thompson',
+                translation: '朱莉 • 汤普森',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__Julie Thompson',
+                category: 'middle'
+            },
+            {
+                word: 'Whitcomb Judson',
+                translation: '惠特科姆 • 贾德森',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__Whitcomb Judson',
+                category: 'middle'
+            },
+            {
+                word: 'Thomas Watson',
+                translation: '托马斯 • 沃森',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__Thomas Watson',
+                category: 'middle'
+            },
+            {
+                word: 'George Crum',
+                translation: '乔治 • 克拉姆',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__George Crum',
+                category: 'middle'
+            },
+            {
+                word: 'James Naismith',
+                translation: '詹姆斯 • 奈史密斯',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__James Naismith',
+                category: 'middle'
+            },
         ]
     },
     {
@@ -2290,12 +2353,12 @@ export default [
                 category: 'high'
             },
             {
-                word: 'Colombia  VmbI',
+                word: 'Colombia VmbI',
                 translation: '哥伦比亚（南美洲国家）',
                 phonetic: '',
                 partOfSpeech: '',
                 examples: [],
-                id: 'middle__Colombia  VmbI',
+                id: 'middle__Colombia VmbI',
                 category: 'middle'
             },
             {
@@ -2601,7 +2664,16 @@ export default [
                 ],
                 id: 'primary__Italian',
                 category: 'primary'
-            }
+            },
+            {
+                word: 'South Africa',
+                translation: '南非',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'middle__South Africa',
+                category: 'middle'
+            },
         ]
     },
     {
@@ -3228,7 +3300,16 @@ export default [
                 ],
                 id: 'high__Alps',
                 category: 'high'
-            }
+            },
+            {
+                word: 'Mount Kilauea',
+                translation: '基拉韦厄火山',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [],
+                id: 'high__Mount Kilauea',
+                category: 'high'
+            },
         ]
     },
     {

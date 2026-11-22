@@ -1999,7 +1999,7 @@ export default [
         ]
     },
     {
-        word: 'Buckingham  Palace',
+        word: 'Buckingham Palace',
         translation: '白金汉宫',
         phonetic: '',
         partOfSpeech: '',

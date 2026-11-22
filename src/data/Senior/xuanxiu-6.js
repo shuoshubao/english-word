@@ -821,7 +821,7 @@ export default [
         ]
     },
     {
-        word: 'Guggenheim  Museum',
+        word: 'Guggenheim Museum',
         translation: '古根海姆博物馆',
         phonetic: '',
         partOfSpeech: ''
@@ -4773,12 +4773,6 @@ export default [
                 cn: '存储在数据库内的客户详细信息'
             }
         ]
-    },
-    {
-        word: 'Mount  Kilauea',
-        translation: '基拉韦厄火山',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'evaluate',
