@@ -9,8 +9,7 @@ export default function Roots() {
     const roots = listRoots();
     const groups = [
         { title: '前缀', items: roots.filter(r => r.type === 'prefix') },
-        { title: '后缀', items: roots.filter(r => r.type === 'suffix') },
-        { title: '词组', items: roots.filter(r => r.type === 'exact') }
+        { title: '后缀', items: roots.filter(r => r.type === 'suffix') }
     ];
 
     return (

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const ENTRIES = [
     { title: '主题分类', sub: '按场景批量记忆', to: '/topic', background: 'linear-gradient(135deg, #6652d1, #8b7ae8)' },
     { title: '不规则动词', sub: '原形/过去式/过去分词时态表', to: '/irregulars', background: 'linear-gradient(135deg, #2f80ed, #6aa9f0)' },
-    { title: '词根词缀', sub: '按前缀/后缀/词组批量记忆', to: '/roots', background: 'linear-gradient(135deg, #4caf8a, #7fd4b5)' },
+    { title: '词缀', sub: '按前缀/后缀批量记忆', to: '/roots', background: 'linear-gradient(135deg, #4caf8a, #7fd4b5)' },
     { title: '固定搭配', sub: 'be good at / look forward to 等短语', to: '/collocations', background: 'linear-gradient(135deg, #f0a04b, #f5c089)' }
 ];
 

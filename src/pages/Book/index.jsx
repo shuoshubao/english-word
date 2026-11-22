@@ -9,7 +9,7 @@ import { loadTopicCategory } from '@/utils/topic';
 import { loadRootCategory } from '@/utils/word-roots';
 import { ensureBookWords } from '@/utils/words';
 
-// 词书详情 / 主题 / 词根 / 固定搭配 共用: 根据 mode 加载词表, 交给 WordListView 渲染
+// 词书详情 / 主题 / 词缀 / 固定搭配 共用: 根据 mode 加载词表, 交给 WordListView 渲染
 export default function Book({ mode = 'book' }) {
     const params = useParams();
     const [words, setWords] = useState(null);

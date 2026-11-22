@@ -31,7 +31,7 @@ export default function Collocations() {
         <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
             {levels.map(item => (
                 <Card key={item.level} hoverable onClick={() => navigate(`/collocations/${encodeURIComponent(item.level)}`)} className="cursor-pointer">
-                    <div className="text-base font-semibold text-[#1f1a33]">固定搭配 · {item.level}</div>
+                    <div className="text-base font-semibold text-[#1f1a33]">{item.level}</div>
                     <div className="text-xs text-[#333] mt-1">{item.count} 个</div>
                     <div className="flex gap-3 mt-2 text-[11px]">
                         <Text type="success">认识 {item.known}</Text>

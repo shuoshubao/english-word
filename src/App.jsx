@@ -54,7 +54,7 @@ const titleOf = pathname => {
         case 'topic':
             return parts[1] ? `主题 · ${dec(parts[1])}` : '主题分类';
         case 'roots':
-            return parts[1] ? `词根 · ${dec(parts[1])}` : '词根词缀';
+            return parts[1] ? `词缀 · ${dec(parts[1])}` : '词缀';
         case 'collocations':
             return parts[1] ? `固定搭配 · ${dec(parts[1])}` : '固定搭配';
         case 'irregulars':

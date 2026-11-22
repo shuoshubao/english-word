@@ -1,4 +1,4 @@
-// 词根词缀词组: 按 title 取分类的 id 列表, 运行时还原词条
+// 词缀: 按 title 取分类的 id 列表, 运行时还原词条
 import rootList from '@/data/word-roots/index';
 import { vocabularyCatalog } from '@/data/catalog';
 import { getWordIndex, ensureStages } from '@/utils/words';
@@ -22,7 +22,7 @@ export const loadRootCategory = async title => {
     await ensureAllStages();
     const { byId } = getWordIndex();
     const words = category.ids.map(id => byId[id]).filter(Boolean);
-    console.log('[词根]', title, '匹配到', words.length, '词');
+    console.log('[词缀]', title, '匹配到', words.length, '词');
     return { category, words };
 };
 

@@ -1,4 +1,4 @@
-// 词根词缀词组: 每组为人工核对过的单词 id 列表, 按 title/type 分类
+// 词缀: 每组为人工核对过的单词 id 列表, 按 title/type 分类
 // 单词详情运行时按 id 从 getWordIndex().byId 取
 export default [
     {
@@ -1843,40 +1843,5 @@ export default [
             'cet4__victimize',
             'cet6__visualize'
         ]
-    },
-    {
-        title: 'look 词组',
-        type: 'exact',
-        ids: ['primary__look up', 'primary__look for', 'middle__look after', 'middle__look forward to']
-    },
-    {
-        title: 'take 词组',
-        type: 'exact',
-        ids: ['middle__take off', 'middle__take care of', 'high__take part in', 'middle__take place']
-    },
-    {
-        title: 'get 词组',
-        type: 'exact',
-        ids: ['primary__get up', 'middle__get off', 'high__get along with']
-    },
-    {
-        title: 'put 词组',
-        type: 'exact',
-        ids: ['middle__put on', 'middle__put off', 'high__put up with']
-    },
-    {
-        title: 'turn 词组',
-        type: 'exact',
-        ids: ['middle__turn on', 'middle__turn down', 'high__turn up']
-    },
-    {
-        title: 'give 词组',
-        type: 'exact',
-        ids: ['middle__give up', 'high__give in', 'middle__give away']
-    },
-    {
-        title: 'make 词组',
-        type: 'exact',
-        ids: ['middle__make up', 'middle__make sure']
     }
 ];
