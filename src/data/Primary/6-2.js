@@ -1733,26 +1733,6 @@ export default [
         ]
     },
     {
-        word: 'Italian',
-        translation: '意大利的',
-        phonetic: 'ɪˈtæljən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Her beauty is of the Italian type.',
-                cn: '她的美是意大利型的。'
-            },
-            {
-                en: 'The game terminated in a victory for Italian team.',
-                cn: '比赛以意大利队获胜告终。'
-            },
-            {
-                en: 'How could they be Italian?',
-                cn: '他们怎么会是意大利人呢？'
-            }
-        ]
-    },
-    {
         word: 'restaurant',
         translation: '餐馆',
         phonetic: 'ˈrestərənt; rɛstərənt',

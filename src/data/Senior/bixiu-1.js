@@ -221,22 +221,6 @@ export default [
         ]
     },
     {
-        word: 'Netherlands',
-        translation: 'n. 荷兰（西欧国家）',
-        phonetic: "'neðələndz",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: "Now that we're in Europe we ought to visit the Netherlands.",
-                cn: '既然我们到了欧洲，就应当去荷兰。'
-            },
-            {
-                en: 'So to come back to your question if the Netherlands inspired me in what I do.',
-                cn: '回到你的问题上：荷兰大地是否赋予了我艺术创作的灵感？'
-            }
-        ]
-    },
-    {
         word: 'Jewish',
         translation: 'adj. 犹太人的；犹太族的',
         phonetic: "'dʒʊɪʃ",
@@ -249,26 +233,6 @@ export default [
             {
                 en: 'My husband is Jewish.',
                 cn: '我丈夫是犹太人。'
-            }
-        ]
-    },
-    {
-        word: 'German',
-        translation: 'adj. 德国的；德国人的；德语的; n. 德国人；德语',
-        phonetic: "'dʒɜːmən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'German history',
-                cn: '德国历史'
-            },
-            {
-                en: 'He is German',
-                cn: '他是德国人。'
-            },
-            {
-                en: 'English, Dutch and German are cognate languages.',
-                cn: '英语、荷兰语、德语是同语族的语言'
             }
         ]
     },
@@ -345,26 +309,6 @@ export default [
             {
                 en: 'There is a series of science and technology on the desk.',
                 cn: '案头放着一套科技丛书。'
-            }
-        ]
-    },
-    {
-        word: 'Kitty',
-        translation: 'n. 基蒂（女名）',
-        phonetic: "'kɪti",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Kitty was down on the junior typist.',
-                cn: '基蒂仇视那个年轻的打字员。'
-            },
-            {
-                en: 'What do you like,Kitty?',
-                cn: '你喜欢什么，基蒂？'
-            },
-            {
-                en: 'Kitty, what do you usually do with your aunt?',
-                cn: '基蒂，你通常与你的姑母做什么？'
             }
         ]
     },
@@ -795,22 +739,6 @@ export default [
         ]
     },
     {
-        word: 'Margot',
-        translation: 'n. 玛戈（女名）',
-        phonetic: "'mɑɡo",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'My sister Margot was born in Frankfurt am Main in Germany in 1926.',
-                cn: '我姐姐玛戈特1926年出生在德国美因河畔的法兰克福。'
-            },
-            {
-                en: "At the end of the year we were both in tears as we said a heartbreaking farewell, because I'd been accepted at the Jewish Lyceum, where Margot also went to school.",
-                cn: '六年级结束的时候，我和科普卢斯夫人都流下了离别的眼泪，因为我被犹太公立中学录取了，而玛戈特也在那里读中学。'
-            }
-        ]
-    },
-    {
         word: 'Overcoat',
         translation: 'n. 大衣；外套',
         phonetic: "'ovɚkot",
@@ -1205,22 +1133,6 @@ export default [
         ]
     },
     {
-        word: 'Amy',
-        translation: 'n. 艾米（女名）',
-        phonetic: "'emɪ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Amy, do you like mouse?',
-                cn: '艾米，你喜欢老鼠吗？'
-            },
-            {
-                en: '"Bye, Amy, " we said.',
-                cn: '再见,艾米,“我们说。'
-            }
-        ]
-    },
-    {
         word: 'come up',
         translation: '走近；上来；提出',
         phonetic: '',
@@ -1353,26 +1265,6 @@ export default [
         ]
     },
     {
-        word: 'Danish',
-        translation: 'n. 丹麦语; adj. 丹麦的；丹麦人的；丹麦语的',
-        phonetic: "'denɪʃ",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'There is no inherent right to some particular quantity of any commodity whether it’s oil, gold, coffee, or Danish pastry.',
-                cn: '任何一种商品的具体数量本身是没有正确性的，不论它是石油，黄金，咖啡或者丹麦点心。'
-            },
-            {
-                en: 'Like all Danish students, they study for free and receive a monthly stipend equivalent to about $900 per person from the government.',
-                cn: '和其他丹麦学生一样，他们免费学习，并且每人每月可从政府领取约合900美元的津贴。'
-            },
-            {
-                en: 'The Danish study, to be published next year, should leave us the wiser about the role they play in turning our children into adults before their time.',
-                cn: '此项丹麦研究，明年将会公布。 届时，应当会让我们对这些物质在使我们的孩子提早进入成年中起到的作用，了解多一点。'
-            }
-        ]
-    },
-    {
         word: 'enrich',
         translation: 'v. 充实；改善；使富裕',
         phonetic: "ɪn'rɪtʃ",
@@ -1401,26 +1293,6 @@ export default [
             {
                 en: 'Teachers were impressed by his vocabulary.',
                 cn: '他的词汇量给老师们留下了深刻的印象。'
-            }
-        ]
-    },
-    {
-        word: 'Shakespeare',
-        translation: '莎士比亚（英国剧作家，诗人）',
-        phonetic: "'ʃekspɪr",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'He turned to the study of Shakespeare.',
-                cn: '他致力于莎士比亚的研究。'
-            },
-            {
-                en: 'As a playwriter,Shakespeare belongs to the 16th century.',
-                cn: '作为一位剧作家，莎士比亚属于16世纪。'
-            },
-            {
-                en: 'He was reading the plays of Shakespeare when I met him in the library the other day.',
-                cn: '前几天我在图书馆遇见他时，他正在阅读莎士比亚的戏剧。'
             }
         ]
     },
@@ -1457,26 +1329,6 @@ export default [
             {
                 en: 'an essay full of spelling mistakes',
                 cn: '一篇满是拼写错误的文章'
-            }
-        ]
-    },
-    {
-        word: 'Samuel Johnson',
-        translation: '塞缪尔•约翰逊（英国作家，批评家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'One side of today’s political spectrum looks upon it with suspicion and distrust, echoing Samuel Johnson’s witticism that “patriotism is the last refuge of the scoundrel.',
-                cn: '今天政治光谱的一个侧面带着猜疑和不信任的眼光看它，呼应了塞缪尔·约翰逊的俏皮话：“爱国主义是歹徒最后的避难所。”'
-            },
-            {
-                en: 'You have developed a habit that you depend on.As Samuel Johnson so eloquently said, “The chains of habit are generally too small to be felt until they are too strong to be broken.',
-                cn: '你发展了一种你依赖的习惯，正如塞缪尔·约翰逊富有表现力地说：“习惯的链条一般都太微弱了，根本感觉不到，直到它们强大到难以被打破时才感觉得出来。”'
-            },
-            {
-                en: "It's reasonable, I think, to invoke Dr. Johnson here, Samuel Johnson, who writes in his Life of Milton that Milton's unskillful allegory appears to be one of the greatest faults of the poem.",
-                cn: '我认为在这引用塞缪尔·约翰逊的话是很合理的，他一生都在写关于弥尔顿的文章,他指出弥尔顿不熟练的寓言成为了这部诗的大败笔之一。'
             }
         ]
     },
@@ -1545,46 +1397,6 @@ export default [
             {
                 en: 'We should train our students to speak English fluently and accurately.',
                 cn: '我们应培养学生流利而准确地讲英语。'
-            }
-        ]
-    },
-    {
-        word: 'Singapore',
-        translation: 'n. 新加坡（东南亚国家）',
-        phonetic: "ˌsɪŋgə'pɔ:",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'I come from Singapore.',
-                cn: '我来自新加坡。'
-            },
-            {
-                en: 'But not in Singapore.',
-                cn: '但是在新加坡就不同了。'
-            },
-            {
-                en: 'After staying a few days in Shanghai, he moved on to Singapore.',
-                cn: '在上海逗留了几天之后，他又启程去新加坡。'
-            }
-        ]
-    },
-    {
-        word: 'Malaysia',
-        translation: 'n. 马来西亚（东南亚国家）；马来群岛',
-        phonetic: "mə'leʒə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He settled in Malaysia.',
-                cn: '他定居马来西亚。'
-            },
-            {
-                en: 'But in all of Malaysia?',
-                cn: '但是在整个马来西亚呢？'
-            },
-            {
-                en: 'I come from Malaysia.',
-                cn: '我来自马来西亚。'
             }
         ]
     },
@@ -1729,30 +1541,6 @@ export default [
         ]
     },
     {
-        word: 'African',
-        translation: 'adj. 非洲的；非洲人的；非洲语言的',
-        phonetic: "'æfrɪkən",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: '...the African continent.',
-                cn: '…非洲大陆。'
-            }
-        ]
-    },
-    {
-        word: 'Spanish',
-        translation: 'adj. 西班牙的；西班牙人的；西班牙语的; n. 西班牙人；西班牙语',
-        phonetic: "'spænɪʃ",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: '...a Spanish sherry.',
-                cn: '...一瓶西班牙雪利酒。'
-            }
-        ]
-    },
-    {
         word: 'play a part (in)',
         translation: '扮演一个角色；参与',
         phonetic: '',
@@ -1837,38 +1625,6 @@ export default [
         ]
     },
     {
-        word: 'Lori',
-        translation: 'n. 罗丽（女名）',
-        phonetic: 'lɔri',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: "There are a few dolphin studies out there, but they don't add up to much, says Lori Marino, a neuroscience and behavioral biology researcher at Emory University in Atlanta.",
-                cn: '现在已有少数关于海豚的研究，但是总计并不多，亚特兰大埃默里大学的神经科学和行为生物学研究者--罗莉马里诺说道。'
-            }
-        ]
-    },
-    {
-        word: 'Houston',
-        translation: 'n. 休斯顿（美国城市）',
-        phonetic: "'hju:stən",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: '"I do think if you can do this work in Houston, then you can do it anywhere, " Spanjian says.',
-                cn: '斯潘健说：“我认为，如果能在休斯顿开展环保项目，那么在其他任何地方都可以做到。”'
-            },
-            {
-                en: 'I have nothing but sincere gratitude for the city of Houston and the generous peoplewho live in it.',
-                cn: '对此我只有真挚的感激，对休斯顿这座城市和对居住在这里的慷慨的人们。'
-            },
-            {
-                en: 'On top of that, I hurt my knee against Houston just six games into the season.',
-                cn: '不仅如此，在新赛季的第六场比赛，我就在休斯顿伤到了膝盖。'
-            }
-        ]
-    },
-    {
         word: 'Texas',
         translation: 'n. 德克萨斯州（美国州名）',
         phonetic: "'teksəs",
@@ -1901,34 +1657,6 @@ export default [
             {
                 en: 'In the word ‘dinner’ the accent is on the first syllable.',
                 cn: 'dinner一词的重音在第一音节上。'
-            }
-        ]
-    },
-    {
-        word: 'Buford',
-        translation: 'n. 布福德（姓氏；男名）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: "The battle began at 5.30 a.m., when shots were exchanged over Marsh Creek. In the face of Buford's resistance, Heth pushed on cautiously until he reached a point about two miles west of Gettysburg.",
-                cn: '上午5点30分，双方在沼泽溪一带交火，面对巴福德的顽强抵御，海斯步步为营，谨慎前进，一直推进到葛底士堡大约2英里之处，随后他以两个旅的兵力列队进攻。'
-            }
-        ]
-    },
-    {
-        word: 'Lester',
-        translation: 'n. 莱斯特（姓错；男名）',
-        phonetic: "'lestə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Lester： I already have a job.',
-                cn: '莱斯特：我已经有工作了。'
-            },
-            {
-                en: 'Lester: I’ve been writing for this magazine for fourteen years, Brad.',
-                cn: '莱斯特：布莱德，我为这家杂志社写了十四年的文章。'
             }
         ]
     },
@@ -2895,42 +2623,6 @@ export default [
         ]
     },
     {
-        word: 'Laos',
-        translation: 'n. 老挝（东南亚国家）',
-        phonetic: 'laʊz',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Today, Tony from the Vientiane International School in Laos asks the scientists about how long we - or our descendants - might live.',
-                cn: '今天，来自老挝万象国际学校的托尼向科学家提出了关于我们或我们的后代可以活多久的问题。'
-            },
-            {
-                en: 'At a meeting of the Mekong River Commission in the Lao capital, Vientiane, Laos insisted the Xayaburi dam go ahead, saying it will be up to international standards.',
-                cn: '在湄公河委员会在老挝首都万象举行的一个会议上，老挝坚持让沙耶武里水坝破土动工，并且说工程将达到国际标准。'
-            },
-            {
-                en: 'Laos says the dam will cause no serious problems, while its neighbors say more information is needed about its environmental and economic effects.',
-                cn: '老挝说，这座大坝不会造成严重问题，但是其他邻国认为，在环境和经济影响方面还需要更多信息。'
-            }
-        ]
-    },
-    {
-        word: 'Laotian',
-        translation: 'n. 老挝人; adj. 老挝（人）的',
-        phonetic: "lei'əuʃən",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'Laotian villages, without electricity, rent solar energy panels for a weekend.',
-                cn: '老挝没有电力的村庄周末租用太阳能电池板。'
-            },
-            {
-                en: 'and they do the same damage to the Vietnamese countryside and the Laotian people.',
-                cn: '他们对越南乡村和老挝人民造成的破坏也是一样的。'
-            }
-        ]
-    },
-    {
         word: 'temple',
         translation: 'n. 庙宇；寺庙',
         phonetic: "'tɛmpl",
@@ -3853,26 +3545,6 @@ export default [
         ]
     },
     {
-        word: 'Nelson Mandela',
-        translation: '纳尔逊•曼德拉（前南非共和国总统）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Nelson Mandela had received tens of thousands of votes more than anyone else in the initial poll.',
-                cn: '调查一开始，纳尔逊·曼德拉就收到了数以万计的选票，远超过其他任何人。'
-            },
-            {
-                en: 'The next day, at the White House, I held a reception for Nelson Mandela with African-American religious leaders.',
-                cn: '第二天，我和非裔美国宗教领袖们一起在白宫主持接待了纳尔逊·曼德拉。'
-            },
-            {
-                en: 'The exchange is said to have happened when both were in South Africa as guests of President Nelson Mandela in 1997.',
-                cn: '据说，这场交易发生在1997年，当 时她和泰勒都作为南非总统纳尔逊·曼德拉的客人访问南非。'
-            }
-        ]
-    },
-    {
         word: 'quality',
         translation: 'n. 质量；品质；性质',
         phonetic: "'kwɑləti",
@@ -4243,26 +3915,6 @@ export default [
         ]
     },
     {
-        word: 'Elias',
-        translation: 'n. 伊莱亚斯（男名）',
-        phonetic: "ɪ'laɪəs",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'There are those who say he is Elias.',
-                cn: '还有人说他就是伊莱亚斯呢。'
-            },
-            {
-                en: 'Elias Sory is the director general of health services in Ghana.',
-                cn: '伊莱亚斯·索瑞是加纳健康服务的处长。'
-            },
-            {
-                en: 'President Elias Hrawi of Lebanon was at the White House at a tense moment in the Middle East.',
-                cn: '在中东局势紧张的时刻，黎巴嫩总统埃利亚斯·赫拉维正在白宫。'
-            }
-        ]
-    },
-    {
         word: 'lawyer',
         translation: 'n. 律师',
         phonetic: "'lɔjɚ",
@@ -4331,26 +3983,6 @@ export default [
             {
                 en: "What if he can't find the passbook?",
                 cn: '要是他不能找到存折，该怎么办？'
-            }
-        ]
-    },
-    {
-        word: 'Johannesburg',
-        translation: 'n. 约翰内斯堡（南非城市）',
-        phonetic: "dʒəu'hænisbə:ɡ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'She was also one of the first lesbians to live openly in her township near Johannesburg.',
-                cn: '她还是约翰内斯堡附近她所在的镇区第一个公开同性恋身份的人。'
-            },
-            {
-                en: 'Players are measured first at sea level and then at the altitude of Johannesburg - artificially set by the machine - to see how the body responds.',
-                cn: '运动员先是在海平面的高度测试，然后由机器自动的转到约翰内斯堡的海拔高度，来看看身体有怎样的反应。'
-            },
-            {
-                en: '"Every mayor in Brazil can tell you the vaccination rate in their town, " he told me at the recent International Paediatric Congress in Johannesburg.',
-                cn: '最近他在约翰内斯堡的国际儿科协会对我说，"巴西的每一位市长都会告诉你他们城镇的接种率。"'
             }
         ]
     },
@@ -4823,22 +4455,6 @@ export default [
             {
                 en: 'The club’s directors rewarded him with a free season ticket.',
                 cn: '俱乐部的董事们奖给他一张免费季票。'
-            }
-        ]
-    },
-    {
-        word: 'Transkei',
-        translation: 'n. 特兰斯凯（南非东南部一地区）',
-        phonetic: "træns'kei; -'kai",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Nelson Mandela was born in a small village in the Transkei region of South Africa. He eas born on 18th July, 1918.',
-                cn: '纳尔森·曼德拉1918年七月18日出生在南非特兰斯凯地区的一个小村庄。'
-            },
-            {
-                en: 'The capital of Transkei, in the west-central part of the homeland. It was founded in1860 as a military post. Population, 30, 000.',
-                cn: '乌姆塔塔特兰斯凯首都，在“黑人家园”班图斯坦的中西部，做为一军事要塞建于1860年，人口30，000。'
             }
         ]
     },

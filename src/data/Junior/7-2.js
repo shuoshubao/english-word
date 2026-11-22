@@ -3121,26 +3121,6 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Australia',
-        translation: 'n. 澳大利亚',
-        phonetic: "ɔ'streljə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He transplanted his family to Australia.',
-                cn: '他把家迁到澳大利亚。'
-            },
-            {
-                en: 'He went out to Australia about five years ago.',
-                cn: '他大约在五年前移居澳大利亚。'
-            },
-            {
-                en: 'In the past, English criminals were transported to Australia.',
-                cn: '过去，英国犯人被流放到澳大利亚。'
-            }
-        ]
-    },
-    {
         word: 'south',
         translation: 'adj. 南方的; n. 南； 南方',
         phonetic: 'saʊθ',
@@ -3153,26 +3133,6 @@ export default [
             {
                 en: 'I am currently teaching in south Texas.',
                 cn: '我目前在得克萨斯南部教书。'
-            }
-        ]
-    },
-    {
-        word: 'Africa',
-        translation: 'n. 非洲',
-        phonetic: 'ˈæfrɪkə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The giraffe ranges in Africa.',
-                cn: '长颈鹿生长在非洲。'
-            },
-            {
-                en: 'The practice still prevails in some parts of Africa.',
-                cn: '这种做法在非洲某些地区仍然很盛行。'
-            },
-            {
-                en: 'He traversed alone the whole continent of Africa from east to west.',
-                cn: '他独自一人从东到西横越整个非洲大陆。'
             }
         ]
     },
@@ -3667,74 +3627,6 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Julie',
-        translation: '朱莉（女名）',
-        phonetic: "'dʒu:li",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Julie, do you know why we celebrate Easter?',
-                cn: '朱莉，你知道我们为什么庆祝复活节吗？'
-            },
-            {
-                en: 'Julie: And then what do you do with that log?',
-                cn: '朱莉：然后你要拿那些记录做什么呢？'
-            },
-            {
-                en: 'The St. Lawrence River held a particular poetry and beauty to me and (I) decided to live there with our daughter, Julie.',
-                cn: '圣劳伦斯河对我来说有着特殊的诗意和美感，(我) 决定和我的女儿朱莉一起生活在那里。'
-            }
-        ]
-    },
-    {
-        word: 'Becky',
-        translation: '贝姬（女名）',
-        phonetic: "'beki",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'So John and Becky and their two little girls go on with their semi-rural life in Alaska.',
-                cn: '约翰和贝基以及他们的两个小女儿继续着在阿拉斯加的半乡村式的生活。'
-            },
-            {
-                en: 'John and Becky were then in their late twenties and had no need of our permission, but we encouraged them to give it a try.',
-                cn: '当时约翰和贝基已经是二十八九，做这个决定并没有必要得到我们的批准，但我们还是鼓励他们去试试。'
-            }
-        ]
-    },
-    {
-        word: 'Thailand',
-        translation: 'n. 泰国',
-        phonetic: "'taɪlænd; -lənd",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'In Thailand?',
-                cn: '在泰国吗？'
-            },
-            {
-                en: 'I was born in Thailand.',
-                cn: '我可是在泰国出生的。'
-            }
-        ]
-    },
-    {
-        word: 'Thai',
-        translation: 'n. 泰国（人的）；泰语（的)',
-        phonetic: 'taɪ',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'She was interviewed about the death of the Thai worker on Israeli TV and she plans to continue to work for peace.',
-                cn: '她接受了以色列电视台关于这位泰国工人致死的报道，并且她计划继续致力于为和平而工作。'
-            },
-            {
-                en: 'So the next time you and your brother go out for Thai food you can make him look like a total wimp (I hate my brother).',
-                cn: '所以改天你和你的兄弟去吃泰国菜，你就可以让他像个胆小鬼眼巴巴地看着你（我讨厌我的兄弟）。'
-            }
-        ]
-    },
-    {
         word: 'newspaper',
         translation: 'n. 报纸',
         phonetic: "'nuzpepɚ",
@@ -4097,28 +3989,6 @@ export default [
         translation: 'n. 洲',
         phonetic: 'stet',
         partOfSpeech: 'n'
-    },
-    {
-        word: 'the United States',
-        translation: 'n. 美国；美利坚合众国',
-        phonetic: 'ði juˈnaɪtɪd stets',
-        partOfSpeech: 'n'
-    },
-    {
-        word: 'American',
-        translation: 'adj. 美国的;美洲的; n. 美国人;美洲人',
-        phonetic: 'əˈmɛrɪkən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'a famous American writer',
-                cn: '一位著名的美国作家'
-            },
-            {
-                en: 'Her mother is American.',
-                cn: '她妈妈是美国人。'
-            }
-        ]
     },
     {
         word: 'dragon',
@@ -4679,26 +4549,6 @@ export default [
         ]
     },
     {
-        word: 'Canada',
-        translation: 'n. 加拿大',
-        phonetic: "'kænədə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'She was domiciliated in Canada.',
-                cn: '她在加拿大定居。'
-            },
-            {
-                en: 'Canada produces wheat and furs.',
-                cn: '加拿大出产小麦和毛皮。'
-            },
-            {
-                en: 'He has lived in Canada for more than twenty years and is completely Canadianized now.',
-                cn: '他在加拿大已经住了二十多年了，现在完全加拿大化了。'
-            }
-        ]
-    },
-    {
         word: 'summer',
         translation: 'n. 夏天；夏季',
         phonetic: "'sʌmɚ",
@@ -4829,18 +4679,6 @@ export default [
         ]
     },
     {
-        word: 'Europe',
-        translation: 'n. 欧洲',
-        phonetic: "'jʊrəp",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'eastern Europe',
-                cn: '东欧'
-            }
-        ]
-    },
-    {
         word: 'mountain',
         translation: 'n. 高山',
         phonetic: 'ˈmaʊntn',
@@ -4937,18 +4775,6 @@ export default [
         ]
     },
     {
-        word: 'Russian',
-        translation: 'adj. 俄罗斯的；俄罗斯人的；俄语的',
-        phonetic: "'rʌʃən",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: '...the Russian parliament.',
-                cn: '...俄罗斯国会。'
-            }
-        ]
-    },
-    {
         word: 'snowman',
         translation: 'n. 雪人',
         phonetic: "'snomæn",
@@ -4987,48 +4813,6 @@ export default [
                 cn: '雨季'
             }
         ]
-    },
-    {
-        word: 'Moscow',
-        translation: '莫斯科',
-        phonetic: 'ˈmɑsˌkaʊ',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Must go... to Moscow!',
-                cn: '一定要去莫斯科！'
-            },
-            {
-                en: 'Many of them are coming to Moscow from quite far away for an opportunity to have this kind of educational experience.',
-                cn: '为了这样一个有教育意义的体验，他们中的很多人都是从很远的地方赶到莫斯科来的。'
-            }
-        ]
-    },
-    {
-        word: 'Toronto',
-        translation: '多伦多',
-        phonetic: "tə'rɑnto",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Julia: What can you do in Toronto?',
-                cn: '朱莉娅：在多伦多能玩些什么？'
-            },
-            {
-                en: 'About 830 people on Facebook have replied they would attend the event in Toronto.',
-                cn: '大约有830人在脸书上回覆称他们会参与这个多伦多的活动。'
-            },
-            {
-                en: 'That’s why our customers come in often, ” the Toronto store manager said.',
-                cn: '这就是为什么我们的顾客会经常光顾，”多伦多的店面经理说。'
-            }
-        ]
-    },
-    {
-        word: 'Boston',
-        translation: '波士顿',
-        phonetic: "'bɔstən",
-        partOfSpeech: ''
     },
     {
         word: 'post',
@@ -7157,18 +6941,6 @@ export default [
         ]
     },
     {
-        word: 'the UK',
-        translation: 'n. 英国',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: "It is not known if they will return to the UK for the child's birth .",
-                cn: '现在还不知道他们是否会为了孩子的出生而回到英国。'
-            }
-        ]
-    },
-    {
         word: 'candy',
         translation: 'n. 糖果',
         phonetic: 'ˈkændɪ',
@@ -8419,26 +8191,6 @@ export default [
             {
                 en: 'We had our bicentenary celebrations not that long ago.',
                 cn: '不久前，我们举行了200周年庆典活动。'
-            }
-        ]
-    },
-    {
-        word: 'India',
-        translation: 'n. 印度',
-        phonetic: "'ɪndɪə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Burma borders on India.',
-                cn: '缅甸与印度毗邻。'
-            },
-            {
-                en: 'This book treats of the caste system in India.',
-                cn: '这本书论述了印度的种姓制度。'
-            },
-            {
-                en: 'If you come to India for just one thing, this should be it.',
-                cn: '如果你只为一件事来到印度，那就到这儿来吧。'
             }
         ]
     },

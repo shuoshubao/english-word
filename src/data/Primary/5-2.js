@@ -277,26 +277,6 @@ export default [
         ]
     },
     {
-        word: 'Spain',
-        translation: '西班牙',
-        phonetic: 'spen',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They are touring in Spain.',
-                cn: '他们正在西班牙旅游。'
-            },
-            {
-                en: 'Spain ceded the Philippines to the United States.',
-                cn: '西班牙将菲律宾群岛割让给美国。'
-            },
-            {
-                en: 'This island was ceded to Spain more than one hundred years ago.',
-                cn: '这个岛屿在一百多年以前就割让给西班牙了。'
-            }
-        ]
-    },
-    {
         word: 'late',
         translation: '晚',
         phonetic: 'let',
@@ -1603,22 +1583,6 @@ export default [
         ]
     },
     {
-        word: 'American',
-        translation: '美国的',
-        phonetic: 'əˈmɛrɪkən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Her mother is American.',
-                cn: '她妈妈是美国人。'
-            },
-            {
-                en: 'a famous American writer',
-                cn: '一位著名的美国作家'
-            }
-        ]
-    },
-    {
         word: 'Thanksgiving',
         translation: '感恩节',
         phonetic: "'θæŋks,ɡiviŋ; ,θæŋks'ɡ-",
@@ -2889,46 +2853,6 @@ export default [
             {
                 en: '‘Can you pick me up later?’ ‘Sure thing.’',
                 cn: '“你过一会儿能来接我吗？”“没问题。”'
-            }
-        ]
-    },
-    {
-        word: 'Canadian',
-        translation: '加拿大的',
-        phonetic: "kə'nedɪən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'What about the Canadian policy?',
-                cn: '那么加拿大的政策呢？'
-            },
-            {
-                en: 'The fugitive is believed to be headed for the Canadian border.',
-                cn: '据信，逃亡者正向加拿大边界方向逃窜。'
-            },
-            {
-                en: 'Most English people bracket American and Canadian accents together.',
-                cn: '大多数英国人都把美国音和加拿大音相提并论。'
-            }
-        ]
-    },
-    {
-        word: 'Spanish',
-        translation: '西班牙的',
-        phonetic: "'spænɪʃ",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'First-year students may elect  French, Spanish, or German.',
-                cn: '一年级学生可选修法语、西班牙语或德语。'
-            },
-            {
-                en: 'The English and the Spanish were among the first to colonize North America.',
-                cn: '英国人和西班牙人是首先向北美洲开拓殖民地的。'
-            },
-            {
-                en: "At his lordship's death in the Spanish campaign in the year 1811,his estate fell in to the family of the Tiptoffs.",
-                cn: '这位爵爷在1811年西班牙战役中死亡后，他的产业归蒂普托夫家族支配。'
             }
         ]
     }

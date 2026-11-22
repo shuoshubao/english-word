@@ -29,18 +29,6 @@ export default [
         ]
     },
     {
-        word: 'Scottish',
-        translation: 'adj. 苏格兰的，苏格兰人的，苏格兰英语的',
-        phonetic: "'skɔtiʃ",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: 'These cases are dealt with by the Foreign Office, while Hague cases go through the Ministry of Justice in England and Wales, and the Scottish and Northern Irish court services.',
-                cn: '这些案件由外交部负责处理，而海牙公约缔约国的案件则由英格兰和威尔士司法部、以及苏格兰和北爱尔兰法庭进行处理。'
-            }
-        ]
-    },
-    {
         word: 'suffering',
         translation: 'n. 苦处，难受，苦难',
         phonetic: "'sʌfərɪŋ",
@@ -1807,26 +1795,6 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Latin',
-        translation: 'n. 拉丁文，拉丁语; adj. 拉丁文的，拉丁语的',
-        phonetic: "'lætn",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'He is well grounded in Latin.',
-                cn: '他拉丁语的功底很扎实。'
-            },
-            {
-                en: 'I must brush up on my Latin.',
-                cn: '我必须把拉丁语重温一下。'
-            },
-            {
-                en: 'a Latin inscription',
-                cn: '拉丁语碑文'
-            }
-        ]
-    },
-    {
         word: 'make a name',
         translation: '出名',
         phonetic: '',
@@ -2251,12 +2219,6 @@ export default [
     {
         word: 'Maryann Jines',
         translation: '玛丽安.琼斯',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Montgommery',
-        translation: '蒙哥马利（城市名）',
         phonetic: '',
         partOfSpeech: ''
     },
@@ -3457,22 +3419,6 @@ export default [
         ]
     },
     {
-        word: 'New Zealand',
-        translation: 'n. 新西兰',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Meat from New Zealand is frozen and brought to England in special ships.',
-                cn: '从新西兰运来的肉被冷冻保藏，用特殊的船运往英国。'
-            },
-            {
-                en: 'Unfortunately, we know that one effect of climate change in New Zealand will be more extreme weather like this.',
-                cn: '遗憾的是，我们知道，气候变化在新西兰的影响之一是会有更多像这样的极端天气。'
-            }
-        ]
-    },
-    {
         word: 'assess',
         translation: 'v. 评定，评估',
         phonetic: "ə'sɛs",
@@ -3941,18 +3887,6 @@ export default [
         ]
     },
     {
-        word: 'Agnes Grey',
-        translation: '艾格妮斯.格雷（人名，书名）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "And 19th century literature was transformed by Anne's Agnes Grey, Emily's Wuthering Heights, and Charlotte's Jane Eyre.",
-                cn: '安妮的艾格妮斯·格雷，艾米丽的呼啸山庄，和夏洛特的简爱极大改变了19世纪的文学创作。'
-            }
-        ]
-    },
-    {
         word: 'Jane Austin',
         translation: '简.奥斯丁',
         phonetic: '',
@@ -3989,12 +3923,6 @@ export default [
         ]
     },
     {
-        word: 'Tess of d’Urbevilles',
-        translation: '德伯家的苔丝（书名）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'prejudice',
         translation: 'n. 偏见，成见',
         phonetic: "'prɛdʒədɪs",
@@ -4007,18 +3935,6 @@ export default [
             {
                 en: 'It takes a long time to overcome these kinds of prejudices.',
                 cn: '战胜这些偏见需要假以时日。'
-            }
-        ]
-    },
-    {
-        word: 'Wuthering Heights',
-        translation: '呼啸山庄（书名）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'As we rode the four miles to Wuthering Heights, he kept asking me questions about his new home, and the father he had never seen.',
-                cn: '在我们骑马去呼啸山庄的四英里路途中，他一直在问我有关他的新家和他那从未见过面的父亲的事。'
             }
         ]
     },

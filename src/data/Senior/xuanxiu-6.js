@@ -177,12 +177,6 @@ export default [
         ]
     },
     {
-        word: 'Giotto di Bondone',
-        translation: '乔托（意大利画家、雕刻家、建筑师）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'renaissance',
         translation: 'n. 新生；复兴；复活',
         phonetic: 'ˈrenəsɑ:ns; ˌrɛnəˈsɑns',
@@ -313,12 +307,6 @@ export default [
                 cn: '他是个伟大的球员，球技十分精湛。'
             }
         ]
-    },
-    {
-        word: 'Masaccio',
-        translation: '马萨乔（意大利画家）',
-        phonetic: "mɑ:'sɑ:ttʃɔ:",
-        partOfSpeech: ''
     },
     {
         word: 'coincidence',
@@ -609,22 +597,6 @@ export default [
         ]
     },
     {
-        word: 'Leonardo da Vinci',
-        translation: '列奥纳多•达•芬奇（意大利著名画家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Two previously unseen paintings by Leonardo da Vinci have gone on public display for the first time in Italy.',
-                cn: '绘画大师莱昂纳多·达芬奇的两幅未曾露面的作品近日在意大利首次公开展出。'
-            },
-            {
-                en: 'Using computer scans she found that the face on the Turin Shroud and a self portrait of Leonardo da Vinci share the same dimensions.',
-                cn: '她在使用计算机扫描之后发现，都灵裹尸布的遗像与列奥纳多·达·芬奇的自画像具有诸多相同的特点。'
-            }
-        ]
-    },
-    {
         word: 'carve',
         translation: 'v. 雕刻；刻记',
         phonetic: 'kɑrv',
@@ -653,18 +625,6 @@ export default [
         ]
     },
     {
-        word: 'Michelangelo',
-        translation: '米开朗基罗（意大利文艺复兴雕刻家、画家、建筑师和诗人）',
-        phonetic: 'ˌmaɪkəlˈændʒəˌlo',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'It took Michelangelo 4 years to paint the ceiling. He painted it while lying on his back.',
-                cn: '米开朗基罗在天花板上作画花了4年时间, 且是用仰卧的姿势进行的。'
-            }
-        ]
-    },
-    {
         word: 'canvas',
         translation: 'n. 帆布；画布',
         phonetic: "'kænvəs",
@@ -677,26 +637,6 @@ export default [
             {
                 en: 'The gallery has a canvas by Paul Cézanne.',
                 cn: '这个美术馆有一幅保罗·塞尚的油画作品。'
-            }
-        ]
-    },
-    {
-        word: 'Picasso',
-        translation: '毕加索（西班牙画家）',
-        phonetic: "pi'kæsəu",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The painter modeled his style after that of Picasso.',
-                cn: '这位画家模仿毕加索的绘画风格。'
-            },
-            {
-                en: 'She claimed to be the greatest living fan of Picasso.',
-                cn: '这位姑娘声称自己是活着的头号毕加索迷。'
-            },
-            {
-                en: 'Picasso went away for the summer. When he returned he went at once to the unfinished picture in the corner of his studio.',
-                cn: '毕加索外出了一整个夏天，刚返回他就来到了画室一角那幅尚未完成的画前，凭着记忆头像很快完成了。'
             }
         ]
     },
@@ -797,18 +737,6 @@ export default [
             {
                 en: 'He looked much shorter in the flesh than on television.',
                 cn: '他本人看上去要比在电视上矮得多。'
-            }
-        ]
-    },
-    {
-        word: 'Matisse',
-        translation: '马蒂斯（法国画家）',
-        phonetic: "mə'ti:s",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'His paintings have outstanding style of Matisse.',
-                cn: '他的绘画具有明显的马蒂斯的绘画风格。'
             }
         ]
     },
@@ -1015,38 +943,6 @@ export default [
         ]
     },
     {
-        word: 'Egypt',
-        translation: 'n. 埃及（东北非国家）',
-        phonetic: "'idʒɪpt",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They caravaned through Egypt.',
-                cn: '他们结队在埃及坐大篷车旅行。'
-            },
-            {
-                en: 'The established religion of Egypt is Islam.',
-                cn: '埃及的国教是伊斯兰教。'
-            },
-            {
-                en: 'Glazes had been used from ancient times in Egypt.',
-                cn: '埃及自古代起就使用釉料。'
-            }
-        ]
-    },
-    {
-        word: 'Egyptian',
-        translation: 'adj. 埃及的；埃及人的',
-        phonetic: "ɪ'dʒɪpʃ(ə)n",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: '...the Egyptian pharaoh.',
-                cn: '...古埃及法老。'
-            }
-        ]
-    },
-    {
         word: 'visual',
         translation: 'adj. 视觉的；看得见的',
         phonetic: "'vɪʒʊəl",
@@ -1071,26 +967,6 @@ export default [
             {
                 en: 'fragrant flowers',
                 cn: '芳香的花朵'
-            }
-        ]
-    },
-    {
-        word: 'Monet',
-        translation: '莫奈（法国画家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Monet described his attempts to observe and capture the colors in nature thus: “I’m chasing the merest sliver of color.',
-                cn: '莫奈如此描述自己观察和捕捉大自然中的色彩的尝试：“我追逐最最细微的色彩。'
-            },
-            {
-                en: "But this rarely works-after all, a knowledgeable collector isn't going to buy a stolen Monet that he can't display publicly.",
-                cn: '但这种情况很少，毕竟知识渊博的藏家不会买一副被盗而无法公开展示的莫奈名画。'
-            },
-            {
-                en: 'Monet said: “Color owes its brightness to force of contrast rather than to its inherent qualities … primary colors look brightest when they are brought into contrast with their complementaries.',
-                cn: '莫奈说过：“色彩的亮度，是源于对比的力度，而非其固有特质……原色在与其补色对比时，看起来最亮。”'
             }
         ]
     },
@@ -3643,34 +3519,6 @@ export default [
         ]
     },
     {
-        word: 'Sophie',
-        translation: '索菲（女名）',
-        phonetic: "'səufi",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Sophie: Look! Who is that guy on the stage?',
-                cn: '索菲：看那边，舞台上的那个人是谁啊？'
-            }
-        ]
-    },
-    {
-        word: 'Armstrong',
-        translation: '阿姆斯特朗（姓）',
-        phonetic: "'ɑ:mstrɔŋ",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"One small step for man, " Neil Armstrong said.',
-                cn: '“个人一小步”，尼尔.阿姆斯特朗说道。'
-            },
-            {
-                en: 'Aldrin soon followed Armstrong down the ladder to become the second man to stand on the moon.',
-                cn: '奥尔德林不久跟随阿姆斯特朗走下舷梯，成为在月球上登陆的第二个人。'
-            }
-        ]
-    },
-    {
         word: 'graph',
         translation: 'n. 图表；坐标图；曲线图',
         phonetic: 'ɡræf',
@@ -3783,18 +3631,6 @@ export default [
             {
                 en: 'The raw material for the tyre is a byproduct of oil refining.',
                 cn: '这种轮胎的原料是汽油提炼的副产品。'
-            }
-        ]
-    },
-    {
-        word: 'Janice',
-        translation: '贾尼丝（女名）',
-        phonetic: "'dʒænis",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Janice: It's been three years!",
-                cn: '贾尼斯：三年了！'
             }
         ]
     },
@@ -5171,18 +5007,6 @@ export default [
             {
                 en: 'He was visiting professor of geology at the University of Georgia.',
                 cn: '他曾是佐治亚大学的地质学客座教授。'
-            }
-        ]
-    },
-    {
-        word: 'Mount Etna',
-        translation: '埃特纳火山（意大利西西里岛东北部）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Mount Etna holds a place in Roman mythology as the furnace of the god of fire and blacksmithing.',
-                cn: '埃特纳火山在罗马神话中占有一席之地。 它是火与锻冶之神的熔炉。'
             }
         ]
     },

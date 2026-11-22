@@ -201,13 +201,6 @@ export default [
         examples: []
     },
     {
-        word: 'European',
-        translation: '- adj. 欧洲的；欧洲人的\n- n. 欧洲人',
-        phonetic: 'ˌjʊrəˈpiən',
-        partOfSpeech: 'adj / n',
-        examples: []
-    },
-    {
         word: 'investor',
         translation: 'n. 投资者;出资者',
         phonetic: 'ɪnˈvɛstər',

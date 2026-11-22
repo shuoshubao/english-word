@@ -71,13 +71,6 @@ export default [
         examples: []
     },
     {
-        word: 'Himalaya',
-        translation: '喜马拉雅山脉',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: []
-    },
-    {
         word: 'Utopian',
         translation: 'n. 空想家；乌托邦的居民',
         phonetic: '',

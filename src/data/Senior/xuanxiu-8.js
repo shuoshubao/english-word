@@ -307,18 +307,6 @@ export default [
         ]
     },
     {
-        word: 'San Francisco',
-        translation: 'n. 圣弗朗西斯科（也称旧金山）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'San Francisco and New York are important mercantile ports in America.',
-                cn: '旧金山和纽约是美国的重要商港。'
-            }
-        ]
-    },
-    {
         word: 'adventurer',
         translation: 'n. 冒险家',
         phonetic: "əd'vɛntʃərɚ",
@@ -473,58 +461,6 @@ export default [
         ]
     },
     {
-        word: 'Italy',
-        translation: 'n. 意大利',
-        phonetic: "'ɪtəlɪ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They decided to swan around Italy this summer.',
-                cn: '他们决定今年夏天去意大利游逛。'
-            },
-            {
-                en: 'French troops negotiated the Alps and went on the road in Italy.',
-                cn: '法军成功地越过了阿尔卑斯山脉，行军在意大利的国土上。'
-            },
-            {
-                en: 'All the newspapers reported on the football match of France versus Italy.',
-                cn: '所有的报纸都报道了法国队对意大利队的足球比赛。'
-            }
-        ]
-    },
-    {
-        word: 'Italian',
-        translation: 'n. 意大利人；意大利语; adj. 意大利人的；意大利语的',
-        phonetic: 'ɪˈtæljən',
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'How could they be Italian?',
-                cn: '他们怎么会是意大利人呢？'
-            }
-        ]
-    },
-    {
-        word: 'Denmark',
-        translation: 'n. 丹麦（北欧国家）',
-        phonetic: "'denma:k",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They tried to chart the sea area between Norway and Denmark.',
-                cn: '他们企图绘制挪威与丹麦之间的海域图。'
-            },
-            {
-                en: 'Weeks later it wiped out fields in the Netherlands, Germany, Denmark and England.',
-                cn: '几周以后它彻底横扫了荷兰、德国、丹麦和英格兰的田野。'
-            },
-            {
-                en: 'I think they should be careful about that, but I applaud them for taking up the mantle out there in Denmark.',
-                cn: '我认为他们应该注意那一点，但是我赞赏他们为填补丹麦在这方面的空白所作出的贡献。'
-            }
-        ]
-    },
-    {
         word: 'keep up',
         translation: '跟上',
         phonetic: '',
@@ -593,38 +529,6 @@ export default [
             {
                 en: 'He said a further 200 Thai soldiers occupied small camps along the Cambodian side of the border.',
                 cn: '他说，另外还有200名泰国军人在柬埔寨边境一侧占领着一些小的营地。'
-            }
-        ]
-    },
-    {
-        word: 'Korea',
-        translation: 'n. 韩国；朝鲜',
-        phonetic: "kə'rɪr",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Korea lies (to the) west of Japan.',
-                cn: '韩国在日本以西。'
-            }
-        ]
-    },
-    {
-        word: 'Korean',
-        translation: 'n. 韩国/朝鲜人；朝鲜/韩语; adj. 韩国（人/语）的；朝鲜（人/语）的',
-        phonetic: "kə'riən",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'As for whether they will touch upon the situation on the Korean Peninsula, we will know after their meetings.',
-                cn: '至于是否会谈到你所提到的朝鲜半岛局势，这要等他们谈了之后才能知道。'
-            },
-            {
-                en: 'Another aunt — this one elderly and a real lover of palm wine — went on and on about a family friend who married a Korean woman.',
-                cn: '另一个伯母——这位年岁较大，是一个真正的棕榈酒爱好者——不停地谈论着一位和韩国女人结婚的家族朋友。'
-            },
-            {
-                en: 'We both want stability on the Korean Peninsula and in Pakistan.',
-                cn: '我们都希望朝鲜半岛和巴基斯坦的稳定。'
             }
         ]
     },
@@ -2187,18 +2091,6 @@ export default [
             {
                 en: 'The president’s popularity has declined considerably.',
                 cn: '总统的支持率大大下降了。'
-            }
-        ]
-    },
-    {
-        word: 'Jurassic Park',
-        translation: '侏罗纪公园（美国电影名）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"This is my Jurassic Park, " he said at a meeting of the American Geophysical Union meeting in San Francisco.',
-                cn: '“这就是我的‘侏罗纪公园’。” 马施在旧金山召开的美国地球物理学协会会议上发言说。'
             }
         ]
     },
@@ -3979,24 +3871,6 @@ export default [
         ]
     },
     {
-        word: 'Pygmalion',
-        translation: 'n. 皮格马利翁（希腊神话）',
-        phonetic: "piɡ'meiljən",
-        partOfSpeech: 'n'
-    },
-    {
-        word: 'George Bernard Shaw',
-        translation: '乔治•伯纳德•萧 （也译萧伯纳，英国剧作家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The general population feels a connection to it and its popularity is best described by George Bernard Shaw when he said, "The problem with political jokes is that they get elected.',
-                cn: '普通大众感觉得到某种与政治的关联； 而其最为盛行的方面，乔治·萧伯纳描述得最好，他说：“问题是，他们总是与政治笑话一起当选。”'
-            }
-        ]
-    },
-    {
         word: 'adaptation',
         translation: 'n. 改编本；适应（性）',
         phonetic: ",ædæp'teʃən",
@@ -4081,26 +3955,6 @@ export default [
         ]
     },
     {
-        word: 'Higgins',
-        translation: '希金斯 （姓）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Hey, this may be a way of getting rid of Dean Higgins.',
-                cn: '嘿，这可能是一个摆脱希金斯院长的一个方法。'
-            },
-            {
-                en: 'He interpreted the role of Professor Higgins wonderfully.',
-                cn: '他非常出色地扮演了希金斯这个角色。'
-            },
-            {
-                en: 'He is also, like Higgins, one of the coolest and most tenacious of competitors.',
-                cn: '如同希金斯一样，他也是最为优秀，最为顽强的选手之一。'
-            }
-        ]
-    },
-    {
         word: 'phonetics',
         translation: 'n. 语音学',
         phonetic: "fə'nɛtɪks",
@@ -4133,22 +3987,6 @@ export default [
             {
                 en: 'Nothing remained of the colonel.',
                 cn: '上校身后毫无遗物。'
-            }
-        ]
-    },
-    {
-        word: 'Pickering',
-        translation: '皮克林（姓）',
-        phonetic: "'pikəriŋ",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '“We are now at the beginning of the beginning” of a new relationship, Pickering said.',
-                cn: '皮克林说，我们现在处于两国新关系的“开端的开端”。'
-            },
-            {
-                en: '" Pickering agrees that the paper is "very important and original," adding that "it provides strong evidence that the neural coupling underlies the way that speakers come to understand each other.',
-                cn: '皮克林同意这篇论文“非常重要并且十分新颖”，他还补充说，“这项研究为奠定了交谈双方能够彼此理解的神经耦合提供了强有力的证据。”'
             }
         ]
     },
@@ -4953,26 +4791,6 @@ export default [
             {
                 en: 'Towards the end of Middle English, a sudden and distinct change in pronunciation (the Great Vowel Shift) started, with vowels being pronounced shorter and shorter.',
                 cn: '随着中世纪英语的泯灭，发音突然发生了很大的变化（元音大推移），元音的发音越来越短。'
-            }
-        ]
-    },
-    {
-        word: 'Pearce',
-        translation: '皮尔斯（姓）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"Rather like blood circulating in our veins, inside the termites nest it is air that is moved by external temperature and pressures," Pearce explained.',
-                cn: '皮尔斯说：“就象我们血管里的血液循环，在白蚁巢穴内部，空气随着外界的温度和压力而流动。'
-            },
-            {
-                en: "We've seen it all before with Stuart Pearce, Gareth Southgate and Chris Waddle, who've missed penalties and got the blame of the nation.",
-                cn: '我们以前也曾见过，斯图亚特皮尔斯，加雷斯索斯盖特以及克里斯·沃德尔，那么曾罚丢点球，受到国家的责备。'
-            },
-            {
-                en: "Jolie receives a secret note. She's to take a train from Paris to Venice, pick an average tourist and fool her pursuers into thinking that this stranger is Pearce.",
-                cn: '很快，朱莉收到了一张神秘的纸条，纸条上指示她搭上从巴黎到威尼斯的火车，在火车上选择一名普通的游客，伺机使监视者相信这个人就是皮尔斯。'
             }
         ]
     },

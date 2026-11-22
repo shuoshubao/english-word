@@ -769,22 +769,6 @@ export default [
         partOfSpeech: 'v'
     },
     {
-        word: 'Central Park',
-        translation: 'n. 中央公园',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The Central Park is not so well grassed as it used to be.',
-                cn: '中央公园不如过去那样芳草如茵了。'
-            },
-            {
-                en: 'But they find themselves drawn back to their elm in Central Park. Spending a night there is spiritually restorative, they said, if a bit chilly of late.',
-                cn: '但他们还是带着疲倦的身躯回到了中央公园的橡树那儿，并说，尽管最近有点儿冷，但在这棵树上睡一夜有助于恢复精神。'
-            }
-        ]
-    },
-    {
         word: 'Huangguoshu waterfall',
         translation: 'n. 黄果树瀑布',
         phonetic: '',
@@ -805,26 +789,6 @@ export default [
             {
                 en: 'They cruised to Hong Kong on their vacation.',
                 cn: '他们在假期里到香港去游览。'
-            }
-        ]
-    },
-    {
-        word: 'Malaysia',
-        translation: '马来西亚',
-        phonetic: "mə'leʒə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'He settled in Malaysia.',
-                cn: '他定居马来西亚。'
-            },
-            {
-                en: 'But in all of Malaysia?',
-                cn: '但是在整个马来西亚呢？'
-            },
-            {
-                en: 'I come from Malaysia.',
-                cn: '我来自马来西亚。'
             }
         ]
     },
@@ -4257,12 +4221,6 @@ export default [
         ]
     },
     {
-        word: 'London',
-        translation: 'n. 伦敦',
-        phonetic: '',
-        partOfSpeech: 'n'
-    },
-    {
         word: 'article',
         translation: 'n. 文章，论文',
         phonetic: "'ɑrtɪkl",
@@ -6171,12 +6129,6 @@ export default [
                 cn: '就这样，演员不知经历了多少世纪，横跨过多少心智，模仿着他们的所能与所是，渐渐的，他和那个荒谬的个体，那个旅行者，有了许多共同之处。'
             }
         ]
-    },
-    {
-        word: 'England',
-        translation: 'n. 英格兰；英国',
-        phonetic: "'iŋɡlənd",
-        partOfSpeech: 'n'
     },
     {
         word: 'celebrate',

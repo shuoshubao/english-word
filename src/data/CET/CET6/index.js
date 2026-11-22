@@ -4425,18 +4425,6 @@ export default [
         ]
     },
     {
-        word: 'Jesus',
-        translation: 'n. 耶稣',
-        phonetic: "'dʒizəs",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'As a scientist,he disbelieves in Jesus.',
-                cn: '作为一名科学家，他不信耶稣。'
-            }
-        ]
-    },
-    {
         word: 'derail',
         translation: 'v. 脱轨',
         phonetic: "dɪ'rel",
@@ -48451,18 +48439,6 @@ export default [
         ]
     },
     {
-        word: 'Christ',
-        translation: 'n. 救世主（耶稣基督）',
-        phonetic: 'kraɪst',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'a follower of Christ',
-                cn: '耶稣的门徒'
-            }
-        ]
-    },
-    {
         word: 'dramatic',
         translation: 'adj. 引人注目的， 激动人心的； 戏剧的',
         phonetic: "drə'mætɪk",
@@ -48905,18 +48881,6 @@ export default [
             {
                 en: 'The church refused to sanction the king’s second marriage.',
                 cn: '教会拒绝批准国王的第二次婚姻。'
-            }
-        ]
-    },
-    {
-        word: 'Egyptian',
-        translation: 'adj. 埃及的; n. 埃及人',
-        phonetic: "ɪ'dʒɪpʃ(ə)n",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: '...the Egyptian pharaoh.',
-                cn: '...古埃及法老。'
             }
         ]
     },

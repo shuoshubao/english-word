@@ -7,6 +7,7 @@ import Irregulars from '@/pages/Irregulars';
 import Library from '@/pages/Library';
 import Profile from '@/pages/Profile';
 import Roots from '@/pages/Roots';
+import Special from '@/pages/Special';
 import Topic from '@/pages/Topic';
 import Topics from '@/pages/Topics';
 import { finishAuth } from '@/utils/baidu-pan';
@@ -31,7 +32,7 @@ const NAV_OPTIONS = NAV.map(({ key, label, icon }) => ({ value: key, label, icon
 
 const TAB_PATHS = NAV.map(n => n.key);
 // 专题 tab 下的子页面, 高亮归属到 /topics
-const TOPIC_SUBROUTES = ['topic', 'roots', 'collocations', 'irregulars'];
+const TOPIC_SUBROUTES = ['topic', 'special', 'roots', 'collocations', 'irregulars'];
 
 // 根据路由推导页面标题
 const titleOf = pathname => {
@@ -53,6 +54,8 @@ const titleOf = pathname => {
         }
         case 'topic':
             return parts[1] ? `主题 · ${dec(parts[1])}` : '主题分类';
+        case 'special':
+            return parts[1] ? `特殊单词 · ${dec(parts[1])}` : '特殊单词';
         case 'roots':
             return parts[1] ? `词缀 · ${dec(parts[1])}` : '词缀';
         case 'collocations':
@@ -123,6 +126,8 @@ export default function App() {
                 <Route path="/book/:id" element={<Book mode="book" />} />
                 <Route path="/topic" element={<Topic />} />
                 <Route path="/topic/:title" element={<Book mode="topic" />} />
+                <Route path="/special" element={<Special />} />
+                <Route path="/special/:title" element={<Book mode="special" />} />
                 <Route path="/roots" element={<Roots />} />
                 <Route path="/roots/:title" element={<Book mode="root" />} />
                 <Route path="/collocations" element={<Collocations />} />

@@ -89,18 +89,6 @@ export default [
         ]
     },
     {
-        word: 'Rosalyn',
-        translation: 'n. 罗莎琳（女名）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'While studying the chemistry of human body , Dr. Rosalyn Yalow won a Nobel Prize for the research she conducted on the role of hormones .',
-                cn: '罗莎琳，雅罗博士在研究人体化学组成的过程中，因为荷尔蒙的作用所进行的研究而获得了一项诺贝尔奖。'
-            }
-        ]
-    },
-    {
         word: 'lap',
         translation: 'n. （人坐着时）大腿的上方；跑道的一圈',
         phonetic: 'læp',
@@ -153,22 +141,6 @@ export default [
             {
                 en: 'I hate doing French dictations .',
                 cn: '我讨厌做法语听写。'
-            }
-        ]
-    },
-    {
-        word: 'Sally',
-        translation: 'n. 萨利（女名）',
-        phonetic: "'sæli",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Felicity (to Sally): I guess what I’m saying is this might all be a colossal mistake, as my dad would say, but on the other hand it may…maybe it’ll save my life or something.',
-                cn: '费利西蒂(对莎莉说): 我猜我想要说的这个可能是个巨大的错误，如同我爸爸说的那样，但是另一方面也许……也许它可拯救我的生命或者别的什么。'
-            },
-            {
-                en: 'But watch out for a duck I call Sally.',
-                cn: '不过请注意一只被我叫做萨莉的鸭子。'
             }
         ]
     },
@@ -821,26 +793,6 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Mount Kilimanjaro',
-        translation: 'n. 乞力马扎罗山（位于坦桑尼亚；非洲最高山）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Couple Mikey and Tanya Carr-Hartley have a 56.56-hectare estate in the shadow of Mount Kilimanjaro.',
-                cn: '麦基和坦雅夫妇在乞力马扎罗山脚下拥有一个占地56.56公顷的庄园。'
-            },
-            {
-                en: 'The ice atop Mount Kilimanjaro in Tanzania has continued to retreat rapidly, declining 26 percent since 2000, scientists say in a new report.',
-                cn: '科学家在一份最新报告中称，2000年到现在，坦桑尼亚乞力马扎罗山顶的冰层已经持续快速消退了26%。'
-            },
-            {
-                en: 'Q: So you don’t have to do an extraordinary thing like climb Mount Kilimanjaro?',
-                cn: '问：这么说你也不必去做一些特别与众不同的事，像攀登乞力马扎罗山之类？'
-            }
-        ]
-    },
-    {
         word: 'companion',
         translation: 'n. 同伴；伙伴',
         phonetic: "kəm'pænɪən",
@@ -973,26 +925,6 @@ export default [
             {
                 en: 'The building was constructed from the design of that architect.',
                 cn: '这幢大楼是按那位建筑师的设计建造的。'
-            }
-        ]
-    },
-    {
-        word: 'Sanders',
-        translation: 'n. 桑德斯（姓）',
-        phonetic: "'sændəz",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Judge Sanders: Get out of the chair!',
-                cn: '法官桑德斯：离开这把椅子！'
-            },
-            {
-                en: '"She taught me confidence, and with confidence I could do anything at all, " says Sanders.',
-                cn: '桑德斯说，“她教会了我自信，拥有自信我就敢于面对一切。'
-            },
-            {
-                en: 'She said Sanders will be teaching a class for parents and caregivers of adolescents or children with brain disorders.',
-                cn: '桑德斯也说她将要一直为那些有智力障碍的儿童或青少年的父母或看护人上课。'
             }
         ]
     },
@@ -1425,26 +1357,6 @@ export default [
         translation: '试验；考验',
         phonetic: '',
         partOfSpeech: ''
-    },
-    {
-        word: 'Claire',
-        translation: 'n. 克莱尔（女名）',
-        phonetic: 'klεə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Oh, yes, of course. Some old woman, Claire something I guess.',
-                cn: '啊，是的，当然，一个老太太，叫克莱尔还是什么。'
-            },
-            {
-                en: 'I spent time with Claire [Danes], and her portrayal of me back then is very authentic. She was me.',
-                cn: '我和克莱尔相处了一段时间，她对于那时的我的演绎是很可信的，她就是曾经的我。'
-            },
-            {
-                en: 'He knew they had wanted to have a baby, but Claire had suffered a miscarriage after becoming pregnant by another donor.',
-                cn: '当时他知道她们很想要有个小孩，而克莱儿却通过另外一个捐精者的精子怀孕后不幸流产。'
-            }
-        ]
     },
     {
         word: 'bonus',
@@ -2135,12 +2047,6 @@ export default [
         ]
     },
     {
-        word: 'Marion',
-        translation: 'n. 玛丽安（女名）',
-        phonetic: "'mɛəriən",
-        partOfSpeech: 'n'
-    },
-    {
         word: 'alphabetical',
         translation: 'adj. 字母（表）的；按字母顺序的',
         phonetic: ",ælfə'bɛtɪkl",
@@ -2431,12 +2337,6 @@ export default [
         ]
     },
     {
-        word: 'Boston',
-        translation: 'n. 波士顿（美国东北部城市）',
-        phonetic: "'bɔstən",
-        partOfSpeech: 'n'
-    },
-    {
         word: 'talent',
         translation: 'n. 特殊能力；才干；天才',
         phonetic: "'tælənt",
@@ -2657,26 +2557,6 @@ export default [
             {
                 en: 'The book is full of amusing anecdotes about his life in Japan.',
                 cn: '这本书里全是他在日本生活的趣闻轶事。'
-            }
-        ]
-    },
-    {
-        word: 'Clancy',
-        translation: 'n. 克兰西（男名）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Clancy however says the announcement of the shortfall could be used positively.',
-                cn: '不过克兰西说，可以正面地利用关于援助不足的消息。'
-            },
-            {
-                en: "By 1958 he had teamed up with his friend Liam Clancy and Liam's brothers Paddy and Tom, who had come from Tipperary to America before him, and the gold continued to accrue.",
-                cn: '1958年他伙同他的朋友雷姆-克兰西(他先于汤米从蒂帕雷里来到美国)以及雷姆的兄弟派蒂和汤姆一起成立了乐队，随后财源就滚滚而来。'
-            },
-            {
-                en: 'Moreover, the spy game that the two superpowers have played for years, which was so breathtakingly described by Ian Fleming, Tom Clancy, and John le Carré, has outlived its ideological value.',
-                cn: '而且，间谍游戏在两个大国之间持续了很多年，在伊恩弗莱明，汤姆克兰西和约翰勒卡雷笔下被描绘的如此令人激动，已经远超越了意识形态的价值。'
             }
         ]
     },
@@ -4807,46 +4687,6 @@ export default [
         ]
     },
     {
-        word: 'Kenya',
-        translation: 'n. 肯尼亚（非洲国家）',
-        phonetic: 'ˈkiːnjə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Let us now fuse together now as one people who want to do something for the people of Kenya. Let us strengthen the foundation of multiparty democracy in our country.',
-                cn: '现在让我们融汇在一起，团结起来，就像希望为肯尼亚人民作一些事情的同一个人，让我们一起巩固我国多党民主制的基础。'
-            },
-            {
-                en: 'In Kenya, the government plans cooperation with Japan to produce biofuels.',
-                cn: '在肯尼亚，政府打算与日本合作生产生物燃料。'
-            },
-            {
-                en: 'It wants to keep some taxes on goods from Kenya.',
-                cn: '它希望能保持对来自肯尼亚的某些商品的关税。'
-            }
-        ]
-    },
-    {
-        word: 'Bangladesh',
-        translation: 'n. 孟加拉国（亚洲国家）',
-        phonetic: ",ba:ŋglə'deʃ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'As you know, in Bangladesh rumors go around so fast.',
-                cn: '你也知道，在孟加拉国流言蜚语传播很快。'
-            },
-            {
-                en: 'Come to Singapore is no good, I want to go back to Bangladesh.',
-                cn: '他用蹩脚英语说：“来新加坡一点都不好，我想回孟加拉国。'
-            },
-            {
-                en: 'In 2002 Bangladesh became the first country to ban plastic bags outright after discovering the bags blocked drains and was one of the main causes of the devastating floods of 1988 and 1998.',
-                cn: '2002年，在发现塑料袋堵塞排水管道是导致1988至1998年的毁灭性的洪涝灾害的罪魁祸首后，孟加拉国第一个彻底禁止了塑料袋的使用。'
-            }
-        ]
-    },
-    {
         word: 'click',
         translation: 'v. （使）发出咔嗒声; n. 咔嗒声',
         phonetic: 'klɪk',
@@ -4891,26 +4731,6 @@ export default [
         ]
     },
     {
-        word: 'Tanzania',
-        translation: 'n. 坦桑尼亚（东非国家）',
-        phonetic: 'ˌtænzəˈniə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'We have a good example in Tanzania.',
-                cn: '我们在坦桑尼亚有一个很好的例子。'
-            },
-            {
-                en: 'After his visit to South Africa, he will also continue to visit Tanzania and Uganda.',
-                cn: '在结束对南非的访问后，他还将继续访问坦桑尼亚和乌干达。'
-            },
-            {
-                en: 'Some countries, ranging from Rwanda and Tanzania in East Africa, to Egypt and Morocco in the North and South Africa in the South, have steadily increased their science spending.',
-                cn: '从东非的卢旺达和坦桑尼亚，到北非的埃及和摩洛哥，再到非洲南部的南非，一些国家已经稳步增加了它们的科学开支。'
-            }
-        ]
-    },
-    {
         word: 'economic',
         translation: 'adj. 经济的；经济学的',
         phonetic: 'ˌikəˈnɑmɪk, ˌɛkəˈ-nɑmɪk',
@@ -4947,42 +4767,6 @@ export default [
             {
                 en: 'The government is facing another political crisis.',
                 cn: '该政府正面临着另一场政治危机。'
-            }
-        ]
-    },
-    {
-        word: 'Nepal',
-        translation: 'n. 尼泊尔（亚洲国家）',
-        phonetic: 'nɪˈpɔːl',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'This is Nepal.',
-                cn: '这是尼泊尔。'
-            },
-            {
-                en: '“We have plans to distribute the filter in India and Nepal,” Hussam said.',
-                cn: '胡珊说，"我们还计划在印度和尼泊尔分发这种过滤器。"'
-            }
-        ]
-    },
-    {
-        word: 'Uganda',
-        translation: 'n. 乌干达（东非国家）',
-        phonetic: "ju:'ɡændə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'You can spend one hour tracking here, whereas in Uganda it can take all day.',
-                cn: '这里你只要花一小时既可以找到他们，但是在乌干达需要一整天。'
-            },
-            {
-                en: 'After his visit to South Africa, he will also continue to visit Tanzania and Uganda.',
-                cn: '在结束对南非的访问后，他还将继续访问坦桑尼亚和乌干达。'
-            },
-            {
-                en: 'Many others, he says, have moved in with relatives in Gisenyi or crossed the border to Uganda.',
-                cn: '他说，另外许多人搬到吉塞尼的亲戚家里，或者越过边境进入乌干达。'
             }
         ]
     },
@@ -5123,18 +4907,6 @@ export default [
         ]
     },
     {
-        word: 'Sudan',
-        translation: 'n. 苏丹（非洲国家）',
-        phonetic: "sʊ'dæn",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'An option could be to redeploy to the border troops based in other areas of south Sudan.',
-                cn: '他通过翻译说：“一种选择可能是重新部署南部苏丹其它地区的边境部队。'
-            }
-        ]
-    },
-    {
         word: 'clinic',
         translation: 'n. 门诊部；小诊所',
         phonetic: "'klɪnɪk",
@@ -5143,26 +4915,6 @@ export default [
             {
                 en: 'an appointment at an outpatient clinic',
                 cn: '门诊预约'
-            }
-        ]
-    },
-    {
-        word: 'Malawi',
-        translation: 'n. 马拉维（非洲国家）',
-        phonetic: "mɑ:'lɑ:wi",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: "Adopting jatropha, he thinks, will be a first step out of poverty for Malawi's farmers, and they seem willing to try.",
-                cn: '他认为，种植麻疯树将是马拉维农民摆脱贫困的第一步，而这些农民似乎也愿意尝试一下。'
-            },
-            {
-                en: '"Anyone could come to Malawi and quickly arrange for an adoption that might have grave consequences on the very children that the law seeks to protect," she said.',
-                cn: '她说：“任何人都可以到马拉维很快办理收养事宜，这可能会对那些法律寻求保护的孩子产生严重后果。”'
-            },
-            {
-                en: 'The main section of the valley in Africa continues from the Red Sea across Ethiopia and across Kenya, Tanzania, and Malawi to the lower Zambezi River valley in Mozambique.',
-                cn: '大峡谷的主体部分来自非洲，延伸自红海穿过埃塞俄比亚，横跨两岸的肯尼亚、坦桑尼亚、马拉维到莫桑比克的赞比西河流域下游.'
             }
         ]
     },
@@ -5873,46 +5625,6 @@ export default [
         ]
     },
     {
-        word: 'Julie',
-        translation: 'n. 朱莉（女名）',
-        phonetic: "'dʒu:li",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Julie, do you know why we celebrate Easter?',
-                cn: '朱莉，你知道我们为什么庆祝复活节吗？'
-            },
-            {
-                en: 'Julie: And then what do you do with that log?',
-                cn: '朱莉：然后你要拿那些记录做什么呢？'
-            },
-            {
-                en: 'The St. Lawrence River held a particular poetry and beauty to me and (I) decided to live there with our daughter, Julie.',
-                cn: '圣劳伦斯河对我来说有着特殊的诗意和美感，(我) 决定和我的女儿朱莉一起生活在那里。'
-            }
-        ]
-    },
-    {
-        word: 'Abigail',
-        translation: 'n. 阿比盖尔（女名）',
-        phonetic: "'æbɪ,gel",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Like other women of the time, Abigail lacked formal education; but her curiosity spurred her keen intelligence, and she read avidly the books at hand.',
-                cn: '与同时代其他的妇女一样，阿比盖尔缺乏正式的教育。 但是她的好奇心使她生性聪敏。'
-            },
-            {
-                en: 'He complained to his wife Abigail, "My country has in its wisdom contrived for me the most insignificant office that ever the invention of man contrived or his imagination conceived.',
-                cn: '他曾对他的妻子阿比盖尔抱怨，“我们的国家自做聪明，拿那个最不起眼的职位给我，可能就是某个人即兴杰作或者是他的想象。”'
-            },
-            {
-                en: 'As wife of the first Vice President, Abigail became a good friend to Mrs. Washington and a valued help in official entertaining, drawing on her experience of courts and society abroad.',
-                cn: '作为第一副总统夫人，阿比盖尔成为华盛顿夫人要好的朋友，依靠她在法院和国外的生活经验，对于官方娱乐活动提供了有益的帮助。'
-            }
-        ]
-    },
-    {
         word: 'drill',
         translation: 'v. 钻（孔）; n. 钻；钻机',
         phonetic: 'drɪl',
@@ -5941,46 +5653,6 @@ export default [
         ]
     },
     {
-        word: 'Jamie',
-        translation: 'n. 杰米（男名）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: '"Contractors are using fine print to deny women like Jamie Leigh Jones their day in court, " he said in a Senate debate.',
-                cn: '“承包商钻了法律的空子，拒绝类似杰米·雷·琼斯遭遇的妇女走向法庭。” 他在参议院辩论上说。'
-            },
-            {
-                en: 'Some reports in the past week had even said she planned to name the child Jamilyn, after her younger sister Jamie and her mother Lynne.',
-                cn: '在过去的一周内，有报道称她 计划给孩子起名叫杰米琳，名字取自于她妹妹的名字杰米和母亲的名字琳。'
-            },
-            {
-                en: "Previous winners include Bono and Jamie Oliver, and the money is given to the winner's chosen charity.",
-                cn: '以前的获奖者有波诺和杰米·奥利弗，奖金将赠予获奖者选择的慈善机构。'
-            }
-        ]
-    },
-    {
-        word: 'Sam',
-        translation: 'n. 萨姆（男名）',
-        phonetic: 'sæm',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Sam and John are pulling the rope.',
-                cn: '山姆和约翰在拔河。'
-            },
-            {
-                en: 'Sam and I have been together for over a year.',
-                cn: '山姆和我在一起已经有一年多了。'
-            },
-            {
-                en: 'Over several hours, Sam explained my assignment, should I choose to accept it.',
-                cn: '过了几个小时，我的任务山姆解释说，我应该选择接受它。'
-            }
-        ]
-    },
-    {
         word: 'Lima',
         translation: 'n. 利马（秘鲁首都）',
         phonetic: "'limə",
@@ -6001,26 +5673,6 @@ export default [
         ]
     },
     {
-        word: 'Cuzco',
-        translation: 'n. 库斯科（秘鲁南部城市）',
-        phonetic: "'ku:skəu",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'In total, slides have killed five people in the Cuzco region.',
-                cn: '在库斯科地区泥石流总共已使5人丧生。'
-            },
-            {
-                en: 'Cuzco the capital city, was said by the Spanish to be "as fine as any city in Spain".',
-                cn: '库斯科首都被西班牙人认为“其精致可以媲美西班牙的任何城市”。'
-            },
-            {
-                en: 'Andean dancers wearingfeathered hats walk during celebrations in honor of the Lord of "QoyllurRit\'i" near the town of Tayankani in Cuzco, on June 22, 2011.',
-                cn: '2011年6月22日，库斯科的塔亚卡尼镇附近举办的节庆活动中，安第斯山脉的舞者身着羽毛做成的帽子行走在山间。'
-            }
-        ]
-    },
-    {
         word: 'the Andes',
         translation: '安第斯山脉',
         phonetic: '',
@@ -6035,28 +5687,6 @@ export default [
                 cn: '在开花前，“安弟斯女王”就非常引人注目了，它形状如塔，能长高到40英尺（12米），只在秘鲁与玻利维亚的山地中生长。'
             }
         ]
-    },
-    {
-        word: 'Peru',
-        translation: 'n. 秘鲁（南美国家）',
-        phonetic: "pə'rʊ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'It sounds as though you enjoyed Peru.',
-                cn: '这听起来好像你喜欢秘鲁。'
-            },
-            {
-                en: 'Well, in Peru you had to negotiate like that to get the freshest fish at the market.',
-                cn: '在秘鲁你必须这样还价你才能在市场上拿到最新鲜的鱼。'
-            }
-        ]
-    },
-    {
-        word: 'Lia',
-        translation: 'n. 莉亚（女名）',
-        phonetic: "æ'fi:ljə",
-        partOfSpeech: 'n'
     },
     {
         word: 'agent',

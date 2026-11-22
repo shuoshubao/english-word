@@ -507,49 +507,6 @@ export default [
         ]
     },
     {
-        title: '地点建筑',
-        words: [
-            'school',
-            'hospital',
-            'park',
-            'zoo',
-            'museum',
-            'library',
-            'shop',
-            'store',
-            'restaurant',
-            'bank',
-            'cinema',
-            'theater',
-            'supermarket',
-            'post office',
-            'station',
-            'market',
-            'mall',
-            'stadium'
-        ]
-    },
-    {
-        title: '国家语言',
-        words: [
-            'China',
-            'Chinese',
-            'America',
-            'American',
-            'England',
-            'English',
-            'Japanese',
-            'France',
-            'French',
-            'Germany',
-            'German',
-            'Australia',
-            'Australian',
-            'Canada',
-            'Canadian'
-        ]
-    },
-    {
         title: '运动',
         words: [
             'football',

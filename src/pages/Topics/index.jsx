@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 // 专题入口: 对应小程序的 pages/topics, 从词库页独立出来作为一级 tab
 const ENTRIES = [
+    { title: '特殊单词', sub: '人名 / 国家语言 / 城市等专名', to: '/special', background: 'linear-gradient(135deg, #e05a8a, #f39ab8)' },
     { title: '主题分类', sub: '按场景批量记忆', to: '/topic', background: 'linear-gradient(135deg, #6652d1, #8b7ae8)' },
     { title: '不规则动词', sub: '原形/过去式/过去分词时态表', to: '/irregulars', background: 'linear-gradient(135deg, #2f80ed, #6aa9f0)' },
     { title: '词缀', sub: '按前缀/后缀批量记忆', to: '/roots', background: 'linear-gradient(135deg, #4caf8a, #7fd4b5)' },

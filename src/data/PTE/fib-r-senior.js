@@ -4879,13 +4879,6 @@ export default [
         examples: []
     },
     {
-        word: 'Bishop',
-        translation: 'n. 主教\n\nBishop毕晓普, 伊丽莎白((1911-1979) 美国诗人, 以其大量的, 描述性的著作闻名, 如“加油站”(1965年))',
-        phonetic: 'ˈbɪʃəp',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'artery',
         translation: 'n. 动脉；干道；主流',
         phonetic: 'ˈɑrtəri',

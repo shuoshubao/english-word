@@ -17,26 +17,6 @@ export default [
         ]
     },
     {
-        word: 'Canada',
-        translation: '加拿大',
-        phonetic: "'kænədə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'She was domiciliated in Canada.',
-                cn: '她在加拿大定居。'
-            },
-            {
-                en: 'Canada produces wheat and furs.',
-                cn: '加拿大出产小麦和毛皮。'
-            },
-            {
-                en: 'He has lived in Canada for more than twenty years and is completely Canadianized now.',
-                cn: '他在加拿大已经住了二十多年了，现在完全加拿大化了。'
-            }
-        ]
-    },
-    {
         word: 'USA',
         translation: '美国',
         phonetic: "ju: es 'ei",
@@ -55,12 +35,6 @@ export default [
                 cn: '在接下来两场面对英格兰和美国的比赛中阿尔及利亚能期待些什么呢》加纳能成为小组出线黑马吗？'
             }
         ]
-    },
-    {
-        word: 'China',
-        translation: '中国',
-        phonetic: 'ˈtʃaɪnə',
-        partOfSpeech: 'n'
     },
     {
         word: 'she',

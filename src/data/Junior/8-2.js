@@ -4823,26 +4823,6 @@ export default [
         ]
     },
     {
-        word: 'Asia',
-        translation: 'n. 亚洲',
-        phonetic: 'ˈeɪʒn; eʒən',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The European powers extended their authority in Asia.',
-                cn: '欧洲列强在亚洲扩大他们的管辖权。'
-            },
-            {
-                en: 'The teacher chalked out a map of Asia on the blackboard.',
-                cn: '老师用粉笔在黑板上画了一张亚洲地图。'
-            },
-            {
-                en: 'His extensive experience in other parts of Asia helped him to overcome cultural barriers.',
-                cn: '在亚洲其他地区的广泛经历帮助他克服了文化障碍。'
-            }
-        ]
-    },
-    {
         word: 'feel free',
         translation: '（可以）随便（做某事)',
         phonetic: '',
@@ -6027,22 +6007,6 @@ export default [
         ]
     },
     {
-        word: 'French',
-        translation: 'n. 法语; adj. 法国人（的）',
-        phonetic: 'frentʃ',
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'How do you ask for directions in French?',
-                cn: '上等的法国葡萄酒'
-            },
-            {
-                en: 'an excellent French wine',
-                cn: '用法语怎么问路？'
-            }
-        ]
-    },
-    {
         word: 'pop',
         translation: 'n. 流行音乐',
         phonetic: 'pɑp',
@@ -6735,22 +6699,6 @@ export default [
         ]
     },
     {
-        word: 'German',
-        translation: 'n. 德语；德国人; adj. 德国的；德国人的；德语的',
-        phonetic: "'dʒɜːmən",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'Half of the books are in German.',
-                cn: '这些书有一半是德语的。'
-            },
-            {
-                en: 'German history',
-                cn: '德国历史'
-            }
-        ]
-    },
-    {
         word: 'theme',
         translation: 'n. 主题，题目；作文',
         phonetic: 'θim',
@@ -6915,34 +6863,6 @@ export default [
             {
                 en: 'Look, Kate, I’m calling the doctor, whether you like it or not.',
                 cn: '喂，凯特，我要打电话叫医生来，不管你愿不愿意。'
-            }
-        ]
-    },
-    {
-        word: 'Indian',
-        translation: 'adj. 印度的，印度人的',
-        phonetic: "'ɪndɪən",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: '...the Indian government.',
-                cn: '...印度政府。'
-            }
-        ]
-    },
-    {
-        word: 'Japanese',
-        translation: 'adj. 日本的; n. 日本人；日语',
-        phonetic: ",dʒæpə'niz",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Her familiarity with Japanese surprised me.',
-                cn: '她对日语的熟谙使我惊奇。'
-            },
-            {
-                en: 'a Japanese car',
-                cn: '日本(汽)车'
             }
         ]
     },

@@ -461,30 +461,6 @@ export default [
         ]
     },
     {
-        word: 'English',
-        translation: 'n. 英语; adj. 英格兰的；英格兰人的；英语的',
-        phonetic: "'ɪŋɡlɪʃ",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'Do you speak English?',
-                cn: '你会说英语吗？'
-            },
-            {
-                en: 'leaflets written in plain English',
-                cn: '用简单英语写的传单'
-            },
-            {
-                en: 'the English countryside',
-                cn: '英格兰乡村'
-            },
-            {
-                en: 'English grammar',
-                cn: '英语语法'
-            }
-        ]
-    },
-    {
         word: 'in English',
         translation: '用英语',
         phonetic: '',
@@ -1675,12 +1651,6 @@ export default [
                 cn: '经一位朋友介绍，我认识了吉姆。'
             }
         ]
-    },
-    {
-        word: 'China',
-        translation: 'n. 中国',
-        phonetic: 'ˈtʃaɪnə',
-        partOfSpeech: 'n'
     },
     {
         word: 'middle',
@@ -7033,18 +7003,6 @@ export default [
             {
                 en: 'a math test',
                 cn: '数学测验'
-            }
-        ]
-    },
-    {
-        word: 'Chinese',
-        translation: 'n. 汉语，中文；中国菜，中餐；中餐馆',
-        phonetic: 'tʃaɪniːz',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Do you fancy going out for a Chinese?',
-                cn: '你想不想出去吃顿中餐？'
             }
         ]
     },

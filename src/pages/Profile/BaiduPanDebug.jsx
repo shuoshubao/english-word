@@ -31,12 +31,34 @@ const replaceNodeChildren = (nodes, id, children) =>
 
 // 仅用于代码高亮, 未识别的扩展名按纯文本展示, 不影响文件能否打开
 const LANGUAGES = {
-    json: 'json', jsonc: 'json', md: 'markdown', markdown: 'markdown',
-    js: 'javascript', jsx: 'javascript', mjs: 'javascript', cjs: 'javascript',
-    ts: 'typescript', tsx: 'typescript', html: 'html', htm: 'html',
-    css: 'css', scss: 'scss', less: 'less', xml: 'xml', svg: 'xml',
-    yaml: 'yaml', yml: 'yaml', sql: 'sql', sh: 'shell', bash: 'shell',
-    py: 'python', java: 'java', go: 'go', rs: 'rust', php: 'php', rb: 'ruby'
+    json: 'json',
+    jsonc: 'json',
+    md: 'markdown',
+    markdown: 'markdown',
+    js: 'javascript',
+    jsx: 'javascript',
+    mjs: 'javascript',
+    cjs: 'javascript',
+    ts: 'typescript',
+    tsx: 'typescript',
+    html: 'html',
+    htm: 'html',
+    css: 'css',
+    scss: 'scss',
+    less: 'less',
+    xml: 'xml',
+    svg: 'xml',
+    yaml: 'yaml',
+    yml: 'yaml',
+    sql: 'sql',
+    sh: 'shell',
+    bash: 'shell',
+    py: 'python',
+    java: 'java',
+    go: 'go',
+    rs: 'rust',
+    php: 'php',
+    rb: 'ruby'
 };
 // CDN 的 Content-Type 缺失时会退回 octet-stream/json, 用文件头签名兜底识别图片, 不依赖扩展名
 const isImageBlob = async blob => {
@@ -139,9 +161,7 @@ export default function BaiduPanDebug() {
         return run(async () => {
             const blob = await readFileBlob(readBaiduPanInfo(), file.fsId);
             // 按实际内容判断图片, 其余一律按文本读取, 无需逐个列举扩展名
-            const content = (await isImageBlob(blob))
-                ? { image: true, value: URL.createObjectURL(blob) }
-                : { image: false, value: await blob.text() };
+            const content = (await isImageBlob(blob)) ? { image: true, value: URL.createObjectURL(blob) } : { image: false, value: await blob.text() };
             fileContentCache.set(file.fsId, content);
             if (seq === readSeq.current) {
                 setFileContent(content);

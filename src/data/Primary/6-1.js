@@ -613,26 +613,6 @@ export default [
         ]
     },
     {
-        word: 'Germany',
-        translation: '德国',
-        phonetic: "'dʒɝməni",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Germany borders on France.',
-                cn: '德国与法国接壤。'
-            },
-            {
-                en: 'The news aroused much fear in Germany.',
-                cn: '这消息在德国引起很大恐慌。'
-            },
-            {
-                en: 'The new Nazism is resurging in some places in Germany.',
-                cn: '新纳粹主义正在德国的一些地方复活。'
-            }
-        ]
-    },
-    {
         word: 'Alaska',
         translation: '阿拉斯加州',
         phonetic: "ə'læskə",

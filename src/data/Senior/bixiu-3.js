@@ -225,26 +225,6 @@ export default [
         ]
     },
     {
-        word: 'Mexico',
-        translation: 'n. 墨西哥（拉丁美洲国家）',
-        phonetic: "'mɛksɪko",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'We want to prove that in Mexico.',
-                cn: '我们要在墨西哥证明这一点。'
-            },
-            {
-                en: 'The United States bounds on Mexico in the south.',
-                cn: '美国的南面与墨西哥接壤。'
-            },
-            {
-                en: 'All but one of the deaths were in Mexico, the epicenter of the outbreak.',
-                cn: '除一人外，其他死亡患者都在疾病爆发的中心地墨西哥。'
-            }
-        ]
-    },
-    {
         word: 'feast',
         translation: 'n. 节日；盛宴',
         phonetic: 'fist',
@@ -421,22 +401,6 @@ export default [
             {
                 en: 'Traffic problems account for one third of late arrivals.',
                 cn: '迟到的人有三分之一是因为交通问题。'
-            }
-        ]
-    },
-    {
-        word: 'Christopher Columbus',
-        translation: '克利斯朵夫•哥伦布（意大利航海家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'But the real question for Christopher Columbus was: How do I best get to the West Indies?',
-                cn: '但对克里斯多夫·哥伦布而言，真正的问题是，我怎样才能最快到达西印度？'
-            },
-            {
-                en: 'This may be the spot where Christopher Columbus rached America.',
-                cn: '这里也许是克里斯托弗.哥伦布到达美洲的地点.'
             }
         ]
     },
@@ -741,26 +705,6 @@ export default [
         ]
     },
     {
-        word: 'Jesus',
-        translation: 'n. 耶稣',
-        phonetic: "'dʒizəs",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'As a scientist,he disbelieves in Jesus.',
-                cn: '作为一名科学家，他不信耶稣。'
-            },
-            {
-                en: 'What do you want with us, Jesus of Nazareth?',
-                cn: '拿撒勒的耶稣，我们与你有什么相干？'
-            },
-            {
-                en: 'According to the Christian religion,Jesus Christ resurrected from death.',
-                cn: '根据基督教的说法，耶稣基督曾死而复生。'
-            }
-        ]
-    },
-    {
         word: 'cherry',
         translation: 'n. 樱桃；樱桃树',
         phonetic: "'tʃɛri",
@@ -973,38 +917,6 @@ export default [
             {
                 en: "No, she objects to Picton's role as governor of Trinidad, where he was accused of brutality in his administration of the colony and its slave-based economy.",
                 cn: '不，她反对皮克顿作为特立尼达统治者的角色，在那里，他被指控在其对殖民地和奴隶经济的统治期间的残暴罪行。'
-            }
-        ]
-    },
-    {
-        word: 'Carla',
-        translation: 'n. 卡拉（女名）',
-        phonetic: "'kɑ:lə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He sees that cancer is a world unto itself; that Carla is now part of this world; and that he is part of it, too.',
-                cn: '他认识到癌症就是一个自我施加的世界；卡拉现在就是这个世界的一部分了；而他自己也是这个世界的一部分。'
-            },
-            {
-                en: 'SECRETARY CLINTON: Thank you so much, Carla, and thanks for your leadership in this undertaking as well as so much else.',
-                cn: '非常感谢，卡拉，谢谢你在这项事业和其他众多事务中发挥的领导作用。'
-            },
-            {
-                en: '"The unauthorized use of the image of Carla Bruni caused her moral and economic damage," a court in the island capital Saint Denis de la Reunion said on Thursday.',
-                cn: '在该岛首府圣丹尼斯日留尼汪的法院周四表示这代表了“未经授权使用卡拉布鲁尼的图片，在道德名誉和经济上对她造成的损失 ”。'
-            }
-        ]
-    },
-    {
-        word: 'Hari',
-        translation: 'n. 哈利（男名）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Johann Hari is a writer for the Independent newspaper.',
-                cn: '约翰 • 哈里是《独立报》作家。'
             }
         ]
     },
@@ -2481,26 +2393,6 @@ export default [
         ]
     },
     {
-        word: 'Mark Twain',
-        translation: '马克•吐温(美国作家)',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Mark Twain travel anywhere in all his life , his adventure aboard is the material of his works.',
-                cn: '马克·吐温一生中到处旅游，他在国外的历险经历是他一些作品的素材。'
-            },
-            {
-                en: 'Ron Powers is the author of Mark Twain: A Life, and Sam and Laura, a play about Twain and his lost love.',
-                cn: '罗恩·鲍沃斯，《山姆和劳拉：马克·吐温的爱情人生》的作者，一部关于马克·吐温失去的爱情的戏剧。'
-            },
-            {
-                en: '“On one of my visits we happened to be talking about Mark Twain, ” Byrd wrote to Gold.',
-                cn: '“一次拜访中，我们碰巧谈到了马克·吐温，”伯德在给古尔特的信中写道。'
-            }
-        ]
-    },
-    {
         word: 'birthplace',
         translation: 'n. 出生地；故乡',
         phonetic: "'bɝθ'ples",
@@ -2535,18 +2427,6 @@ export default [
             {
                 en: 'He brought up a subject rarely raised during the course of this campaign.',
                 cn: '他提出了一个在该运动进程中很少被提及的话题。'
-            }
-        ]
-    },
-    {
-        word: 'Hannibal',
-        translation: 'n. 汉尼拔（美国城市）',
-        phonetic: "'hænibəl",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'And in fact it is just shown in percentages, less than a quarter of the painting itself deals with Hannibal and his army, and the rest is this swollen angry sky with the sun just flickering through.',
-                cn: '事实上这从画面的比例中就显示出来，整个画面中只有不到四分之一的画幅是描绘汉尼拔和他的军队的，而其余的空间都给了昏暗的天空、躁动的云以及闪烁不定的阳光。'
             }
         ]
     },
@@ -2643,18 +2523,6 @@ export default [
         ]
     },
     {
-        word: 'Tom Sawyer',
-        translation: 'n. 汤姆•索亚（人名）',
-        phonetic: '',
-        partOfSpeech: 'n'
-    },
-    {
-        word: 'Huckleberry Finn',
-        translation: '哈克贝利•费恩（人名）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'phrase',
         translation: 'n. 短语；词组；惯用语',
         phonetic: 'frez',
@@ -2699,22 +2567,6 @@ export default [
         ]
     },
     {
-        word: 'Samuel Langhorne Clemens',
-        translation: '塞缪尔•兰霍恩•克莱门斯（人名）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Samuel Langhorne Clemens earned his steamboat pilot 's license.",
-                cn: '塞缪尔·朗荷恩·克列门斯拿到了轮船舵手执照。'
-            },
-            {
-                en: 'Samuel Langhorne Clemens more commonly known by his pen name Mark Twain was a great American author.',
-                cn: '萨缪尔·兰亨·克莱门是一位伟大的美国作家，他的笔名马克·吐温更为人熟知。'
-            }
-        ]
-    },
-    {
         word: 'scene',
         translation: 'n. （戏剧）一场；场面；现场；景色',
         phonetic: 'sin',
@@ -2747,46 +2599,6 @@ export default [
             {
                 en: 'a first-person narrator',
                 cn: '第一人称叙述者'
-            }
-        ]
-    },
-    {
-        word: 'Roderick',
-        translation: 'n. 罗德里克（男名）',
-        phonetic: "'rɔdərik",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Roderick Lewis did three odd things yesterday.',
-                cn: '罗德里克刘易斯昨天做了三件怪事。'
-            },
-            {
-                en: 'We were joined by Roderick Hawkins, director of communications for the Chicago Urban League.',
-                cn: '和我们一起去的还有芝加哥城市联盟的总监罗德里克霍金斯。'
-            },
-            {
-                en: 'Roderick Lewis, 23, reportedly approached Officer Scott Bloom in West Haven and yelled, "I need a bag of dust."',
-                cn: '据报道，这位名为罗德里克 路易斯的23岁男子在西天堂接近警官斯科特布鲁姆、并大喊“我要一包粉！”'
-            }
-        ]
-    },
-    {
-        word: 'Oliver',
-        translation: 'n. 奥利弗（男名）',
-        phonetic: "'ɑləvɚ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Oliver Stone finally opened the door for you.',
-                cn: '奥利弗斯通最后为你打开了那扇门。'
-            },
-            {
-                en: 'James and Oliver admit to occasionally pretending to be each other when they were much younger, but not as much as another set of twins at their school, on whom they based the Weasleys.',
-                cn: '詹姆斯和奥利弗承认，他们很小的时候，偶尔会假扮对方，但是扮的次数远不及当时他们学校的另一对双胞胎，韦斯莱兄弟就象这另一对双胞胎一样。'
-            },
-            {
-                en: '"We were relatively good," says Oliver, laughing, "but these boys would swap lessons – one was good at cricket, the other was good at science.',
-                cn: '“我们相对来说还是挺乖的，”奥利弗笑着说，“但这些男孩子会交换身份上课——他们一个板球打得好，一个比较喜欢科学。'
             }
         ]
     },
@@ -3249,12 +3061,6 @@ export default [
                 cn: '令人称奇的天才'
             }
         ]
-    },
-    {
-        word: 'Horace',
-        translation: 'n. 霍勒斯（男名）',
-        phonetic: "'hɔrəs",
-        partOfSpeech: 'n'
     },
     {
         word: 'steak',
@@ -4437,62 +4243,6 @@ export default [
         ]
     },
     {
-        word: 'Isaac Newton',
-        translation: '艾萨克•牛顿（英国科学家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'What Sir Isaac Newton was doing late at night may surprise you.',
-                cn: '在深夜艾萨克·牛顿先生做的事可能会令你感到惊奇。'
-            },
-            {
-                en: 'Sir Isaac Newton supposedly discovered gravity through the fall of an apple.',
-                cn: '据称艾萨克·牛顿爵士通过苹果落地，发现了万有引力。'
-            },
-            {
-                en: 'One of the most well known tenets of physics — for every action, there is an equal and opposite reaction — was first discovered by Isaac Newton.',
-                cn: '物理学最广为人知的一条定律——对任何一个动作而言，存在一个相同大小的反作用——由艾萨克·牛顿发现。'
-            }
-        ]
-    },
-    {
-        word: 'Albert Einstein',
-        translation: '阿尔伯特•爱因斯坦（德裔美国科学家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'This could be done because of the way gravity bends light, as demonstrated by Albert Einstein.',
-                cn: '这所以能够这么做，是因为阿尔伯特·爱因斯坦已经证明了的重力弯曲光线的方式。'
-            },
-            {
-                en: 'At the dawn of the nuclear age that he helped to unleash, Albert Einstein said: “Now everything has changed…” And he warned: “We are drifting towards a catastrophe beyond comparison.',
-                cn: '在他帮助开创的核时代来临之际，阿尔伯特·爱因斯坦说：“现在，一切都改变了……”。 他还警告说：“我们正在向一场无法比拟的灾难滑落。'
-            },
-            {
-                en: 'Albert Einstein was able to conceive his theory of relativity because he thought that time and space might not be immutable.',
-                cn: '阿尔伯特·爱因斯坦能够演算出相对论，是因为他认为时间和空间不可能一成不变。'
-            }
-        ]
-    },
-    {
-        word: 'Stephen Hawking',
-        translation: '斯蒂芬•霍金（英国科学家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'British scientist Stephen Hawking is worried that any extraterrestrial life we find is likely to be a creature out of the movie Predator – not ET.',
-                cn: '英国科学家史蒂芬·霍金曾担心，我们找到的任何一种地外生命都更有可能类似《掠食者》，而不像《ET外星人》那么友善。'
-            },
-            {
-                en: "Professor Stephen Hawking, one of the world's foremost physicists, is seriously ill and in hospital in Cambridge, Cambridge University said in a statement on Monday.",
-                cn: '(路透社)-在周一的声明中，剑桥大学称，史蒂芬·霍金教授，世界上最顶尖的物理学家之一，因患重病而在剑桥住院。'
-            }
-        ]
-    },
-    {
         word: 'spaceship',
         translation: 'n. 宇宙飞船',
         phonetic: "'spesʃɪp",
@@ -4697,86 +4447,6 @@ export default [
             {
                 en: 'a biology quiz',
                 cn: '生物测验'
-            }
-        ]
-    },
-    {
-        word: 'Canadian',
-        translation: 'n. 加拿大人; adj. 加拿大的；加拿大人的',
-        phonetic: "kə'nedɪən",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'What about the Canadian policy?',
-                cn: '那么加拿大的政策呢？'
-            },
-            {
-                en: 'The fugitive is believed to be headed for the Canadian border.',
-                cn: '据信，逃亡者正向加拿大边界方向逃窜。'
-            },
-            {
-                en: 'Most English people bracket American and Canadian accents together.',
-                cn: '大多数英国人都把美国音和加拿大音相提并论。'
-            }
-        ]
-    },
-    {
-        word: 'Vancouver',
-        translation: 'n. 温哥华（加拿大城市）',
-        phonetic: "væn'ku:və",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Have you been to Vancouver before?',
-                cn: '你以前去过温哥华吗？'
-            },
-            {
-                en: 'I was in Vancouver about a month ago.',
-                cn: '大约一个月之前我就呆在温哥华。'
-            },
-            {
-                en: 'Well, what if I ask you what happens after Vancouver?',
-                cn: '好吧 如果我是在问你去温哥华后的事呢？'
-            }
-        ]
-    },
-    {
-        word: 'Toronto',
-        translation: 'n. 多伦多（加拿大城市）',
-        phonetic: "tə'rɑnto",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Julia: What can you do in Toronto?',
-                cn: '朱莉娅：在多伦多能玩些什么？'
-            },
-            {
-                en: 'About 830 people on Facebook have replied they would attend the event in Toronto.',
-                cn: '大约有830人在脸书上回覆称他们会参与这个多伦多的活动。'
-            },
-            {
-                en: 'That’s why our customers come in often, ” the Toronto store manager said.',
-                cn: '这就是为什么我们的顾客会经常光顾，”多伦多的店面经理说。'
-            }
-        ]
-    },
-    {
-        word: 'Calgary',
-        translation: 'n. 卡尔加里（加拿大城市）',
-        phonetic: "'kælɡəri",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'We also have a women working group in our Consulate General in Calgary. And the chair of the group, Ms. Yan, is just sitting over there.',
-                cn: '驻卡尔加里总领馆也有一个妇女工作小组，严萍女士就是这个小组的组长，她也参加了今天的活动。'
-            },
-            {
-                en: 'The psychologist, from the University of Calgary, has subsequently formed an equation for why people procrastinate, which began by studying 250 college students.',
-                cn: '来自卡尔加里大学的心理学家随后提出了解释人们拖延的方程式，并已开始在250名大学生身上进行研究。'
-            },
-            {
-                en: '"It was half the size of a domestic cat and probably hunted and ate whatever it could for its size, " said Nick Longrich, a palaeontologist at the University of Calgary, who led the expedition.',
-                cn: '“它的大小只是家猫的一半，它只可能猎食力所能及的任何动物，”领导这项探险的卡尔加里大学古生物学家尼克·朗瑞奇说到。'
             }
         ]
     },
@@ -5573,22 +5243,6 @@ export default [
             {
                 en: 'Without my glasses everything is just a misty blur.',
                 cn: '我如果不戴眼镜，看什么都是模模糊糊的。'
-            }
-        ]
-    },
-    {
-        word: 'Niagara',
-        translation: 'n. 尼亚加拉（河；瀑布）',
-        phonetic: "naɪ'æɡrə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'There a friendly captain pointed across the Niagara River.',
-                cn: '在那儿，一位友善的船长指着尼亚加拉河对岸。'
-            },
-            {
-                en: 'Niagara belongs to the heavyweights - where a whole solid river plunges bodily over a cliff The real sight from above is the gigantic movement of the falls themselves， digging the gorge.',
-                cn: '尼亚加拉瀑布属于重量级——一股巨流全部从悬崖上冲泻下来。 从上往下看到的现实景像是瀑布自身的强烈运动在凿峡谷。'
             }
         ]
     },

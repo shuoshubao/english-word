@@ -253,13 +253,6 @@ export default [
         examples: []
     },
     {
-        word: 'Grace',
-        translation: 'n. 优雅；恩惠；魅力；慈悲',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'Bay',
         translation: '湾',
         phonetic: '',
@@ -8517,13 +8510,6 @@ export default [
         translation: 'vt. 使固定；集中于；扎牢；强加于',
         phonetic: '',
         partOfSpeech: 'vt',
-        examples: []
-    },
-    {
-        word: 'Christ',
-        translation: 'n. 基督；救世主',
-        phonetic: '',
-        partOfSpeech: 'n',
         examples: []
     },
     {

@@ -3249,13 +3249,6 @@ export default [
         examples: []
     },
     {
-        word: 'Shakespeare',
-        translation: 'n. 莎士比亚（1564-1616，英国诗人、剧作家）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'secular',
         translation: 'n. 修道院外的教士，(对宗教家而言的) 俗人',
         phonetic: '',
@@ -3363,13 +3356,6 @@ export default [
     {
         word: 'pollination',
         translation: 'n. [农学] 授粉（作用）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
-        word: 'spanish',
-        translation: 'n. 西班牙语；西班牙人',
         phonetic: '',
         partOfSpeech: 'n',
         examples: []
@@ -3498,13 +3484,6 @@ export default [
         translation: 'adv. 专业地；内行地',
         phonetic: '',
         partOfSpeech: 'adv',
-        examples: []
-    },
-    {
-        word: 'Tokyo',
-        translation: 'n. 东京（日本首都）',
-        phonetic: '',
-        partOfSpeech: 'n',
         examples: []
     },
     {

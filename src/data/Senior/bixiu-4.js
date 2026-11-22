@@ -13,12 +13,6 @@ export default [
         ]
     },
     {
-        word: 'Joan of Arc',
-        translation: '圣女贞德（法国民族女英雄）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'Elizabeth Fry',
         translation: '伊丽莎白•弗赖伊（英国慈善家）',
         phonetic: '',
@@ -1079,18 +1073,6 @@ export default [
         ]
     },
     {
-        word: 'Vietnam',
-        translation: 'n. 越南（东南亚国家）',
-        phonetic: ",vjɛt'næm",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He encouraged me to bag the safety of my present course, join the marines, and go to Vietnam, where at least I’d really learn something.',
-                cn: '他鼓励我走出当前寻求安全庇护的路线，加入海军陆战队开赴越南，至少我在那里真的可以学到点东西。'
-            }
-        ]
-    },
-    {
         word: 'thanks to',
         translation: '幸亏；由于；因为',
         phonetic: '',
@@ -1789,12 +1771,6 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Edward Lear',
-        translation: '爱德华•李尔（英国作家、画家）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'comedy',
         translation: 'n. 喜剧',
         phonetic: "'kɑmədi",
@@ -2483,22 +2459,6 @@ export default [
         ]
     },
     {
-        word: 'Switzerland',
-        translation: 'n. 瑞士（欧洲中部国家）',
-        phonetic: "'swɪtsələnd",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The River Rhine rises in Switzerland.',
-                cn: '莱茵河发源于瑞士。'
-            },
-            {
-                en: 'The problem is Switzerland is a smaller country and you can not compare it with other leagues like Germany, French or Great Britain.',
-                cn: '问题在于瑞士是一个较小的国家，你不能把它与像德国、法国或英国这样的大国的国家队相比。'
-            }
-        ]
-    },
-    {
         word: 'confidence',
         translation: 'n. 信心；信念',
         phonetic: "'kɑnfɪdəns",
@@ -2719,18 +2679,6 @@ export default [
             {
                 en: 'She hired a detective to find out if her husband was having an affair.',
                 cn: '她雇了一个私人侦探调查她丈夫是否有外遇。'
-            }
-        ]
-    },
-    {
-        word: 'Sherlock Holmes',
-        translation: 'n. 夏洛克•福尔摩斯',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'By the way, do you like the Sherlock Holmes in movies?',
-                cn: '顺便问一下，你喜欢电影中的夏洛克•福尔摩斯吗？'
             }
         ]
     },
@@ -2999,38 +2947,6 @@ export default [
         ]
     },
     {
-        word: 'Garcia',
-        translation: '加西亚（姓）',
-        phonetic: "'ga:ʃjə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'After more than two hours in the chocolate, does he still have a taste for it?"Not so much anymore, " Garcia said.',
-                cn: '在身陷巧克力两个多小时之后，加西亚还有胃口吃巧克力么？ 他说：“再不要像这样多了！”'
-            },
-            {
-                en: 'Garcia and Youngdahl live in a house for students with an interest in Russian studies.',
-                cn: '住在一起的加西亚和扬达尔都对关于俄罗斯的研究抱有兴趣。'
-            }
-        ]
-    },
-    {
-        word: 'Colombia',
-        translation: 'n. 哥伦比亚（南美洲国家）',
-        phonetic: "kə'lʌmbiə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'I have had similar experiences all over Brazil and Colombia.',
-                cn: '在巴西和哥伦比亚各地我都有类似的经历。'
-            },
-            {
-                en: 'That study should begin in Colombia next year.',
-                cn: '这项研究将于明年在哥伦比亚开始。'
-            }
-        ]
-    },
-    {
         word: 'approach',
         translation: 'v. 接近；靠近；走近; n. 接近；方法',
         phonetic: "ə'protʃ",
@@ -3191,12 +3107,6 @@ export default [
         ]
     },
     {
-        word: 'Jordan',
-        translation: 'n. 约旦（西亚国家）',
-        phonetic: "'dʒɔrdn",
-        partOfSpeech: 'n'
-    },
-    {
         word: 'Darlene Coulon',
         translation: '达琳•库隆',
         phonetic: '',
@@ -3295,38 +3205,6 @@ export default [
             {
                 en: 'her upright posture',
                 cn: '她笔挺的姿势'
-            }
-        ]
-    },
-    {
-        word: 'Spain',
-        translation: 'n. 西班牙（欧洲国家）',
-        phonetic: 'spen',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They are touring in Spain.',
-                cn: '他们正在西班牙旅游。'
-            }
-        ]
-    },
-    {
-        word: 'Italy',
-        translation: 'n. 意大利（欧洲国家）',
-        phonetic: "'ɪtəlɪ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They decided to swan around Italy this summer.',
-                cn: '他们决定今年夏天去意大利游逛。'
-            },
-            {
-                en: 'French troops negotiated the Alps and went on the road in Italy.',
-                cn: '法军成功地越过了阿尔卑斯山脉，行军在意大利的国土上。'
-            },
-            {
-                en: 'All the newspapers reported on the football match of France versus Italy.',
-                cn: '所有的报纸都报道了法国队对意大利队的足球比赛。'
             }
         ]
     },
@@ -3731,24 +3609,6 @@ export default [
                 cn: '该党的中央办公楼'
             }
         ]
-    },
-    {
-        word: 'Central Park',
-        translation: '中央公园（位于美国纽约）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The Central Park is not so well grassed as it used to be.',
-                cn: '中央公园不如过去那样芳草如茵了。'
-            }
-        ]
-    },
-    {
-        word: 'Dollywood',
-        translation: 'n. 多莱坞（公园名，位于美国）',
-        phonetic: '',
-        partOfSpeech: 'n'
     },
     {
         word: 'various',
@@ -4193,18 +4053,6 @@ export default [
             {
                 en: 'She mopped her face with a wet cloth.',
                 cn: '她用一块湿布擦脸。'
-            }
-        ]
-    },
-    {
-        word: 'Futuroscope',
-        translation: 'n. 观测未来（公园名，位于法国）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Futuroscope is not only for individuals, but is also the perfect mix of fun and learning for class outings.',
-                cn: '“观测未来”主题公园不仅适合个人，也适合学生全班出游，因为它是娱乐与学习的完美结合。'
             }
         ]
     },

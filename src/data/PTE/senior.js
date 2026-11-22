@@ -2937,13 +2937,6 @@ export default [
         examples: []
     },
     {
-        word: 'Shakespeare',
-        translation: 'n. 莎士比亚(1564-1616,英国诗人、剧作家)',
-        phonetic: 'ˈʃeɪkˌspir',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'Republican',
         translation: '- adj. 共和国的, 共和政体的\n- n. 拥护共和政体者, 共和主义者\n\n名 词:  \nrepublicanism',
         phonetic: 'rɪˈpʌblɪkən',
@@ -3018,13 +3011,6 @@ export default [
         translation: '- n. 表示, 表现, 表达\n- 表情\n- 感情\n- 词, 措辞, 词组',
         phonetic: 'ɪkˈsprɛʃən',
         partOfSpeech: 'n',
-        examples: []
-    },
-    {
-        word: 'spanish',
-        translation: '- adj. 西班牙的；西班牙人的；西班牙语的\n- n. 西班牙语；西班牙人',
-        phonetic: 'ˈspænɪʃ',
-        partOfSpeech: 'adj / n',
         examples: []
     },
     {
@@ -5452,13 +5438,6 @@ export default [
             '- adj. 苗条的；修长的\n- 微小的；渺茫的\n- vi. 减肥\nSLIMabbr. Special Language Interpreting Matrix 专用语言翻译矩阵\n\n比较级:  \nslimmer，slimmest \n\n副 词:  \nslimly\n\n名 词:  \nslimmer',
         phonetic: 'slɪm',
         partOfSpeech: 'n / vt',
-        examples: []
-    },
-    {
-        word: 'Himalaya',
-        translation: 'n. 喜马拉雅山脉',
-        phonetic: 'ˌhɪməˈlaɪə',
-        partOfSpeech: 'n',
         examples: []
     },
     {
@@ -8704,14 +8683,6 @@ export default [
         examples: []
     },
     {
-        word: 'English',
-        translation:
-            '- adj. 英国人的；英国的；英文的\n- n. 英语；英国人；英文；英格兰人\n- vt. 把…译成英语；使(球)旋转前进\n\n\n时 态:  \nEnglished, Englishing, Englishes \n\n名 词:  \nEnglishness',
-        phonetic: 'ˈɪŋɡlɪʃ',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'geography',
         translation: '- n. 地理(学)\n- 地形, 地势\n\n名 词:  \ngeographer',
         phonetic: 'ʤiˈɑɡrəfi',
@@ -10370,13 +10341,6 @@ export default [
         translation: 'n. 完成, 结束',
         phonetic: 'kəmˈpliʃən',
         partOfSpeech: 'n',
-        examples: []
-    },
-    {
-        word: 'Scottish',
-        translation: 'adj. 苏格兰的;苏格兰式的',
-        phonetic: 'ˈskɑtɪʃ',
-        partOfSpeech: 'adj',
         examples: []
     },
     {
@@ -21512,13 +21476,6 @@ export default [
         translation: 'adj. 异想天开的，闹着玩的；反复无常的',
         phonetic: 'ˈwɪmzɪkəl',
         partOfSpeech: 'adj',
-        examples: []
-    },
-    {
-        word: 'Tokyo',
-        translation: 'n. 东京(日本首都)',
-        phonetic: 'ˈtoʊkiˌoʊ',
-        partOfSpeech: 'n',
         examples: []
     },
     {

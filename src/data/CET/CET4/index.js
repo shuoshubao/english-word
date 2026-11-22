@@ -1827,12 +1827,6 @@ export default [
         ]
     },
     {
-        word: 'China',
-        translation: 'n. 中国',
-        phonetic: 'tʃaɪnə',
-        partOfSpeech: 'n'
-    },
-    {
         word: 'evaporate',
         translation: 'v. 使蒸发; v. 蒸发',
         phonetic: "ɪ'væpəret",
@@ -3123,26 +3117,6 @@ export default [
             {
                 en: 'subsequent pages of the book',
                 cn: '接下去的书页'
-            }
-        ]
-    },
-    {
-        word: 'Englishman',
-        translation: 'n. 英国男子',
-        phonetic: "'iŋɡliʃmən",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He was the only Englishman present.',
-                cn: '他是在场的唯一一名英国人。'
-            },
-            {
-                en: 'Report writing, like motor car driving and lovemaking, is one of those activities that every Englishman thinks he can do well without instruction.',
-                cn: '写报告，像开车和做爱一样，是每个英国人都以为自己毋需指导就能做好的事。'
-            },
-            {
-                en: 'I wish I could be acquainted with the feelings and thoughts which must agitate the heart and present themselves to the mind of an enlightened Englishman, when he first lands on this continent.',
-                cn: '赫克托．圣约翰．克雷夫科尔 但愿我能熟悉那种必将鼓动人心的感情和思想，并且在一个开明的英国人首次踏上这片大陆时，将这种思想和感情原原本本地展现在他眼前。'
             }
         ]
     },
@@ -9565,18 +9539,6 @@ export default [
         ]
     },
     {
-        word: 'Indian',
-        translation: 'adj. 印度的; n. 印度人',
-        phonetic: "'ɪndɪən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: '...the Indian government.',
-                cn: '...印度政府。'
-            }
-        ]
-    },
-    {
         word: 'lick',
         translation: 'v. 舔；舔吃',
         phonetic: 'lɪk',
@@ -9925,18 +9887,6 @@ export default [
             {
                 en: 'I’ve found a great pub – good beer and a friendly atmosphere.',
                 cn: '我找到了一家很棒的酒馆——啤酒好，氛围也亲切。'
-            }
-        ]
-    },
-    {
-        word: 'Japanese',
-        translation: 'adj. 日本的; n. 日本人',
-        phonetic: ",dʒæpə'niz",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'a Japanese car',
-                cn: '日本(汽)车'
             }
         ]
     },
@@ -12435,26 +12385,6 @@ export default [
         ]
     },
     {
-        word: 'America',
-        translation: 'n. 美洲；美国',
-        phonetic: 'əˈmɛrɪkə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'I may go to America or I may not,it all depends.',
-                cn: '我也许去美国，也许不去，要视情况而定。'
-            },
-            {
-                en: 'She scampered in London then went back to America.',
-                cn: '她在伦敦匆忙地游览了一番，然后回到了美国。'
-            },
-            {
-                en: 'Some of the mountains in America have not yet been mapped out.',
-                cn: '美洲有些山脉还没有在地图上标出来。'
-            }
-        ]
-    },
-    {
         word: 'evidence',
         translation: 'n. 根据，证据，迹象',
         phonetic: "'ɛvɪdəns",
@@ -13097,18 +13027,6 @@ export default [
             {
                 en: 'a 100-watt bulb',
                 cn: '一个100瓦的灯泡'
-            }
-        ]
-    },
-    {
-        word: 'French',
-        translation: 'adj. 法国的; n. 法国人',
-        phonetic: 'fren(t)ʃ',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'an excellent French wine',
-                cn: '上等的法国葡萄酒'
             }
         ]
     },
@@ -14491,12 +14409,6 @@ export default [
         ]
     },
     {
-        word: 'Germany',
-        translation: 'n. 德意志，德国',
-        phonetic: "'dʒɝməni",
-        partOfSpeech: 'n'
-    },
-    {
         word: 'mushroom',
         translation: 'n. 蘑菇，菌类植物',
         phonetic: "'mʌʃrʊm",
@@ -15699,18 +15611,6 @@ export default [
         ]
     },
     {
-        word: 'African',
-        translation: 'adj. 非洲的; n. 非洲人',
-        phonetic: "'æfrɪkən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: '...the African continent.',
-                cn: '…非洲大陆。'
-            }
-        ]
-    },
-    {
         word: 'ultimately',
         translation: 'adv. 最后，最终',
         phonetic: "'ʌltɪmətli",
@@ -16829,26 +16729,6 @@ export default [
         ]
     },
     {
-        word: 'Oceania',
-        translation: 'n. 大洋洲',
-        phonetic: ",oʃɪ'ænɪə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The Mummies Of The World exhibition brings together a collection of mummies and related artefacts from South America, Europe, Asia, Oceania and Egypt.',
-                cn: '汇集了来自南美，欧洲，亚洲，大洋洲和埃及的一系列干尸和艺术品将举办全球巡回展览。'
-            },
-            {
-                en: 'Interested library associations outside of Latin America and the Caribbean, Africa, and Asia and Oceania should contact the Management of Library Associations section.',
-                cn: '在拉美地区以外以及加勒比海，非洲和亚洲以及大洋洲的感兴趣的图书馆联盟可以联系图书馆联盟管理部门。'
-            },
-            {
-                en: 'Findings and experiences were presented by around 100 clinicians, scientists, and public health professionals from the Americas, Europe, Asia, Africa, the Middle East and Oceania.',
-                cn: '来自美洲、欧洲、亚洲、非洲、中东和大洋洲的大约100名临床医生、科学家以及公共卫生专业人员介绍了取得的结果和经验。'
-            }
-        ]
-    },
-    {
         word: 'fiction',
         translation: 'n. 小说，虚构的文学作品',
         phonetic: "'fɪkʃən",
@@ -16909,18 +16789,6 @@ export default [
             {
                 en: 'His wife was heavily pregnant (= almost ready to give birth ) .',
                 cn: '他的妻子即将临产。'
-            }
-        ]
-    },
-    {
-        word: 'Latin',
-        translation: 'adj. 拉丁的; n. 拉丁语',
-        phonetic: "'lætn",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'a Latin inscription',
-                cn: '拉丁语碑文'
             }
         ]
     },
@@ -17197,18 +17065,6 @@ export default [
             {
                 en: 'Bruce spends most evenings surfing the Net (= looking at information in different places on the Internet ).',
                 cn: '布鲁斯晚上大多在网上浏览信息。'
-            }
-        ]
-    },
-    {
-        word: 'Europe',
-        translation: 'n. 欧洲',
-        phonetic: "'jʊrəp",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'eastern Europe',
-                cn: '东欧'
             }
         ]
     },
@@ -17733,18 +17589,6 @@ export default [
             {
                 en: 'a highly amusing (=  very amusing  ) film',
                 cn: '非常有趣的电影'
-            }
-        ]
-    },
-    {
-        word: 'British',
-        translation: 'adj. 不列颠的，英联邦的',
-        phonetic: "'brɪtɪʃ",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: 'the British government',
-                cn: '英国政府'
             }
         ]
     },
@@ -20761,18 +20605,6 @@ export default [
             {
                 en: 'I don’t understand how the two ideas relate.',
                 cn: '我不明白这两个观点有什么联系。'
-            }
-        ]
-    },
-    {
-        word: 'German',
-        translation: 'adj. 德国的; n. 德国人',
-        phonetic: "'dʒɜːmən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'German history',
-                cn: '德国历史'
             }
         ]
     },
@@ -23837,26 +23669,6 @@ export default [
         ]
     },
     {
-        word: 'Africa',
-        translation: 'n. 非洲',
-        phonetic: 'ˈæfrɪkə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The giraffe ranges in Africa.',
-                cn: '长颈鹿生长在非洲。'
-            },
-            {
-                en: 'The practice still prevails in some parts of Africa.',
-                cn: '这种做法在非洲某些地区仍然很盛行。'
-            },
-            {
-                en: 'He traversed alone the whole continent of Africa from east to west.',
-                cn: '他只身长途跋涉， 从东向西横穿整个非洲大陆。'
-            }
-        ]
-    },
-    {
         word: 'mosquito',
         translation: 'n. 蚊子',
         phonetic: 'məˈskiːtoʊ',
@@ -24851,18 +24663,6 @@ export default [
             {
                 en: 'the UN Security Council',
                 cn: '联合国安全理事会'
-            }
-        ]
-    },
-    {
-        word: 'Christ',
-        translation: 'n. 基督， 救世主',
-        phonetic: 'kraɪst',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'a follower of Christ',
-                cn: '耶稣的门徒'
             }
         ]
     },
@@ -28839,22 +28639,6 @@ export default [
         ]
     },
     {
-        word: 'European',
-        translation: 'adj. 欧洲的; n. 欧洲人',
-        phonetic: "'jʊrə'piən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'European languages',
-                cn: '欧洲的语言'
-            },
-            {
-                en: 'our European partners',
-                cn: '我们的欧洲伙伴'
-            }
-        ]
-    },
-    {
         word: 'inhabit',
         translation: 'v. 居住于，栖息于',
         phonetic: "ɪn'hæbɪt",
@@ -31243,22 +31027,6 @@ export default [
         ]
     },
     {
-        word: 'English',
-        translation: 'n. 英语; adj. 英国人的',
-        phonetic: 'ɪŋɡlɪʃ',
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'Do you speak English?',
-                cn: '你会说英语吗？'
-            },
-            {
-                en: 'leaflets written in plain English',
-                cn: '用简单英语写的传单'
-            }
-        ]
-    },
-    {
         word: 'seek',
         translation: 'v. 寻找，探索；试图',
         phonetic: 'sik',
@@ -33063,18 +32831,6 @@ export default [
             {
                 en: 'Victor seemed to grow taller every day.',
                 cn: '维克托好像一天比一天高。'
-            }
-        ]
-    },
-    {
-        word: 'Greek',
-        translation: 'adj. 希腊的; n. 希腊人',
-        phonetic: 'grik',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Greek yoghurt',
-                cn: '希腊式酸奶'
             }
         ]
     },
@@ -37949,12 +37705,6 @@ export default [
         ]
     },
     {
-        word: 'Italian',
-        translation: 'adj. 意大利的n意大利人',
-        phonetic: 'ɪˈtæljən',
-        partOfSpeech: 'adj'
-    },
-    {
         word: 'point',
         translation: 'n. 点；要点；细目；分',
         phonetic: 'pɔɪnt',
@@ -40391,12 +40141,6 @@ export default [
                 cn: '这栋大楼严重疏于维护。'
             }
         ]
-    },
-    {
-        word: 'Japan',
-        translation: 'n. 日本，日本国',
-        phonetic: "dʒə'pæn",
-        partOfSpeech: 'n'
     },
     {
         word: 'heaven',
@@ -45199,18 +44943,6 @@ export default [
         ]
     },
     {
-        word: 'Mediterranean',
-        translation: 'n. 地中海; adj. 地中海的',
-        phonetic: ",mɛdətə'renɪən",
-        partOfSpeech: 'n / adj',
-        examples: [
-            {
-                en: 'You have the choice of night fishing in the Mediterranean, or windsurfing on a lake in Switzerland.',
-                cn: '你可选择在地中海夜间垂钓，或是在瑞士的湖上玩帆板。'
-            }
-        ]
-    },
-    {
         word: 'kilometre',
         translation: 'n. 千米，公里',
         phonetic: "kɪ'lɔmɪtɚ",
@@ -48009,26 +47741,6 @@ export default [
         ]
     },
     {
-        word: 'Asia',
-        translation: 'n. 亚洲',
-        phonetic: 'ˈeʒə;ˈeʃə',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'The European powers extended their authority in Asia.',
-                cn: '欧洲列强在亚洲扩大他们的管辖权。'
-            },
-            {
-                en: 'The teacher chalked out a map of Asia on the blackboard.',
-                cn: '老师用粉笔在黑板上画了一张亚洲地图。'
-            },
-            {
-                en: 'His extensive experience in other parts of Asia helped him to overcome cultural barriers.',
-                cn: '在亚洲其他地区的广泛经历帮助他克服了文化障碍。'
-            }
-        ]
-    },
-    {
         word: 'leisure',
         translation: 'n. 悠闲，空闲',
         phonetic: "'liʒɚ",
@@ -48811,26 +48523,6 @@ export default [
         ]
     },
     {
-        word: 'Australia',
-        translation: 'n. 澳大利亚',
-        phonetic: "ɔ'streljə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He transplanted his family to Australia.',
-                cn: '他把家迁到澳大利亚。'
-            },
-            {
-                en: 'He went out to Australia about five years ago.',
-                cn: '他大约在五年前移居澳大利亚。'
-            },
-            {
-                en: 'Australia won the toss and put England in to bat.',
-                cn: '澳大利亚队掷币获胜，要求英格兰队首先击球。'
-            }
-        ]
-    },
-    {
         word: 'diligent',
         translation: 'adj. 勤奋的',
         phonetic: "'dɪlɪdʒənt",
@@ -49341,18 +49033,6 @@ export default [
         ]
     },
     {
-        word: 'Australian',
-        translation: 'adj. 澳大利亚的',
-        phonetic: "ɑ'strelɪən",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: 'She went solo backpacking for eight months in the Australian outback.',
-                cn: '她在澳大利亚内陆独自背包旅行了八个月。'
-            }
-        ]
-    },
-    {
         word: 'metre',
         translation: 'n. 米，公尺',
         phonetic: 'ˈmitɚ',
@@ -49783,22 +49463,6 @@ export default [
             {
                 en: 'Men often mask their true feelings with humour.',
                 cn: '男人常常用幽默来掩饰他们真实的情感。'
-            }
-        ]
-    },
-    {
-        word: 'Asian',
-        translation: 'adj. 亚洲的; n. 亚洲人',
-        phonetic: 'ˈeʒən, ˈeʃən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'The financial crisis devitalized the economy of the Asian countries.',
-                cn: '这次金融危机使亚洲国家的经济大伤元气。'
-            },
-            {
-                en: 'The government predicates that the market collapse was caused by Asian financial crisis.',
-                cn: '政府宣布市场不景气是由于亚洲金融危机而引起的。'
             }
         ]
     },
@@ -51039,22 +50703,6 @@ export default [
         ]
     },
     {
-        word: 'Atlantic',
-        translation: 'adj. 大西洋的; n. 大西洋',
-        phonetic: "ət'læntɪk",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'They underlaid the Atlantic with a cable.',
-                cn: '他们在大西洋海底铺设了一条电缆。'
-            },
-            {
-                en: 'The Straits of Gibraltar are the strategic passage between the Mediterranean and the Atlantic.',
-                cn: '直布罗陀海峡是地中海通向大西洋的咽喉。'
-            }
-        ]
-    },
-    {
         word: 'cell',
         translation: 'n. 细胞；小房间',
         phonetic: 'sɛl',
@@ -51515,26 +51163,6 @@ export default [
         ]
     },
     {
-        word: 'Canada',
-        translation: 'n. 加拿大',
-        phonetic: "'kænədə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'She was domiciliated in Canada.',
-                cn: '她在加拿大定居。'
-            },
-            {
-                en: 'Canada produces high-guality wheat.',
-                cn: '加拿大出产优质小麦。'
-            },
-            {
-                en: 'He has lived in Canada for more than twenty years and is completely Canadianized now.',
-                cn: '他在加拿大已经住了二十多年了，现在完全加拿大化了。'
-            }
-        ]
-    },
-    {
         word: 'furnish',
         translation: 'v. 供应，提供；装备',
         phonetic: "'fɝnɪʃ",
@@ -51685,12 +51313,6 @@ export default [
                 cn: '“我怎么会知道！”珍妮怒道。'
             }
         ]
-    },
-    {
-        word: 'France',
-        translation: 'n. 法国，法兰西',
-        phonetic: 'frɑːns',
-        partOfSpeech: 'n'
     },
     {
         word: 'overwhelming',
@@ -52281,26 +51903,6 @@ export default [
             {
                 en: 'The information is there and waiting to be accessed by anyone with the wit to use it.',
                 cn: '信息是现成的，等着有头脑的人去获取和利用。'
-            }
-        ]
-    },
-    {
-        word: 'India',
-        translation: 'n. 印度',
-        phonetic: "'ɪndɪə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Burma borders on India.',
-                cn: '缅甸与印度毗邻。'
-            },
-            {
-                en: 'This book treats of the caste system in India.',
-                cn: '这本书论述了印度的种姓制度。'
-            },
-            {
-                en: 'If you come to India for just one thing, this should be it.',
-                cn: '如果你只为一件事来到印度，那就到这儿来吧。'
             }
         ]
     },
@@ -53133,22 +52735,6 @@ export default [
             {
                 en: 'Good management is of prime importance in business.',
                 cn: '良好的经营管理在商业领域尤为重要。'
-            }
-        ]
-    },
-    {
-        word: 'American',
-        translation: 'adj. 美洲的; n. 美国人',
-        phonetic: 'əˈmɛrɪkən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Her mother is American.',
-                cn: '她妈妈是美国人。'
-            },
-            {
-                en: 'a famous American writer',
-                cn: '一位著名的美国作家'
             }
         ]
     },
@@ -61027,18 +60613,6 @@ export default [
         ]
     },
     {
-        word: 'Chinese',
-        translation: 'adj. 中国的; n. 中国人',
-        phonetic: ",tʃai'ni:z",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Do you fancy going out for a Chinese?',
-                cn: '你想不想出去吃顿中餐？'
-            }
-        ]
-    },
-    {
         word: 'persuade',
         translation: 'v. 说服',
         phonetic: "pɚ'swed",
@@ -62526,12 +62100,6 @@ export default [
         word: 'honey',
         translation: 'n. 蜜，蜂蜜；甜，甜蜜',
         phonetic: "'hʌni",
-        partOfSpeech: 'n'
-    },
-    {
-        word: 'England',
-        translation: 'n. 英格兰；英国',
-        phonetic: "'iŋɡlənd",
         partOfSpeech: 'n'
     },
     {
@@ -64057,26 +63625,6 @@ export default [
             {
                 en: "I'm going to buy a surfboard and learn to surf.",
                 cn: '我要去买个冲浪板来学冲浪。'
-            }
-        ]
-    },
-    {
-        word: 'Canadian',
-        translation: 'adj. 加拿大的',
-        phonetic: "kə'nedɪən",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: 'What about the Canadian policy?',
-                cn: '那么加拿大的政策呢？'
-            },
-            {
-                en: 'The fugitive is believed to be headed for the Canadian border.',
-                cn: '据信，逃亡者正向加拿大边界方向逃窜。'
-            },
-            {
-                en: 'Most English people bracket American and Canadian accents together.',
-                cn: '大多数英国人都把美国音和加拿大音相提并论。'
             }
         ]
     },

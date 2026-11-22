@@ -575,22 +575,6 @@ export default [
         ]
     },
     {
-        word: 'Annie',
-        translation: '安妮（女名）',
-        phonetic: "'æni",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'After the movie was finished, my husband reminded me that I am an Annie Sullivan.',
-                cn: '看完电影后，我丈夫提醒我说，我就是一个安妮·莎莉文式的人。'
-            },
-            {
-                en: "Dear Annie: I hope you and your readers have some suggestions for me, because I'm just about at the end of my rope.",
-                cn: '亲爱的安妮： 我希望您和您的读者可以给我提些建议，因为我实在是山穷水尽，毫无办法了。'
-            }
-        ]
-    },
-    {
         word: 'Alexander Graham Bell',
         translation: '亚历山大 • 格雷厄姆 • 贝尔',
         phonetic: '',
@@ -1207,22 +1191,6 @@ export default [
         ]
     },
     {
-        word: 'Chiang Mai',
-        translation: '清迈（泰国城市）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'I caught the trees in the water for this shot, which is the one that reminds me of my time in Chiang Mai.',
-                cn: '我拍到了这张树木倒影在水面的照片，这样的景象也让我想起了那段在清迈的时光。'
-            },
-            {
-                en: 'Despite being banned from streetwalking in Bangkok and Chiang Mai, roving elephants are relatively common on city outskirts.',
-                cn: '尽管曼谷和清迈都禁止大象上街，但是在城市的郊区，大象还是随处可见的。'
-            }
-        ]
-    },
-    {
         word: 'Halloween',
         translation: '万圣节前夕',
         phonetic: 'ˌhæloˈin',
@@ -1263,26 +1231,6 @@ export default [
         ]
     },
     {
-        word: 'Clara',
-        translation: '克拉拉（女名）',
-        phonetic: "'klærə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Clara, I heard nothing of what you said but that du.',
-                cn: '克拉拉，你说的其他话我都没听见，只听见了那个“你”。'
-            },
-            {
-                en: 'Everyone’s worried about me, Clara said one afternoon.',
-                cn: '大家担心的是我，一天下午克拉拉说。'
-            },
-            {
-                en: 'All the years since I had met Clara suddenly came tumbling down on top of me, everything my life had been, most of it nothing to do with her.',
-                cn: '自从我遇见克拉拉以来，那些年的一景一幕一股脑涌上了我的心头，我所过的生活，我的一切大多都与她没有任何关联。'
-            }
-        ]
-    },
-    {
         word: 'Santa',
         translation: '圣诞老人',
         phonetic: "'sæntə",
@@ -1301,12 +1249,6 @@ export default [
                 cn: '不管是一件礼物还是一次体验，尝试新的东西可以让那些美好的日子不至于那么快消散，我第一次当圣诞老人的这一年亦将成为记忆中的永恒。'
             }
         ]
-    },
-    {
-        word: 'Charles  Dickens',
-        translation: '查尔斯 • 狄更斯（英国作家）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'Scrooge',
@@ -1853,48 +1795,6 @@ export default [
         ]
     },
     {
-        word: 'Italian',
-        translation: 'adj. 意大利（人）的；; n. 意大利人；意大利语',
-        phonetic: 'ɪˈtæljən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Her beauty is of the Italian type.',
-                cn: '她的美是意大利型的。'
-            },
-            {
-                en: 'The game terminated in a victory for Italian team.',
-                cn: '比赛以意大利队获胜告终。'
-            },
-            {
-                en: 'How could they be Italian?',
-                cn: '他们怎么会是意大利人呢？'
-            }
-        ]
-    },
-    {
-        word: 'Kevin',
-        translation: '凯文（男名）',
-        phonetic: "'kevin",
-        partOfSpeech: ''
-    },
-    {
-        word: 'Tim',
-        translation: '蒂姆（男名）',
-        phonetic: 'tim',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "I realize that I'm seeing Tim as he is in the world, with no reference to me at all.",
-                cn: '我意识到我所看到的，是蒂姆在他的世界里的生活，而这个世界和我一点关系也没有。'
-            },
-            {
-                en: '"Tim Howard was \'Man Of The Match\' and that was proof of how strong we were, " said David James, without flinching.',
-                cn: '大卫詹姆斯没有任何畏惧的说：“蒂姆霍华德是比赛的救星，而这证明了我们的强大。”'
-            }
-        ]
-    },
-    {
         word: 'humorous',
         translation: 'adj. 有幽默感的；滑稽有趣的',
         phonetic: "'hjumərəs",
@@ -2019,18 +1919,6 @@ export default [
         ]
     },
     {
-        word: 'Asian',
-        translation: 'adj. 亚洲的；亚洲人的; n. 亚洲人',
-        phonetic: 'ˈeʒən, ˈeʃən',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Many of the shops were run by Asians.',
-                cn: '这些商店中有许多是由亚洲人经营的。'
-            }
-        ]
-    },
-    {
         word: 'deal with',
         translation: '对付；应付',
         phonetic: '',
@@ -2115,38 +2003,6 @@ export default [
             {
                 en: 'Most house plants require regular watering.',
                 cn: '大多数室内盆栽植物需要定期浇水。'
-            }
-        ]
-    },
-    {
-        word: 'European',
-        translation: 'adj. 欧洲的；欧洲人的',
-        phonetic: "'jʊrə'piən",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: 'European languages',
-                cn: '欧洲的语言'
-            },
-            {
-                en: 'our European partners',
-                cn: '我们的欧洲伙伴'
-            }
-        ]
-    },
-    {
-        word: 'British',
-        translation: 'adj. 英国的；英国人的',
-        phonetic: "'brɪtɪʃ",
-        partOfSpeech: 'adj',
-        examples: [
-            {
-                en: 'the British government',
-                cn: '英国政府'
-            },
-            {
-                en: 'a British-born scientist',
-                cn: '一名英国出生的科学家'
             }
         ]
     },
@@ -2467,86 +2323,6 @@ export default [
         ]
     },
     {
-        word: 'Paula',
-        translation: '葆拉 （女名）',
-        phonetic: "'pɔ:lə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Peter asks Paula to go to dinner.',
-                cn: '彼得请保拉去共进晚餐。'
-            },
-            {
-                en: "Peter says, 'We could order some pizza and then watch the golf on TV!' Paula becomes silent.",
-                cn: '彼得说：“我们叫比萨饼外卖，然后一边吃一边开电视看高尔夫球！” 保拉不说话了。'
-            }
-        ]
-    },
-    {
-        word: 'Alfred',
-        translation: '艾尔弗雷德（男名）',
-        phonetic: "'ælfrɪd",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"On going around with the boys, I guess." said Alfred.',
-                cn: '“我想是和朋友们一起出去，”艾尔弗雷德说。'
-            },
-            {
-                en: "I admire Jay's and Alfred's translations, but I just do my own thing, my own take on what Murakami should sound like in English.",
-                cn: '我很欣赏杰和阿尔弗雷德的译文，但我只会做我自己的事情。 我在翻译中坚持译文应该是地道的目标语言。'
-            },
-            {
-                en: 'Neither Alfred nor I had had any training as teachers, and I at least had no books for the lessons in French, maths and physics that I was supposed to give.',
-                cn: '阿尔弗雷德来自南罗得西亚，我俩谁也没有接受过任何正规的教学培训，至少，我连任何要教授的法语、数学和物理课程的书籍都没有。'
-            }
-        ]
-    },
-    {
-        word: 'Billy',
-        translation: '比利（男名）',
-        phonetic: "'bili",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Billy：But what if my friends see me.',
-                cn: '比利：但要是我朋友看到怎幺办。'
-            },
-            {
-                en: 'I tell you, Billy, she’s an angel.',
-                cn: '我对你说，比利，她真是一个天使。'
-            }
-        ]
-    },
-    {
-        word: 'Candy',
-        translation: '坎迪（女名）',
-        phonetic: "'kændi:",
-        partOfSpeech: ''
-    },
-    {
-        word: 'Jerry',
-        translation: '杰里（男名）；杰丽（女名）',
-        phonetic: "'dʒeri",
-        partOfSpeech: ''
-    },
-    {
-        word: 'Emily',
-        translation: '埃米莉（女名）',
-        phonetic: "'emili",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'At times, Henrietta would tell me she felt slightly guilty that Emily enjoyed staying with her so much.',
-                cn: '有时，亨利埃塔会对我说，埃米莉如此喜欢和她待在一起，让她感到有些内疚。'
-            },
-            {
-                en: 'With my family –my wife Mona and our children Emily, Dylan, and Madeline –we’re excited to have this opportunity to serve the President and the people of the United States of America.',
-                cn: '我和我的家人──即我的夫人蒙娜以及我们的孩子埃米莉、迪伦和梅德林──都很兴奋有这个机会为美国总统及美国人民效劳。'
-            }
-        ]
-    },
-    {
         word: 'material',
         translation: 'n. 衣料，布料；材料，原料',
         phonetic: "mə'tɪrɪəl",
@@ -2799,22 +2575,6 @@ export default [
         ]
     },
     {
-        word: 'France',
-        translation: '法国',
-        phonetic: 'frɑːns',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Germany borders on France.',
-                cn: '德国与法国接壤。'
-            },
-            {
-                en: 'Red wine made in France is famous for its high quality.',
-                cn: '法国出产的红葡萄酒以质优而闻名。'
-            }
-        ]
-    },
-    {
         word: 'no matter',
         translation: '不论；无论',
         phonetic: '',
@@ -2935,26 +2695,6 @@ export default [
             {
                 en: 'mobile air-conditioners',
                 cn: '移动式空调器'
-            }
-        ]
-    },
-    {
-        word: 'Germany',
-        translation: '德国',
-        phonetic: "'dʒɝməni",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Germany borders on France.',
-                cn: '德国与法国接壤。'
-            },
-            {
-                en: 'The news aroused much fear in Germany.',
-                cn: '这消息在德国引起很大恐慌。'
-            },
-            {
-                en: 'The new Nazism is resurging in some places in Germany.',
-                cn: '新纳粹主义正在德国的一些地方复活。'
             }
         ]
     },
@@ -3225,46 +2965,6 @@ export default [
                 cn: '这幢大楼花了两年时间才完工。'
             }
         ]
-    },
-    {
-        word: 'Korea',
-        translation: '朝鲜；韩国',
-        phonetic: "kə'rɪr",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Korea lies (to the) west of Japan.',
-                cn: '韩国在日本以西。'
-            }
-        ]
-    },
-    {
-        word: 'Switzerland',
-        translation: '瑞士',
-        phonetic: "'swɪtsələnd",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The River Rhine rises in Switzerland.',
-                cn: '莱茵河发源于瑞士。'
-            },
-            {
-                en: 'The problem is Switzerland is a smaller country and you can not compare it with other leagues like Germany, French or Great Britain.',
-                cn: '问题在于瑞士是一个较小的国家，你不能把它与像德国、法国或英国这样的大国的国家队相比。'
-            }
-        ]
-    },
-    {
-        word: 'San Francisco',
-        translation: '圣弗朗西斯科（旧金山，美国城市）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Pam',
-        translation: '帕姆（女名）',
-        phonetic: 'pæm',
-        partOfSpeech: ''
     },
     {
         word: 'heel',
@@ -3785,18 +3485,6 @@ export default [
         ]
     },
     {
-        word: 'Canadian',
-        translation: 'adj. 加拿大的；加拿大人的; n. 加拿大人',
-        phonetic: "kə'nedɪən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Most English people bracket American and Canadian accents together.',
-                cn: '大多数英国人都把美国音和加拿大音相提并论。'
-            }
-        ]
-    },
-    {
         word: 'divide',
         translation: 'v. 分开；分散',
         phonetic: "dɪ'vaɪd",
@@ -3885,26 +3573,6 @@ export default [
             {
                 en: 'The hero of Doctor Zhivago dies in 1929. ＃',
                 cn: '《日瓦戈医生》的男主人公于1929年去世。'
-            }
-        ]
-    },
-    {
-        word: 'Berlin',
-        translation: '柏林（德国城市）',
-        phonetic: "bɝ'lɪn",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'He captained the siege of Berlin.',
-                cn: '他指挥了围攻柏林的战役。'
-            },
-            {
-                en: 'Once you have a flat in central Berlin,you can always monetize it when the prices rise.',
-                cn: '如果在柏林市中心有一套公寓，价格上涨时就可以随时把它变现。'
-            },
-            {
-                en: 'But I remember an anecdote I once heard from one of my German friends. Shortly after the unification, an Ossie and a Weissie meet in Berlin.',
-                cn: '但我记得从一个德国朋友那里听来的这样一件轶事：统一后不久，一个东德人与一个西德人在柏林相遇。'
             }
         ]
     },
@@ -4443,22 +4111,6 @@ export default [
             {
                 en: 'Local people have given us a lot of support in our campaign.',
                 cn: '当地人对我们的活动给予了大力支持。'
-            }
-        ]
-    },
-    {
-        word: 'Picasso',
-        translation: '毕加索（西班牙画家）',
-        phonetic: "pi'kæsəu",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The painter modeled his style after that of Picasso.',
-                cn: '这位画家模仿毕加索的绘画风格。'
-            },
-            {
-                en: 'She claimed to be the greatest living fan of Picasso.',
-                cn: '这位姑娘声称自己是活着的头号毕加索迷。'
             }
         ]
     },
@@ -5147,46 +4799,6 @@ export default [
         ]
     },
     {
-        word: 'Carla',
-        translation: '卡拉（女名）',
-        phonetic: "'kɑ:lə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Thank you so much, Carla, and thanks for your leadership in this undertaking as well as so much else.',
-                cn: '非常感谢，卡拉，谢谢你在这项事业和其他众多事务中发挥的领导作用。'
-            },
-            {
-                en: '"The unauthorized use of the image of Carla Bruni caused her moral and economic damage," a court in the island capital Saint Denis de la Reunion said on Thursday.',
-                cn: '在该岛首府圣丹尼斯日留尼汪的法院周四表示这代表了“未经授权使用卡拉布鲁尼的图片，在道德名誉和经济上对她造成的损失 ”。'
-            }
-        ]
-    },
-    {
-        word: 'J. K. Rowling',
-        translation: 'J. K. 罗琳（英国作家）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Victor',
-        translation: '维克托（男名）',
-        phonetic: "'vɪktɚ",
-        partOfSpeech: ''
-    },
-    {
-        word: 'Jean',
-        translation: '琼（女名）',
-        phonetic: 'dʒiːn',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Jean knew the only way to be content without her husband's love was to seek an expression of love from God.",
-                cn: '琼知道，在没有丈夫的爱的情况下也能得到满足的唯一方式就是寻求上帝表达对她的爱。'
-            }
-        ]
-    },
-    {
         word: 'Paul Stoker',
         translation: '保罗 • 斯托克',
         phonetic: '',
@@ -5229,22 +4841,6 @@ export default [
             {
                 en: "...Kurt Weill's Broadway opera with lyrics by Langston Hughes.",
                 cn: '…由兰斯顿·休斯作词的库尔特·韦尔的百老汇歌剧。'
-            }
-        ]
-    },
-    {
-        word: 'Australian',
-        translation: 'adj. 澳大利亚的；澳大利亚人的; n. 澳大利亚人',
-        phonetic: "ɑ'strelɪən",
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'She went solo backpacking for eight months in the Australian outback.',
-                cn: '她在澳大利亚内陆独自背包旅行了八个月。'
-            },
-            {
-                en: 'Whoever they are, they will never know that they are a blood brother or sister to an Australian! ＃',
-                cn: '不管他们是谁，他们绝不会知道自己是一个澳大利亚人的血亲兄弟或姐妹。'
             }
         ]
     },
@@ -5797,38 +5393,6 @@ export default [
             {
                 en: 'Surf and spray scatter as a large wave crashes onto the shore in Palau. More than 250 islands make up the country, a Japanese stronghold during World War II.',
                 cn: '作为巨大波涛的海浪和浪花崩溃在帕劳的海岸，由250多个岛屿组成国家，这些岛屿是第二次世界大战期间日本的据点。'
-            }
-        ]
-    },
-    {
-        word: 'Titanic',
-        translation: '泰坦尼克号（轮船名）；《泰坦尼克号》（电影名）',
-        phonetic: "taɪ'tænɪk",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Directly in back of the building is a lake from which the tips of icebergs protrude, and anchored there is a ship named Titanic, whose deck chairs can be rearranged.',
-                cn: '在建筑物正后面有一个湖，湖里露出冰山的小角，有一艘名叫泰坦尼克的船停在那里，它的甲板椅子可以重新排列。'
-            },
-            {
-                en: 'Dean had enjoyed her celebrity status as the last survivor, but remembered the doomed voyage with sadness. She said, "Until the wreckage of the Titanic was found in 1985, nobody was interested in me.',
-                cn: '迪安很喜欢她作为最后一名幸存者的名人地位，但回忆那次注定难逃一劫的航程时，她充满悲伤地说道：“直到1985年泰坦尼克号的残骸被发现，才有人对我感兴趣。'
-            }
-        ]
-    },
-    {
-        word: 'Carmen',
-        translation: '卡门（女名）',
-        phonetic: "'kɑ:mən",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'I like Carmen very much.',
-                cn: '我非常喜欢歌剧“卡门”。'
-            },
-            {
-                en: 'You seem like a ‘Carmen’ to me anyhow.',
-                cn: '不管怎么说，你就像是我的‘卡门’。'
             }
         ]
     },
@@ -6425,60 +5989,6 @@ export default [
         ]
     },
     {
-        word: 'Mexico',
-        translation: '墨西哥',
-        phonetic: "'mɛksɪko",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'We want to prove that in Mexico.',
-                cn: '我们要在墨西哥证明这一点。'
-            },
-            {
-                en: 'The United States bounds on Mexico in the south.',
-                cn: '美国的南面与墨西哥接壤。'
-            },
-            {
-                en: 'All but one of the deaths were in Mexico, the epicenter of the outbreak.',
-                cn: '除一人外，其他死亡患者都在疾病爆发的中心地墨西哥。'
-            }
-        ]
-    },
-    {
-        word: 'Cali',
-        translation: '卡利（哥伦比亚城市）',
-        phonetic: "'kɑ:li",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'We spent close to two months together in Cali, and we met up again in Buenos Aires for two more months.',
-                cn: '我们曾在卡利（哥伦比亚西部城市）一起度过近两个月，又在布宜诺期艾利斯相遇相聚了两个月。'
-            },
-            {
-                en: 'The executive order invoked the International Emergency Economic Powers Act, which we had earlier used successfully against the Cali drug cartel in Colombia.',
-                cn: '该决策令援引了《国际紧急经济权力法》，我们曾成功运用该法令打击哥伦比亚的卡利派毒品垄断组织。'
-            }
-        ]
-    },
-    {
-        word: 'Colombia  VmbI',
-        translation: '哥伦比亚（南美洲国家）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Lausanne',
-        translation: '洛桑（瑞士城市）',
-        phonetic: "lo'zæn",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Well, he was still helping her a year later, then; for somebody met 'em living at Lausanne together.",
-                cn: '可一年之后他仍然在继续帮助她呢。 有人在洛桑亲眼看见他们住在一起。'
-            }
-        ]
-    },
-    {
         word: 'Norway',
         translation: '挪威',
         phonetic: "'nɔrweɪ",
@@ -6497,72 +6007,6 @@ export default [
                 cn: '现在我们知道挪威的某些人可以这么做。'
             }
         ]
-    },
-    {
-        word: 'Maria',
-        translation: '玛丽亚（女名）',
-        phonetic: "'mɛərɪr",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Steven: Yes, but Maria might not be back in. You might have to help me.',
-                cn: '史蒂文： 是的， 但是玛丽亚有可能回不来， 你可能得帮帮我。'
-            }
-        ]
-    },
-    {
-        word: 'Katie',
-        translation: '凯蒂（女名）',
-        phonetic: "'keiti",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'But Katie, my older sister, is not there.',
-                cn: '但是凯蒂，我的姐姐，她不在那里。'
-            },
-            {
-                en: 'She’d ask me about my girlfriend, Katie, what we did on our dates, whether I said nice things to her.',
-                cn: '她问起我的女朋友凯蒂，问我们约会时都做些什么，以及我是否对她说过好听的。'
-            },
-            {
-                en: 'Katie will not be clapping for me when I finally get my college diploma or giving me advice on my wedding day.',
-                cn: '在我拿到大学文凭那一刻，再也不会有凯蒂为我鼓掌了，在我结婚那天，她也不能从旁给我任何意见。'
-            }
-        ]
-    },
-    {
-        word: 'Sato',
-        translation: '佐藤（日本姓氏）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"I have reason to think this person is missing," a friend seeking Kimiko Sato wrote on the site.',
-                cn: '“我有理由认为这个人失踪了”，一个寻找佐藤林睿君的朋友在网上写道。'
-            },
-            {
-                en: 'During a date with Ms. Sato one evening, his boss phoned Mr. Shaw on the pretext of asking him to stop by the office to test some teleconferencing gear.',
-                cn: '一天晚上，当肖尔先生和佐藤女士约会的时候，他的老板如两人事先约好的计划打来电话，要求肖尔先生到办公室测试一下某种电话会议系统。'
-            }
-        ]
-    },
-    {
-        word: 'Marie',
-        translation: '玛丽（女名）；马里（男名）',
-        phonetic: "'mɑ:ri",
-        partOfSpeech: ''
-    },
-    {
-        word: 'Teresa Lopez Upez',
-        translation: '特蕾莎 • 洛佩斯（人名）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Marc LeBlanc',
-        translation: '马克 • 勒布朗（人名）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'the more … the more',
@@ -7123,28 +6567,6 @@ export default [
         ]
     },
     {
-        word: 'Bert',
-        translation: '伯特（男名）',
-        phonetic: 'bə:t',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'These two guys, in case you forgot, are called Bert and Ernie.',
-                cn: '以防忘记，我告诉大家这两个人物叫伯特和尔尼。'
-            },
-            {
-                en: 'And I remembered Bert Jeffries’s letter telling me to stay away.',
-                cn: '我记得伯特.杰弗里斯的来信告诫我远离战场。'
-            }
-        ]
-    },
-    {
-        word: 'Holly',
-        translation: '霍莉（女名）',
-        phonetic: "'hɑli",
-        partOfSpeech: ''
-    },
-    {
         word: 'backpack',
         translation: 'n. 背包；旅行包',
         phonetic: "'bæk'pæk",
@@ -7653,46 +7075,6 @@ export default [
         ]
     },
     {
-        word: 'New Zealand',
-        translation: '新西兰',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Meat from New Zealand is frozen and brought to England in special ships.',
-                cn: '从新西兰运来的肉被冷冻保藏，用特殊的船运往英国。'
-            },
-            {
-                en: 'If you live in Australia, the US, the UK, Canada or New Zealand, then you live in the same place as me; Fat City.',
-                cn: '如果你是生活在澳大利亚，美国，加拿大或者新西兰，那么你其实就是和我住在同一个地方：肥胖国。'
-            },
-            {
-                en: 'Unfortunately, we know that one effect of climate change in New Zealand will be more extreme weather like this.',
-                cn: '遗憾的是，我们知道，气候变化在新西兰的影响之一是会有更多像这样的极端天气。'
-            }
-        ]
-    },
-    {
-        word: 'Italy',
-        translation: '意大利',
-        phonetic: "'ɪtəlɪ",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'They decided to swan around Italy this summer.',
-                cn: '他们决定今年夏天去意大利游逛。'
-            },
-            {
-                en: 'French troops negotiated the Alps and went on the road in Italy.',
-                cn: '法军成功地越过了阿尔卑斯山脉，行军在意大利的国土上。'
-            },
-            {
-                en: 'All the newspapers reported on the football match of France versus Italy.',
-                cn: '所有的报纸都报道了法国队对意大利队的足球比赛。'
-            }
-        ]
-    },
-    {
         word: 'Mars',
         translation: '火星',
         phonetic: 'mɑrz',
@@ -7701,18 +7083,6 @@ export default [
             {
                 en: 'the enormous volcanoes known to exist on Mars',
                 cn: '已知在火星上存在的大量火山'
-            }
-        ]
-    },
-    {
-        word: 'Carl',
-        translation: '卡尔（男名）',
-        phonetic: 'kɑ:l',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Call me Carl.',
-                cn: '叫我卡尔吧。'
             }
         ]
     },
@@ -8339,58 +7709,6 @@ export default [
         ]
     },
     {
-        word: 'Mark',
-        translation: '马克（男名）',
-        phonetic: 'mɑːk',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Jason',
-        translation: '杰森（男名）',
-        phonetic: "'dʒesən",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Jason: No, I just want to accumulate some useful experience there.',
-                cn: '杰森:不想，我只想在那里积累一些有用的经验。'
-            },
-            {
-                en: 'Jason: So, can you help me to do this work?',
-                cn: '杰森: 那么你能帮我做这个工作吗？'
-            }
-        ]
-    },
-    {
-        word: 'Ken',
-        translation: '肯（男名）',
-        phonetic: 'ken',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Do they associate with Mary and Ken out of genuine affection, or because spending time with such miserable types makes them feel (and look) better?',
-                cn: '他们陪伴玛丽和肯恩真的是出于诚挚的感情吗？ 亦或是这些悲惨的人能令他们感觉（或是看起来）更好?'
-            }
-        ]
-    },
-    {
-        word: 'Hayes',
-        translation: '海斯（姓）',
-        phonetic: 'heiz',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Jessica',
-        translation: '杰茜卡（女名）',
-        phonetic: "'dʒesikə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'You can ask Jessica what it’s like to be his sister.',
-                cn: '你可以问问杰西卡，做乔伊的姐姐是个什么感觉。'
-            }
-        ]
-    },
-    {
         word: 'Survey',
         translation: 'n. 调查',
         phonetic: 'ˈsɝˌve; (for v.) sɝˈve',
@@ -8911,52 +8229,6 @@ export default [
             {
                 en: 'The bird flapped its wings furiously.',
                 cn: '那只鸟使劲地拍打着翅膀。'
-            }
-        ]
-    },
-    {
-        word: 'Brian',
-        translation: '布莱恩（男名）',
-        phonetic: "'braɪən",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Brian: So I could wear my swimmers to the office?',
-                cn: '布莱恩：那么我可以穿我的游泳衣去办公室了？'
-            }
-        ]
-    },
-    {
-        word: 'Luke',
-        translation: '卢克（男名）',
-        phonetic: 'luk',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'So the first casualty of the expedition was Luke himself, who decided to leave.',
-                cn: '因此这次探险的第一个受害者是卢克自己，他决定离开。'
-            }
-        ]
-    },
-    {
-        word: 'Griffin',
-        translation: '格里芬（姓）',
-        phonetic: "'ɡrifin",
-        partOfSpeech: ''
-    },
-    {
-        word: 'Trent',
-        translation: '特伦特（姓）',
-        phonetic: 'trent',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'For Tom and Trent, the trap demonstration was a setup on a stage.',
-                cn: '对汤姆和特伦特来说，这只是个设置在舞台上的陷阱。'
-            },
-            {
-                en: 'Trent would like to see the technology spread among companies as an open-source solution.',
-                cn: '特伦特希望该技术可以作为一种开源的解决方案在公司间共享。'
             }
         ]
     }

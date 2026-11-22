@@ -1,26 +1,6 @@
 // 高中 选修11(源 PEPGaoZhong_11)
 export default [
     {
-        word: 'Auckland',
-        translation: 'n. 奥克兰（新西兰北岛西北岸港口城市）',
-        phonetic: 'ˈɔːklənd',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'I lived in Auckland, New Zealand, in my own flat with my dog.',
-                cn: '我住在新西兰的奥克兰，我与我的狗住在我自己的公寓里。'
-            },
-            {
-                en: 'Vancouver, Auckland and Sydney were the only non-European cities in the top 10.',
-                cn: '在前10名中，温哥华、奥克兰和悉尼是仅有的几个非欧洲城市。'
-            },
-            {
-                en: 'For me the ultimate voyage is the Bank Line voyage from Auckland, New Zealand, to Singapore.',
-                cn: '对我来说，最长的行程是新西兰奥克兰前往新加坡的海岸线航行。'
-            }
-        ]
-    },
-    {
         word: 'Maori',
         translation: 'n. （新西兰的）毛利人，毛利语；毛利语',
         phonetic: "'mauri",
@@ -41,18 +21,6 @@ export default [
         translation: 'n. 几维鸟（新西兰产的一种无翼鸟）',
         phonetic: "'kiwi",
         partOfSpeech: 'n'
-    },
-    {
-        word: 'Stewart Island',
-        translation: '斯图尔特岛（新西兰一岛屿）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The Little Blue Penguin and the Stewart Island Shag can also be seen here in their natural environment.',
-                cn: '在这里，还可以看到自然生态环境中的小蓝企鹅和斯图尔特岛鹭鸶。'
-            }
-        ]
     },
     {
         word: 'tectonic',
@@ -103,26 +71,6 @@ export default [
         ]
     },
     {
-        word: 'Alps',
-        translation: 'n. 阿尔卑斯山',
-        phonetic: 'ælps',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They headed the storm crossing over Alps to Italy.',
-                cn: '他们迎着暴风雪越过了阿尔卑斯山脉，朝着意大利进发。'
-            },
-            {
-                en: 'French troops negotiated the Alps and went on the road in Italy.',
-                cn: '法军成功地越过了阿尔卑斯山脉，行军在意大利的国土上。'
-            },
-            {
-                en: 'The high mountainous Alps in the west of Austria flatten somewhat into low lands and plains in the east of the country.',
-                cn: '奥地利西面的阿尔卑斯高山变得有些平坦，直接和国家的东面的低地和平原融为一体。'
-            }
-        ]
-    },
-    {
         word: 'backbone',
         translation: 'n. 脊椎，脊柱',
         phonetic: "'bæk'bon",
@@ -149,18 +97,6 @@ export default [
             {
                 en: 'a strip of sand between the cliffs and the sea',
                 cn: '悬崖和大海之间的一块狭长沙地'
-            }
-        ]
-    },
-    {
-        word: 'Christchurch',
-        translation: '克莱斯特彻奇（新西兰南岛东岸港口城市）',
-        phonetic: "'kraisttʃə:tʃ",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The United States stands ready to provide assistance to the government of New Zealand and to the brave people of Christchurch.',
-                cn: '克林顿说：“美国随时准备向新西兰政府和克赖斯特彻奇勇敢的人民提供援助。'
             }
         ]
     },
@@ -587,12 +523,6 @@ export default [
         ]
     },
     {
-        word: 'Napier',
-        translation: '内皮尔（新西兰北岛东岸港口城市）；纳皮尔（人名）',
-        phonetic: "'neipiə",
-        partOfSpeech: ''
-    },
-    {
         word: 'Burma',
         translation: 'n. 缅甸',
         phonetic: "'bə:mə",
@@ -605,26 +535,6 @@ export default [
             {
                 en: 'Severino says the focus now should be on helping the people of Burma.',
                 cn: '塞韦里诺说，现在的工作重点应该是帮助缅甸人民。'
-            }
-        ]
-    },
-    {
-        word: 'Lake Taupo',
-        translation: '陶波湖（新西兰最大湖）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Lake Taupo's shore is covered with pieces of pumice.",
-                cn: '陶波湖岸上布满了一片片的浮石。'
-            },
-            {
-                en: "Today, New Zealand's Lake Taupo is a serene sheet of fresh water, beloved of crayfish and hikers alike.",
-                cn: '今天，新西兰的陶波湖是一片宁静的淡水湖，为小龙虾和徒步旅行者所喜欢。'
-            },
-            {
-                en: 'This large eruption, known as the Oruanui, formed the caldera that holds Lake Taupo in the centre of New Zealand’s North Island.',
-                cn: '陶波湖火山的巨大喷发在新西兰北岛的中部形成了承载陶波湖的火山喷口。'
             }
         ]
     },
@@ -1053,12 +963,6 @@ export default [
         ]
     },
     {
-        word: 'Bahmad',
-        translation: '巴姆德（姓）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'jogger',
         translation: 'n. 跑步锻炼的人，慢跑者',
         phonetic: "'dʒɑɡɚ",
@@ -1163,26 +1067,6 @@ export default [
         ]
     },
     {
-        word: 'Dempsey',
-        translation: '登普西（姓）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Prior to the start of the fight, promoter Tex Rickard visits Dempsey and his manager in his dressing room.',
-                cn: '比赛开始前，赞助人特克斯·里卡德在更衣室里拜访了邓普西和他的经理人（卡恩斯）。'
-            },
-            {
-                en: 'We had to find a lawyer to help us understand the actions of Dempsey but Blatter came in and said he understood our plight.',
-                cn: '我们必须找一个律师来帮助我们理解邓普西的行为，但是布拉特进来说，他理解我们的苦境。'
-            },
-            {
-                en: "Speaking about the conference, Noel Dempsey TD, minister for transport, commented, “It's a proven fact that speed has a direct relationship with collision severity.",
-                cn: '在会议上，交通运输部部长诺尔·邓普西指出：“这是一个速度和车祸的严重程度之间有直接关系的事实证明。'
-            }
-        ]
-    },
-    {
         word: 'surgeon',
         translation: 'n. 外科医生',
         phonetic: "'sɝdʒən",
@@ -1223,18 +1107,6 @@ export default [
             {
                 en: 'My parents thought it was abnormal for a boy to be interested in ballet.',
                 cn: '我父母认为一个男孩子对芭蕾舞感兴趣并不正常。'
-            }
-        ]
-    },
-    {
-        word: 'Shipley',
-        translation: '希普利（姓）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The Linthicum Zip Code, which includes the community of Linthicum, Linthicum Heights, and Shipley, is just minutes from Baltimore.',
-                cn: '林西克姆距巴尔的摩只有几分钟路程，它的邮政区域包括林西克姆社区、林西克姆高地和钢皮普利。'
             }
         ]
     },
@@ -1595,42 +1467,10 @@ export default [
         ]
     },
     {
-        word: 'Arthur Conan Doyle',
-        translation: '亚瑟.柯南道尔（1859-1930，英国医师、小说家、推理小说家，创造了私人侦探福尔摩斯的形象）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Arthur Conan Doyle, himself a physician, imbued his character with the kind of keen observational skills so essential to a good physician.',
-                cn: '内科医生亚瑟柯南道尔笔下的角色，具有敏锐的观察力，这对一个好医生来说相当重要。'
-            },
-            {
-                en: 'They admitted they had made cut-out fairies and held them up with hatpins, and said they realized the joke had gone too far when Arthur Conan Doyle was duped.',
-                cn: '他们承认他们只是用纸剪出小精灵的形状然后用别针固定照了几张相，直到柯南·道尔也上当之后他们才意识到这玩笑开大了。'
-            }
-        ]
-    },
-    {
         word: 'Jaez Wilson',
         translation: '杰贝兹.威尔逊',
         phonetic: '',
         partOfSpeech: ''
-    },
-    {
-        word: 'Sherlock Holmes',
-        translation: '夏洛克.福尔摩斯（英国作家柯南.道尔作品中的名侦探）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'By the way, do you like the Sherlock Holmes in movies?',
-                cn: '顺便问一下，你喜欢电影中的夏洛克•福尔摩斯吗？'
-            },
-            {
-                en: 'I’ve enlisted the help of Master Detective Sherlock Holmes to help guide us on our search.',
-                cn: '我已经列举出大侦探夏洛克福尔摩斯的箴言教导，引领我们向前进。'
-            }
-        ]
     },
     {
         word: 'flame',
@@ -2619,18 +2459,6 @@ export default [
         partOfSpeech: 'adj'
     },
     {
-        word: 'Ithaca',
-        translation: 'n. 伊萨卡岛（希腊西部爱奥尼海中亚群岛之一）',
-        phonetic: "'iθəkə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Oxford and Cambridge (England) feel like Ithaca or Hanover: the message is there, but not as strong.',
-                cn: '英国的牛津和剑桥感觉就像伊萨卡岛或者汉诺威：虽然也在发着类似的消息，但是比较微弱。'
-            }
-        ]
-    },
-    {
         word: 'Telemachus',
         translation: '忒勒玛科斯（Odysseus 和 Penelope 之子）',
         phonetic: "ti'leməkəs; tə-",
@@ -2735,12 +2563,6 @@ export default [
                 cn: '无条件投降'
             }
         ]
-    },
-    {
-        word: 'Cyclops',
-        translation: '塞克罗伯斯（希腊神话独眼巨人）',
-        phonetic: "'saɪklɑps",
-        partOfSpeech: ''
     },
     {
         word: 'scar',
@@ -2931,22 +2753,6 @@ export default [
             {
                 en: 'They taught me to wrestle.',
                 cn: '他们教我去摔跤。'
-            }
-        ]
-    },
-    {
-        word: 'Circe',
-        translation: '瑟茜（希腊神话女巫，有把人变成猪的法术）',
-        phonetic: "'sə:si",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Cookery means the knowledge of Medea and of Circe and of Helen and of the Queen of Sheba.',
-                cn: '烹饪术包含着美狄娅、瑟西、海伦和希巴女王的学问。'
-            },
-            {
-                en: 'Among the characters Harry learns of is Circe , a powerful witch who turns men into pigs in one of the greatest stories ever told, The Odssey.',
-                cn: '哈利学习的人物之一是瑟茜，瑟茜是法力高强的女巫，能把人变成猪。她出现在最伟大的故事之一----《奥德赛》中。'
             }
         ]
     },
@@ -3175,22 +2981,6 @@ export default [
         ]
     },
     {
-        word: 'Theseus',
-        translation: '忒修斯（希腊神话雅典王子）',
-        phonetic: "'θi:sju:s; -siəs",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Nietzsche often spoke of Ariadne, a faithful companion of Theseus.',
-                cn: '尼采经常提到阿里阿德涅，她是提修斯忠实的伴侣。'
-            },
-            {
-                en: 'However, to come to those who have become princes by means of their own virtue and not because of Fortune, I say that the most outstanding are Moses, Cyrus, Romulus, Theseus, and others of their kind.',
-                cn: '不管怎样，对于那些通过他们自己的才干而非命运成为君主的人，我要说最杰出的就是摩西、居鲁士、罗穆卢斯、忒修斯，以及其他像他们这般的人物*。'
-            }
-        ]
-    },
-    {
         word: 'enlarge',
         translation: 'v. 增大，扩大',
         phonetic: "ɪn'lɑrdʒ",
@@ -3371,50 +3161,6 @@ export default [
             {
                 en: 'In 1949 Bonn was a small, insignificant city.',
                 cn: '1949年，波恩还是个不足称道的小城市。'
-            }
-        ]
-    },
-    {
-        word: 'Sinis',
-        translation: '西尼斯（古希腊神话中的一个强盗）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Sinis caught sight of Theseus and hailed him.',
-                cn: '辛尼斯看到忒修思，就和 他打招呼。'
-            }
-        ]
-    },
-    {
-        word: 'Procrustes',
-        translation: '普罗克拉斯提斯（古希腊神话传说中 Attica 的一个强盗）',
-        phonetic: "prəu'krʌsti:z",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Near to the banks of the Cephissus lived the giant Procrustes , of whom (as was the case with other giants) Theseus had heard long before he met him.',
-                cn: '在科菲索斯河岸边住着巨人普洛克洛斯忒斯，就象其它的巨人一样，忒修斯早就听说了他的情况。'
-            },
-            {
-                en: 'Procrustes was accustomed to invite strangers to spend a night in his cave, and if the guest were tall he would lead him to the shorter bed.',
-                cn: '普洛克洛斯忒斯总是请陌生人到山洞中过夜，如果客人很高，他就把他领到较短的床上。'
-            }
-        ]
-    },
-    {
-        word: 'Crete',
-        translation: '克里特岛（希腊位于地中海西部的一个岛屿）',
-        phonetic: 'kri:t',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Pavlos Tsimas says some people commit suicide in a public way, like the businessman in Crete.',
-                cn: '特斯马斯表示一些人以公开的方式自杀，就像克里特岛这位小商人。'
-            },
-            {
-                en: 'LinearB dates from around 1450 BC. It is an archaic form of written Greek used by Greek-speakers who conquered parts of Crete around that time.',
-                cn: '线形文字B大约始于公元前1450年，为当时征服了克里特岛部分地区的希腊人使用，是一种古老的书面希腊语。'
             }
         ]
     },

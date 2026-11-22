@@ -22,7 +22,7 @@ export const vocabularyCatalog = [
         id: 'p3-2',
         stage: '小学',
         title: '三年级下册',
-        wordCount: 72
+        wordCount: 70
     },
     {
         id: 'p4-1',
@@ -34,7 +34,7 @@ export const vocabularyCatalog = [
         id: 'p4-2',
         stage: '小学',
         title: '四年级下册',
-        wordCount: 104
+        wordCount: 100
     },
     {
         id: 'p5-1',
@@ -46,127 +46,127 @@ export const vocabularyCatalog = [
         id: 'p5-2',
         stage: '小学',
         title: '五年级下册',
-        wordCount: 156
+        wordCount: 152
     },
     {
         id: 'p6-1',
         stage: '小学',
         title: '六年级上册',
-        wordCount: 130
+        wordCount: 129
     },
     {
         id: 'p6-2',
         stage: '小学',
         title: '六年级下册',
-        wordCount: 108
+        wordCount: 107
     },
     {
         id: 'm7-1',
         stage: '初中',
         title: '七年级上册',
-        wordCount: 392
+        wordCount: 389
     },
     {
         id: 'm7-2',
         stage: '初中',
         title: '七年级下册',
-        wordCount: 492
+        wordCount: 476
     },
     {
         id: 'm8-1',
         stage: '初中',
         title: '八年级上册',
-        wordCount: 419
+        wordCount: 415
     },
     {
         id: 'm8-2',
         stage: '初中',
         title: '八年级下册',
-        wordCount: 463
+        wordCount: 458
     },
     {
         id: 'm9-1',
         stage: '初中',
         title: '九年级上册',
-        wordCount: 551
+        wordCount: 495
     },
     {
         id: 'h-bx1',
         stage: '高中',
         title: '必修一',
-        wordCount: 311
+        wordCount: 289
     },
     {
         id: 'h-bx2',
         stage: '高中',
         title: '必修二',
-        wordCount: 319
+        wordCount: 298
     },
     {
         id: 'h-bx3',
         stage: '高中',
         title: '必修三',
-        wordCount: 366
+        wordCount: 345
     },
     {
         id: 'h-bx4',
         stage: '高中',
         title: '必修四',
-        wordCount: 307
+        wordCount: 294
     },
     {
         id: 'h-bx5',
         stage: '高中',
         title: '必修五',
-        wordCount: 357
+        wordCount: 352
     },
     {
         id: 'h-xx6',
         stage: '高中',
         title: '选修六',
-        wordCount: 391
+        wordCount: 378
     },
     {
         id: 'h-xx7',
         stage: '高中',
         title: '选修七',
-        wordCount: 384
+        wordCount: 362
     },
     {
         id: 'h-xx8',
         stage: '高中',
         title: '选修八',
-        wordCount: 420
+        wordCount: 408
     },
     {
         id: 'h-xx9',
         stage: '高中',
         title: '选修九',
-        wordCount: 352
+        wordCount: 344
     },
     {
         id: 'h-xx10',
         stage: '高中',
         title: '选修十',
-        wordCount: 361
+        wordCount: 354
     },
     {
         id: 'h-xx11',
         stage: '高中',
         title: '选修十一',
-        wordCount: 309
+        wordCount: 291
     },
     {
         id: 'cet4',
         stage: 'CET4',
         title: '大学英语四级',
-        wordCount: 4544
+        wordCount: 4511
     },
     {
         id: 'cet6',
         stage: 'CET6',
         title: '大学英语六级',
-        wordCount: 3991
+        wordCount: 3988
     },
     // PTE 阶段: 11 个分类, 每分类一个独立 category(一级 key, 不与其它词书共用), 顺序同词库页截图
     {
@@ -174,14 +174,14 @@ export const vocabularyCatalog = [
         stage: 'PTE',
         title: '基础词汇',
         category: 'pte_junior',
-        wordCount: 2651
+        wordCount: 2649
     },
     {
         id: 'pte-senior',
         stage: 'PTE',
         title: '高阶词汇',
         category: 'pte_senior',
-        wordCount: 3170
+        wordCount: 3164
     },
     {
         id: 'pte-fib-r-junior',
@@ -195,49 +195,49 @@ export const vocabularyCatalog = [
         stage: 'PTE',
         title: '阅读FIB高阶机经词汇',
         category: 'pte_fib_r_senior',
-        wordCount: 1272
+        wordCount: 1271
     },
     {
         id: 'pte-wfd',
         stage: 'PTE',
         title: 'WFD机经词汇',
         category: 'pte_wfd',
-        wordCount: 1212
+        wordCount: 1208
     },
     {
         id: 'pte-fib-l',
         stage: 'PTE',
         title: '听力FIB机经词汇',
         category: 'pte_fib_l',
-        wordCount: 646
+        wordCount: 645
     },
     {
         id: 'pte-basic',
         stage: 'PTE',
         title: '基础词汇猩际',
         category: 'pte_basic',
-        wordCount: 2651
+        wordCount: 2649
     },
     {
         id: 'pte-advanced',
         stage: 'PTE',
         title: '高阶词汇猩际',
         category: 'pte_advanced',
-        wordCount: 3169
+        wordCount: 3163
     },
     {
         id: 'pte-read',
         stage: 'PTE',
         title: '阅读FIB机经词汇猩际',
         category: 'pte_read',
-        wordCount: 630
+        wordCount: 629
     },
     {
         id: 'pte-listening',
         stage: 'PTE',
         title: '听力FIB机经词汇猩际',
         category: 'pte_listening',
-        wordCount: 674
+        wordCount: 671
     },
     {
         id: 'pte-phrases',

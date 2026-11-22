@@ -691,18 +691,6 @@ export default [
         ]
     },
     {
-        word: 'Barcelona',
-        translation: '巴塞罗那（西班牙东北部港口城市）',
-        phonetic: ",ba:si'ləunə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The aeroplane landed us at the airport in Barcelona.',
-                cn: '飞机把我们降落在巴塞罗那机场。'
-            }
-        ]
-    },
-    {
         word: 'springboard',
         translation: 'n. 跳板；(游泳或体操运动中的) 跳板',
         phonetic: "'sprɪŋbɔrd",
@@ -759,18 +747,6 @@ export default [
         ]
     },
     {
-        word: 'the Danube River',
-        translation: '多瑙河（位于欧洲）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Romania is situated in southeastern Europe, bordered by Ukraine and Moldova in the northeast; Hungary in the west; Serbia and Bulgaria to the south along the Danube River.',
-                cn: '罗马尼亚位于欧洲东南部，东北面和乌克兰及摩尔多瓦接壤，西面和匈牙利接壤，南面隔着多瑙河的是塞尔维亚和保加利亚。'
-            }
-        ]
-    },
-    {
         word: 'attain',
         translation: 'v. 获得；达到',
         phonetic: "ə'ten",
@@ -783,18 +759,6 @@ export default [
             {
                 en: 'Share prices attained a high of 3.27.',
                 cn: '股价涨到3.27美元的高位。'
-            }
-        ]
-    },
-    {
-        word: 'the Parana River',
-        translation: '巴拉那河(位于南美洲中南部，该州第二大河)',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'This project involves the construction of a road and a large number of bridges across the Parana River waterway.',
-                cn: '这项工程包括一条路和横跨巴拿马运河的几座桥梁的建设。'
             }
         ]
     },
@@ -2031,18 +1995,6 @@ export default [
         ]
     },
     {
-        word: 'Greenland',
-        translation: '格林兰（位于北美洲东北部，世界第一大岛）',
-        phonetic: "'grinlənd",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Regardless of which version of Santa Claus you believe in, however, there is only one thing you need to know – that Santa Claus lives in Greenland.',
-                cn: '不过 无论你相信的是那一个版本的圣诞老人 你只需要知道一件事-圣诞老人居住在格陵兰。'
-            }
-        ]
-    },
-    {
         word: 'Shetland Islands',
         translation: '设得兰群岛（位于英国苏格兰北部）',
         phonetic: '',
@@ -2129,18 +2081,6 @@ export default [
             {
                 en: 'problems associated with cancer treatment',
                 cn: '与癌症治疗有关的问题'
-            }
-        ]
-    },
-    {
-        word: 'Perth',
-        translation: '珀思（澳大利亚西南部港口城市）',
-        phonetic: 'pɜrθ',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"I see no basis in any of that speculation, " he told reporters in Perth.',
-                cn: '他在珀斯告诉记者：“我看不到那种推测有任何根据。”'
             }
         ]
     },
@@ -2233,26 +2173,6 @@ export default [
         translation: '科西阿斯科山（位于澳大利亚东南部）',
         phonetic: '',
         partOfSpeech: ''
-    },
-    {
-        word: 'Oceania',
-        translation: 'n. 大洋洲',
-        phonetic: ",oʃɪ'ænɪə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Future research will be required to determine if these findings hold true for other territories in Asia and Oceania with similar malaria epidemiology.',
-                cn: '然而，还需做进一步研究以确定该发现是否适用于有类似疟疾流行病的亚洲和大洋洲。'
-            },
-            {
-                en: 'Interested library associations outside of Latin America and the Caribbean, Africa, and Asia and Oceania should contact the Management of Library Associations section.',
-                cn: '在拉美地区以外以及加勒比海，非洲和亚洲以及大洋洲的感兴趣的图书馆联盟可以联系图书馆联盟管理部门。'
-            },
-            {
-                en: 'Findings and experiences were presented by around 100 clinicians, scientists, and public health professionals from the Americas, Europe, Asia, Africa, the Middle East and Oceania.',
-                cn: '来自美洲、欧洲、亚洲、非洲、中东和大洋洲的大约100名临床医生、科学家以及公共卫生专业人员介绍了取得的结果和经验。'
-            }
-        ]
     },
     {
         word: 'adequate',
@@ -2723,22 +2643,6 @@ export default [
             {
                 en: 'Customers are advised to make seat reservations well in advance.',
                 cn: '建议顾客提前订座。'
-            }
-        ]
-    },
-    {
-        word: 'Hobart',
-        translation: '奥巴特（澳大利亚塔斯马尼亚岛东南岸港市）',
-        phonetic: "'həuba:t",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Hobart Town, by degrees, grew to be a fine city, with handsome buildings and well kept streets.',
-                cn: '霍巴特镇在一定程度上已经演变为一个惬意的城市，街道整齐，建筑物大方气派；'
-            },
-            {
-                en: 'There, at the very foot of the lofty Mount Wellington, Hobart Town began to grow in its new situation.',
-                cn: '这里正处于高耸的威灵顿山脚下，一个新的霍巴特镇开始在这里成长。'
             }
         ]
     },
@@ -3255,26 +3159,6 @@ export default [
             {
                 en: 'The President hopes to visit Ireland in the not too distant future (= quite soon ) .',
                 cn: '总统希望在不久的将来访问爱尔兰。'
-            }
-        ]
-    },
-    {
-        word: 'Egypt',
-        translation: 'n. 埃及',
-        phonetic: "'idʒɪpt",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'They caravaned through Egypt.',
-                cn: '他们结队在埃及坐大篷车旅行。'
-            },
-            {
-                en: 'The established religion of Egypt is Islam.',
-                cn: '埃及的国教是伊斯兰教。'
-            },
-            {
-                en: 'Glazes had been used from ancient times in Egypt.',
-                cn: '埃及自古代起就使用釉料。'
             }
         ]
     },

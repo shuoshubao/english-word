@@ -261,13 +261,6 @@ export default [
         examples: []
     },
     {
-        word: 'Grace',
-        translation: '- n. 优雅；恩惠；慈悲；魅力\n- vt. 使优美\n\nGracen. 格雷斯（女子名）\n\n时 态:  \ngraced, gracing, graces',
-        phonetic: 'ɡreɪs',
-        partOfSpeech: 'n / vt',
-        examples: []
-    },
-    {
         word: 'bay',
         translation: '- n. 海湾；狗吠声\n- vt. 向…吠叫\n- vi. 吠叫；大声叫嚷\n\n\n时 态:  \nbayed, baying, bays',
         phonetic: 'beɪ',
@@ -8723,13 +8716,6 @@ export default [
         translation: '- vt. 系紧, 拴牢\n- vt. & vi. 闩住\n\n时 态:  \nfastened, fastening, fastens \n\n名 词:  \nfastener',
         phonetic: 'ˈfæsən',
         partOfSpeech: 'vt',
-        examples: []
-    },
-    {
-        word: 'Christ',
-        translation: '- n. 基督；救世主\n- int. 天啊！\n\n\n形容词:  \nChristlike\n\n形容词:  \nChristly',
-        phonetic: 'kraɪst',
-        partOfSpeech: 'n / int',
         examples: []
     },
     {

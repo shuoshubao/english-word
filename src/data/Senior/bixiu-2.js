@@ -201,26 +201,6 @@ export default [
         ]
     },
     {
-        word: 'Frederick William I',
-        translation: '腓特烈•威廉一世（普鲁士国王）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'However, the next king of Prussia, Frederick William I.',
-                cn: '然而，下一位普鲁士国王，腓特烈威廉一世。'
-            },
-            {
-                en: 'However, the next King of Prussia, Frederick William I, to whom the amber room belonged, decided not to keep it.',
-                cn: '然而，下一位普鲁士国王，腓特烈·威廉一世，这个琥珀屋的主人却决定不要它了。'
-            },
-            {
-                en: 'The Great Elector, Frederick William I, adopted a similar course when he encouraged the French Huguenots to emigrate to Brandenburg-Prussia.',
-                cn: '伟大的选候腓得列威廉一世在鼓励法国的新教徒移居普鲁士的布兰登堡时采取类似的手法。'
-            }
-        ]
-    },
-    {
         word: 'Prussia',
         translation: 'n. （史）普鲁士（位于北欧）',
         phonetic: "'prʌʃə",
@@ -441,26 +421,6 @@ export default [
         ]
     },
     {
-        word: 'Peter the Great',
-        translation: '彼得大帝（俄国皇帝）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "But she knew that was only because, like Peter the Great in a shipwright's yard, he was studying what he wanted to know.",
-                cn: '但是苔丝知道，那只是因为他要学习他想学习的东西，就像彼得大帝到造船厂里去学习一样。'
-            },
-            {
-                en: 'But nonetheless, Peter the Great creates this huge empire that will have over the long run, an enormous influence in European affairs.',
-                cn: '即使如此,彼得大帝还是一手创造了,这个庞大的帝国,长远来看将对欧洲事务产生极大影响'
-            },
-            {
-                en: 'The best example I can think of offhand, I should let this wait, but Peter the Great, the czar of the Russians, who may or may not have beaten his son to death, at least he ordered him tortured.',
-                cn: '我现在临时能想到的最好的例子,就是沙皇彼得大帝,本来要等会再说的,彼得大帝是否判处了自己儿子死刑 还有争论,但至少他曾下令用酷刑折磨他的儿子'
-            }
-        ]
-    },
-    {
         word: 'in return',
         translation: '作为报答；回报',
         phonetic: '',
@@ -499,22 +459,6 @@ export default [
             {
                 en: 'a troop of monkeys',
                 cn: '一群猴子'
-            }
-        ]
-    },
-    {
-        word: 'St Petersburg',
-        translation: 'n. 圣彼得堡（俄罗斯城市）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Imagine what it must have been like being a resident of St Petersburg in 1917, in the months before Lenin and the Bolsheviks finally seized power.',
-                cn: '想象一下，在1917年圣彼得堡，在列宁和布尔什维克最后夺取政权的几个月前，居民应该是怎么样的。'
-            },
-            {
-                en: 'It is only three years since a judge in St Petersburg, Russia, threw out a case on the ground that: “If we had no sexual harassment we would have no children.',
-                cn: '仅仅在三年前，俄罗斯的圣彼得堡还有过这样一个法官，他把诉讼状丢在地上说：“如果没有性骚扰，俄罗斯不就要绝种了吗。”'
             }
         ]
     },
@@ -781,26 +725,6 @@ export default [
         ]
     },
     {
-        word: 'Leningrad',
-        translation: 'n. 列宁格勒（苏联城市）',
-        phonetic: "'leninɡræd",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'A farewell in Leningrad, in the spring of 1942.',
-                cn: '1942年春天，在列宁格勒的一场送别仪式。'
-            },
-            {
-                en: "He entered Leningrad State University's law department in 1970.",
-                cn: '1970年，普京进入列宁格勒州立大学法律系。'
-            },
-            {
-                en: 'First of all, it reflects the fact that some schools practiced separate education for boys and girls, which was introduced in 1943 in Moscow, Leningrad and some other big cities of the USSR.',
-                cn: '首先，教材表明当时城市中的一些学校是男女分开教学的，这种教学实践是苏联（USSR）在1943年引入到如莫斯科、列宁格勒和其他一些这类的大城市。'
-            }
-        ]
-    },
-    {
         word: 'painting',
         translation: 'n. 绘画；画',
         phonetic: "'pentɪŋ",
@@ -893,32 +817,6 @@ export default [
         ]
     },
     {
-        word: 'Jan Hasek',
-        translation: '简•哈兹克（男名）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Czech Republic',
-        translation: '捷克共和国（东欧国家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'We do not have signed agreement with Poland or the Czech Republic, we do not have ratified agreements with their parliaments.',
-                cn: '我们还没有和波兰或捷克共和国签订条约，我们和他们的议会间也没有已经得到批准的协议。'
-            },
-            {
-                en: 'And the US has not relented on anti-missile installations in Poland and the Czech Republic.',
-                cn: '此外，美国并没有放慢在波兰和捷克共和国部署反导弹装置的步伐。'
-            },
-            {
-                en: 'But some in Poland and the Czech Republic will view it as a betrayal of efforts over the years to accommodate US requests in the face of domestic opposition.',
-                cn: '但在波兰和捷克共和国有人会认为，这是对多年来为满足美国的要求而面对国内反对派压力所做的努力的背叛。'
-            }
-        ]
-    },
-    {
         word: 'explode',
         translation: 'v. 爆炸',
         phonetic: "ɪk'splod",
@@ -945,12 +843,6 @@ export default [
                 cn: '车站的入口处'
             }
         ]
-    },
-    {
-        word: 'Hans Braun',
-        translation: '汉斯•布朗（男名）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'sailor',
@@ -989,12 +881,6 @@ export default [
         ]
     },
     {
-        word: 'Anna Petrov',
-        translation: '安娜•帕特罗夫（女名）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'maid',
         translation: 'n. 女仆；少女',
         phonetic: 'med',
@@ -1011,26 +897,6 @@ export default [
         ]
     },
     {
-        word: 'Berlin',
-        translation: 'n. 柏林（德国首都）',
-        phonetic: "bɝ'lɪn",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'He captained the siege of Berlin.',
-                cn: '他指挥了围攻柏林的战役。'
-            },
-            {
-                en: 'Once you have a flat in central Berlin, you can always monetize it when the prices rise.',
-                cn: '如果在柏林市中心有一套公寓，价格上涨时就可以随时把它变现。'
-            },
-            {
-                en: 'But I remember an anecdote I once heard from one of my German friends. Shortly after the unification, an Ossie and a Weissie meet in Berlin.',
-                cn: '但我记得从一个德国朋友那里听来的这样一件轶事：统一后不久，一个东德人与一个西德人在柏林相遇。'
-            }
-        ]
-    },
-    {
         word: 'think highly of',
         translation: '看重；器重',
         phonetic: '',
@@ -1041,12 +907,6 @@ export default [
                 cn: '我就会得出结论，我一定很敬重你。'
             }
         ]
-    },
-    {
-        word: 'Johann Webber',
-        translation: '约翰•韦伯（男名）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'informal',
@@ -1201,54 +1061,6 @@ export default [
             {
                 en: 'Rocky the Raccoon, the team mascot',
                 cn: '浣熊罗基，该队的吉祥物'
-            }
-        ]
-    },
-    {
-        word: 'Pausanias',
-        translation: '帕萨尼亚斯（男名；古希腊人名）',
-        phonetic: "pɔ:'seiniæs",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'What is in question is properly speaking the same theme which is proposed to us by the discourse of Pausanias.',
-                cn: '受到质疑的，适当来说，是相同的主题，由保撒尼亚斯的论述跟我们建议。'
-            },
-            {
-                en: 'Pausanias, who was a Greek writer 2000 years ago, has come on a magical journey to find out about the present day Olympic Games.',
-                cn: '帕萨尼亚斯是一位2000年前的古希腊作家，经过一路不可思议的跋涉后，来询问有关现代奥运会情况。'
-            }
-        ]
-    },
-    {
-        word: 'Greece',
-        translation: 'n. 希腊',
-        phonetic: 'ɡriːs',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Alexander the Great beat every opponent between Greece and India.',
-                cn: '亚历山大大帝打败了希腊和印度之间的每个敌手。'
-            },
-            {
-                en: 'Spain and Greece have not.',
-                cn: '西班牙和希腊还没有。'
-            },
-            {
-                en: 'But there are no special arrangements for Greece or for any other country.',
-                cn: '但是对于希腊和任何别的国家，我们都不会特别对待。'
-            }
-        ]
-    },
-    {
-        word: 'Greek',
-        translation: 'adj. 希腊（人）的；希腊语的; n. 希腊人；希腊语',
-        phonetic: 'grik',
-        partOfSpeech: 'adj / n',
-        examples: [
-            {
-                en: 'Greek yoghurt',
-                cn: '希腊式酸奶'
             }
         ]
     },
@@ -1749,26 +1561,6 @@ export default [
         ]
     },
     {
-        word: 'Atlanta',
-        translation: 'n. 亚特兰大（女名；城市名）',
-        phonetic: "æt'læntə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Atlanta is below Washington.',
-                cn: '亚特兰大比华盛顿更靠南。'
-            },
-            {
-                en: 'The terrorist dusted for Atlanta.',
-                cn: '那名恐怖分子逃往亚特兰大。'
-            },
-            {
-                en: 'They communicated at least once a day, and it was still late afternoon in Atlanta.',
-                cn: '他们每周至少沟通一次，而此时在亚特兰大还是下午晚些时候。'
-            }
-        ]
-    },
-    {
         word: 'princess',
         translation: 'n. 公主',
         phonetic: 'prɪnˌsɛs',
@@ -1845,22 +1637,6 @@ export default [
             {
                 en: 'I kept on struggling forward, even though I knew it was hopeless .',
                 cn: '虽然知道无望，我还是奋力挣扎向前。'
-            }
-        ]
-    },
-    {
-        word: 'Hippomenes',
-        translation: 'n. 希波墨涅斯（男名；古希腊人名）',
-        phonetic: "hi'pɔməni:z",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Do you think Hippomenes deserved to win the race?',
-                cn: '你认为希波墨涅斯应该（算）赢吗？'
-            },
-            {
-                en: 'However, when he saw Atlanta come out of her house to run, Hippomenes changed his mind.',
-                cn: '然而，当他看到亚特兰大从她的房子出来跑步的时候，希波墨涅斯改变了他的心意。'
             }
         ]
     },
@@ -2909,26 +2685,6 @@ export default [
         ]
     },
     {
-        word: 'Seattle',
-        translation: 'n. 西雅图（美国城市）',
-        phonetic: "si'ætl",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Where do you live in Seattle?',
-                cn: '你住在西雅图的哪里？'
-            },
-            {
-                en: 'But we live in Seattle now.',
-                cn: '但是我们现在住在西雅图。'
-            },
-            {
-                en: 'They still live in Seattle, where they have three children together.',
-                cn: '他们依旧居住在西雅图，并且有了三个孩子。'
-            }
-        ]
-    },
-    {
         word: 'type',
         translation: 'n. 类型; v. 打字',
         phonetic: 'taɪp',
@@ -3403,12 +3159,6 @@ export default [
         ]
     },
     {
-        word: 'Daisy',
-        translation: 'n. 戴茜（女名）',
-        phonetic: "'deɪzɪ",
-        partOfSpeech: 'n'
-    },
-    {
         word: 'species',
         translation: 'n. 种类；物种',
         phonetic: "'spiʃiz",
@@ -3513,22 +3263,6 @@ export default [
             {
                 en: 'All I had to do was bring the groceries, which meant a steak — which I thought could fill in for wildebeest or antelope — and a turnip, a mango, some peanuts and potatoes.',
                 cn: '我所要做的就是带一些食品(一个牛排)过去，我认为超市的牛排可以代替非洲草原的牛羚肉或羚羊肉，以及一些萝卜，芒果，花生和土豆之类。'
-            }
-        ]
-    },
-    {
-        word: 'Zimbabwe',
-        translation: 'n. 津巴布韦（非洲东南部国家）',
-        phonetic: "zim'bɑ:bwei; -wi",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'But is it right for the people of Zimbabwe?',
-                cn: '但是这对津巴布韦人民真的有好处吗？'
-            },
-            {
-                en: 'What does this all have to do with Zimbabwe?',
-                cn: '这跟津巴布韦有什么关系呢？'
             }
         ]
     },
@@ -3891,22 +3625,6 @@ export default [
         ]
     },
     {
-        word: 'Indonesia',
-        translation: 'n. 印度尼西亚（东南亚岛国）',
-        phonetic: "'indəu'ni:zjə,-ʒə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'We have the example of Aceh, Indonesia, to guide us.',
-                cn: '我们可用印尼亚齐省这一范例指导我们的工作。'
-            },
-            {
-                en: 'In Indonesia, for example, on the coast of Aceh, only one hospital remains operational.',
-                cn: '例如，在印度尼西亚的亚齐海岸，只有一所医院仍在运转。'
-            }
-        ]
-    },
-    {
         word: 'rhino',
         translation: 'n. 犀牛',
         phonetic: "'raɪno",
@@ -4195,26 +3913,6 @@ export default [
             {
                 en: 'There is now widespread support for these proposals, according to a recent public opinion poll.',
                 cn: '根据最近的民意调查，目前人们普遍支持这些提议。'
-            }
-        ]
-    },
-    {
-        word: 'Mauritius',
-        translation: 'n. 毛里求斯（非洲东部岛国）',
-        phonetic: "mə'rɪʃɚs",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'I started in France, but my father was a British citizen, born in Mauritius.',
-                cn: '我生在法国，但是我的父亲是英国人，出生于毛里求斯。'
-            },
-            {
-                en: 'However, as the exhibit shows, Mauritius faces significant economic and social challenges as it transitions from dependence on trade preferences to open competition in the global economy.',
-                cn: '然而，正如本次展览所示，在从依赖贸易优惠向参与全球经济竞争过渡的过程中，毛里求斯面临巨大经济社会挑战。'
-            },
-            {
-                en: 'Of these, Kenya, Malawi, Mauritius, South Africa and Zimbabwe have all at one time or other used bioethanol as a transport or domestic fuel.',
-                cn: '在这些国家中，肯尼亚、马拉维、毛里求斯、南非和津巴布韦都曾经使用生物乙醇作为交通和家用燃料。'
             }
         ]
     },
@@ -5125,22 +4823,6 @@ export default [
             {
                 en: 'We are confident next year’s profits will be higher.',
                 cn: '我们确信明年的利润会增加。'
-            }
-        ]
-    },
-    {
-        word: 'Freddy',
-        translation: 'n. 弗雷迪（男名）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Freddy the Pharisee: Rigid, narrow-minded, and legalistic, he has a rule for everything.',
-                cn: '弗雷迪 法利赛人：顽固，狭隘，墨守陈规，他对一切事物都制定了规则。'
-            },
-            {
-                en: "This week's episode brought back Freddy Rumsen hoping that Pond's cold cream would be his ticket back into the ad business.",
-                cn: '本周播放的这一集，弗雷迪•拉姆森重新出现在剧情里，他希望自己带来的旁氏冷霜的订单能帮他重回广告业。'
             }
         ]
     },

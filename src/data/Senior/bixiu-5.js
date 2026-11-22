@@ -2011,18 +2011,6 @@ export default [
         ]
     },
     {
-        word: 'Greenwich',
-        translation: 'n. 格林尼治（英城市）',
-        phonetic: "'ɡri:nidʒ",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'After the 1884 Convention, Greenwich officially became the place where every day, year and century began.',
-                cn: '1884年大会以后，格林威治正式成为每一天、每一年及每一世纪开始的地方。'
-            }
-        ]
-    },
-    {
         word: 'longitude',
         translation: 'n. 经线；经度',
         phonetic: "'lɑndʒətud",
@@ -5029,18 +5017,6 @@ export default [
         ]
     },
     {
-        word: 'Casey',
-        translation: '凯西（姓）',
-        phonetic: "'keisi:",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Jim and Casey are old friends from college.',
-                cn: '吉姆和凯西是大学时代的老朋友。'
-            }
-        ]
-    },
-    {
         word: 'sleeve',
         translation: 'n. 袖子',
         phonetic: 'sliv',
@@ -5139,18 +5115,6 @@ export default [
         ]
     },
     {
-        word: 'Janson',
-        translation: '詹森（姓）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Operator makes a call to Janson.',
-                cn: '接线员给詹森打电话。'
-            }
-        ]
-    },
-    {
         word: 'ceremony',
         translation: 'n. 典礼；仪式；礼节',
         phonetic: 'ˈsɛrəˌmoʊni',
@@ -5175,18 +5139,6 @@ export default [
             {
                 en: 'an act of great bravery',
                 cn: '非常勇敢的行为'
-            }
-        ]
-    },
-    {
-        word: 'Slade',
-        translation: '斯莱德（姓）',
-        phonetic: 'sleid',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Slade: No, I’m just getting warmed up.',
-                cn: '斯莱德：没有，我这才刚刚热身。'
             }
         ]
     },
@@ -5299,12 +5251,6 @@ export default [
                 cn: '退休金计划'
             }
         ]
-    },
-    {
-        word: 'Southerton',
-        translation: '萨瑟顿（姓）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'make a difference',

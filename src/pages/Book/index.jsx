@@ -7,9 +7,10 @@ import { loadCollocationLevel } from '@/utils/collocations';
 import { whenReady } from '@/utils/state';
 import { loadTopicCategory } from '@/utils/topic';
 import { loadRootCategory } from '@/utils/word-roots';
+import { loadSpecialCategory } from '@/utils/special';
 import { ensureBookWords } from '@/utils/words';
 
-// 词书详情 / 主题 / 词缀 / 固定搭配 共用: 根据 mode 加载词表, 交给 WordListView 渲染
+// 词书详情 / 主题 / 特殊单词 / 词缀 / 固定搭配 共用: 根据 mode 加载词表, 交给 WordListView 渲染
 export default function Book({ mode = 'book' }) {
     const params = useParams();
     const [words, setWords] = useState(null);
@@ -30,6 +31,9 @@ export default function Book({ mode = 'book' }) {
             }
             if (mode === 'topic') {
                 return (await loadTopicCategory(decodeURIComponent(params.title))).words;
+            }
+            if (mode === 'special') {
+                return loadSpecialCategory(decodeURIComponent(params.title)).words;
             }
             if (mode === 'root') {
                 return (await loadRootCategory(decodeURIComponent(params.title))).words;

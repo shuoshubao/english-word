@@ -3886,13 +3886,6 @@ export default [
         examples: []
     },
     {
-        word: 'Shakespeare',
-        translation: 'n. 莎士比亚（1564-1616，英国诗人、剧作家）',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'Republican',
         translation: 'n. 共和党人',
         phonetic: '',
@@ -3986,13 +3979,6 @@ export default [
     {
         word: 'expression',
         translation: 'n. 表现，表示，表达；表情，脸色，态度，腔调，声调；式，符号；词句，语句，措辞，说法',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
-        word: 'spanish',
-        translation: 'n. 西班牙语；西班牙人',
         phonetic: '',
         partOfSpeech: 'n',
         examples: []
@@ -7432,13 +7418,6 @@ export default [
         translation: 'adj. 苗条的；修长的；微小的；差的',
         phonetic: '',
         partOfSpeech: 'adj',
-        examples: []
-    },
-    {
-        word: 'Himalaya',
-        translation: 'Not Found',
-        phonetic: '',
-        partOfSpeech: '',
         examples: []
     },
     {
@@ -11824,13 +11803,6 @@ export default [
         examples: []
     },
     {
-        word: 'English',
-        translation: 'n. 英语；英国人；英文；英格兰人',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'geography',
         translation: 'n. 地理；地形',
         phonetic: '',
@@ -13835,13 +13807,6 @@ export default [
     {
         word: 'completion',
         translation: 'n. 完成，结束；实现',
-        phonetic: '',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
-        word: 'Scottish',
-        translation: 'n. 苏格兰人；苏格兰语',
         phonetic: '',
         partOfSpeech: 'n',
         examples: []
@@ -21481,13 +21446,6 @@ export default [
         translation: 'adj. 古怪的；异想天开的；反复无常的',
         phonetic: '',
         partOfSpeech: 'adj',
-        examples: []
-    },
-    {
-        word: 'Tokyo',
-        translation: 'n. 东京（日本首都）',
-        phonetic: '',
-        partOfSpeech: 'n',
         examples: []
     },
     {

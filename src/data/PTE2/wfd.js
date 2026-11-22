@@ -3679,13 +3679,6 @@ export default [
         examples: []
     },
     {
-        word: 'Sydney',
-        translation: 'n. 悉尼（澳大利亚港市）',
-        phonetic: 'ˈsɪdni',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'fingerprint',
         translation: 'n. 指纹\n\n时 态:  \nfingerprinted, fingerprinting, fingerprints',
         phonetic: 'ˈfɪŋɡərˌprɪnt',
@@ -5693,13 +5686,6 @@ export default [
         examples: []
     },
     {
-        word: 'America',
-        translation: 'n. 美洲（包括北美和南美洲）；美国',
-        phonetic: 'əˈmɛrəkə',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'specific',
         translation: '- adj. 特殊的，特定的；明确的；详细的；具有特效的\n- n. 特效药；细节；特性\n\n\n副 词:  \nspecifically\n\n名 词:  \nspecificity',
         phonetic: 'spəˈsɪfɪk',
@@ -6737,13 +6723,6 @@ export default [
         examples: []
     },
     {
-        word: 'Greece',
-        translation: 'n. 希腊（欧州南部国家）',
-        phonetic: 'ɡris',
-        partOfSpeech: 'n',
-        examples: []
-    },
-    {
         word: 'interim',
         translation: '- adj. 临时的，暂时的；中间的；间歇的\n- n. 过渡时期，中间时期；暂定',
         phonetic: 'ˈɪntərəm',
@@ -7280,13 +7259,6 @@ export default [
         translation: 'adj. 受尊敬的, 有声望的, 有威信的',
         phonetic: 'prɛˈstɪʤəs',
         partOfSpeech: 'adj',
-        examples: []
-    },
-    {
-        word: 'London',
-        translation: 'n. 伦敦',
-        phonetic: 'ˈlʌndən',
-        partOfSpeech: 'n',
         examples: []
     },
     {
