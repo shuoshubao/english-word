@@ -2048,7 +2048,7 @@ uniqueness`,phonetic:`juˈnik`,partOfSpeech:`adj / n`,examples:[]},{word:`anonym
 
 
 时 态:  
-majored, majoring, majors`,phonetic:`ˈmeɪʤər`,partOfSpeech:`adj / n / vi`,examples:[]},{word:`Sydney`,translation:`n. 悉尼（澳大利亚港市）`,phonetic:`ˈsɪdni`,partOfSpeech:`n`,examples:[]},{word:`fingerprint`,translation:`n. 指纹
+majored, majoring, majors`,phonetic:`ˈmeɪʤər`,partOfSpeech:`adj / n / vi`,examples:[]},{word:`fingerprint`,translation:`n. 指纹
 
 时 态:  
 fingerprinted, fingerprinting, fingerprints`,phonetic:`ˈfɪŋɡərˌprɪnt`,partOfSpeech:`n`,examples:[]},{word:`demonstrate`,translation:`- vi. 举行示威游行(或集会)
@@ -3053,7 +3053,7 @@ hanging, hangs`,phonetic:`hæŋ`,partOfSpeech:`vt`,examples:[]},{word:`managemen
 
 
 形容词:  
-billion`,phonetic:`ˈbɪljən`,partOfSpeech:`n / num / adj`,examples:[]},{word:`America`,translation:`n. 美洲（包括北美和南美洲）；美国`,phonetic:`əˈmɛrəkə`,partOfSpeech:`n`,examples:[]},{word:`specific`,translation:`- adj. 特殊的，特定的；明确的；详细的；具有特效的
+billion`,phonetic:`ˈbɪljən`,partOfSpeech:`n / num / adj`,examples:[]},{word:`specific`,translation:`- adj. 特殊的，特定的；明确的；详细的；具有特效的
 - n. 特效药；细节；特性
 
 
@@ -3691,7 +3691,7 @@ cited, citing, cites
 形容词:  
 citable`,phonetic:`saɪt`,partOfSpeech:`n`,examples:[]},{word:`planner`,translation:`n. 计划者，规划师`,phonetic:`ˈplænər`,partOfSpeech:`n`,examples:[]},{word:`harbour`,translation:`- vi. 藏匿；入港停泊；庇护
 - vt. 庇护；藏匿；入港停泊
-- n. 海港（等于harbor）；避难所`,phonetic:`ˈhɑrbər`,partOfSpeech:`vi / vt / n`,examples:[]},{word:`Greece`,translation:`n. 希腊（欧州南部国家）`,phonetic:`ɡris`,partOfSpeech:`n`,examples:[]},{word:`interim`,translation:`- adj. 临时的，暂时的；中间的；间歇的
+- n. 海港（等于harbor）；避难所`,phonetic:`ˈhɑrbər`,partOfSpeech:`vi / vt / n`,examples:[]},{word:`interim`,translation:`- adj. 临时的，暂时的；中间的；间歇的
 - n. 过渡时期，中间时期；暂定`,phonetic:`ˈɪntərəm`,partOfSpeech:`adj / n`,examples:[]},{word:`audit`,translation:`- vi. 查帐；审计
 - n. 审计；查帐
 - vt. （美）旁听
@@ -3985,7 +3985,7 @@ fuelingfuelling
 fuelsfuels  
 
 名 词:  
-fueler`,phonetic:`ˈfjuəl`,partOfSpeech:`adj`,examples:[]},{word:`mathematics`,translation:`n. 数学`,phonetic:`ˌmæθəˈmætɪks`,partOfSpeech:`n`,examples:[]},{word:`prestigious`,translation:`adj. 受尊敬的, 有声望的, 有威信的`,phonetic:`prɛˈstɪʤəs`,partOfSpeech:`adj`,examples:[]},{word:`London`,translation:`n. 伦敦`,phonetic:`ˈlʌndən`,partOfSpeech:`n`,examples:[]},{word:`constantly`,translation:`adv. 不断地;时常地`,phonetic:`ˈkɑnstəntli`,partOfSpeech:`adv`,examples:[]},{word:`extremely`,translation:`adv. 极端;极其;非常`,phonetic:`ɛkˈstrimli`,partOfSpeech:`adv`,examples:[]},{word:`perfectly`,translation:`- adv. 完美地;理想地
+fueler`,phonetic:`ˈfjuəl`,partOfSpeech:`adj`,examples:[]},{word:`mathematics`,translation:`n. 数学`,phonetic:`ˌmæθəˈmætɪks`,partOfSpeech:`n`,examples:[]},{word:`prestigious`,translation:`adj. 受尊敬的, 有声望的, 有威信的`,phonetic:`prɛˈstɪʤəs`,partOfSpeech:`adj`,examples:[]},{word:`constantly`,translation:`adv. 不断地;时常地`,phonetic:`ˈkɑnstəntli`,partOfSpeech:`adv`,examples:[]},{word:`extremely`,translation:`adv. 极端;极其;非常`,phonetic:`ɛkˈstrimli`,partOfSpeech:`adv`,examples:[]},{word:`perfectly`,translation:`- adv. 完美地;理想地
 - 完全地;十足地
 - 非常清楚；完全明白`,phonetic:`ˈpɜrfəktli`,partOfSpeech:`adv`,examples:[]},{word:`steam`,translation:`- vt. 蒸，散发；用蒸汽处理
 - n. 蒸汽；精力

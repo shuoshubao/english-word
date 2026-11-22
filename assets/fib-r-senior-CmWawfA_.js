@@ -2172,9 +2172,7 @@ duels, duels`,phonetic:`ˈduəl`,partOfSpeech:`n / vi`,examples:[]},{word:`spawn
 spawned, spawning, spawns 
 
 名 词:  
-spawner`,phonetic:`spɑn`,partOfSpeech:`n / vi`,examples:[]},{word:`salmon`,translation:`n. 鲑鱼, 大马哈鱼`,phonetic:`ˈsæmən`,partOfSpeech:`n`,examples:[]},{word:`developmental`,translation:`adj. 发展的`,phonetic:`dɪˌvɛləpˈmɛntəl`,partOfSpeech:`adj`,examples:[]},{word:`Bishop`,translation:`n. 主教
-
-Bishop毕晓普, 伊丽莎白((1911-1979) 美国诗人, 以其大量的, 描述性的著作闻名, 如“加油站”(1965年))`,phonetic:`ˈbɪʃəp`,partOfSpeech:`n`,examples:[]},{word:`artery`,translation:`n. 动脉；干道；主流`,phonetic:`ˈɑrtəri`,partOfSpeech:`n`,examples:[]},{word:`stun`,translation:`- vt. 击晕, 打晕
+spawner`,phonetic:`spɑn`,partOfSpeech:`n / vi`,examples:[]},{word:`salmon`,translation:`n. 鲑鱼, 大马哈鱼`,phonetic:`ˈsæmən`,partOfSpeech:`n`,examples:[]},{word:`developmental`,translation:`adj. 发展的`,phonetic:`dɪˌvɛləpˈmɛntəl`,partOfSpeech:`adj`,examples:[]},{word:`artery`,translation:`n. 动脉；干道；主流`,phonetic:`ˈɑrtəri`,partOfSpeech:`n`,examples:[]},{word:`stun`,translation:`- vt. 击晕, 打晕
 - 使大吃一惊, 使震惊
 
 时 态:  

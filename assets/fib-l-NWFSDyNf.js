@@ -95,8 +95,7 @@ migrator`,phonetic:`ˈmaɪˌɡreɪt`,partOfSpeech:`vi / vt`,examples:[]},{word:`
 
 复 数: 
 phenomena`,phonetic:`fəˈnɑməˌnɑn`,partOfSpeech:`n`,examples:[]},{word:`practise`,translation:`- vt. & vi. 练习; 实习
-- 积极从事`,phonetic:`practise`,partOfSpeech:`vt`,examples:[]},{word:`European`,translation:`- adj. 欧洲的；欧洲人的
-- n. 欧洲人`,phonetic:`ˌjʊrəˈpiən`,partOfSpeech:`adj / n`,examples:[]},{word:`investor`,translation:`n. 投资者;出资者`,phonetic:`ɪnˈvɛstər`,partOfSpeech:`n`,examples:[]},{word:`organisation`,translation:`n. 〈主英〉组织,机构,团体`,phonetic:`ˌɔrɡənɪˈzeɪʃən`,partOfSpeech:`n`,examples:[]},{word:`poverty`,translation:`n. 贫困；缺少；低劣；困难`,phonetic:`ˈpɑvərti`,partOfSpeech:`n`,examples:[]},{word:`perch`,translation:`- n. 栖息处，栖枝，栖木
+- 积极从事`,phonetic:`practise`,partOfSpeech:`vt`,examples:[]},{word:`investor`,translation:`n. 投资者;出资者`,phonetic:`ɪnˈvɛstər`,partOfSpeech:`n`,examples:[]},{word:`organisation`,translation:`n. 〈主英〉组织,机构,团体`,phonetic:`ˌɔrɡənɪˈzeɪʃən`,partOfSpeech:`n`,examples:[]},{word:`poverty`,translation:`n. 贫困；缺少；低劣；困难`,phonetic:`ˈpɑvərti`,partOfSpeech:`n`,examples:[]},{word:`perch`,translation:`- n. 栖息处，栖枝，栖木
 - 高处，较高的位置
 - 鲈鱼
 - vi. (鸟)飞落，暂栖，停留

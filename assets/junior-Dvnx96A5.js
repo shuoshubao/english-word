@@ -183,13 +183,7 @@ murdered, murdering, murders
 murderer
 
 名 词:  
-murderess`,phonetic:`ˈmɜrdər`,partOfSpeech:`vt / vi / n`,examples:[]},{word:`Grace`,translation:`- n. 优雅；恩惠；慈悲；魅力
-- vt. 使优美
-
-Gracen. 格雷斯（女子名）
-
-时 态:  
-graced, gracing, graces`,phonetic:`ɡreɪs`,partOfSpeech:`n / vt`,examples:[]},{word:`bay`,translation:`- n. 海湾；狗吠声
+murderess`,phonetic:`ˈmɜrdər`,partOfSpeech:`vt / vi / n`,examples:[]},{word:`bay`,translation:`- n. 海湾；狗吠声
 - vt. 向…吠叫
 - vi. 吠叫；大声叫嚷
 
@@ -5957,15 +5951,7 @@ sealed, sealing, seals`,phonetic:`sil`,partOfSpeech:`n`,examples:[]},{word:`fast
 fastened, fastening, fastens 
 
 名 词:  
-fastener`,phonetic:`ˈfæsən`,partOfSpeech:`vt`,examples:[]},{word:`Christ`,translation:`- n. 基督；救世主
-- int. 天啊！
-
-
-形容词:  
-Christlike
-
-形容词:  
-Christly`,phonetic:`kraɪst`,partOfSpeech:`n / int`,examples:[]},{word:`textile`,translation:`- n. 纺织品，织物
+fastener`,phonetic:`ˈfæsən`,partOfSpeech:`vt`,examples:[]},{word:`textile`,translation:`- n. 纺织品，织物
 - adj. 纺织的`,phonetic:`ˈtɛkˌstaɪl`,partOfSpeech:`n / adj`,examples:[]},{word:`fame`,translation:`- n. 名声，名望；[古]传闻，传说
 - vt. 使闻名，使有名望
 

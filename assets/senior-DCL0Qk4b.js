@@ -1683,7 +1683,7 @@ peacekeeping`,phonetic:`ˈpiˌskipɪŋ`,partOfSpeech:`adj`,examples:[]},{word:`b
 - v. 以厚层覆盖
 
 时 态:  
-blanketed, blanketing, blankets`,phonetic:`ˈblæŋkət`,partOfSpeech:`n / adj / v`,examples:[]},{word:`Shakespeare`,translation:`n. 莎士比亚(1564-1616,英国诗人、剧作家)`,phonetic:`ˈʃeɪkˌspir`,partOfSpeech:`n`,examples:[]},{word:`Republican`,translation:`- adj. 共和国的, 共和政体的
+blanketed, blanketing, blankets`,phonetic:`ˈblæŋkət`,partOfSpeech:`n / adj / v`,examples:[]},{word:`Republican`,translation:`- adj. 共和国的, 共和政体的
 - n. 拥护共和政体者, 共和主义者
 
 名 词:  
@@ -1720,8 +1720,7 @@ slipperier, slipperiest
 slipperiness`,phonetic:`ˈslɪpəri`,partOfSpeech:`adj`,examples:[]},{word:`expression`,translation:`- n. 表示, 表现, 表达
 - 表情
 - 感情
-- 词, 措辞, 词组`,phonetic:`ɪkˈsprɛʃən`,partOfSpeech:`n`,examples:[]},{word:`spanish`,translation:`- adj. 西班牙的；西班牙人的；西班牙语的
-- n. 西班牙语；西班牙人`,phonetic:`ˈspænɪʃ`,partOfSpeech:`adj / n`,examples:[]},{word:`complicate`,translation:`vt. 使复杂化
+- 词, 措辞, 词组`,phonetic:`ɪkˈsprɛʃən`,partOfSpeech:`n`,examples:[]},{word:`complicate`,translation:`vt. 使复杂化
 
 时 态:  
 complicated, complicating, complicates`,phonetic:`ˈkɑmpləˌkeɪt`,partOfSpeech:`vt`,examples:[]},{word:`restore`,translation:`- vt. 修复；恢复；归还
@@ -3073,7 +3072,7 @@ slimmer，slimmest
 slimly
 
 名 词:  
-slimmer`,phonetic:`slɪm`,partOfSpeech:`n / vt`,examples:[]},{word:`Himalaya`,translation:`n. 喜马拉雅山脉`,phonetic:`ˌhɪməˈlaɪə`,partOfSpeech:`n`,examples:[]},{word:`Utopian`,translation:`- adj. 空想的；乌托邦的；理想化的
+slimmer`,phonetic:`slɪm`,partOfSpeech:`n / vt`,examples:[]},{word:`Utopian`,translation:`- adj. 空想的；乌托邦的；理想化的
 - n. 空想家；乌托邦的居民
 
 Utopianadj. 理想而不实际的, 乌托邦的`,phonetic:`juˈtoʊpiən`,partOfSpeech:`adj / n`,examples:[]},{word:`toxicology`,translation:`n. 毒理学, 毒物学
@@ -4834,16 +4833,7 @@ virtuality`,phonetic:`ˈvɜrʧuəl`,partOfSpeech:`adj`,examples:[]},{word:`trans
 
 形容词:  
 transactional`,phonetic:`trænˈzækʃən`,partOfSpeech:`n`,examples:[]},{word:`explosion`,translation:`- n. 爆炸；爆发
-- 激增，扩大`,phonetic:`ɪkˈsploʊʒən`,partOfSpeech:`n`,examples:[]},{word:`English`,translation:`- adj. 英国人的；英国的；英文的
-- n. 英语；英国人；英文；英格兰人
-- vt. 把…译成英语；使(球)旋转前进
-
-
-时 态:  
-Englished, Englishing, Englishes 
-
-名 词:  
-Englishness`,phonetic:`ˈɪŋɡlɪʃ`,partOfSpeech:`n`,examples:[]},{word:`geography`,translation:`- n. 地理(学)
+- 激增，扩大`,phonetic:`ɪkˈsploʊʒən`,partOfSpeech:`n`,examples:[]},{word:`geography`,translation:`- n. 地理(学)
 - 地形, 地势
 
 名 词:  
@@ -5958,7 +5948,7 @@ exchangeable`,phonetic:`ɪksˈʧeɪnʤ`,partOfSpeech:`n`,examples:[]},{word:`nat
 
 
 副 词:  
-natively`,phonetic:`ˈneɪtɪv`,partOfSpeech:`adj / n`,examples:[]},{word:`recovery`,translation:`n. 恢复，复原；痊愈；重获`,phonetic:`rɪˈkʌvri`,partOfSpeech:`n`,examples:[]},{word:`completion`,translation:`n. 完成, 结束`,phonetic:`kəmˈpliʃən`,partOfSpeech:`n`,examples:[]},{word:`Scottish`,translation:`adj. 苏格兰的;苏格兰式的`,phonetic:`ˈskɑtɪʃ`,partOfSpeech:`adj`,examples:[]},{word:`preamble`,translation:`- n. 序文；电报报头；先兆
+natively`,phonetic:`ˈneɪtɪv`,partOfSpeech:`adj / n`,examples:[]},{word:`recovery`,translation:`n. 恢复，复原；痊愈；重获`,phonetic:`rɪˈkʌvri`,partOfSpeech:`n`,examples:[]},{word:`completion`,translation:`n. 完成, 结束`,phonetic:`kəmˈpliʃən`,partOfSpeech:`n`,examples:[]},{word:`preamble`,translation:`- n. 序文；电报报头；先兆
 - vi. 作序文`,phonetic:`priˈæmbəl`,partOfSpeech:`n / vi`,examples:[]},{word:`ass`,translation:`n. 驴子；屁股；蠢人`,phonetic:`æs`,partOfSpeech:`n`,examples:[]},{word:`circumstance`,translation:`- n. 环境, 条件, 情况
 - 境遇, 经济状况
 
@@ -12395,7 +12385,7 @@ disciplinal`,phonetic:`ˈdɪsəplən`,partOfSpeech:`vt`,examples:[]},{word:`barr
 - 可笑的事物; 愚蠢的景象
 - 眼镜`,phonetic:`ˈspɛktəkəl`,partOfSpeech:`n`,examples:[]},{word:`growth`,translation:`- n. 生长，发育
 - 增加；发展，扩大
-- 生长物`,phonetic:`ɡroʊθ`,partOfSpeech:`n`,examples:[]},{word:`violence`,translation:`n. 激烈；暴力；侵犯；歪曲`,phonetic:`ˈvaɪələns`,partOfSpeech:`n`,examples:[]},{word:`whimsical`,translation:`adj. 异想天开的，闹着玩的；反复无常的`,phonetic:`ˈwɪmzɪkəl`,partOfSpeech:`adj`,examples:[]},{word:`Tokyo`,translation:`n. 东京(日本首都)`,phonetic:`ˈtoʊkiˌoʊ`,partOfSpeech:`n`,examples:[]},{word:`opportunity`,translation:`n. 机会, 时机`,phonetic:`ˌɑpərˈtunəti`,partOfSpeech:`n`,examples:[]},{word:`irrelevant`,translation:`adj. 不相干的,不相关的
+- 生长物`,phonetic:`ɡroʊθ`,partOfSpeech:`n`,examples:[]},{word:`violence`,translation:`n. 激烈；暴力；侵犯；歪曲`,phonetic:`ˈvaɪələns`,partOfSpeech:`n`,examples:[]},{word:`whimsical`,translation:`adj. 异想天开的，闹着玩的；反复无常的`,phonetic:`ˈwɪmzɪkəl`,partOfSpeech:`adj`,examples:[]},{word:`opportunity`,translation:`n. 机会, 时机`,phonetic:`ˌɑpərˈtunəti`,partOfSpeech:`n`,examples:[]},{word:`irrelevant`,translation:`adj. 不相干的,不相关的
 
 副 词:  
 irrelevantly`,phonetic:`ɪˈrɛləvənt`,partOfSpeech:`adj`,examples:[]},{word:`reference`,translation:`- n. 提及，涉及
