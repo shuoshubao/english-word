@@ -10,8 +10,9 @@ import Roots from '@/pages/Roots';
 import Topic from '@/pages/Topic';
 import Topics from '@/pages/Topics';
 import { finishAuth } from '@/utils/baidu-pan';
+import { isMobile } from '@/utils/device';
 import { AppstoreOutlined, BookOutlined, FileTextOutlined, HeartOutlined, LeftOutlined, UserOutlined } from '@ant-design/icons';
-import { App as AntApp, Button, Divider, Layout, Menu, Space, Tooltip, Typography } from 'antd';
+import { App as AntApp, Button, Divider, Layout, Segmented, Space, Tooltip, Typography } from 'antd';
 import { useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
@@ -25,6 +26,8 @@ const NAV = [
     { key: '/topics', label: '专题', icon: <AppstoreOutlined /> },
     { key: '/profile', label: '我的', icon: <UserOutlined /> }
 ];
+
+const NAV_OPTIONS = NAV.map(({ key, label, icon }) => ({ value: key, label, icon }));
 
 const TAB_PATHS = NAV.map(n => n.key);
 // 专题 tab 下的子页面, 高亮归属到 /topics
@@ -95,53 +98,51 @@ export default function App() {
     }
     const title = titleOf(location.pathname);
 
+    const content = (
+        <>
+            {!isTab ? (
+                <>
+                    <Space>
+                        <Tooltip title="返回">
+                            <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
+                        </Tooltip>
+                        <Title level={4} style={{ margin: 0 }}>
+                            {title}
+                        </Title>
+                    </Space>
+                    <Divider size="small" />
+                </>
+            ) : null}
+
+            <Routes>
+                <Route path="/" element={<Library />} />
+                <Route path="/words" element={<Collection collection="unknown" emptyText='在词库里把单词标记为"不认识", 就会集中出现在这里复习' />} />
+                <Route path="/favorites" element={<Collection collection="favorites" emptyText='点单词的"收藏", 随时回来复习你的词汇本' />} />
+                <Route path="/topics" element={<Topics />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/book/:id" element={<Book mode="book" />} />
+                <Route path="/topic" element={<Topic />} />
+                <Route path="/topic/:title" element={<Book mode="topic" />} />
+                <Route path="/roots" element={<Roots />} />
+                <Route path="/roots/:title" element={<Book mode="root" />} />
+                <Route path="/collocations" element={<Collocations />} />
+                <Route path="/collocations/:level" element={<Book mode="collocation" />} />
+                <Route path="/irregulars" element={<Irregulars />} />
+                <Route path="/collection/:collection/:stage" element={<CollectionDetail />} />
+            </Routes>
+        </>
+    );
+
     return (
         <Layout className="bg-white!" style={{ minHeight: '100vh' }}>
             <Header
-                className="sticky top-0 z-50 flex items-center px-6! border-b border-[#ededf3] shadow-[0_1px_8px_rgba(102,82,209,0.04)]"
+                className={`sticky top-0 z-50 h-auto! flex items-center border-b border-[#ededf3] shadow-[0_1px_8px_rgba(102,82,209,0.04)] ${isMobile ? 'px-1! py-2!' : 'px-6! py-2!'}`}
                 style={{ background: '#fff' }}
             >
-                <Menu
-                    mode="horizontal"
-                    selectedKeys={[selectedKey]}
-                    items={NAV}
-                    className="flex-1 min-w-0"
-                    style={{ borderBottom: 'none', background: 'transparent' }}
-                    onClick={({ key }) => navigate(key)}
-                />
+                <Segmented block={isMobile} options={NAV_OPTIONS} value={selectedKey} onChange={navigate} />
             </Header>
-
-            <Content className="w-full mx-auto p-6" style={{ background: '#fff' }}>
-                {!isTab ? (
-                    <>
-                        <Space>
-                            <Tooltip title="返回">
-                                <Button type="text" shape="circle" icon={<LeftOutlined />} onClick={() => navigate(-1)} />
-                            </Tooltip>
-                            <Title level={4} style={{ margin: 0 }}>
-                                {title}
-                            </Title>
-                        </Space>
-                        <Divider size="small" />
-                    </>
-                ) : null}
-
-                <Routes>
-                    <Route path="/" element={<Library />} />
-                    <Route path="/words" element={<Collection collection="unknown" emptyText='在词库里把单词标记为"不认识", 就会集中出现在这里复习' />} />
-                    <Route path="/favorites" element={<Collection collection="favorites" emptyText='点单词的"收藏", 随时回来复习你的词汇本' />} />
-                    <Route path="/topics" element={<Topics />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/book/:id" element={<Book mode="book" />} />
-                    <Route path="/topic" element={<Topic />} />
-                    <Route path="/topic/:title" element={<Book mode="topic" />} />
-                    <Route path="/roots" element={<Roots />} />
-                    <Route path="/roots/:title" element={<Book mode="root" />} />
-                    <Route path="/collocations" element={<Collocations />} />
-                    <Route path="/collocations/:level" element={<Book mode="collocation" />} />
-                    <Route path="/irregulars" element={<Irregulars />} />
-                    <Route path="/collection/:collection/:stage" element={<CollectionDetail />} />
-                </Routes>
+            <Content className={`w-full mx-auto ${isMobile ? 'p-1' : 'p-6'}`} style={{ background: '#fff' }}>
+                {content}
             </Content>
         </Layout>
     );
