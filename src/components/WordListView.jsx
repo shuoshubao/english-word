@@ -260,34 +260,37 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         {
             title: '操作',
             key: 'actions',
-            width: 300,
+            width: 140,
             render: (_, record) => {
                 const known = hasRecord(state.known, record.id);
                 const unknown = hasRecord(state.unknown, record.id);
                 const favorite = hasRecord(state.favorites, record.id);
                 return (
                     <Space>
-                        <Button
-                            icon={known ? <LikeFilled /> : <LikeOutlined />}
-                            style={known ? { background: '#e6f7ef', color: '#18a058', borderColor: '#b7e8cf' } : undefined}
-                            onClick={() => setKnowledge(record, known ? null : 'known')}
-                        >
-                            认识
-                        </Button>
-                        <Button
-                            icon={unknown ? <DislikeFilled /> : <DislikeOutlined />}
-                            style={unknown ? { background: '#fdecec', color: '#d03050', borderColor: '#f5c2c7' } : undefined}
-                            onClick={() => setKnowledge(record, unknown ? null : 'unknown')}
-                        >
-                            不认识
-                        </Button>
-                        <Button
-                            icon={favorite ? <HeartFilled /> : <HeartOutlined />}
-                            style={favorite ? { background: '#fff3e6', color: '#e07714', borderColor: '#f3d6b3' } : undefined}
-                            onClick={() => toggleFavorite(record)}
-                        >
-                            {favorite ? '已收藏' : '收藏'}
-                        </Button>
+                        <Tooltip title={known ? '取消认识' : '认识'}>
+                            <Button
+                                type="text"
+                                icon={known ? <LikeFilled /> : <LikeOutlined />}
+                                style={known ? { background: '#e6f7ef', color: '#18a058' } : undefined}
+                                onClick={() => setKnowledge(record, known ? null : 'known')}
+                            />
+                        </Tooltip>
+                        <Tooltip title={unknown ? '取消不认识' : '不认识'}>
+                            <Button
+                                type="text"
+                                icon={unknown ? <DislikeFilled /> : <DislikeOutlined />}
+                                style={unknown ? { background: '#fdecec', color: '#d03050' } : undefined}
+                                onClick={() => setKnowledge(record, unknown ? null : 'unknown')}
+                            />
+                        </Tooltip>
+                        <Tooltip title={favorite ? '取消收藏' : '收藏'}>
+                            <Button
+                                type="text"
+                                icon={favorite ? <HeartFilled /> : <HeartOutlined />}
+                                style={favorite ? { background: '#fff3e6', color: '#e07714' } : undefined}
+                                onClick={() => toggleFavorite(record)}
+                            />
+                        </Tooltip>
                     </Space>
                 );
             }
