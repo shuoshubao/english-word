@@ -9,4 +9,4 @@ export const setSentenceTtsSource = source => localStorage.setItem(SOURCE_KEY, s
 
 export const readSentenceTtsInfo = source => (source === 'doubao' ? readDoubaoInfo() : readTtsInfo());
 export const hasSentenceTtsConfig = (source, info) => (source === 'doubao' ? hasDoubaoConfig(info) : hasTtsConfig(info));
-export const synthesizeSentence = (text, source, info) => (source === 'doubao' ? synthesizeDoubao(text, info) : synthesizeBaidu(text, info));
+export const synthesizeSentence = (text, source, info, options) => (source === 'doubao' ? synthesizeDoubao(text, info, options) : synthesizeBaidu(text, info, options));

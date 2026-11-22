@@ -1,4 +1,4 @@
-// 百度智能云 TTS(短文本在线合成 text2audio), 专用于整句朗读.
+// 百度智能云 TTS(短文本在线合成 text2audio), 用于整句朗读与 SSML 调试.
 // 本地走 Vite 代理(/baidu-aip /baidu-tts), 线上走 Vercel 转发(/proxy/aip /proxy/bdaitts).
 // 凭证: API Key / Secret Key 从百度智能云控制台获取, 与百度网盘开放平台是两套.
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
@@ -65,8 +65,8 @@ const getAccessToken = async info => {
     return data.access_token;
 };
 
-// 合成整句, 返回 mp3 Blob. 失败抛错(内容为 application/json 时读取 err_msg)
-export const synthesize = async (text, info) => {
+// 合成整句或 SSML 文本, 返回 mp3 Blob. 失败抛错(内容为 application/json 时读取 err_msg)
+export const synthesize = async (text, info, { ssml = false } = {}) => {
     const token = await getAccessToken(info);
     const voice = Number(info?.voice) || 0;
     const speed = info?.speed === undefined || info?.speed === null || info?.speed === '' ? 5 : Number(info.speed);
@@ -79,9 +79,11 @@ export const synthesize = async (text, info) => {
         cuid: getCuid(),
         tok: token,
         per: String(voice),
-        spd: String(speed),
+        spd: ssml ? '0' : String(speed),
         aue: '3'
     });
+    // SSML 文本需要 xml=1, 否则标签会被当成普通文字读出来
+    if (ssml) body.set('xml', '1');
     const res = await fetch(`${apiBase('tts')}/text2audio`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

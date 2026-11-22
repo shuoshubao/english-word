@@ -96,6 +96,11 @@ const WORD_TTS_SOURCES = {
     'doubao-tts': 'doubao'
 };
 
+const ttsCredentials = (source, info) =>
+    source === 'doubao'
+        ? `${info.apiKey}|${info.voice || ''}|${info.speed ?? 0}`
+        : `${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed ?? 5}`;
+
 // 按发音来源设置选择有道或百度翻译
 const sourceUrl = text => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text) : youdaoUrl(text));
 
@@ -116,12 +121,30 @@ export const speakSentence = (text, onEnd, onError, sourceOverride) => {
         if (onEnd) onEnd();
         return;
     }
-    const credentials =
-        source === 'doubao'
-            ? `${info.apiKey}|${info.voice || ''}|${info.speed ?? 0}`
-            : `${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed ?? 5}`;
-    const key = `tts-${source}-${credentials}-${text}`;
+    const key = `tts-${source}-${ttsCredentials(source, info)}-${text}`;
     playByKey(key, () => synthesizeSentence(text, source, info), onEnd, onError);
+};
+
+// SSML 朗读(逐字母等): 复用句子 TTS 的凭证校验和缓存, 但单独标记缓存避免与纯文本混淆
+export const speakSsml = (ssml, onEnd, onError, sourceOverride) => {
+    if (!ssml) {
+        if (onEnd) onEnd();
+        return;
+    }
+    const source = sourceOverride || getSentenceTtsSource();
+    const info = readSentenceTtsInfo(source);
+    if (!hasSentenceTtsConfig(source, info)) {
+        Modal.error({
+            title: '未配置TTS',
+            content: `请先到「我的 - 句子发音」配置${source === 'baidu' ? '百度TTS' : '豆包TTS'}的必填项`
+        });
+        if (onEnd) onEnd();
+        return;
+    }
+    // 百度 SSML 语速写死为 0, 缓存 key 带上标记避免命中之前较快的音频
+    const speedMark = source === 'baidu' ? 'spd0' : 'default';
+    const key = `ssml-${source}-${speedMark}-${ttsCredentials(source, info)}-${ssml}`;
+    playByKey(key, () => synthesizeSentence(ssml, source, info, { ssml: true }), onEnd, onError);
 };
 
 // 英文单词发音: 普通音源走词典接口, TTS 来源走对应音源

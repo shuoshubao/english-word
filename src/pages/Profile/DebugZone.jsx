@@ -1,7 +1,8 @@
 import MonacoJsonViewer from '@/pages/Profile/MonacoJsonViewer';
+import { speakSentence, speakSsml } from '@/utils/audio';
 import { listDir, readFileBlob } from '@/utils/baidu-pan';
-import { FileOutlined, LoadingOutlined } from '@ant-design/icons';
-import { App, Button, Card, Empty, Skeleton, Typography } from 'antd';
+import { FileOutlined, LoadingOutlined, OrderedListOutlined, SoundOutlined } from '@ant-design/icons';
+import { App, Button, Card, Empty, Input, Skeleton, Space, Typography } from 'antd';
 import { useMemo, useRef, useState } from 'react';
 import { Tree } from 'react-arborist';
 
@@ -17,6 +18,14 @@ const readBaiduPanInfo = () => {
 };
 
 const ERROR_LABEL = { files: '拉取文件', read: '读取文件', dir: '加载目录' };
+const TTS_SOURCES = [
+    { value: 'baidu', label: '百度TTS' },
+    { value: 'doubao', label: '豆包TTS' }
+];
+const spellLetters = word => word.toUpperCase().replace(/[^A-Z]/g, '');
+const spellSpaced = word => [...spellLetters(word)].join(' ');
+const spellSsml = word => `<speak><say-as interpret-as="as-character">${spellLetters(word)}</say-as></speak>`;
+const spellText = (word, source) => (source === 'baidu' ? spellSsml(word) : spellSpaced(word));
 // 已读取过的文件内容按 fsId 缓存, 避免重复点击时再次请求网盘。图片存 objectURL, 文本存字符串
 const fileContentCache = new Map();
 // 已展开目录的子项按 path 缓存, 再次展开不再请求网盘
@@ -92,6 +101,35 @@ export default function DebugZone() {
     const readSeq = useRef(0);
     const treeRef = useRef(null);
     const fileTreeRef = useRef(null);
+    const [word, setWord] = useState('BANANA');
+    const [ttsBusy, setTtsBusy] = useState('');
+    const ttsBusyRef = useRef('');
+
+    const playWord = (source, mode) => {
+        const text = word.trim();
+        if (!text) {
+            message.warning('请输入单词');
+            return;
+        }
+        const key = `${source}-${mode}`;
+        ttsBusyRef.current = key;
+        setTtsBusy(key);
+        const done = () => {
+            if (ttsBusyRef.current === key) {
+                ttsBusyRef.current = '';
+                setTtsBusy('');
+            }
+        };
+        const fail = error => {
+            done();
+            message.error(`合成失败: ${error.message}`);
+        };
+        if (mode === 'spell' && source === 'baidu') {
+            speakSsml(spellSsml(text), done, fail, source);
+        } else {
+            speakSentence(mode === 'spell' ? spellSpaced(text) : text, done, fail, source);
+        }
+    };
 
     const run = async (action, key) => {
         setBusy(key);
@@ -275,6 +313,43 @@ export default function DebugZone() {
                             </div>
                         </div>
                     )}
+                </Card>
+                <Card title="朗读单词">
+                    <div className="flex flex-col gap-3">
+                        <Input value={word} onChange={e => setWord(e.target.value)} placeholder="输入单词，如 BANANA" />
+                        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3">
+                            {TTS_SOURCES.map(({ value, label }) => {
+                                const letters = spellLetters(word);
+                                return (
+                                    <Card key={value} size="small" title={label} className="bg-[#fcfcfe]">
+                                        <Space wrap>
+                                            <Button
+                                                size="small"
+                                                icon={<SoundOutlined />}
+                                                loading={ttsBusy === `${value}-word`}
+                                                disabled={!word.trim()}
+                                                onClick={() => playWord(value, 'word')}
+                                            >
+                                                整词
+                                            </Button>
+                                            <Button
+                                                size="small"
+                                                icon={<OrderedListOutlined />}
+                                                loading={ttsBusy === `${value}-spell`}
+                                                disabled={!letters}
+                                                onClick={() => playWord(value, 'spell')}
+                                            >
+                                                逐字母
+                                            </Button>
+                                        </Space>
+                                        <div className="mt-2 text-[11px] break-all">
+                                            <Text code>{spellText(word, value)}</Text>
+                                        </div>
+                                    </Card>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </Card>
             </div>
         </Card>
