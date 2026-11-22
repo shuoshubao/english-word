@@ -38,7 +38,7 @@ const toLines = text =>
     String(text || '')
         .replace(POS_SPLIT_RE, '\n$1 ')
         .split('\n')
-        .map(l => l.trim().replace(/;+$/, '').trim())
+        .map(item => item.trim().replace(/;+$/, '').trim())
         .filter(Boolean);
 
 // 桌面版单词列表: 顶部工具栏 + antd Table(例句可展开)
@@ -75,8 +75,11 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
     const toggleRevealWord = id => {
         setRevealedWords(prev => {
             const next = new Set(prev);
-            if (next.has(id)) next.delete(id);
-            else next.add(id);
+            if (next.has(id)) {
+                next.delete(id);
+            } else {
+                next.add(id);
+            }
             return next;
         });
     };
@@ -95,12 +98,14 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
     };
 
     const list = useMemo(() => {
-        if (!filterable || filter === 'all') return order;
+        if (!filterable || filter === 'all') {
+            return order;
+        }
         const preds = {
-            unread: w => !hasRecord(state.known, w.id) && !hasRecord(state.unknown, w.id),
-            unknown: w => hasRecord(state.unknown, w.id),
-            known: w => hasRecord(state.known, w.id),
-            favorite: w => hasRecord(state.favorites, w.id)
+            unread: item => !hasRecord(state.known, item.id) && !hasRecord(state.unknown, item.id),
+            unknown: item => hasRecord(state.unknown, item.id),
+            known: item => hasRecord(state.known, item.id),
+            favorite: item => hasRecord(state.favorites, item.id)
         };
         return order.filter(preds[filter]);
     }, [order, filter, filterable, state]);
@@ -110,11 +115,17 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         let unknown = 0;
         let known = 0;
         let favorite = 0;
-        order.forEach(w => {
-            if (hasRecord(state.favorites, w.id)) favorite += 1;
-            if (hasRecord(state.known, w.id)) known += 1;
-            else if (hasRecord(state.unknown, w.id)) unknown += 1;
-            else unread += 1;
+        order.forEach(item => {
+            if (hasRecord(state.favorites, item.id)) {
+                favorite += 1;
+            }
+            if (hasRecord(state.known, item.id)) {
+                known += 1;
+            } else if (hasRecord(state.unknown, item.id)) {
+                unknown += 1;
+            } else {
+                unread += 1;
+            }
         });
         return { all: order.length, unread, unknown, known, favorite };
     }, [order, state]);
@@ -123,7 +134,9 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
 
     const focusWord = useCallback(
         index => {
-            if (index < 0 || index >= list.length) return;
+            if (index < 0 || index >= list.length) {
+                return;
+            }
             const targetPage = Math.floor(index / pageSize) + 1;
             const id = list[index].id;
             focusIndexRef.current = index;
@@ -131,7 +144,9 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
             setHighlightId(id);
             requestAnimationFrame(() => {
                 const el = document.querySelector(`[data-row-id="${CSS.escape(id)}"]`);
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             });
             clearTimeout(blinkTimer.current);
             blinkTimer.current = setTimeout(() => setHighlightId(null), 1800);
@@ -140,11 +155,15 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
     );
 
     const focusNextUnread = () => {
-        const unmarked = w => !hasRecord(state.known, w.id) && !hasRecord(state.unknown, w.id);
+        const unmarked = item => !hasRecord(state.known, item.id) && !hasRecord(state.unknown, item.id);
         const from = focusIndexRef.current + 1;
-        let next = list.findIndex((w, i) => i >= from && unmarked(w));
-        if (next === -1) next = list.findIndex(unmarked);
-        if (next !== -1) focusWord(next);
+        let next = list.findIndex((item, index) => index >= from && unmarked(item));
+        if (next === -1) {
+            next = list.findIndex(unmarked);
+        }
+        if (next !== -1) {
+            focusWord(next);
+        }
     };
 
     const shuffle = () => {
@@ -162,7 +181,9 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
     const toggleMeaning = () => {
         const next = !showAll;
         setShowAll(next);
-        if (meaningKey) localStorage.setItem(meaningKey, next ? '1' : '0');
+        if (meaningKey) {
+            localStorage.setItem(meaningKey, next ? '1' : '0');
+        }
     };
 
     const knownCount = counts.known;
@@ -254,7 +275,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     );
                 }
                 const lines = toLines(record.translation);
-                return <div className="leading-relaxed">{lines.length ? lines.map((l, i) => <div key={i}>{l}</div>) : '暂无释义'}</div>;
+                return <div className="leading-relaxed">{lines.length ? lines.map((item, index) => <div key={index}>{item}</div>) : '暂无释义'}</div>;
             }
         },
         {
@@ -309,7 +330,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                 {filterable ? (
                     <Segmented
                         value={filter}
-                        options={FILTERS.map(f => ({ value: f.value, label: `${f.label} ${counts[f.value]}` }))}
+                        options={FILTERS.map(item => ({ value: item.value, label: `${item.label} ${counts[item.value]}` }))}
                         onChange={v => {
                             setFilter(v);
                             setPage(1);
@@ -346,7 +367,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     quizMode
                         ? undefined
                         : {
-                              rowExpandable: record => Boolean(record.examples && record.examples.length),
+                              rowExpandable: record => Boolean(record.examples?.length),
                               expandedRowRender: record => (
                                   <div className="ml-[100px] pr-4 bg-white">
                                       <Listy

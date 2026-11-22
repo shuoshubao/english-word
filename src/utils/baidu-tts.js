@@ -13,7 +13,7 @@ const CUID_KEY = 'BaiduTtsCuid';
 
 const read = (key, fallback) => {
     try {
-        return JSON.parse(localStorage.getItem(key)) || fallback;
+        return JSON.parse(localStorage.getItem(key)) ?? fallback;
     } catch {
         return fallback;
     }
@@ -43,7 +43,9 @@ const getCuid = () => {
 
 // 用 API Key / Secret Key 换 access_token(有效期约 30 天), 缓存并在过期前刷新
 const getAccessToken = async info => {
-    if (!hasTtsConfig(info)) throw new Error('请先填写百度 TTS 的 API Key 和 Secret Key');
+    if (!hasTtsConfig(info)) {
+        throw new Error('请先填写百度 TTS 的 API Key 和 Secret Key');
+    }
     const cached = readToken();
     if (cached && cached.apiKey === info.apiKey && cached.expiresAt > Date.now() + 60 * 1000) {
         return cached.accessToken;
@@ -54,9 +56,13 @@ const getAccessToken = async info => {
         client_secret: info.secretKey
     });
     const res = await fetch(`${apiBase('aip')}/oauth/2.0/token?${params}`);
-    if (!res.ok) throw new Error(`获取 token 失败 (HTTP ${res.status})`);
+    if (!res.ok) {
+        throw new Error(`获取 token 失败 (HTTP ${res.status})`);
+    }
     const data = await res.json();
-    if (!data.access_token) throw new Error(data.error_description || data.error || '获取 token 失败');
+    if (!data.access_token) {
+        throw new Error(data.error_description || data.error || '获取 token 失败');
+    }
     write(TOKEN_KEY, {
         apiKey: info.apiKey,
         accessToken: data.access_token,
@@ -83,13 +89,15 @@ export const synthesize = async (text, info, { ssml = false } = {}) => {
         aue: '3'
     });
     // SSML 文本需要 xml=1, 否则标签会被当成普通文字读出来
-    if (ssml) body.set('xml', '1');
+    if (ssml) {
+        body.set('xml', '1');
+    }
     const res = await fetch(`${apiBase('tts')}/text2audio`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body
     });
-    const contentType = res.headers.get('content-type') || '';
+    const contentType = res.headers.get('content-type') ?? '';
     if (!contentType.startsWith('audio')) {
         let detail = '';
         try {

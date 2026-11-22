@@ -1,10 +1,10 @@
+import books from '@/data/irregular-verbs';
+import { speak } from '@/utils/audio';
 import { ShakeOutlined, SoundOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Segmented, Table, Tooltip, Typography } from 'antd';
 import { useEffect, useRef, useState } from 'react';
 
 const { Text } = Typography;
-import books from '@/data/irregular-verbs';
-import { speak } from '@/utils/audio';
 
 const PAGE_SIZE = 20;
 const STAGES = ['小学', '初中', '高中', '四级', '六级'];
@@ -12,10 +12,10 @@ const MASTER_KEY = 'EnglishWord:irregular-mastered';
 
 const readMastered = () => {
     try {
-        const arr = JSON.parse(localStorage.getItem(MASTER_KEY) || '[]');
+        const arr = JSON.parse(localStorage.getItem(MASTER_KEY) ?? '[]');
         const map = {};
-        (Array.isArray(arr) ? arr : []).forEach(w => {
-            map[w] = true;
+        (Array.isArray(arr) ? arr : []).forEach(item => {
+            map[item] = true;
         });
         return map;
     } catch {
@@ -55,8 +55,11 @@ export default function Irregulars() {
     const toggleMaster = word => {
         setMastered(prev => {
             const next = { ...prev };
-            if (next[word]) delete next[word];
-            else next[word] = true;
+            if (next[word]) {
+                delete next[word];
+            } else {
+                next[word] = true;
+            }
             localStorage.setItem(MASTER_KEY, JSON.stringify(Object.keys(next)));
             return next;
         });
@@ -71,14 +74,20 @@ export default function Irregulars() {
         ];
         let i = 0;
         const next = () => {
-            if (playRef.current.stop) return;
+            if (playRef.current.stop) {
+                return;
+            }
             if (i >= parts.length) {
-                if (done) done();
+                if (done) {
+                    done();
+                }
                 return;
             }
             const part = parts[i];
             part.fn(part.text, () => {
-                if (playRef.current.stop) return;
+                if (playRef.current.stop) {
+                    return;
+                }
                 i += 1;
                 timer.current = setTimeout(next, 400);
             });
@@ -87,11 +96,15 @@ export default function Irregulars() {
     };
 
     const startAutoPlay = () => {
-        if (!visible.length) return;
+        if (!visible.length) {
+            return;
+        }
         playRef.current = { stop: false, index: 0 };
         setPlaying(true);
         const playNext = () => {
-            if (playRef.current.stop) return;
+            if (playRef.current.stop) {
+                return;
+            }
             if (playRef.current.index >= visible.length) {
                 stopAutoPlay();
                 return;
@@ -99,7 +112,9 @@ export default function Irregulars() {
             const item = visible[playRef.current.index];
             setHighlightWord(item.word);
             playItem(item, () => {
-                if (playRef.current.stop) return;
+                if (playRef.current.stop) {
+                    return;
+                }
                 playRef.current.index += 1;
                 timer.current = setTimeout(playNext, 1500);
             });
@@ -108,8 +123,11 @@ export default function Irregulars() {
     };
 
     const toggleAutoPlay = () => {
-        if (playing) stopAutoPlay();
-        else startAutoPlay();
+        if (playing) {
+            stopAutoPlay();
+        } else {
+            startAutoPlay();
+        }
     };
 
     const shuffle = () => {

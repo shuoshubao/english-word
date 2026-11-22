@@ -39,8 +39,12 @@ const playByKey = async (key, load, onEnd, onError) => {
             } catch (error) {
                 inflight.delete(key);
                 console.warn('音频加载失败', error);
-                if (onError) onError(error);
-                if (onEnd) onEnd();
+                if (onError) {
+                    onError(error);
+                }
+                if (onEnd) {
+                    onEnd();
+                }
                 return;
             }
             objectUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
@@ -53,15 +57,21 @@ const playByKey = async (key, load, onEnd, onError) => {
             if (current === audio) {
                 current = null;
             }
-            if (onEnd) onEnd();
+            if (onEnd) {
+                onEnd();
+            }
         };
         audio.onended = finish;
         audio.onerror = finish;
         await audio.play();
     } catch (error) {
         console.warn('发音播放失败', error);
-        if (onError) onError(error);
-        if (onEnd) onEnd();
+        if (onError) {
+            onError(error);
+        }
+        if (onEnd) {
+            onEnd();
+        }
     }
 };
 
@@ -70,7 +80,9 @@ const play = (url, onEnd) =>
         url,
         async () => {
             const res = await fetch(url);
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            if (!res.ok) {
+                throw new Error(`HTTP ${res.status}`);
+            }
             return res.blob();
         },
         onEnd
@@ -82,8 +94,12 @@ export const playBuffer = (objectUrl, onEnd) => {
     const audio = new Audio(objectUrl);
     current = audio;
     const finish = () => {
-        if (current === audio) current = null;
-        if (onEnd) onEnd();
+        if (current === audio) {
+            current = null;
+        }
+        if (onEnd) {
+            onEnd();
+        }
     };
     audio.onended = finish;
     audio.onerror = finish;
@@ -97,9 +113,7 @@ const WORD_TTS_SOURCES = {
 };
 
 const ttsCredentials = (source, info) =>
-    source === 'doubao'
-        ? `${info.apiKey}|${info.voice || ''}|${info.speed ?? 0}`
-        : `${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed ?? 5}`;
+    source === 'doubao' ? `${info.apiKey}|${info.voice || ''}|${info.speed ?? 0}` : `${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed ?? 5}`;
 
 // 按发音来源设置选择有道或百度翻译
 const sourceUrl = text => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text) : youdaoUrl(text));
@@ -108,7 +122,9 @@ const sourceUrl = text => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text) : yo
 // 缓存由 playByKey 统一处理, key 含音源+凭证+音色+语速+文本, 命中不再请求接口.
 export const speakSentence = (text, onEnd, onError, sourceOverride) => {
     if (!text) {
-        if (onEnd) onEnd();
+        if (onEnd) {
+            onEnd();
+        }
         return;
     }
     const source = sourceOverride || getSentenceTtsSource();
@@ -118,7 +134,9 @@ export const speakSentence = (text, onEnd, onError, sourceOverride) => {
             title: '未配置TTS',
             content: `请先到「我的 - 句子发音」配置${source === 'baidu' ? '百度TTS' : '豆包TTS'}的必填项`
         });
-        if (onEnd) onEnd();
+        if (onEnd) {
+            onEnd();
+        }
         return;
     }
     const key = `tts-${source}-${ttsCredentials(source, info)}-${text}`;
@@ -128,7 +146,9 @@ export const speakSentence = (text, onEnd, onError, sourceOverride) => {
 // SSML 朗读(逐字母等): 复用句子 TTS 的凭证校验和缓存, 但单独标记缓存避免与纯文本混淆
 export const speakSsml = (ssml, onEnd, onError, sourceOverride) => {
     if (!ssml) {
-        if (onEnd) onEnd();
+        if (onEnd) {
+            onEnd();
+        }
         return;
     }
     const source = sourceOverride || getSentenceTtsSource();
@@ -138,10 +158,12 @@ export const speakSsml = (ssml, onEnd, onError, sourceOverride) => {
             title: '未配置TTS',
             content: `请先到「我的 - 句子发音」配置${source === 'baidu' ? '百度TTS' : '豆包TTS'}的必填项`
         });
-        if (onEnd) onEnd();
+        if (onEnd) {
+            onEnd();
+        }
         return;
     }
-    // 百度 SSML 语速写死为 0, 缓存 key 带上标记避免命中之前较快的音频
+    // 百度 SSML 语速固定为 0, 缓存 key 用标记与其他语速隔离
     const speedMark = source === 'baidu' ? 'spd0' : 'default';
     const key = `ssml-${source}-${speedMark}-${ttsCredentials(source, info)}-${ssml}`;
     playByKey(key, () => synthesizeSentence(ssml, source, info, { ssml: true }), onEnd, onError);
@@ -150,7 +172,9 @@ export const speakSsml = (ssml, onEnd, onError, sourceOverride) => {
 // 英文单词发音: 普通音源走词典接口, TTS 来源走对应音源
 export const speak = (word, onEnd, onError) => {
     if (!word) {
-        if (onEnd) onEnd();
+        if (onEnd) {
+            onEnd();
+        }
         return;
     }
     const ttsSource = WORD_TTS_SOURCES[getVoiceSource()];

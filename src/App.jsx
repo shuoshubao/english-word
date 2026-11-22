@@ -37,8 +37,10 @@ const TOPIC_SUBROUTES = ['topic', 'special', 'roots', 'collocations', 'irregular
 // 根据路由推导页面标题
 const titleOf = pathname => {
     const parts = pathname.split('/').filter(Boolean);
-    const dec = s => decodeURIComponent(s || '');
-    if (parts.length === 0) return '词库';
+    const dec = text => decodeURIComponent(text ?? '');
+    if (parts.length === 0) {
+        return '词库';
+    }
     switch (parts[0]) {
         case 'words':
             return '生词';
@@ -76,14 +78,18 @@ export default function App() {
 
     // 百度网盘 OAuth 回调: 回调会整页重载到根路径, 需在顶层检测 code 换取 token
     useEffect(() => {
-        finishAuth()
-            .then(path => {
+        const handleAuthCallback = async () => {
+            try {
+                const path = await finishAuth();
                 if (path) {
                     message.success('百度网盘已授权');
                     navigate(path, { replace: true });
                 }
-            })
-            .catch(error => message.error(`百度网盘授权失败: ${error.message}`));
+            } catch (error) {
+                message.error(`百度网盘授权失败: ${error.message}`);
+            }
+        };
+        handleAuthCallback();
     }, [message]);
 
     const isTab = TAB_PATHS.includes(location.pathname);

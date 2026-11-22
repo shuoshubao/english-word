@@ -264,7 +264,7 @@ const mainBooks = {
 };
 
 // 分包词书: 动态 import() 按需加载(自动代码分割)
-const pick = mod => (mod && mod.default ? mod.default : mod);
+const pick = mod => (mod?.default ? mod.default : mod);
 const subLoaders = {
     'm7-1': () => import('./Junior/7-1.js'),
     'm7-2': () => import('./Junior/7-2.js'),
@@ -321,20 +321,22 @@ const cleanPhonetic = raw => {
 // category 优先取词书显式声明的(PTE 每分类一个独立一级 key), 否则按 id 前缀推断(保证旧进度 id 命中).
 const decorate = (words, book) => {
     const category = book.category || categoryOf(book.id);
-    return words.map(word => ({
-        ...word,
-        phonetic: cleanPhonetic(word.phonetic),
-        id: `${category}__${word.word}`,
-        category,
-        categoryLabel: book.stage
-    }));
+    return words.map(item => {
+        return {
+            ...item,
+            phonetic: cleanPhonetic(item.phonetic),
+            id: `${category}__${item.word}`,
+            category,
+            categoryLabel: book.stage
+        };
+    });
 };
 
 // 分包异步化: 用动态 import() 异步拉起分包里的词书模块
 const loadSub = async id => {
     const loader = subLoaders[id];
     if (!loader) {
-        throw new Error('未知词书: ' + id);
+        throw new Error(`未知词书: ${id}`);
     }
     const mod = await loader();
     return pick(mod);

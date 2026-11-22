@@ -18,16 +18,22 @@ export default function Library() {
 
     useEffect(() => {
         let alive = true;
-        ensureStages([stage]).then(() => {
-            if (!alive) return;
+        const load = async () => {
+            await ensureStages([stage]);
+            if (!alive) {
+                return;
+            }
             const list = vocabularyCatalog
                 .filter(book => book.stage === stage)
                 .map(book => {
                     let known = 0;
                     let unknown = 0;
                     getBookWords(book.id).forEach(word => {
-                        if (hasRecord(state.known, word.id)) known += 1;
-                        else if (hasRecord(state.unknown, word.id)) unknown += 1;
+                        if (hasRecord(state.known, word.id)) {
+                            known += 1;
+                        } else if (hasRecord(state.unknown, word.id)) {
+                            unknown += 1;
+                        }
                     });
                     const total = book.wordCount;
                     return {
@@ -42,7 +48,8 @@ export default function Library() {
                     };
                 });
             setBooks(list);
-        });
+        };
+        load();
         return () => {
             alive = false;
         };

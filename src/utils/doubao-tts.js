@@ -8,7 +8,7 @@ export const DEFAULT_VOICE = 'zh_female_vv_uranus_bigtts';
 
 export const readDoubaoInfo = () => {
     try {
-        return JSON.parse(localStorage.getItem(DOUBAO_INFO_KEY)) || {};
+        return JSON.parse(localStorage.getItem(DOUBAO_INFO_KEY)) ?? {};
     } catch {
         return {};
     }
@@ -19,7 +19,9 @@ export const hasDoubaoConfig = info => Boolean(info?.apiKey);
 const base64ToBytes = data => {
     const binary = atob(data);
     const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+    for (let i = 0; i < binary.length; i += 1) {
+        bytes[i] = binary.charCodeAt(i);
+    }
     return bytes;
 };
 
@@ -81,7 +83,9 @@ export const synthesize = async (text, info) => {
     };
     while (true) {
         const { value, done } = await reader.read();
-        if (done) break;
+        if (done) {
+            break;
+        }
         buffer += decoder.decode(value, { stream: true });
         const lines = buffer.split('\n');
         buffer = lines.pop();
@@ -97,6 +101,8 @@ export const synthesize = async (text, info) => {
         }
     }
     flushEvent();
-    if (!chunks.length) throw new Error('未获取到音频');
+    if (!chunks.length) {
+        throw new Error('未获取到音频');
+    }
     return new Blob(chunks, { type: 'audio/mpeg' });
 };

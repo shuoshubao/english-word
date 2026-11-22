@@ -19,7 +19,7 @@ const load = () => {
     if (!settings) {
         let saved = {};
         try {
-            saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {};
+            saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '{}') ?? {};
         } catch {
             saved = {};
         }

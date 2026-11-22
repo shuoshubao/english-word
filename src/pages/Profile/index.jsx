@@ -18,7 +18,9 @@ const { Text } = Typography;
 
 const PROGRESS_KEYS = ['primary', 'junior', 'senior', 'cet4', 'cet6'];
 vocabularyCatalog.forEach(book => {
-    if (book.category && !PROGRESS_KEYS.includes(book.category)) PROGRESS_KEYS.push(book.category);
+    if (book.category && !PROGRESS_KEYS.includes(book.category)) {
+        PROGRESS_KEYS.push(book.category);
+    }
 });
 
 const BAIDU_PAN_KEY = 'BaiduPanInfo';
@@ -46,7 +48,9 @@ const buildActivity = state => {
     const activity = {};
     [...state.known, ...state.unknown].forEach(record => {
         const date = new Date(record.time);
-        if (Number.isNaN(date.getTime())) return;
+        if (Number.isNaN(date.getTime())) {
+            return;
+        }
         const key = formatDate(date);
         activity[key] = (activity[key] || 0) + 1;
     });
@@ -70,7 +74,11 @@ export default function Profile() {
     const [ttsVersion, setTtsVersion] = useState(0);
 
     useEffect(() => {
-        checkAuthStatus(baiduPanInfo).then(ok => setAuthStatus(ok ? 'ok' : 'fail'));
+        const checkAuth = async () => {
+            const ok = await checkAuthStatus(baiduPanInfo);
+            setAuthStatus(ok ? 'ok' : 'fail');
+        };
+        checkAuth();
     }, []);
 
     const activity = useMemo(() => buildActivity(state), [state]);
@@ -80,7 +88,10 @@ export default function Profile() {
         const content = JSON.stringify({ app: '背单词', version: 1, exportedAt: new Date().toISOString(), progress: toNestedProgress(state) }, null, 2);
         const stamp = `${pad(new Date().getMonth() + 1)}${pad(new Date().getDate())}`;
         const url = URL.createObjectURL(new Blob([content], { type: 'application/json' }));
-        Object.assign(document.createElement('a'), { href: url, download: `学习进度-${stamp}.json` }).click();
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `学习进度-${stamp}.json`;
+        link.click();
         URL.revokeObjectURL(url);
         message.success('已导出');
     };
@@ -92,7 +103,9 @@ export default function Profile() {
             const value = JSON.parse(await file.text());
             const p = value.progress;
             const looksValid = p && typeof p === 'object' && (Array.isArray(p.favorites) || PROGRESS_KEYS.some(k => p[k]));
-            if (!looksValid) throw new Error('invalid');
+            if (!looksValid) {
+                throw new Error('invalid');
+            }
             merge(toFlatProgress(p));
             message.success('学习进度已合并');
         } catch {
@@ -176,7 +189,9 @@ export default function Profile() {
             }
             const payload = await downloadBackup(baiduPanInfo, files[0].fs_id);
             const progress = payload?.progress;
-            if (!progress || typeof progress !== 'object') throw new Error('备份文件格式不正确');
+            if (!progress || typeof progress !== 'object') {
+                throw new Error('备份文件格式不正确');
+            }
             merge(toFlatProgress(progress));
             message.success(`已同步 ${files[0].server_filename}`);
         }, 'sync');
@@ -239,9 +254,13 @@ export default function Profile() {
                         value={dayjs(monthDate)}
                         mode={mode}
                         fullCellRender={(current, info) => {
-                            if (info.type !== 'date') return info.originNode;
+                            if (info.type !== 'date') {
+                                return info.originNode;
+                            }
                             const inMonth = current.isSame(dayjs(monthDate), 'month');
-                            if (!inMonth) return <div className="h-full w-full" />;
+                            if (!inMonth) {
+                                return <div className="h-full w-full" />;
+                            }
                             const count = activity[current.format('YYYY-MM-DD')] || 0;
                             return (
                                 <div

@@ -11,15 +11,15 @@ let builtIndex = null; // word(lowercase) -> 合并后的词条
 const mergeWord = (a, b) => {
     const merged = { ...a };
     if (b.examples) {
-        const enSet = new Set((merged.examples || []).map(e => e.en));
-        b.examples.forEach(e => {
-            if (!enSet.has(e.en)) {
-                merged.examples = merged.examples || [];
-                merged.examples.push(e);
+        const enSet = new Set((merged.examples ?? []).map(item => item.en));
+        b.examples.forEach(item => {
+            if (!enSet.has(item.en)) {
+                merged.examples ??= [];
+                merged.examples.push(item);
             }
         });
     }
-    if ((b.translation || '').length > (merged.translation || '').length) {
+    if ((b.translation ?? '').length > (merged.translation ?? '').length) {
         merged.translation = b.translation;
     }
     if (!merged.phonetic && b.phonetic) {
@@ -50,7 +50,7 @@ const buildIndex = () => {
 
 // 确保所有阶段词书已加载(主题分类需要跨书查词条)
 export const loadTopicCategory = async title => {
-    const category = topicList.find(c => c.title === title);
+    const category = topicList.find(item => item.title === title);
     if (!category) {
         return { category: null, words: [] };
     }
@@ -62,7 +62,7 @@ export const loadTopicCategory = async title => {
     }
     // 按分类 words 列表取词条, 保持分类顺序; 查不到的词跳过.
     // 不覆盖 id: 保留词书里原有的 id(如 middle__January), 学习进度与词书互通.
-    const words = category.words.map(w => builtIndex[w.toLowerCase()]).filter(Boolean);
+    const words = category.words.map(item => builtIndex[item.toLowerCase()]).filter(Boolean);
     console.log('[主题]', title, '匹配到', words.length, '/', category.words.length, '词');
     return { category, words };
 };
@@ -78,14 +78,17 @@ export const listTopicsWithStats = async () => {
     }
     await stateStore.whenReady();
     const state = stateStore.getState();
-    return topicList.map(t => {
-        const words = t.words.map(w => builtIndex[w.toLowerCase()]).filter(Boolean);
+    return topicList.map(item1 => {
+        const words = item1.words.map(item2 => builtIndex[item2.toLowerCase()]).filter(Boolean);
         let known = 0;
         let unknown = 0;
         words.forEach(word => {
-            if (hasRecord(state.known, word.id)) known += 1;
-            else if (hasRecord(state.unknown, word.id)) unknown += 1;
+            if (hasRecord(state.known, word.id)) {
+                known += 1;
+            } else if (hasRecord(state.unknown, word.id)) {
+                unknown += 1;
+            }
         });
-        return { title: t.title, count: words.length, known, unknown, unread: words.length - known - unknown };
+        return { title: item1.title, count: words.length, known, unknown, unread: words.length - known - unknown };
     });
 };

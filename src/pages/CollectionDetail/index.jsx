@@ -14,15 +14,18 @@ export default function CollectionDetail() {
 
     useEffect(() => {
         let alive = true;
-        whenReady()
-            .then(() => ensureStages([stage]))
-            .then(() => {
-                if (!alive) return;
-                const marked = getState()[collection] || [];
-                const index = getWordIndex();
-                const items = (index.byStage[stage] || []).filter(word => hasRecord(marked, word.id));
-                setWords(items);
-            });
+        const load = async () => {
+            await whenReady();
+            await ensureStages([stage]);
+            if (!alive) {
+                return;
+            }
+            const marked = getState()[collection] || [];
+            const index = getWordIndex();
+            const items = (index.byStage[stage] || []).filter(word => hasRecord(marked, word.id));
+            setWords(items);
+        };
+        load();
         return () => {
             alive = false;
         };

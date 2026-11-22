@@ -38,7 +38,9 @@ export default function DoubaoTtsCard({ onSaved, active }) {
         };
         saveInfo(next);
         setInfo(next);
-        if (onSaved) onSaved();
+        if (onSaved) {
+            onSaved();
+        }
     };
 
     return (

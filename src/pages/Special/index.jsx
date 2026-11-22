@@ -11,12 +11,15 @@ export default function Special() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        listSpecialWithStats()
-            .then(list => {
-                setCategories(list);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+        const load = async () => {
+            try {
+                setCategories(await listSpecialWithStats());
+            } catch {
+                // 加载失败时保留空列表
+            }
+            setLoading(false);
+        };
+        load();
     }, []);
 
     if (loading) {

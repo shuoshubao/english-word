@@ -11,12 +11,15 @@ export default function Topic() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        listTopicsWithStats()
-            .then(list => {
-                setTopics(list);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+        const load = async () => {
+            try {
+                setTopics(await listTopicsWithStats());
+            } catch {
+                // 加载失败时保留空列表
+            }
+            setLoading(false);
+        };
+        load();
     }, []);
 
     if (loading) {
@@ -29,14 +32,14 @@ export default function Topic() {
 
     return (
         <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
-            {topics.map(t => (
-                <Card key={t.title} hoverable onClick={() => navigate(`/topic/${encodeURIComponent(t.title)}`)} className="cursor-pointer">
-                    <div className="text-base font-semibold text-[#1f1a33]">{t.title}</div>
-                    <div className="text-xs text-[#333] mt-1">{t.count} 词</div>
+            {topics.map(item => (
+                <Card key={item.title} hoverable onClick={() => navigate(`/topic/${encodeURIComponent(item.title)}`)} className="cursor-pointer">
+                    <div className="text-base font-semibold text-[#1f1a33]">{item.title}</div>
+                    <div className="text-xs text-[#333] mt-1">{item.count} 词</div>
                     <div className="flex gap-3 mt-2 text-[11px]">
-                        <Text type="success">认识 {t.known}</Text>
-                        <Text type="danger">不识 {t.unknown}</Text>
-                        <Text type="secondary">未读 {t.unread}</Text>
+                        <Text type="success">认识 {item.known}</Text>
+                        <Text type="danger">不识 {item.unknown}</Text>
+                        <Text type="secondary">未读 {item.unread}</Text>
                     </div>
                 </Card>
             ))}

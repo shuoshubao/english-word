@@ -35,10 +35,14 @@ export default function TtsSamplePanel({ source, version }) {
         speakSentence(
             samples[index],
             () => {
-                if (playingRef.current === index) setPlayingIndex(-1);
+                if (playingRef.current === index) {
+                    setPlayingIndex(-1);
+                }
             },
             error => {
-                if (playingRef.current === index) setPlayingIndex(-1);
+                if (playingRef.current === index) {
+                    setPlayingIndex(-1);
+                }
                 message.error(`合成失败: ${error.message}`);
             },
             source

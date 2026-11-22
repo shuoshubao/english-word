@@ -110,7 +110,9 @@ export default function BaiduTtsCard({ onSaved, active }) {
         }
         saveTtsInfo(next);
         setTtsInfo(next);
-        if (onSaved) onSaved();
+        if (onSaved) {
+            onSaved();
+        }
     };
 
     return (

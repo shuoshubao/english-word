@@ -15,7 +15,7 @@ const ensureAllStages = async () => {
 };
 
 export const loadRootCategory = async title => {
-    const category = rootList.find(c => c.title === title);
+    const category = rootList.find(item => item.title === title);
     if (!category) {
         return { category: null, words: [] };
     }

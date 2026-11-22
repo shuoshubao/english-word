@@ -27,9 +27,12 @@ export default function MonacoJsonViewer({ value = '', height = 320, language = 
 
     useEffect(() => {
         let disposed = false;
-        loadMonacoEditor()
-            .then(monaco => {
-                if (disposed || !hostRef.current) return;
+        const createEditor = async () => {
+            try {
+                const monaco = await loadMonacoEditor();
+                if (disposed || !hostRef.current) {
+                    return;
+                }
                 monacoRef.current = monaco;
                 editorRef.current = monaco.editor.create(hostRef.current, {
                     value: valueRef.current,
@@ -52,10 +55,11 @@ export default function MonacoJsonViewer({ value = '', height = 320, language = 
                     scrollbar: { verticalScrollbarSize: 8, horizontalScrollbarSize: 8 },
                     padding: { top: 10, bottom: 10 }
                 });
-            })
-            .catch(() => {
+            } catch {
                 // 加载失败时组件仍保留容器, 由上层决定提示
-            });
+            }
+        };
+        createEditor();
         return () => {
             disposed = true;
             editorRef.current?.dispose();
@@ -67,10 +71,16 @@ export default function MonacoJsonViewer({ value = '', height = 320, language = 
 
     useEffect(() => {
         const editor = editorRef.current;
-        if (!editor) return;
-        if (editor.getValue() !== value) editor.setValue(value);
+        if (!editor) {
+            return;
+        }
+        if (editor.getValue() !== value) {
+            editor.setValue(value);
+        }
         const model = editor.getModel();
-        if (model && monacoRef.current) monacoRef.current.editor.setModelLanguage(model, language);
+        if (model && monacoRef.current) {
+            monacoRef.current.editor.setModelLanguage(model, language);
+        }
     }, [value, language]);
 
     return <div ref={hostRef} style={{ width: '100%', height }} />;

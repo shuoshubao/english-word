@@ -34,7 +34,9 @@ const dirCache = new Map();
 // 按 id 递归替换树中某个目录节点的 children, 其余节点引用保持不变
 const replaceNodeChildren = (nodes, id, children) =>
     nodes.map(node => {
-        if (node.id === id) return { ...node, children, loaded: true };
+        if (node.id === id) {
+            return { ...node, children, loaded: true };
+        }
         return node.children?.length ? { ...node, children: replaceNodeChildren(node.children, id, children) } : node;
     });
 
@@ -71,8 +73,12 @@ const LANGUAGES = {
 };
 // CDN 的 Content-Type 缺失时会退回 octet-stream/json, 用文件头签名兜底识别图片, 不依赖扩展名
 const isImageBlob = async blob => {
-    if (blob.type.startsWith('image/')) return true;
-    if (blob.type && blob.type !== 'application/octet-stream' && blob.type !== 'application/json') return false;
+    if (blob.type.startsWith('image/')) {
+        return true;
+    }
+    if (blob.type && blob.type !== 'application/octet-stream' && blob.type !== 'application/json') {
+        return false;
+    }
     const head = new Uint8Array(await blob.slice(0, 16).arrayBuffer());
     const ascii = (offset, str) => [...str].every((c, i) => head[offset + i] === c.charCodeAt(0));
     return (
@@ -288,7 +294,7 @@ export default function DebugZone() {
                                                     )}
                                                 </span>
                                                 <span className="min-w-0 flex-1 truncate text-[13px]">{node.data.name}</span>
-                                                {!isDir && node.data.size != null ? (
+                                                {!isDir && node.data.size !== undefined && node.data.size !== null ? (
                                                     <span className="shrink-0 text-[11px] text-[#98a2b3]">{formatSize(node.data.size)}</span>
                                                 ) : null}
                                             </div>

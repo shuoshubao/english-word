@@ -13,7 +13,7 @@ export const getBookWords = bookId => {
             bookCache[bookId] = sync;
         }
     }
-    return bookCache[bookId] || [];
+    return bookCache[bookId] ?? [];
 };
 
 // 异步确保某本词书已加载(分包会按需下载); 返回该书单词
@@ -52,7 +52,7 @@ export const getWordIndex = () => {
     const byId = {};
     const byStage = {};
     vocabularyCatalog.forEach(book => {
-        byStage[book.stage] = byStage[book.stage] || [];
+        byStage[book.stage] ??= [];
         const words = bookCache[book.id];
         if (!words) {
             return;

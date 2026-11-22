@@ -50,7 +50,9 @@ export const md5 = bytes => {
     let d0 = 0x10325476;
     for (let offset = 0; offset < size; offset += 64) {
         const m = new Uint32Array(16);
-        for (let i = 0; i < 16; i += 1) m[i] = view.getUint32(offset + i * 4, true);
+        for (let i = 0; i < 16; i += 1) {
+            m[i] = view.getUint32(offset + i * 4, true);
+        }
         let a = a0;
         let b = b0;
         let c = c0;
@@ -84,14 +86,14 @@ export const md5 = bytes => {
         c0 = (c0 + c) >>> 0;
         d0 = (d0 + d) >>> 0;
     }
-    const hex = n => [n & 255, (n >>> 8) & 255, (n >>> 16) & 255, (n >>> 24) & 255].map(v => v.toString(16).padStart(2, '0')).join('');
+    const hex = n => [n & 255, (n >>> 8) & 255, (n >>> 16) & 255, (n >>> 24) & 255].map(item => item.toString(16).padStart(2, '0')).join('');
     return hex(a0) + hex(b0) + hex(c0) + hex(d0);
 };
 
 // ---- token ----
 const readToken = () => {
     try {
-        return JSON.parse(localStorage.getItem(TOKEN_KEY)) || null;
+        return JSON.parse(localStorage.getItem(TOKEN_KEY)) ?? null;
     } catch {
         return null;
     }
@@ -100,9 +102,15 @@ const readToken = () => {
 const writeToken = token => localStorage.setItem(TOKEN_KEY, JSON.stringify(token));
 
 const checkError = data => {
-    if (data?.error) throw new Error(data.error_description || data.error);
-    if (data?.error_code && data.error_code !== 0) throw new Error(`${data.error_msg || '百度接口错误'} (${data.error_code})`);
-    if (data?.errno && data.errno !== 0) throw new Error(data.error_msg || `百度接口错误 ${data.errno}`);
+    if (data?.error) {
+        throw new Error(data.error_description || data.error);
+    }
+    if (data?.error_code && data.error_code !== 0) {
+        throw new Error(`${data.error_msg || '百度接口错误'} (${data.error_code})`);
+    }
+    if (data?.errno && data.errno !== 0) {
+        throw new Error(data.error_msg || `百度接口错误 ${data.errno}`);
+    }
     return data;
 };
 
@@ -134,7 +142,9 @@ const postCreate = async (url, params) => {
     query.set('access_token', params.access_token);
     const body = new URLSearchParams();
     Object.entries(params).forEach(([key, value]) => {
-        if (key !== 'method' && key !== 'access_token') body.set(key, String(value));
+        if (key !== 'method' && key !== 'access_token') {
+            body.set(key, String(value));
+        }
     });
     const response = await fetch(`${url}?${query}`, {
         method: 'POST',
@@ -146,7 +156,7 @@ const postCreate = async (url, params) => {
 
 const readInfo = () => {
     try {
-        return JSON.parse(localStorage.getItem('BaiduPanInfo')) || {};
+        return JSON.parse(localStorage.getItem('BaiduPanInfo')) ?? {};
     } catch {
         return {};
     }
@@ -154,7 +164,9 @@ const readInfo = () => {
 
 // 方式一: oob 授权, 新窗口显示授权码, 手动粘贴. 本地/线上都可用.
 export const startOobAuth = info => {
-    if (!info?.appKey) throw new Error('请先保存 AppKey');
+    if (!info?.appKey) {
+        throw new Error('请先保存 AppKey');
+    }
     const params = {
         response_type: 'code',
         client_id: info.appKey,
@@ -167,7 +179,9 @@ export const startOobAuth = info => {
 
 // 方式二: 标准授权码回调, 同窗口跳转, 带 state. 仅线上可用(百度不允许本地回调地址).
 export const startRedirectAuth = info => {
-    if (!info?.appKey) throw new Error('请先保存 AppKey');
+    if (!info?.appKey) {
+        throw new Error('请先保存 AppKey');
+    }
     const state = Math.random().toString(36).slice(2);
     sessionStorage.setItem(STATE_KEY, state);
     // 回调会丢掉 hash, 记下当前路由, 授权完成后恢复
@@ -185,9 +199,13 @@ export const startRedirectAuth = info => {
 
 // 用 oob 授权码换取 token
 export const exchangeCode = async (info, code) => {
-    if (!info?.appKey || !info?.secretKey) throw new Error('请先保存 AppKey 和 SecretKey');
+    if (!info?.appKey || !info?.secretKey) {
+        throw new Error('请先保存 AppKey 和 SecretKey');
+    }
     const clean = (code || '').trim();
-    if (!clean) throw new Error('请粘贴授权码');
+    if (!clean) {
+        throw new Error('请粘贴授权码');
+    }
     const data = await postForm(`${OAUTH}/token`, {
         grant_type: 'authorization_code',
         code: clean,
@@ -203,13 +221,19 @@ let authInFlight = false;
 export const finishAuth = async () => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    if (!code || authInFlight) return null;
+    if (!code || authInFlight) {
+        return null;
+    }
     authInFlight = true;
     try {
         const state = params.get('state');
-        if (!state || state !== sessionStorage.getItem(STATE_KEY)) throw new Error('授权状态校验失败');
+        if (!state || state !== sessionStorage.getItem(STATE_KEY)) {
+            throw new Error('授权状态校验失败');
+        }
         const info = readInfo();
-        if (!info?.appKey || !info?.secretKey) throw new Error('请先保存 AppKey 和 SecretKey');
+        if (!info?.appKey || !info?.secretKey) {
+            throw new Error('请先保存 AppKey 和 SecretKey');
+        }
         const data = await postForm(`${OAUTH}/token`, {
             grant_type: 'authorization_code',
             code,
@@ -231,9 +255,15 @@ export const finishAuth = async () => {
 
 const validToken = async info => {
     const token = readToken();
-    if (token?.accessToken && token.expiresAt > Date.now() + 60_000) return token.accessToken;
-    if (!token?.refreshToken) throw new Error('AUTH_REQUIRED');
-    if (!info?.secretKey) throw new Error('请先保存 SecretKey');
+    if (token?.accessToken && token.expiresAt > Date.now() + 60_000) {
+        return token.accessToken;
+    }
+    if (!token?.refreshToken) {
+        throw new Error('AUTH_REQUIRED');
+    }
+    if (!info?.secretKey) {
+        throw new Error('请先保存 SecretKey');
+    }
     const data = await postForm(`${OAUTH}/token`, {
         grant_type: 'refresh_token',
         refresh_token: token.refreshToken,
@@ -248,7 +278,9 @@ const validToken = async info => {
 // 合并并发调用, 避免 StrictMode 下重复挂载触发两次请求
 let authCheckInFlight = null;
 export const checkAuthStatus = info => {
-    if (authCheckInFlight) return authCheckInFlight;
+    if (authCheckInFlight) {
+        return authCheckInFlight;
+    }
     authCheckInFlight = (async () => {
         try {
             const accessToken = await validToken(info);
@@ -276,7 +308,7 @@ export const listBackups = async info => {
         access_token: token
     });
     const data = await getJson(`${NETDISK}/file?${params}`);
-    return (data.list || []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
+    return (data.list ?? []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
 };
 
 // 拉取指定目录下的直接子项(不递归)。目录节点带空 children 占位, 供 react-arborist 识别为可展开
@@ -294,21 +326,25 @@ export const listDir = async (info, dir = APP_DIR) => {
             access_token: token
         });
         const data = await getJson(`${NETDISK}/file?${params}`);
-        const list = data.list || [];
+        const list = data.list ?? [];
         items.push(...list);
-        if (list.length < 1000) break;
+        if (list.length < 1000) {
+            break;
+        }
         start += list.length;
     }
-    return items.map(item => ({
-        id: String(item.fs_id),
-        name: item.server_filename,
-        isDir: !!item.isdir,
-        path: item.path,
-        fsId: item.fs_id,
-        size: item.size,
-        mtime: item.mtime,
-        ...(item.isdir ? { children: [], loaded: false } : {})
-    }));
+    return items.map(item => {
+        return {
+            id: String(item.fs_id),
+            name: item.server_filename,
+            isDir: !!item.isdir,
+            path: item.path,
+            fsId: item.fs_id,
+            size: item.size,
+            mtime: item.mtime,
+            ...(item.isdir ? { children: [], loaded: false } : {})
+        };
+    });
 };
 
 // 把带签名的 dlink 交给服务端代理 fetch(自动跟随 302 且无 CORS 限制)
@@ -324,11 +360,15 @@ const fetchFileResponse = async (info, fsId) => {
     });
     const meta = await getJson(`${NETDISK}/multimedia?${params}`);
     const dlink = meta.list?.[0]?.dlink;
-    if (!dlink) throw new Error('获取下载地址失败');
+    if (!dlink) {
+        throw new Error('获取下载地址失败');
+    }
     // dlink 鉴权仍需要 access_token, 缺了会 403 error_code 31045
-    const withToken = dlink + (dlink.includes('?') ? '&' : '?') + `access_token=${token}`;
+    const withToken = `${dlink}${dlink.includes('?') ? '&' : '?'}access_token=${token}`;
     const response = await fetch(proxyDlink(withToken));
-    if (!response.ok) throw new Error(`下载失败 (${response.status})`);
+    if (!response.ok) {
+        throw new Error(`下载失败 (${response.status})`);
+    }
     return response;
 };
 
@@ -347,7 +387,9 @@ const ensureDir = async (token, dir) => {
     const name = dir.slice(dir.lastIndexOf('/') + 1);
     const params = new URLSearchParams({ method: 'list', dir: parent, access_token: token });
     const data = await getJson(`${NETDISK}/file?${params}`);
-    if ((data.list || []).some(f => f.isdir && f.server_filename === name)) return;
+    if ((data.list || []).some(item => item.isdir && item.server_filename === name)) {
+        return;
+    }
     await postCreate(`${NETDISK}/file`, { method: 'create', access_token: token, path: dir, isdir: 1, rtype: 0 });
 };
 

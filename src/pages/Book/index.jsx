@@ -45,11 +45,14 @@ export default function Book({ mode = 'book' }) {
         };
         setWords(null);
         setNotFound(false);
-        whenReady()
-            .then(resolve)
-            .then(list => {
-                if (alive) setWords(list);
-            });
+        const load = async () => {
+            await whenReady();
+            const list = await resolve();
+            if (alive) {
+                setWords(list);
+            }
+        };
+        load();
         return () => {
             alive = false;
         };

@@ -8,8 +8,8 @@ export default function Roots() {
     const navigate = useNavigate();
     const roots = listRoots();
     const groups = [
-        { title: '前缀', items: roots.filter(r => r.type === 'prefix') },
-        { title: '后缀', items: roots.filter(r => r.type === 'suffix') }
+        { title: '前缀', items: roots.filter(item => item.type === 'prefix') },
+        { title: '后缀', items: roots.filter(item => item.type === 'suffix') }
     ];
 
     return (

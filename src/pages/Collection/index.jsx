@@ -6,7 +6,9 @@ import { useLearningState } from '@/utils/useStore';
 // 记录 id 前缀(category) -> 阶段名
 const CATEGORY_STAGE = { primary: '小学', middle: '初中', high: '高中', cet4: 'CET4', cet6: 'CET6' };
 vocabularyCatalog.forEach(book => {
-    if (book.category) CATEGORY_STAGE[book.category] = book.stage;
+    if (book.category) {
+        CATEGORY_STAGE[book.category] = book.stage;
+    }
 });
 
 // 每个阶段词汇总数
@@ -23,10 +25,16 @@ export default function Collection({ collection, emptyText }) {
     const marked = state[collection] || [];
     const countBy = {};
     marked.forEach(record => {
-        const stage = CATEGORY_STAGE[String(record.id || '').split('__')[0]];
-        if (stage) countBy[stage] = (countBy[stage] || 0) + 1;
+        const stage = CATEGORY_STAGE[String(record.id ?? '').split('__')[0]];
+        if (stage) {
+            countBy[stage] = (countBy[stage] ?? 0) + 1;
+        }
     });
-    const overview = stages.filter(s => countBy[s]).map(s => ({ stage: s, count: countBy[s], total: STAGE_TOTAL[s] || 0 }));
+    const overview = stages
+        .filter(item => countBy[item])
+        .map(item => {
+            return { stage: item, count: countBy[item], total: STAGE_TOTAL[item] ?? 0 };
+        });
 
     if (!overview.length) {
         return <Empty className="py-20" description={emptyText} />;

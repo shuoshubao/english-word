@@ -25,8 +25,8 @@ export const toNestedProgress = state => {
         out[key] = { favorites: [], known: [], unknown: [] };
     });
     ['favorites', 'known', 'unknown'].forEach(bucket => {
-        (state?.[bucket] || []).forEach(record => {
-            const id = String(record?.id || '');
+        (state?.[bucket] ?? []).forEach(record => {
+            const id = String(record?.id ?? '');
             const i = id.indexOf('__');
             if (i < 0 || !Number.isFinite(record.time)) {
                 return;
@@ -58,7 +58,7 @@ export const toFlatProgress = progress => {
             return;
         }
         ['favorites', 'known', 'unknown'].forEach(bucket => {
-            (stage[bucket] || []).forEach(record => {
+            (stage[bucket] ?? []).forEach(record => {
                 if (record && record.word && Number.isFinite(record.time)) {
                     flat[bucket].push({ id: `${cat}__${record.word}`, time: record.time });
                 }
@@ -68,17 +68,19 @@ export const toFlatProgress = progress => {
     return flat;
 };
 
-export const normalizeState = state => ({
-    favorites: toRecords(state?.favorites),
-    known: toRecords(state?.known),
-    unknown: toRecords(state?.unknown)
-});
+export const normalizeState = state => {
+    return {
+        favorites: toRecords(state?.favorites),
+        known: toRecords(state?.known),
+        unknown: toRecords(state?.unknown)
+    };
+};
 
 export const getSyncStatus = () => ({ enabled: false, error: '' });
 
 const readLocal = () => {
     try {
-        return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? 'null');
     } catch {
         return null;
     }

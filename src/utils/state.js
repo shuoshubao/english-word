@@ -17,21 +17,19 @@ export const getState = () => state;
 
 export const isReady = () => ready;
 
+// 分包按需加载, 启动时无法索引全部词库, 故不在此剔除词库中不存在的记录;
+// 这类残留记录无害, 展示时按当前已加载词库过滤, 命不中就不显示.
 export const whenReady = () => {
     if (!readyPromise) {
-        readyPromise = loadState()
-            .then(saved => {
-                // 分包按需加载, 启动时无法索引全部词库, 故不再在此剔除"词库中不存在"的记录;
-                // 这类残留记录无害(展示时按当前已加载词库过滤, 命不中就不显示).
-                state = saved;
-                ready = true;
-                notify();
-            })
-            .catch(error => {
+        readyPromise = (async () => {
+            try {
+                state = await loadState();
+            } catch (error) {
                 console.error('学习进度读取失败', error);
-                ready = true;
-                notify();
-            });
+            }
+            ready = true;
+            notify();
+        })();
     }
     return readyPromise;
 };

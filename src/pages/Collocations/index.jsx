@@ -11,12 +11,15 @@ export default function Collocations() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        listCollocationsWithStats()
-            .then(list => {
-                setLevels(list);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+        const load = async () => {
+            try {
+                setLevels(await listCollocationsWithStats());
+            } catch {
+                // 加载失败时保留空列表
+            }
+            setLoading(false);
+        };
+        load();
     }, []);
 
     if (loading) {
