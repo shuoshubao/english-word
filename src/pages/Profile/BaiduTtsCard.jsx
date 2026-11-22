@@ -118,7 +118,7 @@ export default function BaiduTtsCard({ onSaved }) {
             size="small"
             title={
                 <Space>
-                    <span>百度语音合成</span>
+                    <span>百度TTS</span>
                     <Tooltip
                         title={
                             <>
@@ -131,7 +131,7 @@ export default function BaiduTtsCard({ onSaved }) {
                                 >
                                     百度智能云控制台
                                 </a>
-                                <span>开通语音合成, 获取 API Key / Secret Key</span>
+                                <span>开通TTS, 获取 API Key / Secret Key</span>
                             </>
                         }
                     >

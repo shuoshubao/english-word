@@ -1,4 +1,4 @@
-// 百度智能云语音合成(短文本在线合成 text2audio), 专用于整句朗读.
+// 百度智能云 TTS(短文本在线合成 text2audio), 专用于整句朗读.
 // 本地走 Vite 代理(/baidu-aip /baidu-tts), 线上走 Vercel 转发(/proxy/aip /proxy/bdaitts).
 // 凭证: API Key / Secret Key 从百度智能云控制台获取, 与百度网盘开放平台是两套.
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';

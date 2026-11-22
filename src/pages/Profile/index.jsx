@@ -198,15 +198,18 @@ export default function Profile() {
             <Card
                 title="数据概览"
                 extra={
-                    <Select
-                        value={voice}
-                        options={VOICE_SOURCES.map(s => ({ value: s.id, label: s.name }))}
-                        style={{ width: 140 }}
-                        onChange={v => {
-                            setVoiceSource(v);
-                            setVoice(v);
-                        }}
-                    />
+                    <Space>
+                        <Text type="secondary">单词发音</Text>
+                        <Select
+                            value={voice}
+                            options={VOICE_SOURCES}
+                            style={{ width: 140 }}
+                            onChange={v => {
+                                setVoiceSource(v);
+                                setVoice(v);
+                            }}
+                        />
+                    </Space>
                 }
             >
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-5">
@@ -274,8 +277,8 @@ export default function Profile() {
                     <Segmented
                         value={ttsSource}
                         options={[
-                            { label: '百度语音合成', value: 'baidu' },
-                            { label: '豆包语音合成', value: 'doubao' }
+                            { label: '百度TTS', value: 'baidu' },
+                            { label: '豆包TTS', value: 'doubao' }
                         ]}
                         onChange={value => {
                             setSentenceTtsSource(value);

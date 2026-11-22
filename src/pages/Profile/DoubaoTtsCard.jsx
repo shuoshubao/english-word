@@ -3,7 +3,7 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 import { Card, Form, Input, Select, Space, Tooltip } from 'antd';
 import { useState } from 'react';
 
-// 语音合成大模型 2.0 音色
+// TTS 大模型 2.0 音色
 const VOICES = [
     { value: 'zh_female_vv_uranus_bigtts', label: 'Vivi 2.0 (女, 多语种)' },
     { value: 'zh_female_xiaohe_uranus_bigtts', label: '小何 2.0 (女)' },
@@ -46,7 +46,7 @@ export default function DoubaoTtsCard({ onSaved }) {
             size="small"
             title={
                 <Space>
-                    <span>豆包语音合成</span>
+                    <span>豆包TTS</span>
                     <Tooltip
                         title={
                             <>

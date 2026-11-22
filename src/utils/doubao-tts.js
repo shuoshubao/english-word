@@ -1,4 +1,4 @@
-// 豆包语音合成大模型 2.0 (V3 SSE), 例句朗读与调试卡片共用
+// 豆包 TTS 大模型 2.0 (V3 SSE), 例句朗读与调试卡片共用
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
 const isLocal = window.location.hostname === 'localhost';
 const API = isLocal ? '/doubao-tts/api/v3/tts/unidirectional/sse' : `${VERCEL_PROXY}/doubaotts/api/v3/tts/unidirectional/sse`;

@@ -89,17 +89,14 @@ export const playBuffer = (objectUrl, onEnd) => {
     audio.play().catch(finish);
 };
 
-// 按发音来源设置选择有道或百度
-const sourceUrl = text => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text) : youdaoUrl(text));
-
-// 英文单词发音(按"发音来源"设置走有道或百度)
-export const speak = (word, onEnd) => {
-    if (!word) {
-        if (onEnd) onEnd();
-        return;
-    }
-    play(sourceUrl(word), onEnd);
+// 单词发音设置里的 TTS 来源 -> 句子 TTS 的音源
+const WORD_TTS_SOURCES = {
+    'baidu-tts': 'baidu',
+    'doubao-tts': 'doubao'
 };
+
+// 按发音来源设置选择有道或百度翻译
+const sourceUrl = text => (getVoiceSource() === 'baidu' ? baiduTtsUrl(text) : youdaoUrl(text));
 
 // 英文句子(例句/调试句)朗读: 按当前音源走百度或豆包, 失败不回退
 // 缓存由 playByKey 统一处理, key 含音源+凭证+音色+语速+文本, 命中不再请求接口.
@@ -120,4 +117,18 @@ export const speakSentence = (text, onEnd, onError, sourceOverride) => {
             : `${info.apiKey}|${info.secretKey}|${info.voice || 0}|${info.speed ?? 5}`;
     const key = `tts-${source}-${credentials}-${text}`;
     playByKey(key, () => synthesizeSentence(text, source, info), onEnd, onError);
+};
+
+// 英文单词发音: 普通音源走词典接口, TTS 来源走对应音源
+export const speak = (word, onEnd, onError) => {
+    if (!word) {
+        if (onEnd) onEnd();
+        return;
+    }
+    const ttsSource = WORD_TTS_SOURCES[getVoiceSource()];
+    if (ttsSource) {
+        speakSentence(word, onEnd, onError, ttsSource);
+        return;
+    }
+    play(sourceUrl(word), onEnd);
 };

@@ -1634,7 +1634,7 @@ export default [
                 examples: [],
                 id: 'middle__James Naismith',
                 category: 'middle'
-            },
+            }
         ]
     },
     {
@@ -2673,7 +2673,7 @@ export default [
                 examples: [],
                 id: 'middle__South Africa',
                 category: 'middle'
-            },
+            }
         ]
     },
     {
@@ -3309,7 +3309,7 @@ export default [
                 examples: [],
                 id: 'high__Mount Kilauea',
                 category: 'high'
-            },
+            }
         ]
     },
     {
