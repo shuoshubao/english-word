@@ -287,9 +287,9 @@ export default function Profile() {
                     />
                 }
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <BaiduTtsCard onSaved={() => setTtsVersion(v => v + 1)} />
-                    <DoubaoTtsCard onSaved={() => setTtsVersion(v => v + 1)} />
+                <div className="grid grid-cols-2 max-md:grid-cols-1">
+                    <BaiduTtsCard active={ttsSource === 'baidu'} onSaved={() => setTtsVersion(v => v + 1)} />
+                    <DoubaoTtsCard active={ttsSource === 'doubao'} onSaved={() => setTtsVersion(v => v + 1)} />
                 </div>
 
                 <TtsSamplePanel source={ttsSource} version={ttsVersion} />

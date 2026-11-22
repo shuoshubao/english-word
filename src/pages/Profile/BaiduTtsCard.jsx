@@ -95,7 +95,7 @@ const saveTtsInfo = info => {
     }
 };
 
-export default function BaiduTtsCard({ onSaved }) {
+export default function BaiduTtsCard({ onSaved, active }) {
     const [form] = Form.useForm();
     const [ttsInfo, setTtsInfo] = useState(readTtsInfo);
     const initialLibrary = ttsInfo.library || TTS_LIBRARIES[0].value;
@@ -114,8 +114,11 @@ export default function BaiduTtsCard({ onSaved }) {
     };
 
     return (
-        <Card
+        <Card.Grid
+            hoverable={false}
             size="small"
+            className="w-full!"
+            style={active ? { boxShadow: '0 4px 16px rgba(102,82,209,0.18)' } : undefined}
             title={
                 <Space>
                     <span>百度TTS</span>
@@ -175,6 +178,6 @@ export default function BaiduTtsCard({ onSaved }) {
                     </Form.Item>
                 </div>
             </Form>
-        </Card>
+        </Card.Grid>
     );
 }

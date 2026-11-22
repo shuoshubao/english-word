@@ -1,5 +1,6 @@
 // 发音: 统一经 vercel 代理(fetch+blob 播放), 规避第三方域无 CORS 头与媒体 Range 请求问题.
 // 单词按设置走有道 dictvoice 或百度 gettts; 例句按设置走百度智能云或豆包 TTS
+import { Modal } from 'antd';
 import { getSentenceTtsSource, hasSentenceTtsConfig, readSentenceTtsInfo, synthesizeSentence } from '@/utils/sentence-tts';
 import { getVoiceSource } from '@/utils/settings';
 
@@ -108,6 +109,10 @@ export const speakSentence = (text, onEnd, onError, sourceOverride) => {
     const source = sourceOverride || getSentenceTtsSource();
     const info = readSentenceTtsInfo(source);
     if (!hasSentenceTtsConfig(source, info)) {
+        Modal.error({
+            title: '未配置TTS',
+            content: `请先到「我的 - 句子发音」配置${source === 'baidu' ? '百度TTS' : '豆包TTS'}的必填项`
+        });
         if (onEnd) onEnd();
         return;
     }

@@ -26,7 +26,7 @@ const saveInfo = info => {
     }
 };
 
-export default function DoubaoTtsCard({ onSaved }) {
+export default function DoubaoTtsCard({ onSaved, active }) {
     const [form] = Form.useForm();
     const [info, setInfo] = useState(readDoubaoInfo);
 
@@ -42,8 +42,11 @@ export default function DoubaoTtsCard({ onSaved }) {
     };
 
     return (
-        <Card
+        <Card.Grid
+            hoverable={false}
             size="small"
+            className="w-full!"
+            style={active ? { boxShadow: '0 4px 16px rgba(102,82,209,0.18)' } : undefined}
             title={
                 <Space>
                     <span>豆包TTS</span>
@@ -59,7 +62,7 @@ export default function DoubaoTtsCard({ onSaved }) {
                                 >
                                     火山引擎控制台
                                 </a>
-                                <span>获取 API Key</span>
+                                <span>开通TTS, 获取 API Key</span>
                             </>
                         }
                     >
@@ -87,6 +90,6 @@ export default function DoubaoTtsCard({ onSaved }) {
                     </Form.Item>
                 </div>
             </Form>
-        </Card>
+        </Card.Grid>
     );
 }
