@@ -14,7 +14,7 @@ import {
     ShakeOutlined,
     SoundOutlined
 } from '@ant-design/icons';
-import { Button, Input, Listy, Progress, Segmented, Space, Table, Tooltip } from 'antd';
+import { Button, Input, Listy, message, Progress, Segmented, Space, Table, Tooltip } from 'antd';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { speak, speakSentence } from '@/utils/audio';
 import { hasRecord } from '@/utils/records';
@@ -54,13 +54,13 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
     const [quizMode, setQuizMode] = useState(() => quizEnabled && localStorage.getItem('EnglishWord:exam') === '1');
     const [answers, setAnswers] = useState({}); // wordId -> { value, status: 'correct'|'wrong'|null }
     const [revealedWords, setRevealedWords] = useState(() => new Set()); // 默写模式下被眼睛点开显示单词的行
-    const focusIndexRef = useRef(-1);
+    const focusIdRef = useRef(null);
     const blinkTimer = useRef(null);
 
     useEffect(() => {
         setOrder(words);
         setPage(1);
-        focusIndexRef.current = -1;
+        focusIdRef.current = null;
     }, [words]);
 
     const toggleQuiz = () => {
@@ -139,7 +139,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
             }
             const targetPage = Math.floor(index / pageSize) + 1;
             const id = list[index].id;
-            focusIndexRef.current = index;
+            focusIdRef.current = id;
             setPage(targetPage);
             setHighlightId(id);
             requestAnimationFrame(() => {
@@ -154,16 +154,25 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         [list, pageSize]
     );
 
+    const speakWord = item => {
+        focusIdRef.current = item.id;
+        speak(item.word);
+    };
+
     const focusNextUnread = () => {
         const unmarked = item => !hasRecord(state.known, item.id) && !hasRecord(state.unknown, item.id);
-        const from = focusIndexRef.current + 1;
+        const cursorIndex = focusIdRef.current === null ? -1 : list.findIndex(item => item.id === focusIdRef.current);
+        const from = cursorIndex + 1;
         let next = list.findIndex((item, index) => index >= from && unmarked(item));
-        if (next === -1) {
+        if (next === -1 && from > 0) {
             next = list.findIndex(unmarked);
         }
-        if (next !== -1) {
-            focusWord(next);
+        if (next === -1) {
+            const hint = filter === 'all' || filter === 'unread' ? '没有未读单词了' : '当前筛选下没有未读单词';
+            message.info(hint);
+            return;
         }
+        focusWord(next);
     };
 
     const shuffle = () => {
@@ -174,7 +183,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         }
         setOrder(arr);
         setPage(1);
-        focusIndexRef.current = -1;
+        focusIdRef.current = null;
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -200,7 +209,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     if (revealedWords.has(record.id)) {
                         return (
                             <div className="flex items-center gap-2">
-                                <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speak(record.word)}>
+                                <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speakWord(record)}>
                                     <SoundOutlined style={{ color: '#6652d1' }} />
                                     <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
                                     {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
@@ -218,7 +227,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     );
                 }
                 return (
-                    <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speak(record.word)}>
+                    <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speakWord(record)}>
                         <SoundOutlined style={{ color: '#6652d1' }} />
                         <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
                         {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
@@ -334,7 +343,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                         onChange={v => {
                             setFilter(v);
                             setPage(1);
-                            focusIndexRef.current = -1;
+                            focusIdRef.current = null;
                         }}
                     />
                 ) : null}
