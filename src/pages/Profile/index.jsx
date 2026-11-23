@@ -1,4 +1,5 @@
 import { vocabularyCatalog } from '@/data/catalog';
+import { createBackup, unpackBackup } from '@/utils/backup-file';
 import BaiduTtsCard from '@/pages/Profile/BaiduTtsCard';
 import DebugZone from '@/pages/Profile/DebugZone';
 import DoubaoTtsCard from '@/pages/Profile/DoubaoTtsCard';
@@ -7,7 +8,7 @@ import { checkAuthStatus, downloadBackup, exchangeCode, isLocal, listBackups, st
 import { getSentenceTtsSource, setSentenceTtsSource } from '@/utils/sentence-tts';
 import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '@/utils/settings';
 import { merge, reset } from '@/utils/state';
-import { toFlatProgress, toNestedProgress } from '@/utils/storage';
+import { buildBackupContent, toFlatProgress } from '@/utils/storage';
 import { useLearningState } from '@/utils/useStore';
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
 import { App, Avatar, Button, Calendar, Card, Divider, Input, Modal, Segmented, Select, Space, Statistic, Typography } from 'antd';
@@ -94,12 +95,11 @@ export default function Profile() {
     const todayCount = activity[formatDate(new Date())] || 0;
 
     const exportProgress = () => {
-        const content = JSON.stringify({ app: '背单词', version: 1, exportedAt: new Date().toISOString(), progress: toNestedProgress(state) }, null, 2);
-        const stamp = `${pad(new Date().getMonth() + 1)}${pad(new Date().getDate())}`;
-        const url = URL.createObjectURL(new Blob([content], { type: 'application/json' }));
+        const { name, bytes } = createBackup(buildBackupContent(state));
+        const url = URL.createObjectURL(new Blob([bytes], { type: 'application/zip' }));
         const link = document.createElement('a');
         link.href = url;
-        link.download = `学习进度-${stamp}.json`;
+        link.download = name;
         link.click();
         URL.revokeObjectURL(url);
         message.success('已导出');
@@ -107,9 +107,9 @@ export default function Profile() {
 
     const importProgress = async () => {
         try {
-            const [handle] = await window.showOpenFilePicker({ types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }] });
+            const [handle] = await window.showOpenFilePicker({ types: [{ description: 'ZIP', accept: { 'application/zip': ['.zip'] } }] });
             const file = await handle.getFile();
-            const value = JSON.parse(await file.text());
+            const value = JSON.parse(unpackBackup(await file.arrayBuffer()));
             const p = value.progress;
             const looksValid = p && typeof p === 'object' && (Array.isArray(p.favorites) || PROGRESS_KEYS.some(k => p[k]));
             if (!looksValid) {
@@ -226,14 +226,7 @@ export default function Profile() {
 
     const backupToCloud = () =>
         runBaidu(async () => {
-            const content = JSON.stringify({
-                app: '背单词',
-                version: 1,
-                exportedAt: new Date().toISOString(),
-                updatedAt: Date.now(),
-                progress: toNestedProgress(state)
-            });
-            const name = await uploadBackup(content);
+            const name = await uploadBackup(buildBackupContent(state));
             message.success(`已备份为 ${name}`);
         }, 'backup');
 
@@ -438,7 +431,7 @@ export default function Profile() {
                     value={restoreFsId}
                     onChange={setRestoreFsId}
                     options={restoreFiles.map(item => {
-                        return { value: String(item.fsId), label: new Date(item.mtime * 1000).toLocaleString('zh-CN', { hour12: false }) };
+                        return { value: String(item.fsId), label: new Date(item.timestamp).toLocaleString('zh-CN', { hour12: false }) };
                     })}
                     optionRender={option => {
                         const chosen = restoreFiles.find(item => String(item.fsId) === option.value);

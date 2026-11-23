@@ -1,5 +1,7 @@
 // 百度网盘同步: 本地走 Vite 代理, 线上走 Vercel 转发
-// 应用根目录 /apps/EnglishWord, 备份存其下 progress/, 文件名: <毫秒时间戳>.json
+// 应用根目录 /apps/EnglishWord, 备份存其下 progress/, 文件名: <毫秒时间戳>.zip
+import { createBackup, unpackBackup } from './backup-file';
+
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
 export const isLocal = window.location.hostname === 'localhost';
 // 本地前缀对应 vite.config.js 的 proxy, 线上 target 对应 Vercel proxy/config.js
@@ -265,20 +267,30 @@ export const checkAuthStatus = () => {
 // ---- files ----
 export const listBackups = async () => {
     const token = await validToken();
-    const params = new URLSearchParams({
-        method: 'list',
-        dir: DIR,
-        order: 'time',
-        desc: '1',
-        limit: '50',
-        access_token: token
-    });
-    const data = await getJson(`${NETDISK}/file?${params}`);
-    return (data.list ?? []).filter(item => {
-        return !item.isdir && /^\d+\.json$/.test(item.server_filename);
+    const items = [];
+    let start = 0;
+    while (true) {
+        const params = new URLSearchParams({
+            method: 'list',
+            dir: DIR,
+            order: 'name',
+            limit: '1000',
+            start: String(start),
+            access_token: token
+        });
+        const data = await getJson(`${NETDISK}/file?${params}`);
+        const list = data.list ?? [];
+        items.push(...list);
+        if (list.length < 1000) {
+            break;
+        }
+        start += list.length;
+    }
+    return items.filter(item => {
+        return !item.isdir && /^\d+\.zip$/.test(item.server_filename);
     }).map(item => {
-        return { fsId: item.fs_id, name: item.server_filename, mtime: item.server_mtime };
-    });
+        return { fsId: item.fs_id, name: item.server_filename, timestamp: Number(item.server_filename.slice(0, -4)) };
+    }).sort((first, second) => second.timestamp - first.timestamp);
 };
 
 // 拉取指定目录下的直接子项(不递归), 默认从网盘根目录开始。目录节点带空 children 占位, 供 react-arborist 识别为可展开
@@ -344,7 +356,9 @@ const fetchFileResponse = async fsId => {
 
 const downloadFile = async fsId => (await fetchFileResponse(fsId)).text();
 
-export const downloadBackup = async fsId => JSON.parse(await downloadFile(fsId));
+export const downloadBackup = async fsId => {
+    return JSON.parse(unpackBackup(await (await fetchFileResponse(fsId)).arrayBuffer()));
+};
 
 // 调试用: 读取文件原始文本
 export const readFileText = fsId => downloadFile(fsId);
@@ -365,10 +379,10 @@ const ensureDir = async (token, dir) => {
 
 export const uploadBackup = async content => {
     const token = await validToken();
-    const bytes = new TextEncoder().encode(content);
+    const { name, bytes } = createBackup(content);
     const hash = md5(bytes);
     await ensureDir(token, DIR);
-    const path = `${DIR}/${Date.now()}.json`;
+    const path = `${DIR}/${name}`;
     const pre = await postQuery(`${NETDISK}/file`, {
         method: 'precreate',
         access_token: token,
@@ -389,7 +403,7 @@ export const uploadBackup = async content => {
             partseq: '0'
         });
         const form = new FormData();
-        form.append('file', new Blob([bytes], { type: 'application/json' }), path.split('/').pop());
+        form.append('file', new Blob([bytes], { type: 'application/zip' }), path.split('/').pop());
         checkError(await (await fetch(`${UPLOAD}/superfile2?${uploadParams}`, { method: 'POST', body: form })).json());
         await postCreate(`${NETDISK}/file`, {
             method: 'create',

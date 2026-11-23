@@ -76,6 +76,16 @@ export const normalizeState = state => {
     };
 };
 
+export const buildBackupContent = state => {
+    return JSON.stringify({
+        app: '背单词',
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        updatedAt: Date.now(),
+        progress: toNestedProgress(state)
+    });
+};
+
 export const getSyncStatus = () => ({ enabled: false, error: '' });
 
 const readLocal = () => {
