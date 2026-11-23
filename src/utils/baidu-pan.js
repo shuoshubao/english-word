@@ -235,7 +235,10 @@ const validToken = async () => {
     return data.access_token;
 };
 
-// 校验当前是否已授权: 确保 token 有效后调 uinfo 让百度确认, 失败返回 false
+// 百度头像返回 http, 线上 https 页面会被浏览器拦截, 换成 https
+const toHttps = url => (url ? url.replace(/^http:\/\//, 'https://') : '');
+
+// 校验当前是否已授权: 确保 token 有效后调 uinfo 让百度确认, 同时取回登录用户名和头像
 // 合并并发调用, 避免 StrictMode 下重复挂载触发两次请求
 let authCheckInFlight = null;
 export const checkAuthStatus = () => {
@@ -247,9 +250,11 @@ export const checkAuthStatus = () => {
             const accessToken = await validToken();
             const params = new URLSearchParams({ method: 'uinfo', access_token: accessToken });
             const data = await getJson(`${NETDISK}/nas?${params}`);
-            return Boolean(data?.uk);
+            return data?.uk
+                ? { authorized: true, name: data.baidu_name || '', avatar: toHttps(data.avatar_url) }
+                : { authorized: false, name: '', avatar: '' };
         } catch {
-            return false;
+            return { authorized: false, name: '', avatar: '' };
         } finally {
             authCheckInFlight = null;
         }
@@ -272,8 +277,8 @@ export const listBackups = async () => {
     return (data.list ?? []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
 };
 
-// 拉取指定目录下的直接子项(不递归)。目录节点带空 children 占位, 供 react-arborist 识别为可展开
-export const listDir = async (dir = APP_DIR) => {
+// 拉取指定目录下的直接子项(不递归), 默认从网盘根目录开始。目录节点带空 children 占位, 供 react-arborist 识别为可展开
+export const listDir = async (dir = '/') => {
     const token = await validToken();
     const items = [];
     let start = 0;

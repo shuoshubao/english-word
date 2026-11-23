@@ -10,7 +10,7 @@ import { merge, reset } from '@/utils/state';
 import { toFlatProgress, toNestedProgress } from '@/utils/storage';
 import { useLearningState } from '@/utils/useStore';
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Divider, Input, Modal, Segmented, Select, Space, Statistic, Typography } from 'antd';
+import { App, Avatar, Button, Calendar, Card, Divider, Input, Modal, Segmented, Select, Space, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -49,14 +49,14 @@ export default function Profile() {
     const [authModalOpen, setAuthModalOpen] = useState(false);
     const [authCode, setAuthCode] = useState('');
     const [authLoading, setAuthLoading] = useState(false);
-    const [authStatus, setAuthStatus] = useState('');
+    const [auth, setAuth] = useState({ status: '', name: '', avatar: '' });
     const [ttsSource, setTtsSource] = useState(getSentenceTtsSource);
     const [ttsVersion, setTtsVersion] = useState(0);
 
     useEffect(() => {
         const checkAuth = async () => {
-            const ok = await checkAuthStatus();
-            setAuthStatus(ok ? 'ok' : 'fail');
+            const { authorized, name, avatar } = await checkAuthStatus();
+            setAuth({ status: authorized ? 'ok' : 'fail', name, avatar });
         };
         checkAuth();
     }, []);
@@ -131,7 +131,8 @@ export default function Profile() {
             await exchangeCode(authCode);
             setAuthModalOpen(false);
             setAuthCode('');
-            setAuthStatus('ok');
+            const { name, avatar } = await checkAuthStatus();
+            setAuth({ status: 'ok', name, avatar });
             message.success('百度网盘已授权');
         } catch (error) {
             message.error(`授权失败: ${error.message}`);
@@ -290,7 +291,17 @@ export default function Profile() {
             </Card>
 
             <Card
-                title="百度网盘"
+                title={
+                    <Space align="center">
+                        <span>百度网盘</span>
+                        {auth.status === 'ok' ? (
+                            <Space size={6} align="center">
+                                {auth.avatar ? <Avatar src={auth.avatar} size={24} /> : null}
+                                {auth.name ? <Text type="secondary" className="text-sm font-normal">{auth.name}</Text> : null}
+                            </Space>
+                        ) : null}
+                    </Space>
+                }
                 extra={
                     <Space>
                         <Button icon={<CloudDownloadOutlined />} loading={baiduBusy === 'sync'} onClick={syncFromCloud}>
@@ -307,11 +318,11 @@ export default function Profile() {
                         <Text type="secondary" className="text-xs">
                             授权状态:
                         </Text>
-                        {authStatus === 'ok' ? (
+                        {auth.status === 'ok' ? (
                             <Text type="success" className="text-xs">
                                 已授权
                             </Text>
-                        ) : authStatus === 'fail' ? (
+                        ) : auth.status === 'fail' ? (
                             <Text type="danger" className="text-xs">
                                 未授权
                             </Text>
