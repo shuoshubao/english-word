@@ -14,7 +14,7 @@ dayjs.locale('zh-cn');
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <ConfigProvider theme={theme} locale={zhCN}>
+        <ConfigProvider theme={theme} locale={zhCN} button={{ autoInsertSpace: false }}>
             <AntApp>
                 <HashRouter>
                     <App />
