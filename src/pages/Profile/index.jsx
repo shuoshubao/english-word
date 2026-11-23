@@ -11,7 +11,7 @@ import { merge, reset } from '@/utils/state';
 import { buildBackupContent, toFlatProgress } from '@/utils/storage';
 import { useLearningState } from '@/utils/useStore';
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
-import { App, Avatar, Button, Calendar, Card, Divider, Input, Modal, Segmented, Select, Space, Statistic, Typography } from 'antd';
+import { App, Avatar, Button, Calendar, Card, Divider, Input, Modal, Progress, Segmented, Select, Skeleton, Space, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import pLimit from 'p-limit';
 import { useEffect, useMemo, useState } from 'react';
@@ -78,6 +78,9 @@ export default function Profile() {
     const [authLoading, setAuthLoading] = useState(false);
     const [auth, setAuth] = useState({ status: '', name: '', avatar: '' });
     const [restoreOpen, setRestoreOpen] = useState(false);
+    const [restoreLoading, setRestoreLoading] = useState(false);
+    const [restoreLoaded, setRestoreLoaded] = useState(0);
+    const [restoreTotal, setRestoreTotal] = useState(0);
     const [restoreFiles, setRestoreFiles] = useState([]);
     const [restoreFsId, setRestoreFsId] = useState('');
     const [ttsSource, setTtsSource] = useState(getSentenceTtsSource);
@@ -185,27 +188,44 @@ export default function Profile() {
         }
     };
 
-    const syncFromCloud = () =>
+    const syncFromCloud = () => {
+        setRestoreOpen(true);
+        setRestoreLoading(true);
+        setRestoreLoaded(0);
+        setRestoreTotal(0);
+        setRestoreFiles([]);
+        setRestoreFsId('');
         runBaidu(async () => {
-            const files = (await listBackups()).slice(0, 20);
-            if (!files.length) {
-                message.warning('云端还没有备份文件');
-                return;
+            try {
+                const files = (await listBackups()).slice(0, 20);
+                if (!files.length) {
+                    setRestoreOpen(false);
+                    message.warning('云端还没有备份文件');
+                    return;
+                }
+                setRestoreTotal(files.length);
+                const enriched = await Promise.all(files.map(item => {
+                    return SummaryLimit(async () => {
+                        try {
+                            const { progress } = await getBackup(item.fsId);
+                            return { ...item, summary: backupSummary(progress) };
+                        } catch {
+                            return { ...item, summary: '摘要读取失败' };
+                        } finally {
+                            setRestoreLoaded(count => count + 1);
+                        }
+                    });
+                }));
+                setRestoreFiles(enriched);
+                setRestoreFsId(String(enriched[0].fsId));
+            } catch (error) {
+                setRestoreOpen(false);
+                throw error;
+            } finally {
+                setRestoreLoading(false);
             }
-            const enriched = await Promise.all(files.map(item => {
-                return SummaryLimit(async () => {
-                    try {
-                        const { progress } = await getBackup(item.fsId);
-                        return { ...item, summary: backupSummary(progress) };
-                    } catch {
-                        return { ...item, summary: '摘要读取失败' };
-                    }
-                });
-            }));
-            setRestoreFiles(enriched);
-            setRestoreFsId(String(enriched[0].fsId));
-            setRestoreOpen(true);
         }, 'sync');
+    };
 
     const confirmRestore = () => {
         const chosen = restoreFiles.find(item => String(item.fsId) === restoreFsId);
@@ -423,26 +443,43 @@ export default function Profile() {
                 onOk={confirmRestore}
                 okText="恢复"
                 cancelText="取消"
+                okButtonProps={{ disabled: restoreLoading }}
                 destroyOnHidden
             >
-                <Select
-                    className="w-full"
-                    popupMatchSelectWidth={false}
-                    value={restoreFsId}
-                    onChange={setRestoreFsId}
-                    options={restoreFiles.map(item => {
-                        return { value: String(item.fsId), label: new Date(item.timestamp).toLocaleString('zh-CN', { hour12: false }) };
-                    })}
-                    optionRender={option => {
-                        const chosen = restoreFiles.find(item => String(item.fsId) === option.value);
-                        return (
-                            <div className="flex flex-col gap-0.5 py-1">
-                                <span>{option.label}</span>
-                                <span className="text-xs text-[#999]">{chosen?.summary}</span>
-                            </div>
-                        );
-                    }}
-                />
+                {restoreLoading ? (
+                    <div className="flex flex-col gap-4 py-1">
+                        <div className="flex items-center justify-between">
+                            <Text type="secondary" className="text-xs">正在读取备份摘要...</Text>
+                            <Text type="secondary" className="text-xs">{restoreLoaded}{restoreTotal ? ` / ${restoreTotal}` : ''}</Text>
+                        </div>
+                        <Progress
+                            percent={restoreTotal ? Math.round(restoreLoaded / restoreTotal * 100) : undefined}
+                            status={restoreTotal ? 'active' : undefined}
+                            showInfo={false}
+                            size="small"
+                        />
+                        <Skeleton active title={false} paragraph={{ rows: 2 }} />
+                    </div>
+                ) : (
+                    <Select
+                        className="w-full"
+                        popupMatchSelectWidth={false}
+                        value={restoreFsId}
+                        onChange={setRestoreFsId}
+                        options={restoreFiles.map(item => {
+                            return { value: String(item.fsId), label: new Date(item.timestamp).toLocaleString('zh-CN', { hour12: false }) };
+                        })}
+                        optionRender={option => {
+                            const chosen = restoreFiles.find(item => String(item.fsId) === option.value);
+                            return (
+                                <div className="flex flex-col gap-0.5 py-1">
+                                    <span>{option.label}</span>
+                                    <span className="text-xs text-[#999]">{chosen?.summary}</span>
+                                </div>
+                            );
+                        }}
+                    />
+                )}
             </Modal>
         </div>
     );
