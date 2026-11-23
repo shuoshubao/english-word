@@ -73,6 +73,7 @@ export default function DoubaoTtsCard({ onSaved, active }) {
             }
         >
             <Form
+                name="doubaoTtsForm"
                 form={form}
                 layout="vertical"
                 autoComplete="off"

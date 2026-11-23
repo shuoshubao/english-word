@@ -145,6 +145,7 @@ export default function BaiduTtsCard({ onSaved, active }) {
             }
         >
             <Form
+                name="baiduTtsForm"
                 form={form}
                 layout="vertical"
                 autoComplete="off"

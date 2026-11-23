@@ -349,7 +349,7 @@ export default function Profile() {
                     </Space>
                 }
             >
-                <Form form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo} onValuesChange={handlePanValuesChange}>
+                <Form name="baiduPanForm" form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo} onValuesChange={handlePanValuesChange}>
                     <Form.Item name="appId" label="AppID" rules={[{ required: true, message: '请输入 AppID' }]}>
                         <InputNumber style={{ width: '100%' }} min={0} precision={0} placeholder="应用 AppID" />
                     </Form.Item>
