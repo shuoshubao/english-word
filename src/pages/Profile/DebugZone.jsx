@@ -81,6 +81,12 @@ const isImageBlob = async blob => {
     );
 };
 
+// CDN 的 Content-Type 不可靠, 用文件头 %PDF 判断
+const isPdfBlob = async blob => {
+    const head = new Uint8Array(await blob.slice(0, 4).arrayBuffer());
+    return head[0] === 0x25 && head[1] === 0x50 && head[2] === 0x44 && head[3] === 0x46;
+};
+
 const languageOf = name => {
     const dot = name.lastIndexOf('.');
     return dot < 0 ? 'plaintext' : LANGUAGES[name.slice(dot + 1).toLowerCase()] || 'plaintext';
@@ -195,8 +201,16 @@ export default function DebugZone() {
         }
         return run(async () => {
             const blob = await readFileBlob(file.fsId);
-            // 按实际内容判断图片, 其余一律按文本读取, 无需逐个列举扩展名
-            const content = (await isImageBlob(blob)) ? { image: true, value: URL.createObjectURL(blob) } : { image: false, value: await blob.text() };
+            // 按实际内容判断类型, 其余一律按文本读取, 无需逐个列举扩展名
+            let content;
+            if (await isImageBlob(blob)) {
+                content = { type: 'image', value: URL.createObjectURL(blob) };
+            } else if (await isPdfBlob(blob)) {
+                // 指定 MIME, 否则浏览器可能直接下载而不内联显示
+                content = { type: 'pdf', value: URL.createObjectURL(new Blob([blob], { type: 'application/pdf' })) };
+            } else {
+                content = { type: 'text', value: await blob.text() };
+            }
             fileContentCache.set(file.fsId, content);
             if (seq === readSeq.current) {
                 setFileContent(content);
@@ -206,7 +220,7 @@ export default function DebugZone() {
 
     // 尽量按 JSON 缩进展示, 非合法 JSON 则原样输出
     const prettyContent = useMemo(() => {
-        const text = fileContent && !fileContent.image ? fileContent.value : '';
+        const text = fileContent?.type === 'text' ? fileContent.value : '';
         try {
             return JSON.stringify(JSON.parse(text), null, 2);
         } catch {
@@ -231,14 +245,14 @@ export default function DebugZone() {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 sm:grid-cols-[minmax(200px,280px)_1fr] gap-3">
-                            <div className="h-80 box-border rounded-lg border border-[#e8edf3] bg-white overflow-hidden p-1">
+                            <div className="h-[32rem] box-border rounded-lg border border-[#e8edf3] bg-white overflow-hidden p-1">
                                 <Tree
                                     ref={treeRef}
                                     key="baidu-pan-tree"
                                     data={fileTree}
                                     rowClassName="focus:outline-none"
                                     width="100%"
-                                    height={304}
+                                    height={508}
                                     indent={16}
                                     rowHeight={28}
                                     openByDefault={false}
@@ -293,15 +307,17 @@ export default function DebugZone() {
                                     }}
                                 </Tree>
                             </div>
-                            <div className="h-80 rounded-lg border border-[#e8e6f0] bg-[#fcfcfe] overflow-hidden">
+                            <div className="h-[32rem] rounded-lg border border-[#e8e6f0] bg-[#fcfcfe] overflow-hidden">
                                 {busy === 'read' ? (
                                     <div className="h-full p-3">
                                         <Skeleton active title={false} paragraph={{ rows: 8 }} />
                                     </div>
-                                ) : fileContent?.image ? (
+                                ) : fileContent?.type === 'image' ? (
                                     <div className="flex items-center justify-center h-full p-3 overflow-auto">
                                         <img src={fileContent.value} alt={activeFile?.name} className="max-w-full max-h-full object-contain" />
                                     </div>
+                                ) : fileContent?.type === 'pdf' ? (
+                                    <iframe src={fileContent.value} title={activeFile?.name} className="w-full h-full border-0" />
                                 ) : activeFile ? (
                                     <MonacoJsonViewer value={prettyContent} language={languageOf(activeFile.name)} />
                                 ) : (
