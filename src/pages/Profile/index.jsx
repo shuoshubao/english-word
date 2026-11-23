@@ -12,6 +12,7 @@ import { useLearningState } from '@/utils/useStore';
 import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
 import { App, Avatar, Button, Calendar, Card, Divider, Input, Modal, Segmented, Select, Space, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
+import pLimit from 'p-limit';
 import { useEffect, useMemo, useState } from 'react';
 
 const { Text } = Typography;
@@ -30,6 +31,8 @@ const backupSummary = progress => {
     const flat = toFlatProgress(progress);
     return `生词 ${flat.unknown.length} · 收藏 ${flat.favorites.length} · 认识 ${flat.known.length}`;
 };
+
+const summaryLimit = pLimit(5);
 
 // 备份文件按时间戳命名、写完不改, 同一 fsId 的内容固定, 下载结果可复用
 const backupCache = new Map();
@@ -180,18 +183,20 @@ export default function Profile() {
 
     const syncFromCloud = () =>
         runBaidu(async () => {
-            const files = (await listBackups()).slice(0, 10);
+            const files = (await listBackups()).slice(0, 20);
             if (!files.length) {
                 message.warning('云端还没有备份文件');
                 return;
             }
-            const enriched = await Promise.all(files.map(async file => {
-                try {
-                    const { progress } = await getBackup(file.fsId);
-                    return { ...file, summary: backupSummary(progress) };
-                } catch {
-                    return { ...file, summary: '摘要读取失败' };
-                }
+            const enriched = await Promise.all(files.map(file => {
+                return summaryLimit(async () => {
+                    try {
+                        const { progress } = await getBackup(file.fsId);
+                        return { ...file, summary: backupSummary(progress) };
+                    } catch {
+                        return { ...file, summary: '摘要读取失败' };
+                    }
+                });
             }));
             setRestoreFiles(enriched);
             setRestoreFsId(String(enriched[0].fsId));
