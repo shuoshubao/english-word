@@ -9,8 +9,8 @@ import { VOICE_SOURCES, getVoiceSource, setVoiceSource } from '@/utils/settings'
 import { merge, reset } from '@/utils/state';
 import { toFlatProgress, toNestedProgress } from '@/utils/storage';
 import { useLearningState } from '@/utils/useStore';
-import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined, QuestionCircleOutlined } from '@ant-design/icons';
-import { App, Button, Calendar, Card, Divider, Form, Input, InputNumber, Modal, Segmented, Select, Space, Statistic, Tooltip, Typography } from 'antd';
+import { CloudDownloadOutlined, CloudUploadOutlined, DeleteOutlined, ExportOutlined, ImportOutlined } from '@ant-design/icons';
+import { App, Button, Calendar, Card, Divider, Input, Modal, Segmented, Select, Space, Statistic, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -22,24 +22,6 @@ vocabularyCatalog.forEach(book => {
         PROGRESS_KEYS.push(book.category);
     }
 });
-
-const BAIDU_PAN_KEY = 'BaiduPanInfo';
-
-const readBaiduPanInfo = () => {
-    try {
-        return JSON.parse(localStorage.getItem(BAIDU_PAN_KEY)) || {};
-    } catch {
-        return {};
-    }
-};
-
-const saveBaiduPanInfo = values => {
-    try {
-        localStorage.setItem(BAIDU_PAN_KEY, JSON.stringify(values));
-    } catch {
-        // 隐私模式下 localStorage 可能不可写, 静默忽略
-    }
-};
 
 const pad = v => String(v).padStart(2, '0');
 const formatDate = date => `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
@@ -63,8 +45,6 @@ export default function Profile() {
     const [monthDate, setMonthDate] = useState(() => new Date(new Date().getFullYear(), new Date().getMonth(), 1));
     const [mode, setMode] = useState('month');
     const [voice, setVoice] = useState(getVoiceSource);
-    const [baiduPanForm] = Form.useForm();
-    const [baiduPanInfo, setBaiduPanInfo] = useState(readBaiduPanInfo);
     const [baiduBusy, setBaiduBusy] = useState('');
     const [authModalOpen, setAuthModalOpen] = useState(false);
     const [authCode, setAuthCode] = useState('');
@@ -75,7 +55,7 @@ export default function Profile() {
 
     useEffect(() => {
         const checkAuth = async () => {
-            const ok = await checkAuthStatus(baiduPanInfo);
+            const ok = await checkAuthStatus();
             setAuthStatus(ok ? 'ok' : 'fail');
         };
         checkAuth();
@@ -127,14 +107,9 @@ export default function Profile() {
         });
     };
 
-    const handlePanValuesChange = (changed, allValues) => {
-        saveBaiduPanInfo(allValues);
-        setBaiduPanInfo(allValues);
-    };
-
-    const openOobAuth = () => {
+    const openOobAuth = async () => {
         try {
-            startOobAuth(baiduPanInfo);
+            await startOobAuth();
             setAuthCode('');
             setAuthModalOpen(true);
         } catch (error) {
@@ -142,9 +117,9 @@ export default function Profile() {
         }
     };
 
-    const openRedirectAuth = () => {
+    const openRedirectAuth = async () => {
         try {
-            startRedirectAuth(baiduPanInfo);
+            await startRedirectAuth();
         } catch (error) {
             message.error(error.message);
         }
@@ -153,7 +128,7 @@ export default function Profile() {
     const submitAuthCode = async () => {
         setAuthLoading(true);
         try {
-            await exchangeCode(baiduPanInfo, authCode);
+            await exchangeCode(authCode);
             setAuthModalOpen(false);
             setAuthCode('');
             setAuthStatus('ok');
@@ -182,12 +157,12 @@ export default function Profile() {
 
     const syncFromCloud = () =>
         runBaidu(async () => {
-            const files = await listBackups(baiduPanInfo);
+            const files = await listBackups();
             if (!files.length) {
                 message.warning('云端还没有备份文件');
                 return;
             }
-            const payload = await downloadBackup(baiduPanInfo, files[0].fs_id);
+            const payload = await downloadBackup(files[0].fs_id);
             const progress = payload?.progress;
             if (!progress || typeof progress !== 'object') {
                 throw new Error('备份文件格式不正确');
@@ -204,7 +179,7 @@ export default function Profile() {
                 exportedAt: new Date().toISOString(),
                 progress: toNestedProgress(state)
             });
-            const name = await uploadBackup(baiduPanInfo, content);
+            const name = await uploadBackup(content);
             message.success(`已备份为 ${name}`);
         }, 'backup');
 
@@ -315,29 +290,7 @@ export default function Profile() {
             </Card>
 
             <Card
-                title={
-                    <Space>
-                        百度网盘
-                        <Tooltip
-                            title={
-                                <>
-                                    <span>请到</span>
-                                    <a
-                                        href="https://pan.baidu.com/union/console/applist"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="text-[#91caff] underline mx-0.5"
-                                    >
-                                        百度网盘开放平台
-                                    </a>
-                                    <span>获取 AppID / AppKey / SecretKey / SignKey</span>
-                                </>
-                            }
-                        >
-                            <QuestionCircleOutlined className="text-[#98a2b3] text-xs cursor-help" />
-                        </Tooltip>
-                    </Space>
-                }
+                title="百度网盘"
                 extra={
                     <Space>
                         <Button icon={<CloudDownloadOutlined />} loading={baiduBusy === 'sync'} onClick={syncFromCloud}>
@@ -349,22 +302,7 @@ export default function Profile() {
                     </Space>
                 }
             >
-                <Form name="baiduPanForm" form={baiduPanForm} layout="vertical" autoComplete="off" initialValues={baiduPanInfo} onValuesChange={handlePanValuesChange}>
-                    <Form.Item name="appId" label="AppID" rules={[{ required: true, message: '请输入 AppID' }]}>
-                        <InputNumber style={{ width: '100%' }} min={0} precision={0} placeholder="应用 AppID" />
-                    </Form.Item>
-                    <Form.Item name="appKey" label="AppKey" rules={[{ required: true, whitespace: true, message: '请输入 AppKey' }]}>
-                        <Input placeholder="应用 AppKey" />
-                    </Form.Item>
-                    <Form.Item name="secretKey" label="SecretKey" rules={[{ required: true, whitespace: true, message: '请输入 SecretKey' }]}>
-                        <Input.Password placeholder="应用 SecretKey" />
-                    </Form.Item>
-                    <Form.Item name="signKey" label="SignKey" rules={[{ required: true, whitespace: true, message: '请输入 SignKey' }]}>
-                        <Input.Password placeholder="应用 SignKey" />
-                    </Form.Item>
-                </Form>
-
-                <div className="border-t border-[#eee] pt-4 mt-2 flex flex-col gap-3">
+                <div className="flex flex-col gap-3">
                     <Space>
                         <Text type="secondary" className="text-xs">
                             授权状态:

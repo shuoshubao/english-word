@@ -3,12 +3,14 @@
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
 export const isLocal = window.location.hostname === 'localhost';
 // 本地前缀对应 vite.config.js 的 proxy, 线上 target 对应 Vercel proxy/config.js
-const API_PREFIX = { pan: '/baidu-api', open: '/baidu-oauth', upload: '/baidu-upload' };
-const API_TARGET = { pan: 'baidupan', open: 'baiduopen', upload: 'baiduupload' };
+const API_PREFIX = { pan: '/baidu-api', upload: '/baidu-upload' };
+const API_TARGET = { pan: 'baidupan', upload: 'baiduupload' };
 const apiBase = key => (isLocal ? API_PREFIX[key] : `${VERCEL_PROXY}/${API_TARGET[key]}`);
 const NETDISK = `${apiBase('pan')}/rest/2.0/xpan`;
-const OAUTH = `${apiBase('open')}/oauth/2.0`;
 const UPLOAD = `${apiBase('upload')}/rest/2.0/pcs`;
+// 授权 URL 与 token 换取走服务端专用端点, 密钥不下发浏览器
+const PAN_AUTH_URL = `${VERCEL_PROXY}/pan-auth-url`;
+const PAN_TOKEN_URL = `${VERCEL_PROXY}/pan-token`;
 // dlink 会 302 到 CDN 域名(无 CORS 头), 交给服务端代理跟随重定向后再返回
 const DL = isLocal ? '/baidu-dl' : `${VERCEL_PROXY}/dl`;
 const APP_DIR = '/apps/EnglishWord';
@@ -20,9 +22,6 @@ const RETURN_KEY = 'BaiduPanOAuthReturn';
 const TOKEN_KEY = 'BaiduPanToken';
 // 与百度控制台「授权回调页」一致: origin + pathname, 不含 hash/query
 const REDIRECT_URI = () => `${window.location.origin}${window.location.pathname}`;
-// 授权页是浏览器顶层跳转, 无 CORS 问题, 直连百度域名(不走代理)
-const AUTHORIZE_URL = 'https://openapi.baidu.com/oauth/2.0/authorize';
-
 // ---- MD5 (百度 precreate 需要 block_list) ----
 const K = new Uint32Array([
     0xd76aa478, 0xe8c7b756, 0x242070db, 0xc1bdceee, 0xf57c0faf, 0x4787c62a, 0xa8304613, 0xfd469501, 0x698098d8, 0x8b44f7af, 0xffff5bb1, 0x895cd7be, 0x6b901122,
@@ -154,63 +153,36 @@ const postCreate = async (url, params) => {
     return checkError(await response.json());
 };
 
-const readInfo = () => {
-    try {
-        return JSON.parse(localStorage.getItem('BaiduPanInfo')) ?? {};
-    } catch {
-        return {};
-    }
+// 授权页由服务端拼好(含 client_id), 前端只决定用哪种回调方式
+const fetchAuthUrl = async params => {
+    const data = checkError(await (await fetch(`${PAN_AUTH_URL}?${new URLSearchParams(params)}`)).json());
+    return data.url;
 };
 
 // 方式一: oob 授权, 新窗口显示授权码, 手动粘贴. 本地/线上都可用.
-export const startOobAuth = info => {
-    if (!info?.appKey) {
-        throw new Error('请先保存 AppKey');
-    }
-    const params = {
-        response_type: 'code',
-        client_id: info.appKey,
-        scope: 'basic,netdisk',
-        display: 'page',
-        redirect_uri: OOB_REDIRECT
-    };
-    window.open(`${AUTHORIZE_URL}?${new URLSearchParams(params)}`, '_blank');
+export const startOobAuth = async () => {
+    const url = await fetchAuthUrl({ oob: '1' });
+    window.open(url, '_blank');
 };
 
 // 方式二: 标准授权码回调, 同窗口跳转, 带 state. 仅线上可用(百度不允许本地回调地址).
-export const startRedirectAuth = info => {
-    if (!info?.appKey) {
-        throw new Error('请先保存 AppKey');
-    }
+export const startRedirectAuth = async () => {
     const state = Math.random().toString(36).slice(2);
     sessionStorage.setItem(STATE_KEY, state);
     // 回调会丢掉 hash, 记下当前路由, 授权完成后恢复
     sessionStorage.setItem(RETURN_KEY, window.location.hash || '#/');
-    const params = {
-        response_type: 'code',
-        client_id: info.appKey,
-        scope: 'basic,netdisk',
-        display: 'page',
-        redirect_uri: REDIRECT_URI(),
-        state
-    };
-    window.location.href = `${AUTHORIZE_URL}?${new URLSearchParams(params)}`;
+    window.location.href = await fetchAuthUrl({ redirect_uri: REDIRECT_URI(), state });
 };
 
 // 用 oob 授权码换取 token
-export const exchangeCode = async (info, code) => {
-    if (!info?.appKey || !info?.secretKey) {
-        throw new Error('请先保存 AppKey 和 SecretKey');
-    }
-    const clean = (code || '').trim();
+export const exchangeCode = async code => {
+    const clean = (code ?? '').trim();
     if (!clean) {
         throw new Error('请粘贴授权码');
     }
-    const data = await postForm(`${OAUTH}/token`, {
+    const data = await postForm(PAN_TOKEN_URL, {
         grant_type: 'authorization_code',
         code: clean,
-        client_id: info.appKey,
-        client_secret: info.secretKey,
         redirect_uri: OOB_REDIRECT
     });
     writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
@@ -230,15 +202,9 @@ export const finishAuth = async () => {
         if (!state || state !== sessionStorage.getItem(STATE_KEY)) {
             throw new Error('授权状态校验失败');
         }
-        const info = readInfo();
-        if (!info?.appKey || !info?.secretKey) {
-            throw new Error('请先保存 AppKey 和 SecretKey');
-        }
-        const data = await postForm(`${OAUTH}/token`, {
+        const data = await postForm(PAN_TOKEN_URL, {
             grant_type: 'authorization_code',
             code,
-            client_id: info.appKey,
-            client_secret: info.secretKey,
             redirect_uri: REDIRECT_URI()
         });
         writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
@@ -253,7 +219,7 @@ export const finishAuth = async () => {
     }
 };
 
-const validToken = async info => {
+const validToken = async () => {
     const token = readToken();
     if (token?.accessToken && token.expiresAt > Date.now() + 60_000) {
         return token.accessToken;
@@ -261,14 +227,9 @@ const validToken = async info => {
     if (!token?.refreshToken) {
         throw new Error('AUTH_REQUIRED');
     }
-    if (!info?.secretKey) {
-        throw new Error('请先保存 SecretKey');
-    }
-    const data = await postForm(`${OAUTH}/token`, {
+    const data = await postForm(PAN_TOKEN_URL, {
         grant_type: 'refresh_token',
-        refresh_token: token.refreshToken,
-        client_id: info.appKey,
-        client_secret: info.secretKey
+        refresh_token: token.refreshToken
     });
     writeToken({ accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + data.expires_in * 1000 });
     return data.access_token;
@@ -277,13 +238,13 @@ const validToken = async info => {
 // 校验当前是否已授权: 确保 token 有效后调 uinfo 让百度确认, 失败返回 false
 // 合并并发调用, 避免 StrictMode 下重复挂载触发两次请求
 let authCheckInFlight = null;
-export const checkAuthStatus = info => {
+export const checkAuthStatus = () => {
     if (authCheckInFlight) {
         return authCheckInFlight;
     }
     authCheckInFlight = (async () => {
         try {
-            const accessToken = await validToken(info);
+            const accessToken = await validToken();
             const params = new URLSearchParams({ method: 'uinfo', access_token: accessToken });
             const data = await getJson(`${NETDISK}/nas?${params}`);
             return Boolean(data?.uk);
@@ -297,8 +258,8 @@ export const checkAuthStatus = info => {
 };
 
 // ---- files ----
-export const listBackups = async info => {
-    const token = await validToken(info);
+export const listBackups = async () => {
+    const token = await validToken();
     const params = new URLSearchParams({
         method: 'list',
         dir: DIR,
@@ -312,8 +273,8 @@ export const listBackups = async info => {
 };
 
 // 拉取指定目录下的直接子项(不递归)。目录节点带空 children 占位, 供 react-arborist 识别为可展开
-export const listDir = async (info, dir = APP_DIR) => {
-    const token = await validToken(info);
+export const listDir = async (dir = APP_DIR) => {
+    const token = await validToken();
     const items = [];
     let start = 0;
     while (true) {
@@ -350,8 +311,8 @@ export const listDir = async (info, dir = APP_DIR) => {
 // 把带签名的 dlink 交给服务端代理 fetch(自动跟随 302 且无 CORS 限制)
 const proxyDlink = dlink => `${DL}?url=${encodeURIComponent(dlink)}`;
 
-const fetchFileResponse = async (info, fsId) => {
-    const token = await validToken(info);
+const fetchFileResponse = async fsId => {
+    const token = await validToken();
     const params = new URLSearchParams({
         method: 'filemetas',
         fsids: JSON.stringify([fsId]),
@@ -372,14 +333,14 @@ const fetchFileResponse = async (info, fsId) => {
     return response;
 };
 
-const downloadFile = async (info, fsId) => (await fetchFileResponse(info, fsId)).text();
+const downloadFile = async fsId => (await fetchFileResponse(fsId)).text();
 
-export const downloadBackup = async (info, fsId) => JSON.parse(await downloadFile(info, fsId));
+export const downloadBackup = async fsId => JSON.parse(await downloadFile(fsId));
 
 // 调试用: 读取文件原始文本
-export const readFileText = (info, fsId) => downloadFile(info, fsId);
+export const readFileText = fsId => downloadFile(fsId);
 // 调试用: 读取文件二进制(图片等)
-export const readFileBlob = async (info, fsId) => (await fetchFileResponse(info, fsId)).blob();
+export const readFileBlob = async fsId => (await fetchFileResponse(fsId)).blob();
 
 // 百度接口不会自动创建父目录, 先确保 progress 目录存在
 const ensureDir = async (token, dir) => {
@@ -393,8 +354,8 @@ const ensureDir = async (token, dir) => {
     await postCreate(`${NETDISK}/file`, { method: 'create', access_token: token, path: dir, isdir: 1, rtype: 0 });
 };
 
-export const uploadBackup = async (info, content) => {
-    const token = await validToken(info);
+export const uploadBackup = async content => {
+    const token = await validToken();
     const bytes = new TextEncoder().encode(content);
     const hash = md5(bytes);
     await ensureDir(token, DIR);

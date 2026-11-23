@@ -7,15 +7,6 @@ import { useMemo, useRef, useState } from 'react';
 import { Tree } from 'react-arborist';
 
 const { Text } = Typography;
-const BAIDU_PAN_KEY = 'BaiduPanInfo';
-
-const readBaiduPanInfo = () => {
-    try {
-        return JSON.parse(localStorage.getItem(BAIDU_PAN_KEY)) || {};
-    } catch {
-        return {};
-    }
-};
 
 const ERROR_LABEL = { files: '拉取文件', read: '读取文件', dir: '加载目录' };
 const TTS_SOURCES = [
@@ -160,7 +151,7 @@ export default function DebugZone() {
     // 首次只拉根目录一层; 重新拉取时一并清空目录缓存, 让子层重新加载
     const pullAllFiles = () =>
         run(async () => {
-            const tree = await listDir(readBaiduPanInfo());
+            const tree = await listDir();
             dirCache.clear();
             readSeq.current += 1;
             updateTree(tree);
@@ -186,7 +177,7 @@ export default function DebugZone() {
         // 未加载: 拉该目录子项, 写缓存并注入树
         setLoadingDirId(dir.id);
         return run(async () => {
-            const children = await listDir(readBaiduPanInfo(), dir.path);
+            const children = await listDir(dir.path);
             dirCache.set(dir.path, children);
             updateTree(replaceNodeChildren(fileTreeRef.current, dir.id, children));
             // data 更新后会重建 node, 用 ref 按 id 重新展开(展开状态按 id 保留)
@@ -203,7 +194,7 @@ export default function DebugZone() {
             return;
         }
         return run(async () => {
-            const blob = await readFileBlob(readBaiduPanInfo(), file.fsId);
+            const blob = await readFileBlob(file.fsId);
             // 按实际内容判断图片, 其余一律按文本读取, 无需逐个列举扩展名
             const content = (await isImageBlob(blob)) ? { image: true, value: URL.createObjectURL(blob) } : { image: false, value: await blob.text() };
             fileContentCache.set(file.fsId, content);
