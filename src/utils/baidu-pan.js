@@ -278,7 +278,7 @@ export const listBackups = async () => {
         return !file.isdir && /^\d+\.json$/.test(file.server_filename);
     }).map(file => {
         return { fsId: file.fs_id, name: file.server_filename, mtime: file.server_mtime };
-    }).sort((first, second) => second.mtime - first.mtime);
+    });
 };
 
 // 拉取指定目录下的直接子项(不递归), 默认从网盘根目录开始。目录节点带空 children 占位, 供 react-arborist 识别为可展开

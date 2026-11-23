@@ -26,6 +26,25 @@ vocabularyCatalog.forEach(book => {
 const pad = v => String(v).padStart(2, '0');
 const formatDate = date => `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
 
+const backupSummary = progress => {
+    const flat = toFlatProgress(progress);
+    return `生词 ${flat.unknown.length} · 收藏 ${flat.favorites.length} · 认识 ${flat.known.length}`;
+};
+
+// 备份文件按时间戳命名、写完不改, 同一 fsId 的内容固定, 下载结果可复用
+const backupCache = new Map();
+const getBackup = fsId => {
+    const key = String(fsId);
+    if (!backupCache.has(key)) {
+        const pending = downloadBackup(fsId).catch(error => {
+            backupCache.delete(key);
+            throw error;
+        });
+        backupCache.set(key, pending);
+    }
+    return backupCache.get(key);
+};
+
 const buildActivity = state => {
     const activity = {};
     [...state.known, ...state.unknown].forEach(record => {
@@ -166,8 +185,16 @@ export default function Profile() {
                 message.warning('云端还没有备份文件');
                 return;
             }
-            setRestoreFiles(files);
-            setRestoreFsId(String(files[0].fsId));
+            const enriched = await Promise.all(files.map(async file => {
+                try {
+                    const { progress } = await getBackup(file.fsId);
+                    return { ...file, summary: backupSummary(progress) };
+                } catch {
+                    return { ...file, summary: '摘要读取失败' };
+                }
+            }));
+            setRestoreFiles(enriched);
+            setRestoreFsId(String(enriched[0].fsId));
             setRestoreOpen(true);
         }, 'sync');
 
@@ -178,7 +205,7 @@ export default function Profile() {
             return;
         }
         runBaidu(async () => {
-            const payload = await downloadBackup(chosen.fsId);
+            const payload = await getBackup(chosen.fsId);
             const progress = payload?.progress;
             if (!progress || typeof progress !== 'object') {
                 throw new Error('备份文件格式不正确');
@@ -398,11 +425,21 @@ export default function Profile() {
             >
                 <Select
                     className="w-full"
+                    popupMatchSelectWidth={false}
                     value={restoreFsId}
                     onChange={setRestoreFsId}
                     options={restoreFiles.map(file => {
                         return { value: String(file.fsId), label: new Date(file.mtime * 1000).toLocaleString('zh-CN', { hour12: false }) };
                     })}
+                    optionRender={option => {
+                        const file = restoreFiles.find(item => String(item.fsId) === option.value);
+                        return (
+                            <div className="flex flex-col gap-0.5 py-1">
+                                <span>{option.label}</span>
+                                <span className="text-xs text-[#999]">{file?.summary}</span>
+                            </div>
+                        );
+                    }}
                 />
             </Modal>
         </div>
