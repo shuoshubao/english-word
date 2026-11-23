@@ -32,20 +32,24 @@ const backupSummary = progress => {
     return `生词 ${flat.unknown.length} · 收藏 ${flat.favorites.length} · 认识 ${flat.known.length}`;
 };
 
-const summaryLimit = pLimit(5);
+const SummaryLimit = pLimit(5);
 
 // 备份文件按时间戳命名、写完不改, 同一 fsId 的内容固定, 下载结果可复用
-const backupCache = new Map();
+const BackupCache = new Map();
+const fetchBackup = async fsId => {
+    try {
+        return await downloadBackup(fsId);
+    } catch (error) {
+        BackupCache.delete(String(fsId));
+        throw error;
+    }
+};
 const getBackup = fsId => {
     const key = String(fsId);
-    if (!backupCache.has(key)) {
-        const pending = downloadBackup(fsId).catch(error => {
-            backupCache.delete(key);
-            throw error;
-        });
-        backupCache.set(key, pending);
+    if (!BackupCache.has(key)) {
+        BackupCache.set(key, fetchBackup(fsId));
     }
-    return backupCache.get(key);
+    return BackupCache.get(key);
 };
 
 const buildActivity = state => {
@@ -188,13 +192,13 @@ export default function Profile() {
                 message.warning('云端还没有备份文件');
                 return;
             }
-            const enriched = await Promise.all(files.map(file => {
-                return summaryLimit(async () => {
+            const enriched = await Promise.all(files.map(item => {
+                return SummaryLimit(async () => {
                     try {
-                        const { progress } = await getBackup(file.fsId);
-                        return { ...file, summary: backupSummary(progress) };
+                        const { progress } = await getBackup(item.fsId);
+                        return { ...item, summary: backupSummary(progress) };
                     } catch {
-                        return { ...file, summary: '摘要读取失败' };
+                        return { ...item, summary: '摘要读取失败' };
                     }
                 });
             }));
@@ -204,7 +208,7 @@ export default function Profile() {
         }, 'sync');
 
     const confirmRestore = () => {
-        const chosen = restoreFiles.find(file => String(file.fsId) === restoreFsId);
+        const chosen = restoreFiles.find(item => String(item.fsId) === restoreFsId);
         setRestoreOpen(false);
         if (!chosen) {
             return;
@@ -433,15 +437,15 @@ export default function Profile() {
                     popupMatchSelectWidth={false}
                     value={restoreFsId}
                     onChange={setRestoreFsId}
-                    options={restoreFiles.map(file => {
-                        return { value: String(file.fsId), label: new Date(file.mtime * 1000).toLocaleString('zh-CN', { hour12: false }) };
+                    options={restoreFiles.map(item => {
+                        return { value: String(item.fsId), label: new Date(item.mtime * 1000).toLocaleString('zh-CN', { hour12: false }) };
                     })}
                     optionRender={option => {
-                        const file = restoreFiles.find(item => String(item.fsId) === option.value);
+                        const chosen = restoreFiles.find(item => String(item.fsId) === option.value);
                         return (
                             <div className="flex flex-col gap-0.5 py-1">
                                 <span>{option.label}</span>
-                                <span className="text-xs text-[#999]">{file?.summary}</span>
+                                <span className="text-xs text-[#999]">{chosen?.summary}</span>
                             </div>
                         );
                     }}

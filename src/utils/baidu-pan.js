@@ -274,10 +274,10 @@ export const listBackups = async () => {
         access_token: token
     });
     const data = await getJson(`${NETDISK}/file?${params}`);
-    return (data.list ?? []).filter(file => {
-        return !file.isdir && /^\d+\.json$/.test(file.server_filename);
-    }).map(file => {
-        return { fsId: file.fs_id, name: file.server_filename, mtime: file.server_mtime };
+    return (data.list ?? []).filter(item => {
+        return !item.isdir && /^\d+\.json$/.test(item.server_filename);
+    }).map(item => {
+        return { fsId: item.fs_id, name: item.server_filename, mtime: item.server_mtime };
     });
 };
 
