@@ -50,6 +50,9 @@ export default function Profile() {
     const [authCode, setAuthCode] = useState('');
     const [authLoading, setAuthLoading] = useState(false);
     const [auth, setAuth] = useState({ status: '', name: '', avatar: '' });
+    const [restoreOpen, setRestoreOpen] = useState(false);
+    const [restoreFiles, setRestoreFiles] = useState([]);
+    const [restoreFsId, setRestoreFsId] = useState('');
     const [ttsSource, setTtsSource] = useState(getSentenceTtsSource);
     const [ttsVersion, setTtsVersion] = useState(0);
 
@@ -158,19 +161,32 @@ export default function Profile() {
 
     const syncFromCloud = () =>
         runBaidu(async () => {
-            const files = await listBackups();
+            const files = (await listBackups()).slice(0, 10);
             if (!files.length) {
                 message.warning('云端还没有备份文件');
                 return;
             }
-            const payload = await downloadBackup(files[0].fs_id);
+            setRestoreFiles(files);
+            setRestoreFsId(String(files[0].fsId));
+            setRestoreOpen(true);
+        }, 'sync');
+
+    const confirmRestore = () => {
+        const chosen = restoreFiles.find(file => String(file.fsId) === restoreFsId);
+        setRestoreOpen(false);
+        if (!chosen) {
+            return;
+        }
+        runBaidu(async () => {
+            const payload = await downloadBackup(chosen.fsId);
             const progress = payload?.progress;
             if (!progress || typeof progress !== 'object') {
                 throw new Error('备份文件格式不正确');
             }
             merge(toFlatProgress(progress));
-            message.success(`已同步 ${files[0].server_filename}`);
+            message.success(`已恢复 ${chosen.name}`);
         }, 'sync');
+    };
 
     const backupToCloud = () =>
         runBaidu(async () => {
@@ -178,6 +194,7 @@ export default function Profile() {
                 app: '背单词',
                 version: 1,
                 exportedAt: new Date().toISOString(),
+                updatedAt: Date.now(),
                 progress: toNestedProgress(state)
             });
             const name = await uploadBackup(content);
@@ -368,6 +385,25 @@ export default function Profile() {
                     复制百度页面显示的授权码粘贴到下方.
                 </Text>
                 <Input value={authCode} onChange={e => setAuthCode(e.target.value)} placeholder="粘贴百度授权码" />
+            </Modal>
+
+            <Modal
+                title="选择要恢复的备份"
+                open={restoreOpen}
+                onCancel={() => setRestoreOpen(false)}
+                onOk={confirmRestore}
+                okText="恢复"
+                cancelText="取消"
+                destroyOnHidden
+            >
+                <Select
+                    className="w-full"
+                    value={restoreFsId}
+                    onChange={setRestoreFsId}
+                    options={restoreFiles.map(file => {
+                        return { value: String(file.fsId), label: new Date(file.mtime * 1000).toLocaleString('zh-CN', { hour12: false }) };
+                    })}
+                />
             </Modal>
         </div>
     );

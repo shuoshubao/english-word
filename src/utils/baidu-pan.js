@@ -274,7 +274,11 @@ export const listBackups = async () => {
         access_token: token
     });
     const data = await getJson(`${NETDISK}/file?${params}`);
-    return (data.list ?? []).filter(file => !file.isdir && /^\d+\.json$/.test(file.server_filename));
+    return (data.list ?? []).filter(file => {
+        return !file.isdir && /^\d+\.json$/.test(file.server_filename);
+    }).map(file => {
+        return { fsId: file.fs_id, name: file.server_filename, mtime: file.server_mtime };
+    }).sort((first, second) => second.mtime - first.mtime);
 };
 
 // 拉取指定目录下的直接子项(不递归), 默认从网盘根目录开始。目录节点带空 children 占位, 供 react-arborist 识别为可展开
@@ -307,7 +311,7 @@ export const listDir = async (dir = '/') => {
             path: item.path,
             fsId: item.fs_id,
             size: item.size,
-            mtime: item.mtime,
+            mtime: item.server_mtime,
             ...(item.isdir ? { children: [], loaded: false } : {})
         };
     });
