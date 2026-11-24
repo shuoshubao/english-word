@@ -33,7 +33,7 @@ const backupSummary = progress => {
     return `生词 ${flat.unknown.length} · 收藏 ${flat.favorites.length} · 认识 ${flat.known.length}`;
 };
 
-const SummaryLimit = pLimit(5);
+const SummaryLimit = pLimit(2);
 
 // 备份文件按时间戳命名、写完不改, 同一 fsId 的内容固定, 下载结果可复用
 const BackupCache = new Map();
