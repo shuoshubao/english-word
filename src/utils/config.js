@@ -1,2 +1,2 @@
-export const BackupFileSuffix = '.zip';
-export const BackupEntrySuffix = '.json';
+export const BackupFileSuffix = '.json';
+export const backupFileName = () => `${Date.now()}${BackupFileSuffix}`;

@@ -1,5 +1,5 @@
 import { vocabularyCatalog } from '@/data/catalog';
-import { createBackup, unpackBackup } from '@/utils/backup-file';
+import { createBackup } from '@/utils/backup-file';
 import BaiduTtsCard from '@/pages/Profile/BaiduTtsCard';
 import DebugZone from '@/pages/Profile/DebugZone';
 import DoubaoTtsCard from '@/pages/Profile/DoubaoTtsCard';
@@ -99,7 +99,7 @@ export default function Profile() {
 
     const exportProgress = () => {
         const { name, bytes } = createBackup(buildBackupContent(state));
-        const url = URL.createObjectURL(new Blob([bytes], { type: 'application/zip' }));
+        const url = URL.createObjectURL(new Blob([bytes], { type: 'application/json' }));
         const link = document.createElement('a');
         link.href = url;
         link.download = name;
@@ -110,9 +110,9 @@ export default function Profile() {
 
     const importProgress = async () => {
         try {
-            const [handle] = await window.showOpenFilePicker({ types: [{ description: 'ZIP', accept: { 'application/zip': ['.zip'] } }] });
+            const [handle] = await window.showOpenFilePicker({ types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }] });
             const file = await handle.getFile();
-            const value = JSON.parse(unpackBackup(await file.arrayBuffer()));
+            const value = JSON.parse(await file.text());
             const p = value.progress;
             const looksValid = p && typeof p === 'object' && (Array.isArray(p.favorites) || PROGRESS_KEYS.some(k => p[k]));
             if (!looksValid) {

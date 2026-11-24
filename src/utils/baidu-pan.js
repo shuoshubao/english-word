@@ -1,6 +1,6 @@
 // 百度网盘同步: 本地走 Vite 代理, 线上走 Vercel 转发
-// 应用根目录 /apps/EnglishWord, 备份存其下 progress/, 文件名: <毫秒时间戳>.zip
-import { createBackup, unpackBackup } from './backup-file';
+// 应用根目录 /apps/EnglishWord, 备份存其下 progress/, 文件名: <毫秒时间戳>.json
+import { createBackup } from './backup-file';
 
 const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
 export const isLocal = window.location.hostname === 'localhost';
@@ -287,9 +287,9 @@ export const listBackups = async () => {
         start += list.length;
     }
     return items.filter(item => {
-        return !item.isdir && /^\d+\.zip$/.test(item.server_filename);
+        return !item.isdir && /^\d+\.json$/.test(item.server_filename);
     }).map(item => {
-        return { fsId: item.fs_id, name: item.server_filename, timestamp: Number(item.server_filename.slice(0, -4)) };
+        return { fsId: item.fs_id, name: item.server_filename, timestamp: Number(item.server_filename.slice(0, -5)) };
     }).sort((first, second) => second.timestamp - first.timestamp);
 };
 
@@ -357,7 +357,7 @@ const fetchFileResponse = async fsId => {
 const downloadFile = async fsId => (await fetchFileResponse(fsId)).text();
 
 export const downloadBackup = async fsId => {
-    return JSON.parse(unpackBackup(await (await fetchFileResponse(fsId)).arrayBuffer()));
+    return JSON.parse(await (await fetchFileResponse(fsId)).text());
 };
 
 // 调试用: 读取文件原始文本
@@ -403,7 +403,7 @@ export const uploadBackup = async content => {
             partseq: '0'
         });
         const form = new FormData();
-        form.append('file', new Blob([bytes], { type: 'application/zip' }), path.split('/').pop());
+        form.append('file', new Blob([bytes], { type: 'application/json' }), path.split('/').pop());
         checkError(await (await fetch(`${UPLOAD}/superfile2?${uploadParams}`, { method: 'POST', body: form })).json());
         await postCreate(`${NETDISK}/file`, {
             method: 'create',
