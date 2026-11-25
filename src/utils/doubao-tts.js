@@ -4,7 +4,7 @@ const isLocal = window.location.hostname === 'localhost';
 const API = isLocal ? '/doubao-tts/api/v3/tts/unidirectional/sse' : `${VERCEL_PROXY}/doubaotts/api/v3/tts/unidirectional/sse`;
 
 export const DOUBAO_INFO_KEY = 'DoubaoTtsInfo';
-export const DEFAULT_VOICE = 'zh_female_vv_uranus_bigtts';
+export const DEFAULT_VOICE = 'en_female_mel_uranus_bigtts';
 
 export const readDoubaoInfo = () => {
     try {

@@ -3,14 +3,16 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 import { Card, Form, Input, Select, Space, Tooltip } from 'antd';
 import { useState } from 'react';
 
-// TTS 大模型 2.0 音色
+// TTS 大模型 2.0 英语音色
 const VOICES = [
-    { value: 'zh_female_vv_uranus_bigtts', label: 'Vivi 2.0 (女, 多语种)' },
-    { value: 'zh_female_xiaohe_uranus_bigtts', label: '小何 2.0 (女)' },
-    { value: 'zh_male_m191_uranus_bigtts', label: '云舟 2.0 (男)' },
-    { value: 'zh_male_taocheng_uranus_bigtts', label: '小天 2.0 (男)' },
-    { value: 'en_female_dacey_uranus_bigtts', label: 'Dacey (英文女声)' },
-    { value: 'en_male_tim_uranus_bigtts', label: 'Tim (英文男声)' }
+    { value: 'en_female_mel_uranus_bigtts', label: 'Mel (美音女声, 教学)' },
+    { value: 'en_male_kevin_uranus_bigtts', label: 'Kevin (美音男声, 教学)' },
+    { value: 'en_female_myra_uranus_bigtts', label: 'Myra (美音女声, 教学)' },
+    { value: 'en_male_michael_uranus_bigtts', label: 'Hank (美音男声, 教学)' },
+    { value: 'en_male_knightley_uranus_bigtts', label: 'Knightley (英音男声)' },
+    { value: 'en_male_russell_uranus_bigtts', label: 'Russell (英音男声, 教学)' },
+    { value: 'en_female_dacey_uranus_bigtts', label: 'Dacey (美音女声)' },
+    { value: 'en_male_tim_uranus_bigtts', label: 'Tim (美音男声)' }
 ];
 const SPEEDS = [
     { value: -20, label: '偏慢' },

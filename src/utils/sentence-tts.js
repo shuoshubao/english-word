@@ -4,7 +4,7 @@ import { hasDoubaoConfig, readDoubaoInfo, synthesize as synthesizeDoubao } from 
 
 const SOURCE_KEY = 'SentenceTtsSource';
 
-export const getSentenceTtsSource = () => (localStorage.getItem(SOURCE_KEY) === 'doubao' ? 'doubao' : 'baidu');
+export const getSentenceTtsSource = () => (localStorage.getItem(SOURCE_KEY) === 'baidu' ? 'baidu' : 'doubao');
 export const setSentenceTtsSource = source => localStorage.setItem(SOURCE_KEY, source);
 
 export const readSentenceTtsInfo = source => (source === 'doubao' ? readDoubaoInfo() : readTtsInfo());
