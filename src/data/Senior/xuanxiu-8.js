@@ -1,32 +1,6 @@
 // 高中 选修8(源 PEPGaoZhong_8)
 export default [
     {
-        word: 'California',
-        translation: '加利福尼亚（州）',
-        phonetic: ",kælɪ'fɔnjə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'California borders the Pacific Ocean.',
-                cn: '加利福尼亚州与太平洋毗连。'
-            },
-            {
-                en: 'She lived in California during the winter.',
-                cn: '整个冬天她住在加利福尼亚州。'
-            },
-            {
-                en: 'Many people prospected for gold in California in the 1850s.',
-                cn: '19世纪50年代许多人在加利福尼亚勘探金矿。'
-            }
-        ]
-    },
-    {
-        word: 'Californian',
-        translation: '加利福尼亚（州）人',
-        phonetic: 'ˌkælɪˈfɔːnɪən',
-        partOfSpeech: ''
-    },
-    {
         word: 'illustrate',
         translation: 'v. 说明；阐明',
         phonetic: "'ɪləstret",
@@ -111,26 +85,6 @@ export default [
             {
                 en: 'the Bering Strait',
                 cn: '白令海峡'
-            }
-        ]
-    },
-    {
-        word: 'Bering',
-        translation: '白令海峡',
-        phonetic: "'bɛriŋ",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'I first came to North American in prehistoric times when I crossed the Bering Strait land bridge from Eurasia.',
-                cn: '在史前时期，我从欧亚大陆穿越白令海峡、走过陆地、桥第一次来到了北美。'
-            },
-            {
-                en: "As they report online this week in Nature Geoscience, the model shows that the Bering Strait's status was directly responsible for the ice-sheet oscillations.",
-                cn: '他们在本周《自然-地球科学》杂志在线版上报道：模拟显示，白令海峡的状况是造成冰盖振荡的直接原因。'
-            },
-            {
-                en: 'Its modern distribution suggests that Japanese sailors were the first people to reach the Americas, millennia before Siberians wandered across the Bering Strait.',
-                cn: '其现代分布表明，日本船员首先到达美洲，比西伯利亚人越过白令海峡早了一千年。'
             }
         ]
     },
@@ -283,26 +237,6 @@ export default [
             {
                 en: 'At least nine out of ten Mexicans are baptized Catholics.',
                 cn: '至少十分之九的墨西哥人是受过洗礼的天主教徒。'
-            }
-        ]
-    },
-    {
-        word: 'Alaska',
-        translation: 'n. 阿拉斯加（州）',
-        phonetic: "ə'læskə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Like I said, perfect, if you live in Alaska.',
-                cn: '像我说过的，完美，如果你住在阿拉斯加的话。'
-            },
-            {
-                en: 'Alaska and Hawaii were dependencies of the United States.',
-                cn: '阿拉斯加和夏威夷过去是美国的属地。'
-            },
-            {
-                en: 'Once they went camping with friends who had moved to Alaska.',
-                cn: '有一次，他们和几个搬到阿拉斯加的朋友去野营。'
             }
         ]
     },
@@ -857,18 +791,6 @@ export default [
         ]
     },
     {
-        word: 'Andrew Hallidie',
-        translation: '安德鲁•海利迪',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Built in 1873, the cable car system was invented by Andrew Hallidie, who wanted to find a better form of transport than horse-drawn trams.',
-                cn: '缆车系统建于1873年，是由安德鲁·海利迪发明的，他试图找到一种比马拉轨道车更好的交通方式。'
-            }
-        ]
-    },
-    {
         word: 'tram',
         translation: 'n. （有轨）电车',
         phonetic: 'træm',
@@ -1003,22 +925,6 @@ export default [
             {
                 en: 'The ship was used to ferry supplies to Russia during the war.',
                 cn: '这艘船在战时被用来往俄罗斯运送补给。'
-            }
-        ]
-    },
-    {
-        word: 'Angel Island',
-        translation: '天使岛',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Angel Island Company offers a number of activities, such as bicycling , sailing and surfing.',
-                cn: '天使岛公司提供许多活动，例如骑单车、出帆和冲浪。'
-            },
-            {
-                en: "Invitingly green Angel Island, once a military installation, contains meandering trails and picnic spots ideal for a day's excursion.",
-                cn: '迷人的天使岛郁郁葱葱，小径蜿蜒，是一日游的理想野餐场所。但在它却是军事基地。（名词短语分译）'
             }
         ]
     },
@@ -2511,26 +2417,6 @@ export default [
         ]
     },
     {
-        word: 'George Stephenson',
-        translation: '乔治•斯蒂芬森（英国发明家，蒸汽机的发明人）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Travel and transportation were changed when the steamship was invented, and they were changed even more when the locomotive was invented by George Stephenson in 1814.',
-                cn: '发明蒸汽船之后，人们的旅行和交通运输都改变了。而在1814年，乔治·史蒂芬逊发明蒸汽机车后，变化更大了。'
-            },
-            {
-                en: 'It begins with an evocative description of George Stephenson’s Rocket, a famous early steam engine, and traces the developments needed to make each of its individual components possible.',
-                cn: '书的开头以动人的笔触描述了早期著名的蒸汽机工程师乔治·斯蒂文森的火箭发明，然后追溯了使每个个体发明成为可能的发展条件。'
-            },
-            {
-                en: 'It is before 1848 because it was referred to by George Stephenson in that year.',
-                cn: '这是1848年之前，因为它是所提到乔治斯蒂芬森在这一年。'
-            }
-        ]
-    },
-    {
         word: 'patent',
         translation: 'n. 专利证书；专利权',
         phonetic: "'pætnt",
@@ -3261,22 +3147,6 @@ export default [
         ]
     },
     {
-        word: 'Alexander Graham',
-        translation: '亚历山大•格雷厄姆•贝尔',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'It is the story of Alexander Graham Bell.',
-                cn: '这就是亚历山大·格雷厄姆·贝尔的故事。'
-            },
-            {
-                en: 'Alexander Graham Bell and Elisha Gray filed patent applications on the very same day in 1876.',
-                cn: '亚历山大·格拉汉姆·贝尔和伊莱莎·格雷在1876年的某个时间几乎同时递交了专利申请。'
-            }
-        ]
-    },
-    {
         word: 'microphone',
         translation: 'n. 麦克风；话筒',
         phonetic: "'maɪkrə'fon",
@@ -3639,22 +3509,6 @@ export default [
             {
                 en: 'It doesn’t sound like a very practical solution.',
                 cn: '这听上去不是一个十分可行的解决方法。'
-            }
-        ]
-    },
-    {
-        word: 'James Dyson',
-        translation: '詹姆斯•戴森（英国发明家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "An Australian designer has won this year's James Dyson Award with an invention that sounds more like magic than science - and the inventor owes his success to an unassuming little beetle.",
-                cn: '一位澳大利亚设计师获得了本年度的杰姆斯戴森奖，他的发明与其说是科学不如说是一个神话。 而且这位发明者将他的成功归功于看起来不起眼的小甲虫。'
-            },
-            {
-                en: 'The James Dyson Award is an international design award that celebrates, encourages and inspires the next generation of design engineers.',
-                cn: '詹姆斯·戴森奖是一项鼓励新人的设计奖项。'
             }
         ]
     },

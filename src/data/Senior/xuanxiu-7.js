@@ -213,12 +213,6 @@ export default [
         ]
     },
     {
-        word: 'Marty',
-        translation: '马蒂•菲尔丁',
-        phonetic: "'mɑ:ti",
-        partOfSpeech: ''
-    },
-    {
         word: 'in other words',
         translation: '换句话说',
         phonetic: '',
@@ -787,12 +781,6 @@ export default [
         ]
     },
     {
-        word: 'Barry Minto',
-        translation: '巴里•明托',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'companion',
         translation: 'n. 同伴；伙伴',
         phonetic: "kəm'pænɪən",
@@ -1305,26 +1293,6 @@ export default [
         ]
     },
     {
-        word: 'Isaac Asimov',
-        translation: '艾萨克•阿西莫夫',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'As Isaac Asimov once commented, we scored a touchdown, then took our football and went home.',
-                cn: '正如艾萨克·阿西莫夫评论的那样，我们只赢得一次达阵，然后便收起球回家了。'
-            },
-            {
-                en: "One of the most celebrated science fiction authors, Isaac Asimov, outlined 'Three Laws of Robotics' in a novel featuring human-like robots. The rules were designed to protect people from harm.",
-                cn: '最著名的科幻小说作者之一，艾萨克·阿西莫夫，在一本以仿生机器人为特写的小说中，他概述了“机器人三定律”，旨在保护人类免受伤害。'
-            },
-            {
-                en: 'Isaac Asimov is the only author to have a book in every Dewey-decimal category.',
-                cn: '艾萨克·阿西莫夫（Isaac Asimov）是美国唯一位在每一版杜威图书里都有出现他的书的作家。'
-            }
-        ]
-    },
-    {
         word: 'satisfaction',
         translation: 'n. 满意；满足',
         phonetic: ",sætɪs'fækʃən",
@@ -1337,18 +1305,6 @@ export default [
             {
                 en: '‘I’ve passed all my exams’, he announced with satisfaction.',
                 cn: '“我通过了所有的考试。”他满意地宣布。'
-            }
-        ]
-    },
-    {
-        word: 'Larry Belmont',
-        translation: '拉里•贝尔蒙特',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Larry Belmont worked for a company that made robots.',
-                cn: '拉里·贝尔蒙特的工作，这家公司制造的机器人。'
             }
         ]
     },
@@ -1475,22 +1431,6 @@ export default [
             {
                 en: 'You can dine in elegant surroundings.',
                 cn: '你可以在雅致的环境中进餐。'
-            }
-        ]
-    },
-    {
-        word: 'Gladys Claffern',
-        translation: '格拉迪斯•克拉芬',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'As she turned around, there stood Gladys Claffern.',
-                cn: '她刚一转身，就看到格拉蒂斯·克拉芬站在那里。'
-            },
-            {
-                en: 'As she turned around , there stood Gladys Claffern.',
-                cn: '当她转过身去时，格拉雷斯·克拉芬站在那里。'
             }
         ]
     },
@@ -3771,22 +3711,6 @@ export default [
         ]
     },
     {
-        word: 'Papua',
-        translation: '巴布亚新几内亚',
-        phonetic: "'pæpjuə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The extremely limited road system in Papua New Guinea means that we flew to our destination.',
-                cn: '巴布亚新几内亚极其狭窄的道路系统意味着我们需要飞入目的地。'
-            },
-            {
-                en: 'Our idea is that the ancestors of Melanesians met the Denisovans in Southeast Asia and interbred, and the ancestors of Melanesians then moved on to Papua New Guinea.',
-                cn: '我们的观点是，美拉尼亚人的祖先在亚洲东南部与丹尼索万人相遇并通婚，然后美拉尼亚人的祖先来到巴布亚新几内亚。'
-            }
-        ]
-    },
-    {
         word: 'fortnight',
         translation: 'n. 两星期',
         phonetic: "'fɔrtnaɪt",
@@ -5753,26 +5677,6 @@ export default [
         ]
     },
     {
-        word: 'Lake Titicaca',
-        translation: '的的喀喀湖',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'A girl runs on one ofthe Uros floating islands on Lake Titicaca in Puno, Peru, on May 29, 2011.',
-                cn: '2011年5月29日，秘鲁普诺市的的喀喀湖上的漂流岛，一个女孩正在奔跑。'
-            },
-            {
-                en: 'Ubinas is one of many volcanoes that dot the high desert plateau east of Lake Titicaca in southern Peru.',
-                cn: '乌比纳斯火山是众多火山群中的一个，这些火山群位于秘鲁南部，的的喀喀湖以东的沙漠高原上。'
-            },
-            {
-                en: 'Theprotesters oppose the Canadian Santa Ana silver mining project they say willpollute the Desaguadero River and Lake Titicaca.',
-                cn: '抗议者反对加拿大圣安娜银矿开采项目，声称该项目会污染德萨瓜德罗河和的的喀喀湖。'
-            }
-        ]
-    },
-    {
         word: 'abundant',
         translation: 'adj. 丰富的；充裕的',
         phonetic: "ə'bʌndənt",
@@ -5785,26 +5689,6 @@ export default [
             {
                 en: 'abundant opportunities for well qualified staff',
                 cn: '提供给高素质的员工的大量机会'
-            }
-        ]
-    },
-    {
-        word: 'Inca',
-        translation: '印加帝国',
-        phonetic: "'iŋkə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'With this big stick, Inca kings began eyeing the lands and resources of others.',
-                cn: '有了这根军事大棒，印加帝王开始觊觎别人的土地和资源。'
-            },
-            {
-                en: 'But within a hundred years after the Inca began building this impressive city, they started to abandon it.',
-                cn: '但在开始建设这个城市之后一百年，他们又放弃了这个令人印象深刻的印加城市。'
-            },
-            {
-                en: 'He believed the Inca dynasty had far deeper roots, and Maukallacta seemed the logical place to look for them.',
-                cn: '他认为印加王朝有着更渊源的根，要找出来，毛卡拉塔似乎是个合理的地方。'
             }
         ]
     },
@@ -5845,26 +5729,6 @@ export default [
             {
                 en: "Ellis Island has become one of America's most popular tourist destinations.",
                 cn: '埃利斯岛已经成为美国最受欢迎的游览地之一。'
-            }
-        ]
-    },
-    {
-        word: 'Machu Picchu',
-        translation: '马丘比丘（秘鲁）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The next day the Espinar water strike spreads to communities near Machu Picchu.',
-                cn: '第二天，埃斯皮纳水罢工扩大到马丘比丘附近的社区。'
-            },
-            {
-                en: 'Machu Picchu in Peru, which means ‘Old Peak, ” is one of the most enigmatic ancient sites in the world.',
-                cn: '马丘比丘在秘鲁是“古老的顶峰”的意思。 这是世界上最具神秘色彩的古老建筑。'
-            },
-            {
-                en: 'As archaeologists learn more about what happened here, new questions continue to arise, guaranteeing that Machu Picchu will remain a place of mystery for years to come.',
-                cn: '作为考古学家了解这里发生的事情更多，新的问题继续出现，马丘比丘将在未来几年保持它神秘的面貌。'
             }
         ]
     },

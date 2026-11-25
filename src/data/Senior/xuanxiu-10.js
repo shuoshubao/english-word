@@ -77,28 +77,6 @@ export default [
         ]
     },
     {
-        word: 'Perce Blackborrow',
-        translation: '珀斯.布莱克鲍罗',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Sir Ernest Shackleton',
-        translation: '欧内斯特.沙克尔顿爵士',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The rare whisky was found 3 years ago below the floorboards of the hut used by renowned explorer Sir Ernest Shackleton. They had been buried in 1909.',
-                cn: '这些珍贵的威士忌酒是著名探险家欧内斯特·沙克尔顿1909年进行南极探险时埋在探险小屋地板下的，3年前方得重见天日。'
-            },
-            {
-                en: "It includes sites on every continent, among them Sir Ernest Shackleton's 1908 expedition hut in Antarctica and Australia's Dampier Rock art complex, which dates from 8000BC.",
-                cn: '名单涵盖了各大洲的古迹，包括欧内斯特，沙克尔顿爵士1908年远征南极洲时住的小屋、始于公元前8000年前的澳大利亚丹皮尔地区的岩画群。'
-            }
-        ]
-    },
-    {
         word: 'endurance',
         translation: 'n. 忍耐，持久，耐（性）',
         phonetic: "ɪn'dʊrəns",
@@ -285,18 +263,6 @@ export default [
         ]
     },
     {
-        word: 'Tom Orde-Lees',
-        translation: '汤姆.奥德.利兹',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Tom Orde-Lees is a selfish and bad-tempered member of the crew and his attitude may upset other people.',
-                cn: '汤姆·奥德·利兹是船员中自私而又脾气暴躁的人，他的态度会使别人不安。'
-            }
-        ]
-    },
-    {
         word: 'hook',
         translation: 'n. 钩，吊钩; v. 迷上；勾住',
         phonetic: 'hʊk',
@@ -419,18 +385,6 @@ export default [
             {
                 en: '...a crib with two full sets of bedding.',
                 cn: '…有两整套床单被褥的婴儿床。'
-            }
-        ]
-    },
-    {
-        word: 'Hussey',
-        translation: '赫西',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Mr. Hussey has, in other words, devoted 15 years of his life to rebuilding the trade center.',
-                cn: '换句话说，赫西已经把生命中的15年奉献给了世贸中心的重建。'
             }
         ]
     },
@@ -733,12 +687,6 @@ export default [
         ]
     },
     {
-        word: 'Frank Worsley',
-        translation: '弗兰克.沃斯利',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'odd',
         translation: 'adj. 古怪的；奇数的，单数的',
         phonetic: 'ɑd',
@@ -773,12 +721,6 @@ export default [
                 cn: '他在法庭上进行了顽强的抗辩。'
             }
         ]
-    },
-    {
-        word: 'Hubert Hudson',
-        translation: '休伯特.哈德逊',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'optimism',
@@ -897,12 +839,6 @@ export default [
         ]
     },
     {
-        word: 'Lionel Greenstreet',
-        translation: '莱昂内尔.格林斯特里特',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'bored',
         translation: 'adj. 无聊的，无聊的，烦人的',
         phonetic: 'bɔrd',
@@ -1009,22 +945,6 @@ export default [
         ]
     },
     {
-        word: 'King Lear',
-        translation: '李尔王',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Land rose from its womb, usurped its throne, and ever since the maddened old creature, with hoary crest of foam, wails and laments continually, like King Lear exposed to the fury of the elements.',
-                cn: '大地从它的腹中隆起，篡夺了它的王位。 从那以后，暴怒的老家伙就开始顶着灰白色的泡沫不断的哀号恸哭，一如暴风骤雨之中的李尔王。'
-            },
-            {
-                en: 'The original ending of King Lear wasn’t performed for nearly 150 years because it was thought too upsetting.',
-                cn: '《李尔王》的原始结尾在长达150年的时间里没有上演过，因为人们认为它太悲伤了。'
-            }
-        ]
-    },
-    {
         word: 'respectful',
         translation: 'adj. 尊敬的，恭敬的',
         phonetic: "rɪ'spɛktfəl",
@@ -1125,42 +1045,6 @@ export default [
         ]
     },
     {
-        word: 'Regan',
-        translation: '里根',
-        phonetic: "'ri:gən",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'She also says that on one occasion, Regan hung up on her in the middle of a phone conversation.',
-                cn: '她还表示，有一次，在电话交谈中，里根挂了她的电话。'
-            }
-        ]
-    },
-    {
-        word: 'Goneril',
-        translation: '贡纳莉',
-        phonetic: "'ɡɔnəril",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'This part is equal in value to what I give to Goneril.',
-                cn: '这部份和我给贡纳莉的那部份价值相等。'
-            }
-        ]
-    },
-    {
-        word: 'Cordelia',
-        translation: '科迪莉亚',
-        phonetic: "kɔ:'di:ljə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Don't grudge Anne Cordelia her fancies, Diana. I'm always sorry for children who don't spend a few years in fairyland.",
-                cn: '不要对安妮.科迪莉亚的想象力不满，戴安娜，我总是为没有在童话世界中度过一段岁月的孩子感到遗憾。'
-            }
-        ]
-    },
-    {
         word: 'duke',
         translation: 'n. 公爵',
         phonetic: 'dʊk',
@@ -1169,34 +1053,6 @@ export default [
             {
                 en: 'the Duke of Norfolk',
                 cn: '诺福克公爵'
-            }
-        ]
-    },
-    {
-        word: 'Albany',
-        translation: '奥尔巴尼',
-        phonetic: "'ɔ:bəni",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'One of my students from Albany, NY was suffering from bouts of severe depression.',
-                cn: '我一个来自纽约奥尔巴尼的学生曾患有严重的抑郁症。'
-            }
-        ]
-    },
-    {
-        word: 'Cornwall',
-        translation: '康沃尔',
-        phonetic: "'kɔ:nwɔ:l",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Prince Charles leads an expensive life and the Duchy of Cornwall is there to fund it.',
-                cn: '查尔斯王子过着一种奢侈的生活，这些都由康沃尔公国进行资助。'
-            },
-            {
-                en: 'But the move to abolish shared berths for rail passengers travelling alone from London to Cornwall shows that, like Greta Garbo, we all now want to be alone.',
-                cn: '但废除从伦敦到康沃尔的单身旅行者共用铺位的运动却表明，如同葛丽泰·嘉宝那样，现在的我们希望独处。'
             }
         ]
     },
@@ -1983,18 +1839,6 @@ export default [
         ]
     },
     {
-        word: 'Burgundy',
-        translation: '勃艮第',
-        phonetic: "'bɝɡəndi",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '...a bottle of white burgundy.',
-                cn: '...一瓶勃艮第白葡萄酒。'
-            }
-        ]
-    },
-    {
         word: 'respond',
         translation: 'v. 响应，做出反应；回答',
         phonetic: "rɪ'spɑnd",
@@ -2007,22 +1851,6 @@ export default [
             {
                 en: 'He responded that he didn’t want to see anyone.',
                 cn: '他回答说不想见任何人。'
-            }
-        ]
-    },
-    {
-        word: 'Oswald',
-        translation: '奥斯瓦尔德',
-        phonetic: "'ɔzwəld",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'But Oswald stressed that the research looked at the average person, and could not account for everyone.',
-                cn: '不过奥斯瓦德强调研究只是针对普通大众，不见得适用于所有人。'
-            },
-            {
-                en: '"We find a very strong link between cash falling on you and higher contentment and better mental health in the following year," said Oswald.',
-                cn: '“我们发现意外的财产收入与之后一年内较高的满足感以及更好的精神状况有十分密切的联系，”奥斯瓦德说。'
             }
         ]
     },
@@ -2051,18 +1879,6 @@ export default [
             {
                 en: 'a staff meeting',
                 cn: '员工会议'
-            }
-        ]
-    },
-    {
-        word: 'Caius',
-        translation: '凯厄斯',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'On June 5, 1976, Needham delivered his last sermon as Master of Caius College. I quote from that sermon.',
-                cn: '1976年6月5日，李约瑟作为剑桥大学凯斯学院的院长进行了他最后一次说教或演讲，下边就是他的讲话的引用。'
             }
         ]
     },
@@ -2213,28 +2029,6 @@ export default [
             {
                 en: 'The tanker is registered in Rotterdam.',
                 cn: '这艘油轮是在鹿特丹登记的。'
-            }
-        ]
-    },
-    {
-        word: 'Maryann Jines',
-        translation: '玛丽安.琼斯',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Martin Luther King Jr.',
-        translation: '马丁.路德.金',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Here in the US, today is Martin Luther King Jr. Day.',
-                cn: '今天是美国的马丁.路德.金纪念日。'
-            },
-            {
-                en: 'For this day, we celebrate Dr. Martin Luther King Jr.’s return to the National Mall.',
-                cn: '在这一天，我们欢庆马丁·路德·金博士重返国家大草坪。'
             }
         ]
     },
@@ -2439,18 +2233,6 @@ export default [
             {
                 en: 'The country was plunged into economic chaos.',
                 cn: '这个国家陷入了经济大混乱。'
-            }
-        ]
-    },
-    {
-        word: 'Serena',
-        translation: '赛丽娜',
-        phonetic: "sə'reinə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Her next two films are slated to be Cleopatra and Serena, the story of a frontier woman who, among many other things, tries to kill her stepson.',
-                cn: '朱莉接下来的计划包括《新埃及艳后》和《塞丽娜》两部电影，后一部讲述的是一个女人试图杀死继子的故事。'
             }
         ]
     },
@@ -2859,42 +2641,6 @@ export default [
         ]
     },
     {
-        word: 'Scout',
-        translation: '斯考特',
-        phonetic: 'skaʊt',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Atticus',
-        translation: '阿提斯库',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Greeks still use some ancient sites, such as the Pnyx and the Theater of Herodes Atticus.',
-                cn: '希腊人仍在使用一些古代的场所，如普尼克斯和希罗德•阿提库剧场。'
-            }
-        ]
-    },
-    {
-        word: 'Jem',
-        translation: '杰姆',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Arthur',
-        translation: '亚瑟',
-        phonetic: 'ˈɑːθə',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Arthur and Carl don't like each other. But Bill is friendly with them both.",
-                cn: '亚瑟和卡尔都很讨厌对方，但是比尔却和他们两个都很好。'
-            }
-        ]
-    },
-    {
         word: 'commit',
         translation: 'v. 犯罪，做（不合法的或错事）',
         phonetic: "kə'mɪt",
@@ -2903,28 +2649,6 @@ export default [
             {
                 en: 'Women commit fewer crimes than men.',
                 cn: '女性犯罪比男性少。'
-            }
-        ]
-    },
-    {
-        word: 'Walter Cunningham',
-        translation: '沃尔特.坎宁安',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Caroline',
-        translation: '卡罗琳',
-        phonetic: "'kærə,laɪn",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Caroline, will you be there?',
-                cn: '卡罗琳，你会出席吗？'
-            },
-            {
-                en: 'Caroline and Douglas will be there too.',
-                cn: '卡罗琳和道格拉斯也将出席。'
             }
         ]
     },
@@ -2985,18 +2709,6 @@ export default [
             {
                 en: 'The park was an oasis of peace.',
                 cn: '这座公园是个宁静宜人的去处。'
-            }
-        ]
-    },
-    {
-        word: 'Alabama',
-        translation: '阿拉巴马州（美国的一个州）',
-        phonetic: ",ælə'bæmə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'One of the latest casualties is the sewer system of Jefferson county, Alabama.',
-                cn: '最近的一个受害者是阿拉巴马州杰弗逊县的下水道系统。'
             }
         ]
     },
@@ -3137,18 +2849,6 @@ export default [
                 cn: '明喻是常用的修辞术，也很好用，但是像连珠炮式的比喻与其说是富有启发性，不如说是在转移注意力。'
             }
         ]
-    },
-    {
-        word: 'Ewell',
-        translation: '尤厄尔',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Mayella',
-        translation: '梅耶拉',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'dominate',
@@ -3887,42 +3587,6 @@ export default [
         ]
     },
     {
-        word: 'Jane Austin',
-        translation: '简.奥斯丁',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The story is about Jane Austin , the author of "Pride and Prejudice".',
-                cn: '这部电影讲述的是《傲慢与偏见》的作者简·奥斯汀的故事。'
-            },
-            {
-                en: "In Jane Austin's time, when men and women lived in separate worlds, their primary attraction to each other was romantic and/or sexual.",
-                cn: '在简奥斯汀的时代，男人和女人生活在各自的世界里，他们对于彼此的吸引只能发生在浪漫/性这方面。'
-            },
-            {
-                en: 'This is the second book (that) I have read written by Jane Austin.',
-                cn: '这是我读过的简·奥斯汀的第二本书。'
-            }
-        ]
-    },
-    {
-        word: 'Charlotte Bronte',
-        translation: '夏洛蒂.勃朗特',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Charlotte Bronte used it in a story published in 1849.',
-                cn: '夏洛蒂·勃朗特在1849年发表的故事中用到了这种说法。'
-            },
-            {
-                en: 'An electronic-book firm is adding background noises and music to the works of Charlotte Bronte, Sir Arthur Conan Doyle and William Shakespeare in the hope of attracting younger readers.',
-                cn: '一家电子书公司正在为夏洛蒂·勃朗特、柯南和莎士比亚的作品添加背景音乐，以期望吸引年轻读者。'
-            }
-        ]
-    },
-    {
         word: 'prejudice',
         translation: 'n. 偏见，成见',
         phonetic: "'prɛdʒədɪs",
@@ -3937,24 +3601,6 @@ export default [
                 cn: '战胜这些偏见需要假以时日。'
             }
         ]
-    },
-    {
-        word: 'Margaret Mitchell',
-        translation: '玛格丽特.米切尔',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'American writer, Margaret Mitchell, who wrote "Gone With The Wind", was knocked down and killed by a speeding vehicle in 1949.',
-                cn: '写了《飘》的美国作家玛格丽特米歇尔，1949被一辆飞驰而来的汽车撞倒身亡。'
-            }
-        ]
-    },
-    {
-        word: 'Rudyard Kipling',
-        translation: '拉迪亚德.吉普林',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'consensus',
@@ -4041,18 +3687,6 @@ export default [
             {
                 en: 'She knows how to get round her dad.',
                 cn: '她知道怎样讨她爸爸的欢心。'
-            }
-        ]
-    },
-    {
-        word: 'George Eliot',
-        translation: '乔治.艾略特',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'As the great English writer George Eliot predicted over a century ago, that once established, the Jewish state will "shine like a bright star of freedom amid the despotisms of the East."',
-                cn: '正如伟大的英国作家乔治·艾略特一个世纪以前所预言，一旦建立，这个犹太国家将“在东方的专制暴政中间像一颗明星一样发光”。'
             }
         ]
     },
@@ -4459,12 +4093,6 @@ export default [
                 cn: '内西姑妈总是有点古怪。'
             }
         ]
-    },
-    {
-        word: 'Betsy Trotwood',
-        translation: '贝特西.特洛特伍德',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'generous',

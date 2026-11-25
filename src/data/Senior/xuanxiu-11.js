@@ -1467,12 +1467,6 @@ export default [
         ]
     },
     {
-        word: 'Jaez Wilson',
-        translation: '杰贝兹.威尔逊',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'flame',
         translation: 'n. 火焰',
         phonetic: 'flem',
@@ -2437,38 +2431,10 @@ export default [
         ]
     },
     {
-        word: 'Odysseus',
-        translation: '奥德修斯',
-        phonetic: "əu'disju:s",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'In order to steal it out, Odysseus and Diomedes slipped into the capital one night in  disguise , known to none but Hellen.',
-                cn: '为了将神像偷出城, 一天夜里奥德修斯和狄俄墨德斯乔装改扮潜入首都, 这一切只有海伦知道。'
-            },
-            {
-                en: 'There he helped Odysseus when the hero came to him for advice.',
-                cn: '在那儿，当奥德修斯前去征求他的意见时，泰瑞西斯帮助了他。'
-            }
-        ]
-    },
-    {
         word: 'Trojan',
         translation: 'adj. （古代小亚细亚）特洛伊（Troy）的',
         phonetic: "'trəudʒən",
         partOfSpeech: 'adj'
-    },
-    {
-        word: 'Telemachus',
-        translation: '忒勒玛科斯（Odysseus 和 Penelope 之子）',
-        phonetic: "ti'leməkəs; tə-",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Telemachus, in Homer’s story of the Odyssey, tipped his vehicle vertically against a wall, while others removed their wheels in the evening (Gordon, 1978) to prevent warping.',
-                cn: '荷马史诗里的忒勒马科斯在晚上把他的车竖直靠墙，而其他的车则被卸去了轮毂以防止变形（戈登，1978）。'
-            }
-        ]
     },
     {
         word: 'split',
@@ -2517,12 +2483,6 @@ export default [
                 cn: '她是受雇干临时性工作的。'
             }
         ]
-    },
-    {
-        word: 'Penelope',
-        translation: '珀涅罗珀（Odysseus 的忠实妻子）',
-        phonetic: "pə'nɛləpi",
-        partOfSpeech: ''
     },
     {
         word: 'statesman',
@@ -3173,18 +3133,6 @@ export default [
             {
                 en: '...a special protein which triggers the animal to shed its fleece.',
                 cn: '…一种能够促使这种动物脱毛的特殊蛋白质。'
-            }
-        ]
-    },
-    {
-        word: 'Perseus',
-        translation: '珀尔休斯（希腊主神宙斯之女，杀死怪 Medusa 的英雄）',
-        phonetic: "'pə:sju:s; -siəs",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The hero is Perseus, called a demi-god, because his father is Zeus the god, while his mother a human.',
-                cn: '我们的主角是珀尔修斯，他是一个半人神，因为他的爸爸是一个神，宙斯，而他的妈妈是一个人。'
             }
         ]
     },

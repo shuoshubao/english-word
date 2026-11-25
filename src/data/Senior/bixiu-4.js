@@ -13,12 +13,6 @@ export default [
         ]
     },
     {
-        word: 'Elizabeth Fry',
-        translation: '伊丽莎白•弗赖伊（英国慈善家）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'Quaker',
         translation: 'n. 教友派信徒；贵格会会员',
         phonetic: "'kweikə",
@@ -107,12 +101,6 @@ export default [
         ]
     },
     {
-        word: 'Jane Goodall',
-        translation: '简•古道尔(英国动物学家)',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'chimp',
         translation: 'n. （非洲）黑猩猩',
         phonetic: 'tʃɪmp',
@@ -153,12 +141,6 @@ export default [
                 cn: '该疗法只有在动物身上证明安全、万无一失后才会在人体上试用。'
             }
         ]
-    },
-    {
-        word: 'Jody Williams',
-        translation: '乔迪•威廉斯（美国诺贝尔和平奖得者）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'campaign',
@@ -1765,12 +1747,6 @@ export default [
         ]
     },
     {
-        word: 'Charlie Chaplin',
-        translation: '查理•卓别林（英国喜剧大师）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'comedy',
         translation: 'n. 喜剧',
         phonetic: "'kɑmədi",
@@ -1781,12 +1757,6 @@ export default [
                 cn: '单口喜剧表演职业'
             }
         ]
-    },
-    {
-        word: 'Victor Hugo',
-        translation: '维克多•雨果（法国文学家）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'up to now',
@@ -3083,42 +3053,6 @@ export default [
         ]
     },
     {
-        word: 'Akira Nagata',
-        translation: '永田明',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Then Akira Nagata from Japan came in smiling, together with George Cook from Canada.',
-                cn: '随后，来自日本的永田明微笑着走了进来，同时进来的还有加拿大的乔治•库克。'
-            }
-        ]
-    },
-    {
-        word: 'Ahmed Aziz',
-        translation: '艾哈迈德•阿齐兹',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Ahmed Aziz is a businessman from Jordan .',
-                cn: '艾哈迈德·阿齐兹是一位来自约旦的商人。'
-            }
-        ]
-    },
-    {
-        word: 'Darlene Coulon',
-        translation: '达琳•库隆',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "When Darlene Coulon from France came dashing through the door, she recognized Tony Garcia's smiling face.",
-                cn: '当来自法国的达琳•库隆匆忙走进门的时候，她认出了托尼•加西亚微笑的面孔。'
-            }
-        ]
-    },
-    {
         word: 'dash',
         translation: 'v. 猛冲；突进',
         phonetic: 'dæʃ',
@@ -3947,18 +3881,6 @@ export default [
         translation: '根据……模仿；仿造',
         phonetic: '',
         partOfSpeech: ''
-    },
-    {
-        word: 'Merlin the Wizard',
-        translation: '魔术师梅林',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'In one place, you can watch magic shows with Merlin the Wizard.',
-                cn: '在有的地方，你还能和大魔术师梅林一起观看魔术表演。'
-            }
-        ]
     },
     {
         word: 'sword',

@@ -69,12 +69,6 @@ export default [
         ]
     },
     {
-        word: 'Ashrita Furman',
-        translation: '阿什里塔.弗曼',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'Guinness',
         translation: '吉尼斯',
         phonetic: "'ɡinis",
@@ -89,12 +83,6 @@ export default [
                 cn: '霍尔奎斯特夫妇已经结婚七年，但是直到今年他们才联系了吉尼斯世界纪录。'
             }
         ]
-    },
-    {
-        word: 'Guiness Book of World Records',
-        translation: '《吉尼斯世界纪录大全》',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'approximate',
@@ -341,12 +329,6 @@ export default [
                 cn: '瑜伽包括呼吸训练、伸展和冥想。'
             }
         ]
-    },
-    {
-        word: 'Sri chinmoy',
-        translation: '斯里琴摩',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'spiritual',
@@ -715,18 +697,6 @@ export default [
         ]
     },
     {
-        word: 'Slovenia',
-        translation: '斯洛文尼亚（国名）',
-        phonetic: "sləu'vi:niə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Have you ever been to Slovenia?',
-                cn: '你去过斯洛文尼亚吗？'
-            }
-        ]
-    },
-    {
         word: 'entire',
         translation: 'adj. 全部的，完整的',
         phonetic: "ɪn'taɪɚ",
@@ -949,18 +919,6 @@ export default [
             {
                 en: 'He earns a good wage.',
                 cn: '他工资挺高。'
-            }
-        ]
-    },
-    {
-        word: 'Marco Polo',
-        translation: '马可.波罗',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The most famous of these travelers was Marco Polo, whose thoughts and adventures were later recorded and embellished by an Italian romance writer.',
-                cn: '这些旅行者中最出名的就是马可波罗，他的所见所闻后来被一位意大利传奇小说家记载下来，并加以润色。'
             }
         ]
     },
@@ -1521,18 +1479,6 @@ export default [
         ]
     },
     {
-        word: 'Samuel',
-        translation: '塞缪尔',
-        phonetic: 'ˈsæmjuəl',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '“Look at you,” she says pointing at Samuel, age five.',
-                cn: '“看看你，”她指着照片中的五岁塞缪尔说到。'
-            }
-        ]
-    },
-    {
         word: 'swoop',
         translation: 'v. 突降，猛扑',
         phonetic: 'swup',
@@ -1633,42 +1579,6 @@ export default [
             {
                 en: 'A lot of small companies are having to fight for survival (= work hard in order to continue to exist ) .',
                 cn: '很多小公司不得不挣扎求生。'
-            }
-        ]
-    },
-    {
-        word: 'Captain Bligh',
-        translation: '布莱船长',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The drawback of staying on the ship seemed to grow as I thought about how wrong it was to treat Captain Bligh in this way.',
-                cn: '留在船舶上的缺点似乎成长，我想到它是这样对待布莱船长错误。'
-            },
-            {
-                en: 'In appointing Captain Bligh to rule the colony, the English Government spoiled an excellent seaman to make a very inefficient governor.',
-                cn: '英国政府将布赖任命为殖民地长官，使得他从一个优秀海员演变成一个极其无能的管理者。'
-            }
-        ]
-    },
-    {
-        word: 'Tahiti',
-        translation: '塔西提岛（位于太平洋）',
-        phonetic: "tɑ:'hi:ti; tə-",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Tahiti lies in the South Pacific.',
-                cn: '塔希提岛位于南太平洋。'
-            },
-            {
-                en: 'The hulls were built by Choco Indians in the Darien Providence of Panama and shipped to Tahiti.',
-                cn: '它的船身是在巴拿马的达里恩省由巧克族印第安人做的，然后运到塔希提岛来。'
-            },
-            {
-                en: 'How about a 55-day round trip from California to Australia and New Zealand via Tahiti and Mexico?',
-                cn: '从加州途径塔希提岛和墨西哥前往澳大利亚和新西兰往返55天的行程怎么样？'
             }
         ]
     },
@@ -1917,18 +1827,6 @@ export default [
         ]
     },
     {
-        word: 'Timor',
-        translation: '帝汶岛（位于东南亚）',
-        phonetic: "'ti:mɔ:; 'tai-; ti'mɔ:",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Although Timor Leste is a new country, it is already part of the international sport scene.',
-                cn: '东帝汶虽然是一个新国家，但是它已经是国际体育运动的一部分了。'
-            }
-        ]
-    },
-    {
         word: 'set loose',
         translation: '出发，开始',
         phonetic: '',
@@ -1993,12 +1891,6 @@ export default [
                 cn: '她把他从鬼门关里救了出来。'
             }
         ]
-    },
-    {
-        word: 'Shetland Islands',
-        translation: '设得兰群岛（位于英国苏格兰北部）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'the Faroe Islands',
@@ -2085,44 +1977,6 @@ export default [
         ]
     },
     {
-        word: 'Kakadu',
-        translation: '卡卡杜湾',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Many of its world-renowned attractions are specific, such as the Great Barrier Reef, Ayers Rock, Kakadu National Park, and Sydney Opera House.',
-                cn: '澳大利亚世界闻名的景点中有许多是其独有的，如大堡礁、艾尔斯巨石、卡卡杜国家公园和悉尼歌剧院等。'
-            }
-        ]
-    },
-    {
-        word: 'Canberra',
-        translation: '堪培拉（澳大利亚首都）',
-        phonetic: "'kænbərə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'In Australia, climate change is a political football, kicked about in the power game played in Canberra.',
-                cn: '在澳大利亚，气候变化是政治足球，在堪培拉的权力游戏中被踢来踢去。'
-            },
-            {
-                en: 'Canberra needs the relationship - and the guarantees of military assistance that go with it - far more than Washington does.',
-                cn: '堪培拉需要这种关系，以及随之而来的军援保证，远远超过华盛顿对这种关系的需要。'
-            },
-            {
-                en: 'Kylie Catchpole, a research fellow at the Australian National University in Canberra, says the design is promising because it works over a broad band of the spectrum.',
-                cn: '凯莉·卡崔布尔，堪培拉的澳洲国立大学的一名女研究员，说道这项设计很有前景因为研究的是宽频带的光谱。'
-            }
-        ]
-    },
-    {
-        word: 'Uluru',
-        translation: '乌卢鲁，埃尔斯岩（Ayres Rock）的土著名',
-        phonetic: "'u:ləru:",
-        partOfSpeech: ''
-    },
-    {
         word: 'barrier',
         translation: 'n. 障碍物，栅栏；屏障',
         phonetic: "'bærɪɚ",
@@ -2137,12 +1991,6 @@ export default [
                 cn: '群山构成了两国之间的天然屏障。'
             }
         ]
-    },
-    {
-        word: 'Great Barrier Reef',
-        translation: '大堡礁',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'brochure',
@@ -2169,12 +2017,6 @@ export default [
         ]
     },
     {
-        word: 'Kosciuszko',
-        translation: '科西阿斯科山（位于澳大利亚东南部）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'adequate',
         translation: 'adj. 适当的，足够的',
         phonetic: 'ˈædɪkwət',
@@ -2195,26 +2037,6 @@ export default [
             {
                 en: 'The company has yet to provide an adequate explanation for its actions.',
                 cn: '该公司对其行动仍未作出充分解释。'
-            }
-        ]
-    },
-    {
-        word: 'Melbourne',
-        translation: '墨尔本（澳大利亚东南部港市，维多利亚州首府）',
-        phonetic: "'mɛlbən",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'All works are handmade in Melbourne, with sterling silver, human hair and human teeth.',
-                cn: '所有的作品都以纯银、人的头发和牙齿在墨尔本手工制作而成。'
-            },
-            {
-                en: 'Father and son even attended university together when Daniel began his masters degree in genetics, aged 15, and his dad studied mathematics and physics at the University of Melbourne.',
-                cn: '这对父子甚至一起上大学：当15岁的达尼埃尔在墨尔本大学开始攻读遗传学硕士的时候，他父亲正在学习数学和物理学。'
-            },
-            {
-                en: 'We went to bed to rise early the next day and set off along the Great Ocean Road, which stretches for around 160 miles along the coast between Adelaide and Melbourne.',
-                cn: '我们早早上床睡觉，第二天早起后出发驶上大洋路，这条路从阿德雷德到墨尔本，沿着海岸线延伸160英里。'
             }
         ]
     },
@@ -2455,18 +2277,6 @@ export default [
         ]
     },
     {
-        word: 'Adelaide',
-        translation: '阿德莱德（澳大利亚东南部港市，南澳大利亚前首府）',
-        phonetic: "'ædəleid",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: '"We were lucky to find a site like that, " said lead study author Wolfgang Haak, from the University of Adelaide in Australia.',
-                cn: '“能找到这样的遗址我们真是太幸运了，”来自澳洲阿德莱德大学的主要研究员沃夫冈·哈克说到。'
-            }
-        ]
-    },
-    {
         word: 'superb',
         translation: 'adj. 卓越的，杰出的，极好的',
         phonetic: '/suːˈpɜːrb/',
@@ -2479,18 +2289,6 @@ export default [
             {
                 en: 'superb weather',
                 cn: '极好的天气'
-            }
-        ]
-    },
-    {
-        word: 'Nullarbor',
-        translation: '纳拉伯平原（位于澳大利亚西南部，火箭制造基地和试验场）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'We needed it, for the last leg was the toughest of all: the Nullarbor Plain, which stretches across the south of the country.',
-                cn: '我们需要这么做，因为我们最后一段路程是最艰难的，那就是绵延在澳大利亚南部的纳拉伯平原。'
             }
         ]
     },
@@ -3245,26 +3043,6 @@ export default [
         partOfSpeech: ''
     },
     {
-        word: 'Joseph',
-        translation: '约瑟夫',
-        phonetic: 'ˈdʒozəf, -səf',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Why? Cannot you tell her who I am, eh, Joseph?',
-                cn: '为什么？ 你就不能告诉她我是谁吗，呃，约瑟夫？'
-            },
-            {
-                en: 'Joseph is the right man for the job. You should recommend him.',
-                cn: '约瑟夫是这份工作的合适人选，你该推荐他。'
-            },
-            {
-                en: 'Joseph pulled the nurse into a corner and muttered something to her.',
-                cn: '约瑟夫把护士拉到一个角落里，和她嘀咕着什么。'
-            }
-        ]
-    },
-    {
         word: 'endeavour',
         translation: 'n. 尽力，竭力',
         phonetic: '',
@@ -3295,12 +3073,6 @@ export default [
                 cn: '三艘油轮停泊在港口。'
             }
         ]
-    },
-    {
-        word: 'Nathaniel Ward',
-        translation: '纳撒尼尔.沃德',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'tight',
@@ -3431,12 +3203,6 @@ export default [
                 cn: '19世纪，海盗很猖獗。'
             }
         ]
-    },
-    {
-        word: 'Father Farges',
-        translation: '法尔热神父（法）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'appeal',

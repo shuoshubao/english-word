@@ -483,12 +483,6 @@ export default [
         ]
     },
     {
-        word: 'CatherineⅡ',
-        translation: '叶卡捷琳娜二世（俄国女皇）',
-        phonetic: "'kæθərin",
-        partOfSpeech: ''
-    },
-    {
         word: 'at war',
         translation: '处于交战状态',
         phonetic: '',
@@ -1897,22 +1891,6 @@ export default [
         ]
     },
     {
-        word: 'Charles Babbage',
-        translation: '查尔斯•巴比奇（英国数学教授）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: "Theworld's first computer printer was a 19th century mechanically drivenapparatus invented by Charles Babbage for his Difference Engine.",
-                cn: '世界上第一台计算机的打印机是一种19世纪的机械驱动装置发明的查尔斯巴贝奇的差分机。'
-            },
-            {
-                en: 'I like your story of Charles Babbage, who in the 1820s basically invented the concept of computer a century before anyone, including him, could make one.',
-                cn: '你书中关于查尔斯·巴贝奇（Charles Babbage）的故事我很喜欢，他在十九世纪二十年代就发明了计算机概念，而真正的计算机却是在一个世纪之后出现的。'
-            }
-        ]
-    },
-    {
         word: 'operator',
         translation: 'n. 电话接线员；〔机器或设备的〕操作者，操作员',
         phonetic: "'ɑpəretɚ",
@@ -2057,18 +2035,6 @@ export default [
             {
                 en: 'intelligent software/systems',
                 cn: '智能软件 / 系统'
-            }
-        ]
-    },
-    {
-        word: 'Alan Turing',
-        translation: '艾伦•图灵（英国数学家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'In addition to the Curie clan, Einstein, Newton and Alan Turing —founder of modern computer science —all were left-handed as well.',
-                cn: '除了居里夫人一家之外，爱因斯坦、牛顿和现代电脑科学的创始人阿兰·图灵都是左撇子。'
             }
         ]
     },

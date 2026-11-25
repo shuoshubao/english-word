@@ -881,18 +881,6 @@ export default [
         ]
     },
     {
-        word: 'Nicolaus Copernicus',
-        translation: '尼古拉•哥白尼（波兰天文学家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Nicolaus Copernicus, the Polish astronomer noted for his revolutionary theory about the earth revolving around the sun, is often credited with a gastronomic achievement.',
-                cn: '波兰天文学家尼古劳斯． 哥白尼除了以其革新的「 地球环绕太阳旋转」 论著称， 据说在美食上也有成就。'
-            }
-        ]
-    },
-    {
         word: 'revolutionary',
         translation: 'adj. 革命的；重大变革的',
         phonetic: "'rɛvə'lʊʃə'nɛri",
@@ -1137,44 +1125,6 @@ export default [
         ]
     },
     {
-        word: 'River Avon',
-        translation: '埃文河',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'River Thames',
-        translation: '泰晤士河',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The skeleton of a whale which died after becoming stranded swimming up the River Thames is going on public display.',
-                cn: '这具鲸鱼骨架是一条在英国泰晤士河中因搁浅致死的鲸鱼的骨架，目前它被公开展出。'
-            },
-            {
-                en: 'Researchers working in the Black Sea have found currents of water 350 times greater than the River Thames flowing along the sea bed, carving out channels much like a river on the land.',
-                cn: '在黑海进行研究工作的科研人员发现了在海床上奔涌的水流，它们的流量是泰晤士河的350倍，如同陆地上的河流一样冲刷蚀刻出水道。'
-            },
-            {
-                en: 'After his conviction of piracy and murder charges in a sensational London trial, he was left to hang over the River Thames for two years.',
-                cn: '在伦敦，他被认定海盗和谋杀罪成立的审判轰动一时，之后他的尸体被悬在泰晤士河长达两年。'
-            }
-        ]
-    },
-    {
-        word: 'River Severn',
-        translation: '塞文河',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Shrewsbury also suffered flooding after the River Severn burst its banks.',
-                cn: '在塞文河的河水漫过堤岸后，什鲁斯伯里市也遭遇了洪水袭击。'
-            }
-        ]
-    },
-    {
         word: 'divide…into',
         translation: '把……分成',
         phonetic: '',
@@ -1185,48 +1135,6 @@ export default [
                 cn: '本书分为六部分。'
             }
         ]
-    },
-    {
-        word: 'Wales',
-        translation: '威尔士（英）',
-        phonetic: 'weilz',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'England, Scotland and Wales compose the island of Great Britain.',
-                cn: '英格兰、苏格兰和威尔士组成大不列颠岛国。'
-            },
-            {
-                en: 'The longer he stayed in London the more he hated it, but he could not go back to Wales for he had no job there.',
-                cn: '他在伦敦呆得时间越长，越憎恶伦敦。 可是，他却不能回到威尔士，因为那里没有他的工作。'
-            }
-        ]
-    },
-    {
-        word: 'Scotland',
-        translation: '苏格兰（英）',
-        phonetic: "'skɔtlənd",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'He traveled Scotland last year.',
-                cn: '他去年在苏格兰旅行。'
-            },
-            {
-                en: 'England, Scotland and Wales compose the island of Great Britain.',
-                cn: '英格兰、苏格兰和威尔士组成大不列颠岛国。'
-            },
-            {
-                en: 'Why should they not go on to Scotland, if that had been the case?',
-                cn: '要是真象你所想的那样，那他们干吗不到苏格兰去呢？'
-            }
-        ]
-    },
-    {
-        word: 'Northern Ireland',
-        translation: '北爱尔兰（英）',
-        phonetic: '',
-        partOfSpeech: ''
     },
     {
         word: 'clarify',
@@ -1473,18 +1381,6 @@ export default [
             {
                 en: 'Azaleas flower at roughly the same time each year.',
                 cn: '杜鹃花每年的开花时间大致相同。'
-            }
-        ]
-    },
-    {
-        word: 'Midlands',
-        translation: '英格兰中部地区（英）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The plotters escaped from London for the Midlands.',
-                cn: '密谋者迅速从伦敦撤往中部地区。'
             }
         ]
     },

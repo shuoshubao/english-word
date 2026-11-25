@@ -52,13 +52,13 @@ export const vocabularyCatalog = [
         id: 'p6-1',
         stage: '小学',
         title: '六年级上册',
-        wordCount: 129
+        wordCount: 124
     },
     {
         id: 'p6-2',
         stage: '小学',
         title: '六年级下册',
-        wordCount: 107
+        wordCount: 106
     },
     {
         id: 'm7-1',
@@ -76,7 +76,7 @@ export const vocabularyCatalog = [
         id: 'm8-1',
         stage: '初中',
         title: '八年级上册',
-        wordCount: 415
+        wordCount: 413
     },
     {
         id: 'm8-2',
@@ -88,73 +88,73 @@ export const vocabularyCatalog = [
         id: 'm9-1',
         stage: '初中',
         title: '九年级上册',
-        wordCount: 488
+        wordCount: 479
     },
     {
         id: 'h-bx1',
         stage: '高中',
         title: '必修一',
-        wordCount: 289
+        wordCount: 284
     },
     {
         id: 'h-bx2',
         stage: '高中',
         title: '必修二',
-        wordCount: 298
+        wordCount: 295
     },
     {
         id: 'h-bx3',
         stage: '高中',
         title: '必修三',
-        wordCount: 345
+        wordCount: 341
     },
     {
         id: 'h-bx4',
         stage: '高中',
         title: '必修四',
-        wordCount: 294
+        wordCount: 285
     },
     {
         id: 'h-bx5',
         stage: '高中',
         title: '必修五',
-        wordCount: 352
+        wordCount: 344
     },
     {
         id: 'h-xx6',
         stage: '高中',
         title: '选修六',
-        wordCount: 377
+        wordCount: 369
     },
     {
         id: 'h-xx7',
         stage: '高中',
         title: '选修七',
-        wordCount: 362
+        wordCount: 353
     },
     {
         id: 'h-xx8',
         stage: '高中',
         title: '选修八',
-        wordCount: 408
+        wordCount: 399
     },
     {
         id: 'h-xx9',
         stage: '高中',
         title: '选修九',
-        wordCount: 344
+        wordCount: 323
     },
     {
         id: 'h-xx10',
         stage: '高中',
         title: '选修十',
-        wordCount: 354
+        wordCount: 320
     },
     {
         id: 'h-xx11',
         stage: '高中',
         title: '选修十一',
-        wordCount: 291
+        wordCount: 286
     },
     {
         id: 'cet4',

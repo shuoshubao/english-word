@@ -4997,38 +4997,6 @@ export default [
         ]
     },
     {
-        word: 'Thunder Bay',
-        translation: '桑德湾',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Lake is the main port of Duluth United States and Canada Thunder Bay, and so on.',
-                cn: '主要湖港有美国的德卢斯和加拿大的桑德贝等。'
-            }
-        ]
-    },
-    {
-        word: 'Lake Superior',
-        translation: '苏必利尔湖',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The Lake Superior National Marine Conservation Area offers unparalleled waters for trout, whitefish, lake herring, and walleye.',
-                cn: '苏必利尔湖国家海洋保护区为鳟鱼，白鱼，湖鲱鱼，角膜白斑提供了无与伦比的水域。'
-            },
-            {
-                en: 'Travel to Algoma Country on the northern part of Lake Superior then bait-up, cast your line and wait for something juicy to bite which can then be cooked a crackling fire.',
-                cn: '首先前往苏必利尔湖北面的艾柯玛县，接下来你就可以上饵、放线，然后等着那鲜美多汁的家伙上钩，最后用一堆柴火烹制你的佳肴啦。'
-            },
-            {
-                en: 'The result is a narrow lake 410 miles (660 kilometers) long—60 miles (97 kilometers) longer than Lake Superior—and 3, 600 feet (1, 100 meters) wide, twice the width of the natural river channel.',
-                cn: '蓄水完成后，将形成一个长度达440英里（660公里），宽3600英尺（1100米）的狭长型大湖，其长度比苏必利尔湖长处60英里（97公里），宽度是长江自然河道的两倍。'
-            }
-        ]
-    },
-    {
         word: 'location',
         translation: 'n. 位置；地方',
         phonetic: "lo'keʃən",
@@ -5311,18 +5279,6 @@ export default [
         ]
     },
     {
-        word: 'Cantonese',
-        translation: 'n & adj. 广东人（的）；广州人（的）; 广东话（的）',
-        phonetic: ",kæntə'ni:z",
-        partOfSpeech: 'n & adj',
-        examples: [
-            {
-                en: 'Cantonese cooking',
-                cn: '粤菜'
-            }
-        ]
-    },
-    {
         word: 'approximately',
         translation: 'adv. 接近；大约',
         phonetic: "ə'prɑksɪmətli",
@@ -5407,22 +5363,6 @@ export default [
             {
                 en: 'The show aims to reach the broadest possible audience.',
                 cn: '这个节目力图覆盖尽可能广泛的观众群。'
-            }
-        ]
-    },
-    {
-        word: 'St Lawrence River',
-        translation: '圣劳伦斯河',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'As they sat in a café looking over the broad St Lawrence River, a young man sat down with them.',
-                cn: '正当她们坐在咖啡馆里向外瞭望宽阔的圣劳伦斯河的时候，一个年轻人和他们坐到了一起。'
-            },
-            {
-                en: 'The capital of Francophone Canada offers an annual Winter Carnival with snow sculptures, an Ice Palace and tower and a legendary canoe race along the St Lawrence River.',
-                cn: '雪雕，冰宫，冰塔都是冬季嘉年华上必不可少的项目。 还会有著名的圣劳伦斯河独木舟比赛。'
             }
         ]
     },

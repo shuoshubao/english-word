@@ -1634,7 +1634,904 @@ export default [
                 examples: [],
                 id: 'middle__James Naismith',
                 category: 'middle'
-            }
+            },
+            {
+                word: 'Alexander Graham Bell',
+                translation: '亚历山大 • 格雷厄姆 • 贝尔',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'It is the story of Alexander Graham Bell.', cn: '这就是亚历山大·格雷厄姆·贝尔的故事。' },
+                    { en: 'WHEN Alexander Graham Bell invented the telephone in 1876, he could never have predicted what it would be able to do in the future.', cn: '在1876年亚历山大·格雷厄姆·贝尔发明电话之时，他绝对不会料到电话在未来能做何用途。' }
+                ],
+                id: 'middle__Alexander Graham Bell',
+                category: 'middle'
+            },
+
+            {
+                word: 'Chelsea Lanmon',
+                translation: '切尔西 • 兰曼',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'middle__Chelsea Lanmon',
+                category: 'middle'
+            },
+
+            {
+                word: 'Jamie Ellsworth',
+                translation: '杰米 • 埃尔斯沃恩',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'middle__Jamie Ellsworth',
+                category: 'middle'
+            },
+
+            {
+                word: 'Paul Stoker',
+                translation: '保罗 • 斯托克',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'middle__Paul Stoker',
+                category: 'middle'
+            },
+
+            {
+                word: 'Dan',
+                translation: '丹 • 德维什',
+                phonetic: 'dæn',
+                partOfSpeech: '',
+                id: 'middle__Dan',
+                category: 'middle'
+            },
+
+            {
+                word: 'Orson',
+                translation: '奥森',
+                phonetic: '\'ɔ:sən',
+                partOfSpeech: '',
+                id: 'middle__Orson',
+                category: 'middle'
+            },
+
+            {
+                word: 'Noah Webster',
+                translation: '诺厄•韦伯斯特（美国词典编纂家）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Fifty years later across the pond Noah Webster produced his first dictionary.', cn: '五十年后，诺亚·韦伯斯特在海洋之外的另一片大陆上编成了他的第一本词典。' },
+                    { en: 'First published in 1783, this reference book by the American man of letters Noah Webster (1758-1843) remained a bestseller in the U.S. throughout the 19th century.', cn: '1783年初版后，这本由研究语言文字的美国男子诺亚·韦伯斯特(1758-1843)编写的参考书在整个19世界都一直占据美国畅销书榜。' }
+                ],
+                id: 'high__Noah Webster',
+                category: 'high'
+            },
+
+            {
+                word: 'William Tyndale',
+                translation: '威廉•廷代尔（英国早期新教改革者）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__William Tyndale',
+                category: 'high'
+            },
+
+            {
+                word: 'Norman Bethune',
+                translation: '诺曼•白求恩（加拿大胸外科医师）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Norman Bethune was a well-known international human itarian.', cn: '诺尔曼·白求恩是众所周知的国际友人。' }
+                ],
+                id: 'high__Norman Bethune',
+                category: 'high'
+            },
+
+            {
+                word: 'Mohandas Gandhi',
+                translation: '莫罕达斯•甘地（印度国民大会党领袖）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'In India, a Hindu extremist assassinates Mohandas Gandhi, the spiritual and political leader.', cn: '在印度，一名印度教极端分子刺杀了精神及政治领袖莫汉达斯·甘地。' }
+                ],
+                id: 'high__Mohandas Gandhi',
+                category: 'high'
+            },
+
+            {
+                word: 'Charles Babbage',
+                translation: '查尔斯•巴比奇（英国数学教授）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Theworld\'s first computer printer was a 19th century mechanically drivenapparatus invented by Charles Babbage for his Difference Engine.', cn: '世界上第一台计算机的打印机是一种19世纪的机械驱动装置发明的查尔斯巴贝奇的差分机。' },
+                    { en: 'I like your story of Charles Babbage, who in the 1820s basically invented the concept of computer a century before anyone, including him, could make one.', cn: '你书中关于查尔斯·巴贝奇（Charles Babbage）的故事我很喜欢，他在十九世纪二十年代就发明了计算机概念，而真正的计算机却是在一个世纪之后出现的。' }
+                ],
+                id: 'high__Charles Babbage',
+                category: 'high'
+            },
+
+            {
+                word: 'Alan Turing',
+                translation: '艾伦•图灵（英国数学家）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'In addition to the Curie clan, Einstein, Newton and Alan Turing —founder of modern computer science —all were left-handed as well.', cn: '除了居里夫人一家之外，爱因斯坦、牛顿和现代电脑科学的创始人阿兰·图灵都是左撇子。' }
+                ],
+                id: 'high__Alan Turing',
+                category: 'high'
+            },
+
+            {
+                word: 'CatherineⅡ',
+                translation: '叶卡捷琳娜二世（俄国女皇）',
+                phonetic: '\'kæθərin',
+                partOfSpeech: '',
+                id: 'high__CatherineⅡ',
+                category: 'high'
+            },
+
+            {
+                word: 'Elizabeth Fry',
+                translation: '伊丽莎白•弗赖伊（英国慈善家）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Elizabeth Fry',
+                category: 'high'
+            },
+
+            {
+                word: 'Jane Goodall',
+                translation: '简•古道尔(英国动物学家)',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Jane Goodall',
+                category: 'high'
+            },
+
+            {
+                word: 'Jody Williams',
+                translation: '乔迪•威廉斯（美国诺贝尔和平奖得者）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Jody Williams',
+                category: 'high'
+            },
+
+            {
+                word: 'Charlie Chaplin',
+                translation: '查理•卓别林（英国喜剧大师）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Charlie Chaplin',
+                category: 'high'
+            },
+
+            {
+                word: 'Victor Hugo',
+                translation: '维克多•雨果（法国文学家）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Victor Hugo',
+                category: 'high'
+            },
+
+            {
+                word: 'Ahmed Aziz',
+                translation: '艾哈迈德•阿齐兹',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Ahmed Aziz is a businessman from Jordan .', cn: '艾哈迈德·阿齐兹是一位来自约旦的商人。' }
+                ],
+                id: 'high__Ahmed Aziz',
+                category: 'high'
+            },
+
+            {
+                word: 'Darlene Coulon',
+                translation: '达琳•库隆',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'When Darlene Coulon from France came dashing through the door, she recognized Tony Garcia\'s smiling face.', cn: '当来自法国的达琳•库隆匆忙走进门的时候，她认出了托尼•加西亚微笑的面孔。' }
+                ],
+                id: 'high__Darlene Coulon',
+                category: 'high'
+            },
+
+            {
+                word: 'Akira Nagata',
+                translation: '永田明',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Then Akira Nagata from Japan came in smiling, together with George Cook from Canada.', cn: '随后，来自日本的永田明微笑着走了进来，同时进来的还有加拿大的乔治•库克。' }
+                ],
+                id: 'high__Akira Nagata',
+                category: 'high'
+            },
+
+            {
+                word: 'Merlin the Wizard',
+                translation: '魔术师梅林',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'In one place, you can watch magic shows with Merlin the Wizard.', cn: '在有的地方，你还能和大魔术师梅林一起观看魔术表演。' }
+                ],
+                id: 'high__Merlin the Wizard',
+                category: 'high'
+            },
+
+            {
+                word: 'Nicolaus Copernicus',
+                translation: '尼古拉•哥白尼（波兰天文学家）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Nicolaus Copernicus, the Polish astronomer noted for his revolutionary theory about the earth revolving around the sun, is often credited with a gastronomic achievement.', cn: '波兰天文学家尼古劳斯． 哥白尼除了以其革新的「 地球环绕太阳旋转」 论著称， 据说在美食上也有成就。' }
+                ],
+                id: 'high__Nicolaus Copernicus',
+                category: 'high'
+            },
+
+            {
+                word: 'Whitney',
+                translation: '惠特尼',
+                phonetic: '\'hwɪtni',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'That may be extreme, but Ms. Whitney argues that the boom years are not coming back anytime soon.', cn: '这也许有点极端，但是惠特尼女士还是坚持繁荣的年代还没有到来的观点。' },
+                    { en: 'Prof. CROSS: You know the - you remember that song that Whitney Houston wrote, "The Greatest Love of All"?', cn: '克洛斯教授：你知道——你记得惠特尼休斯顿写的那首歌《最伟大的爱》吗？' },
+                    { en: 'And now there’s a brand new paper in Psychological Science by Faraz Farzin, Susan Rivera and David Whitney that provides some of the best evidence yet for the lantern hypothesis.', cn: '法拉兹-法曾，苏珊-里维拉和大卫-惠特尼在"心理科学"杂志上有一篇新论文，为灯笼的假设提供了到目前为止最好的证据。' }
+                ],
+                id: 'high__Whitney',
+                category: 'high'
+            },
+
+            {
+                word: 'Foster',
+                translation: '福斯特（姓或男名）',
+                phonetic: '\'fɔstɚ',
+                partOfSpeech: '',
+                id: 'high__Foster',
+                category: 'high'
+            },
+
+            {
+                word: 'Charles Keeling',
+                translation: '查尔斯•基林',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'It was Charles Keeling who measured the carbon dioxide content in the atmosphere between 1957 and 1997.', cn: '是查尔斯。奎林把1957-1997年期间大气层中二氧化碳的含量作了精确的统计。' }
+                ],
+                id: 'high__Charles Keeling',
+                category: 'high'
+            },
+
+            {
+                word: 'George Hambley',
+                translation: '乔治•汗布利',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'On the other hand, there are those, like George Hambley, who are opposed to this view, believe that we should not worry about high levels of carbon dioxide in the air.', cn: '另一方面，还有一些人，像科学家乔治治·汉布利，反对上面的观点，他们认为我们不必担心空气中会有高含量的二氧化碳。' }
+                ],
+                id: 'high__George Hambley',
+                category: 'high'
+            },
+
+            {
+                word: 'Marty',
+                translation: '马蒂•菲尔丁',
+                phonetic: '\'mɑ:ti',
+                partOfSpeech: '',
+                id: 'high__Marty',
+                category: 'high'
+            },
+
+            {
+                word: 'Barry Minto',
+                translation: '巴里•明托',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Barry Minto',
+                category: 'high'
+            },
+
+            {
+                word: 'Isaac Asimov',
+                translation: '艾萨克•阿西莫夫',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'As Isaac Asimov once commented, we scored a touchdown, then took our football and went home.', cn: '正如艾萨克·阿西莫夫评论的那样，我们只赢得一次达阵，然后便收起球回家了。' },
+                    { en: 'One of the most celebrated science fiction authors, Isaac Asimov, outlined \'Three Laws of Robotics\' in a novel featuring human-like robots. The rules were designed to protect people from harm.', cn: '最著名的科幻小说作者之一，艾萨克·阿西莫夫，在一本以仿生机器人为特写的小说中，他概述了“机器人三定律”，旨在保护人类免受伤害。' },
+                    { en: 'Isaac Asimov is the only author to have a book in every Dewey-decimal category.', cn: '艾萨克·阿西莫夫（Isaac Asimov）是美国唯一位在每一版杜威图书里都有出现他的书的作家。' }
+                ],
+                id: 'high__Isaac Asimov',
+                category: 'high'
+            },
+
+            {
+                word: 'Larry Belmont',
+                translation: '拉里•贝尔蒙特',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Larry Belmont worked for a company that made robots.', cn: '拉里·贝尔蒙特的工作，这家公司制造的机器人。' }
+                ],
+                id: 'high__Larry Belmont',
+                category: 'high'
+            },
+
+            {
+                word: 'Gladys Claffern',
+                translation: '格拉迪斯•克拉芬',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'As she turned around, there stood Gladys Claffern.', cn: '她刚一转身，就看到格拉蒂斯·克拉芬站在那里。' },
+                    { en: 'As she turned around , there stood Gladys Claffern.', cn: '当她转过身去时，格拉雷斯·克拉芬站在那里。' }
+                ],
+                id: 'high__Gladys Claffern',
+                category: 'high'
+            },
+
+            {
+                word: 'Andrew Hallidie',
+                translation: '安德鲁•海利迪',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Built in 1873, the cable car system was invented by Andrew Hallidie, who wanted to find a better form of transport than horse-drawn trams.', cn: '缆车系统建于1873年，是由安德鲁·海利迪发明的，他试图找到一种比马拉轨道车更好的交通方式。' }
+                ],
+                id: 'high__Andrew Hallidie',
+                category: 'high'
+            },
+
+            {
+                word: 'George Stephenson',
+                translation: '乔治•斯蒂芬森（英国发明家，蒸汽机的发明人）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Travel and transportation were changed when the steamship was invented, and they were changed even more when the locomotive was invented by George Stephenson in 1814.', cn: '发明蒸汽船之后，人们的旅行和交通运输都改变了。而在1814年，乔治·史蒂芬逊发明蒸汽机车后，变化更大了。' },
+                    { en: 'It begins with an evocative description of George Stephenson’s Rocket, a famous early steam engine, and traces the developments needed to make each of its individual components possible.', cn: '书的开头以动人的笔触描述了早期著名的蒸汽机工程师乔治·斯蒂文森的火箭发明，然后追溯了使每个个体发明成为可能的发展条件。' },
+                    { en: 'It is before 1848 because it was referred to by George Stephenson in that year.', cn: '这是1848年之前，因为它是所提到乔治斯蒂芬森在这一年。' }
+                ],
+                id: 'high__George Stephenson',
+                category: 'high'
+            },
+
+            {
+                word: 'Alexander Graham',
+                translation: '亚历山大•格雷厄姆•贝尔',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'It is the story of Alexander Graham Bell.', cn: '这就是亚历山大·格雷厄姆·贝尔的故事。' },
+                    { en: 'Alexander Graham Bell and Elisha Gray filed patent applications on the very same day in 1876.', cn: '亚历山大·格拉汉姆·贝尔和伊莱莎·格雷在1876年的某个时间几乎同时递交了专利申请。' }
+                ],
+                id: 'high__Alexander Graham',
+                category: 'high'
+            },
+
+            {
+                word: 'James Dyson',
+                translation: '詹姆斯•戴森（英国发明家）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'An Australian designer has won this year\'s James Dyson Award with an invention that sounds more like magic than science - and the inventor owes his success to an unassuming little beetle.', cn: '一位澳大利亚设计师获得了本年度的杰姆斯戴森奖，他的发明与其说是科学不如说是一个神话。 而且这位发明者将他的成功归功于看起来不起眼的小甲虫。' },
+                    { en: 'The James Dyson Award is an international design award that celebrates, encourages and inspires the next generation of design engineers.', cn: '詹姆斯·戴森奖是一项鼓励新人的设计奖项。' }
+                ],
+                id: 'high__James Dyson',
+                category: 'high'
+            },
+
+            {
+                word: 'Ashrita Furman',
+                translation: '阿什里塔.弗曼',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Ashrita Furman',
+                category: 'high'
+            },
+
+            {
+                word: 'Sri chinmoy',
+                translation: '斯里琴摩',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Sri chinmoy',
+                category: 'high'
+            },
+
+            {
+                word: 'Marco Polo',
+                translation: '马可.波罗',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The most famous of these travelers was Marco Polo, whose thoughts and adventures were later recorded and embellished by an Italian romance writer.', cn: '这些旅行者中最出名的就是马可波罗，他的所见所闻后来被一位意大利传奇小说家记载下来，并加以润色。' }
+                ],
+                id: 'high__Marco Polo',
+                category: 'high'
+            },
+
+            {
+                word: 'Samuel',
+                translation: '塞缪尔',
+                phonetic: 'ˈsæmjuəl',
+                partOfSpeech: '',
+                examples: [
+                    { en: '“Look at you,” she says pointing at Samuel, age five.', cn: '“看看你，”她指着照片中的五岁塞缪尔说到。' }
+                ],
+                id: 'high__Samuel',
+                category: 'high'
+            },
+
+            {
+                word: 'Captain Bligh',
+                translation: '布莱船长',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The drawback of staying on the ship seemed to grow as I thought about how wrong it was to treat Captain Bligh in this way.', cn: '留在船舶上的缺点似乎成长，我想到它是这样对待布莱船长错误。' },
+                    { en: 'In appointing Captain Bligh to rule the colony, the English Government spoiled an excellent seaman to make a very inefficient governor.', cn: '英国政府将布赖任命为殖民地长官，使得他从一个优秀海员演变成一个极其无能的管理者。' }
+                ],
+                id: 'high__Captain Bligh',
+                category: 'high'
+            },
+
+            {
+                word: 'Joseph',
+                translation: '约瑟夫',
+                phonetic: 'ˈdʒozəf, -səf',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Why? Cannot you tell her who I am, eh, Joseph?', cn: '为什么？ 你就不能告诉她我是谁吗，呃，约瑟夫？' },
+                    { en: 'Joseph is the right man for the job. You should recommend him.', cn: '约瑟夫是这份工作的合适人选，你该推荐他。' },
+                    { en: 'Joseph pulled the nurse into a corner and muttered something to her.', cn: '约瑟夫把护士拉到一个角落里，和她嘀咕着什么。' }
+                ],
+                id: 'high__Joseph',
+                category: 'high'
+            },
+
+            {
+                word: 'Nathaniel Ward',
+                translation: '纳撒尼尔.沃德',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Nathaniel Ward',
+                category: 'high'
+            },
+
+            {
+                word: 'Father Farges',
+                translation: '法尔热神父（法）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Father Farges',
+                category: 'high'
+            },
+
+            {
+                word: 'Perce Blackborrow',
+                translation: '珀斯.布莱克鲍罗',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Perce Blackborrow',
+                category: 'high'
+            },
+
+            {
+                word: 'Sir Ernest Shackleton',
+                translation: '欧内斯特.沙克尔顿爵士',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The rare whisky was found 3 years ago below the floorboards of the hut used by renowned explorer Sir Ernest Shackleton. They had been buried in 1909.', cn: '这些珍贵的威士忌酒是著名探险家欧内斯特·沙克尔顿1909年进行南极探险时埋在探险小屋地板下的，3年前方得重见天日。' },
+                    { en: 'It includes sites on every continent, among them Sir Ernest Shackleton\'s 1908 expedition hut in Antarctica and Australia\'s Dampier Rock art complex, which dates from 8000BC.', cn: '名单涵盖了各大洲的古迹，包括欧内斯特，沙克尔顿爵士1908年远征南极洲时住的小屋、始于公元前8000年前的澳大利亚丹皮尔地区的岩画群。' }
+                ],
+                id: 'high__Sir Ernest Shackleton',
+                category: 'high'
+            },
+
+            {
+                word: 'Tom Orde-Lees',
+                translation: '汤姆.奥德.利兹',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Tom Orde-Lees is a selfish and bad-tempered member of the crew and his attitude may upset other people.', cn: '汤姆·奥德·利兹是船员中自私而又脾气暴躁的人，他的态度会使别人不安。' }
+                ],
+                id: 'high__Tom Orde-Lees',
+                category: 'high'
+            },
+
+            {
+                word: 'Hussey',
+                translation: '赫西',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Mr. Hussey has, in other words, devoted 15 years of his life to rebuilding the trade center.', cn: '换句话说，赫西已经把生命中的15年奉献给了世贸中心的重建。' }
+                ],
+                id: 'high__Hussey',
+                category: 'high'
+            },
+
+            {
+                word: 'Frank Worsley',
+                translation: '弗兰克.沃斯利',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Frank Worsley',
+                category: 'high'
+            },
+
+            {
+                word: 'Hubert Hudson',
+                translation: '休伯特.哈德逊',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Hubert Hudson',
+                category: 'high'
+            },
+
+            {
+                word: 'Lionel Greenstreet',
+                translation: '莱昂内尔.格林斯特里特',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Lionel Greenstreet',
+                category: 'high'
+            },
+
+            {
+                word: 'Regan',
+                translation: '里根',
+                phonetic: '\'ri:gən',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'She also says that on one occasion, Regan hung up on her in the middle of a phone conversation.', cn: '她还表示，有一次，在电话交谈中，里根挂了她的电话。' }
+                ],
+                id: 'high__Regan',
+                category: 'high'
+            },
+
+            {
+                word: 'Goneril',
+                translation: '贡纳莉',
+                phonetic: '\'ɡɔnəril',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'This part is equal in value to what I give to Goneril.', cn: '这部份和我给贡纳莉的那部份价值相等。' }
+                ],
+                id: 'high__Goneril',
+                category: 'high'
+            },
+
+            {
+                word: 'Cordelia',
+                translation: '科迪莉亚',
+                phonetic: 'kɔ:\'di:ljə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Don\'t grudge Anne Cordelia her fancies, Diana. I\'m always sorry for children who don\'t spend a few years in fairyland.', cn: '不要对安妮.科迪莉亚的想象力不满，戴安娜，我总是为没有在童话世界中度过一段岁月的孩子感到遗憾。' }
+                ],
+                id: 'high__Cordelia',
+                category: 'high'
+            },
+
+            {
+                word: 'Albany',
+                translation: '奥尔巴尼',
+                phonetic: '\'ɔ:bəni',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'One of my students from Albany, NY was suffering from bouts of severe depression.', cn: '我一个来自纽约奥尔巴尼的学生曾患有严重的抑郁症。' }
+                ],
+                id: 'high__Albany',
+                category: 'high'
+            },
+
+            {
+                word: 'Cornwall',
+                translation: '康沃尔',
+                phonetic: '\'kɔ:nwɔ:l',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Prince Charles leads an expensive life and the Duchy of Cornwall is there to fund it.', cn: '查尔斯王子过着一种奢侈的生活，这些都由康沃尔公国进行资助。' },
+                    { en: 'But the move to abolish shared berths for rail passengers travelling alone from London to Cornwall shows that, like Greta Garbo, we all now want to be alone.', cn: '但废除从伦敦到康沃尔的单身旅行者共用铺位的运动却表明，如同葛丽泰·嘉宝那样，现在的我们希望独处。' }
+                ],
+                id: 'high__Cornwall',
+                category: 'high'
+            },
+
+            {
+                word: 'Burgundy',
+                translation: '勃艮第',
+                phonetic: '\'bɝɡəndi',
+                partOfSpeech: '',
+                examples: [
+                    { en: '...a bottle of white burgundy.', cn: '...一瓶勃艮第白葡萄酒。' }
+                ],
+                id: 'high__Burgundy',
+                category: 'high'
+            },
+
+            {
+                word: 'Oswald',
+                translation: '奥斯瓦尔德',
+                phonetic: '\'ɔzwəld',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'But Oswald stressed that the research looked at the average person, and could not account for everyone.', cn: '不过奥斯瓦德强调研究只是针对普通大众，不见得适用于所有人。' },
+                    { en: '"We find a very strong link between cash falling on you and higher contentment and better mental health in the following year," said Oswald.', cn: '“我们发现意外的财产收入与之后一年内较高的满足感以及更好的精神状况有十分密切的联系，”奥斯瓦德说。' }
+                ],
+                id: 'high__Oswald',
+                category: 'high'
+            },
+
+            {
+                word: 'Caius',
+                translation: '凯厄斯',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'On June 5, 1976, Needham delivered his last sermon as Master of Caius College. I quote from that sermon.', cn: '1976年6月5日，李约瑟作为剑桥大学凯斯学院的院长进行了他最后一次说教或演讲，下边就是他的讲话的引用。' }
+                ],
+                id: 'high__Caius',
+                category: 'high'
+            },
+
+            {
+                word: 'Maryann Jines',
+                translation: '玛丽安.琼斯',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Maryann Jines',
+                category: 'high'
+            },
+
+            {
+                word: 'Martin Luther King Jr.',
+                translation: '马丁.路德.金',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Here in the US, today is Martin Luther King Jr. Day.', cn: '今天是美国的马丁.路德.金纪念日。' },
+                    { en: 'For this day, we celebrate Dr. Martin Luther King Jr.’s return to the National Mall.', cn: '在这一天，我们欢庆马丁·路德·金博士重返国家大草坪。' }
+                ],
+                id: 'high__Martin Luther King Jr.',
+                category: 'high'
+            },
+
+            {
+                word: 'Serena',
+                translation: '赛丽娜',
+                phonetic: 'sə\'reinə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Her next two films are slated to be Cleopatra and Serena, the story of a frontier woman who, among many other things, tries to kill her stepson.', cn: '朱莉接下来的计划包括《新埃及艳后》和《塞丽娜》两部电影，后一部讲述的是一个女人试图杀死继子的故事。' }
+                ],
+                id: 'high__Serena',
+                category: 'high'
+            },
+
+            {
+                word: 'Scout',
+                translation: '斯考特',
+                phonetic: 'skaʊt',
+                partOfSpeech: '',
+                id: 'high__Scout',
+                category: 'high'
+            },
+
+            {
+                word: 'Atticus',
+                translation: '阿提斯库',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Greeks still use some ancient sites, such as the Pnyx and the Theater of Herodes Atticus.', cn: '希腊人仍在使用一些古代的场所，如普尼克斯和希罗德•阿提库剧场。' }
+                ],
+                id: 'high__Atticus',
+                category: 'high'
+            },
+
+            {
+                word: 'Jem',
+                translation: '杰姆',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Jem',
+                category: 'high'
+            },
+
+            {
+                word: 'Arthur',
+                translation: '亚瑟',
+                phonetic: 'ˈɑːθə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Arthur and Carl don\'t like each other. But Bill is friendly with them both.', cn: '亚瑟和卡尔都很讨厌对方，但是比尔却和他们两个都很好。' }
+                ],
+                id: 'high__Arthur',
+                category: 'high'
+            },
+
+            {
+                word: 'Walter Cunningham',
+                translation: '沃尔特.坎宁安',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Walter Cunningham',
+                category: 'high'
+            },
+
+            {
+                word: 'Caroline',
+                translation: '卡罗琳',
+                phonetic: '\'kærə,laɪn',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Caroline, will you be there?', cn: '卡罗琳，你会出席吗？' },
+                    { en: 'Caroline and Douglas will be there too.', cn: '卡罗琳和道格拉斯也将出席。' }
+                ],
+                id: 'high__Caroline',
+                category: 'high'
+            },
+
+            {
+                word: 'Ewell',
+                translation: '尤厄尔',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Ewell',
+                category: 'high'
+            },
+
+            {
+                word: 'Mayella',
+                translation: '梅耶拉',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Mayella',
+                category: 'high'
+            },
+
+            {
+                word: 'Jane Austin',
+                translation: '简.奥斯丁',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The story is about Jane Austin , the author of "Pride and Prejudice".', cn: '这部电影讲述的是《傲慢与偏见》的作者简·奥斯汀的故事。' },
+                    { en: 'In Jane Austin\'s time, when men and women lived in separate worlds, their primary attraction to each other was romantic and/or sexual.', cn: '在简奥斯汀的时代，男人和女人生活在各自的世界里，他们对于彼此的吸引只能发生在浪漫/性这方面。' },
+                    { en: 'This is the second book (that) I have read written by Jane Austin.', cn: '这是我读过的简·奥斯汀的第二本书。' }
+                ],
+                id: 'high__Jane Austin',
+                category: 'high'
+            },
+
+            {
+                word: 'Charlotte Bronte',
+                translation: '夏洛蒂.勃朗特',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Charlotte Bronte used it in a story published in 1849.', cn: '夏洛蒂·勃朗特在1849年发表的故事中用到了这种说法。' },
+                    { en: 'An electronic-book firm is adding background noises and music to the works of Charlotte Bronte, Sir Arthur Conan Doyle and William Shakespeare in the hope of attracting younger readers.', cn: '一家电子书公司正在为夏洛蒂·勃朗特、柯南和莎士比亚的作品添加背景音乐，以期望吸引年轻读者。' }
+                ],
+                id: 'high__Charlotte Bronte',
+                category: 'high'
+            },
+
+            {
+                word: 'Margaret Mitchell',
+                translation: '玛格丽特.米切尔',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'American writer, Margaret Mitchell, who wrote "Gone With The Wind", was knocked down and killed by a speeding vehicle in 1949.', cn: '写了《飘》的美国作家玛格丽特米歇尔，1949被一辆飞驰而来的汽车撞倒身亡。' }
+                ],
+                id: 'high__Margaret Mitchell',
+                category: 'high'
+            },
+
+            {
+                word: 'Rudyard Kipling',
+                translation: '拉迪亚德.吉普林',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Rudyard Kipling',
+                category: 'high'
+            },
+
+            {
+                word: 'George Eliot',
+                translation: '乔治.艾略特',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'As the great English writer George Eliot predicted over a century ago, that once established, the Jewish state will "shine like a bright star of freedom amid the despotisms of the East."', cn: '正如伟大的英国作家乔治·艾略特一个世纪以前所预言，一旦建立，这个犹太国家将“在东方的专制暴政中间像一颗明星一样发光”。' }
+                ],
+                id: 'high__George Eliot',
+                category: 'high'
+            },
+
+            {
+                word: 'Betsy Trotwood',
+                translation: '贝特西.特洛特伍德',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Betsy Trotwood',
+                category: 'high'
+            },
+
+            {
+                word: 'Jaez Wilson',
+                translation: '杰贝兹.威尔逊',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Jaez Wilson',
+                category: 'high'
+            },
+
+            {
+                word: 'Odysseus',
+                translation: '奥德修斯',
+                phonetic: 'əu\'disju:s',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'In order to steal it out, Odysseus and Diomedes slipped into the capital one night in  disguise , known to none but Hellen.', cn: '为了将神像偷出城, 一天夜里奥德修斯和狄俄墨德斯乔装改扮潜入首都, 这一切只有海伦知道。' },
+                    { en: 'There he helped Odysseus when the hero came to him for advice.', cn: '在那儿，当奥德修斯前去征求他的意见时，泰瑞西斯帮助了他。' }
+                ],
+                id: 'high__Odysseus',
+                category: 'high'
+            },
+
+            {
+                word: 'Telemachus',
+                translation: '忒勒玛科斯（Odysseus 和 Penelope 之子）',
+                phonetic: 'ti\'leməkəs; tə-',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Telemachus, in Homer’s story of the Odyssey, tipped his vehicle vertically against a wall, while others removed their wheels in the evening (Gordon, 1978) to prevent warping.', cn: '荷马史诗里的忒勒马科斯在晚上把他的车竖直靠墙，而其他的车则被卸去了轮毂以防止变形（戈登，1978）。' }
+                ],
+                id: 'high__Telemachus',
+                category: 'high'
+            },
+
+            {
+                word: 'Penelope',
+                translation: '珀涅罗珀（Odysseus 的忠实妻子）',
+                phonetic: 'pə\'nɛləpi',
+                partOfSpeech: '',
+                id: 'high__Penelope',
+                category: 'high'
+            },
+
+            {
+                word: 'Perseus',
+                translation: '珀尔休斯（希腊主神宙斯之女，杀死怪 Medusa 的英雄）',
+                phonetic: '\'pə:sju:s; -siəs',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The hero is Perseus, called a demi-god, because his father is Zeus the god, while his mother a human.', cn: '我们的主角是珀尔修斯，他是一个半人神，因为他的爸爸是一个神，宙斯，而他的妈妈是一个人。' }
+                ],
+                id: 'high__Perseus',
+                category: 'high'
+            },
+
         ]
     },
     {
@@ -2673,7 +3570,196 @@ export default [
                 examples: [],
                 id: 'middle__South Africa',
                 category: 'middle'
-            }
+            },
+
+            {
+                word: 'Alaska',
+                translation: '阿拉斯加州',
+                phonetic: 'ə\'læskə',
+                partOfSpeech: 'n',
+                examples: [
+                    { en: 'Like I said, perfect, if you live in Alaska.', cn: '像我说过的，完美，如果你住在阿拉斯加的话。' },
+                    { en: 'Alaska and Hawaii were dependencies of the United States.', cn: '阿拉斯加和夏威夷过去是美国的属地。' },
+                    { en: 'Once they went camping with friends who had moved to Alaska.', cn: '有一次，他们和几个搬到阿拉斯加的朋友去野营。' }
+                ],
+                id: 'primary__Alaska',
+                category: 'primary'
+            },
+
+            {
+                word: 'Macao',
+                translation: '澳门',
+                phonetic: 'mə\'kau',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'These are ferries that ply between Hong Kong and Macao.', cn: '这些是往返香港和澳门间的渡轮。' }
+                ],
+                id: 'middle__Macao',
+                category: 'middle'
+            },
+
+            {
+                word: 'Brazil',
+                translation: '巴西',
+                phonetic: 'brə\'zil',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Brazil has a big surplus of coffee.', cn: '巴西有很多剩余咖啡。' },
+                    { en: 'Today\'s football match is France versus Brazil.', cn: '今天的足球赛是法国队对巴西队。' },
+                    { en: 'Brazil has thrown up many world-famous footballers.', cn: '巴西出了许多闻名世界的足球运动员。' }
+                ],
+                id: 'middle__Brazil',
+                category: 'middle'
+            },
+
+            {
+                word: 'Norway',
+                translation: '挪威',
+                phonetic: '\'nɔrweɪ',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Sweden borders Norway and Finland.', cn: '瑞典与挪威、芬兰接壤。' },
+                    { en: 'They tried to chart the sea area between Norway and Denmark.', cn: '他们企图绘制挪威与丹麦之间的海域图。' },
+                    { en: 'Now we know that someone from Norway can do it.', cn: '现在我们知道挪威的某些人可以这么做。' }
+                ],
+                id: 'middle__Norway',
+                category: 'middle'
+            },
+
+            {
+                word: 'Cantonese',
+                translation: 'n & adj. 广东人（的）；广州人（的）; 广东话（的）',
+                phonetic: ',kæntə\'ni:z',
+                partOfSpeech: 'n & adj',
+                examples: [
+                    { en: 'Cantonese cooking', cn: '粤菜' }
+                ],
+                id: 'high__Cantonese',
+                category: 'high'
+            },
+
+            {
+                word: 'Wales',
+                translation: '威尔士（英）',
+                phonetic: 'weilz',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'England, Scotland and Wales compose the island of Great Britain.', cn: '英格兰、苏格兰和威尔士组成大不列颠岛国。' },
+                    { en: 'The longer he stayed in London the more he hated it, but he could not go back to Wales for he had no job there.', cn: '他在伦敦呆得时间越长，越憎恶伦敦。 可是，他却不能回到威尔士，因为那里没有他的工作。' }
+                ],
+                id: 'high__Wales',
+                category: 'high'
+            },
+
+            {
+                word: 'Northern Ireland',
+                translation: '北爱尔兰（英）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Northern Ireland',
+                category: 'high'
+            },
+
+            {
+                word: 'Midlands',
+                translation: '英格兰中部地区（英）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The plotters escaped from London for the Midlands.', cn: '密谋者迅速从伦敦撤往中部地区。' }
+                ],
+                id: 'high__Midlands',
+                category: 'high'
+            },
+
+            {
+                word: 'Papua',
+                translation: '巴布亚新几内亚',
+                phonetic: '\'pæpjuə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The extremely limited road system in Papua New Guinea means that we flew to our destination.', cn: '巴布亚新几内亚极其狭窄的道路系统意味着我们需要飞入目的地。' },
+                    { en: 'Our idea is that the ancestors of Melanesians met the Denisovans in Southeast Asia and interbred, and the ancestors of Melanesians then moved on to Papua New Guinea.', cn: '我们的观点是，美拉尼亚人的祖先在亚洲东南部与丹尼索万人相遇并通婚，然后美拉尼亚人的祖先来到巴布亚新几内亚。' }
+                ],
+                id: 'high__Papua',
+                category: 'high'
+            },
+
+            {
+                word: 'California',
+                translation: '加利福尼亚（州）',
+                phonetic: ',kælɪ\'fɔnjə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'California borders the Pacific Ocean.', cn: '加利福尼亚州与太平洋毗连。' },
+                    { en: 'She lived in California during the winter.', cn: '整个冬天她住在加利福尼亚州。' },
+                    { en: 'Many people prospected for gold in California in the 1850s.', cn: '19世纪50年代许多人在加利福尼亚勘探金矿。' }
+                ],
+                id: 'high__California',
+                category: 'high'
+            },
+
+            {
+                word: 'Californian',
+                translation: '加利福尼亚（州）人',
+                phonetic: 'ˌkælɪˈfɔːnɪən',
+                partOfSpeech: '',
+                id: 'high__Californian',
+                category: 'high'
+            },
+
+
+            {
+                word: 'Slovenia',
+                translation: '斯洛文尼亚（国名）',
+                phonetic: 'sləu\'vi:niə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Have you ever been to Slovenia?', cn: '你去过斯洛文尼亚吗？' }
+                ],
+                id: 'high__Slovenia',
+                category: 'high'
+            },
+
+            {
+                word: 'Alabama',
+                translation: '阿拉巴马州（美国的一个州）',
+                phonetic: ',ælə\'bæmə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'One of the latest casualties is the sewer system of Jefferson county, Alabama.', cn: '最近的一个受害者是阿拉巴马州杰弗逊县的下水道系统。' }
+                ],
+                id: 'high__Alabama',
+                category: 'high'
+            },
+
+            {
+                word: 'Inca',
+                translation: '印加帝国',
+                phonetic: '\'iŋkə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'With this big stick, Inca kings began eyeing the lands and resources of others.', cn: '有了这根军事大棒，印加帝王开始觊觎别人的土地和资源。' },
+                    { en: 'But within a hundred years after the Inca began building this impressive city, they started to abandon it.', cn: '但在开始建设这个城市之后一百年，他们又放弃了这个令人印象深刻的印加城市。' },
+                    { en: 'He believed the Inca dynasty had far deeper roots, and Maukallacta seemed the logical place to look for them.', cn: '他认为印加王朝有着更渊源的根，要找出来，毛卡拉塔似乎是个合理的地方。' }
+                ],
+                id: 'high__Inca',
+                category: 'high'
+            },
+
+            {
+                word: 'Scotland',
+                translation: '苏格兰（英）',
+                phonetic: '\'skɔtlənd',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'He traveled Scotland last year.', cn: '他去年在苏格兰旅行。' },
+                    { en: 'England, Scotland and Wales compose the island of Great Britain.', cn: '英格兰、苏格兰和威尔士组成大不列颠岛国。' },
+                    { en: 'Why should they not go on to Scotland, if that had been the case?', cn: '要是真象你所想的那样，那他们干吗不到苏格兰去呢？' }
+                ],
+                id: 'high__Scotland',
+                category: 'high'
+            },
         ]
     },
     {
@@ -3112,7 +4198,109 @@ export default [
                 ],
                 id: 'primary__Moscow',
                 category: 'primary'
-            }
+            },
+            {
+                word: 'Munich',
+                translation: '慕尼黑',
+                phonetic: '\'mju:nik',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'And then we went to Munich.', cn: '然后我们去了慕尼黑。' },
+                    { en: 'She urgently phones her contact, and he orders her to go to Munich and remain untraceable.', cn: '她急切地打电话给她的联络人，对方指令她前往慕尼黑，并保持不被他人找到。' }
+                ],
+                id: 'primary__Munich',
+                category: 'primary'
+            },
+
+            {
+                word: 'Canberra',
+                translation: '堪培拉',
+                phonetic: '\'kænbərə',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'In Australia, climate change is a political football, kicked about in the power game played in Canberra.', cn: '在澳大利亚，气候变化是政治足球，在堪培拉的权力游戏中被踢来踢去。' },
+                    { en: 'Canberra needs the relationship - and the guarantees of military assistance that go with it - far more than Washington does.', cn: '堪培拉需要这种关系，以及随之而来的军援保证，远远超过华盛顿对这种关系的需要。' },
+                    { en: 'Kylie Catchpole, a research fellow at the Australian National University in Canberra, says the design is promising because it works over a broad band of the spectrum.', cn: '凯莉·卡崔布尔，堪培拉的澳洲国立大学的一名女研究员，说道这项设计很有前景因为研究的是宽频带的光谱。' }
+                ],
+                id: 'primary__Canberra',
+                category: 'primary'
+            },
+
+            {
+                word: 'Turpan',
+                translation: '吐鲁番',
+                phonetic: '\'tuə\'pɑ:n',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Ahmed then took me for a drive outside Turpan to a small Uyghur village at the foot of a mountain where I could see their style of housing, farming, etc.', cn: '然后，艾哈迈德载我去吐鲁番郊外的、山脚下的一个维族小村庄，在那我可以看到他们的建筑风格，以及农事等等。' }
+                ],
+                id: 'primary__Turpan',
+                category: 'primary'
+            },
+
+            {
+                word: 'Georgetown',
+                translation: '乔治城（圭亚那首都）',
+                phonetic: '\'dʒɔdʒtaun',
+                partOfSpeech: '',
+                id: 'middle__Georgetown',
+                category: 'middle'
+            },
+
+            {
+                word: 'Cape Town',
+                translation: '开普敦（南非立法首都）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'I travelled from Cairo to Cape Town in 2002.', cn: '2002年，我从开罗一路旅行到了开普敦。' },
+                    { en: 'Given that Capello refused to back Green after the game, Hart should get his chance against Algeria in Cape Town on Friday.', cn: '假定卡佩罗在赛后不支持格林，那哈特就有机会参加星期五开普敦与阿尔及利亚的比赛。' },
+                    { en: 'But their confidence never wavered as Blatter remarked during the team draw in Cape Town six months ago. "You are ready. I am ready.', cn: '但是他们的信心从未动摇，布拉特六个月前在开普敦小组抽签时重申：“你们准备好了，我准备好了。' }
+                ],
+                id: 'high__Cape Town',
+                category: 'high'
+            },
+
+            {
+                word: 'Pompeii',
+                translation: '庞培（意大利古都）',
+                phonetic: 'pɔm\'peii:; -\'pei',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Pompeii was a cultural center and vacation destination for Roman high society until it was destroyed in 79 A.D. by the eruption of Mount Vesuvius.', cn: '公元79年维苏威火山爆发并摧毁该城市以前，意大利古城庞培一直是罗马帝国上流社会贵族们的度假天堂，也是罗马帝国的文化中心。' },
+                    { en: 'Mount Nyiragongo is one of the most dangerous volcanoes in the world - and scientists say it is only a matter of time before it makes the city below a modern day Pompeii.', cn: '尼拉贡戈火山是世界上最危险的火山之一，科学家表示，山脚下的城镇重现庞培古城的悲剧只是时间的问题。' }
+                ],
+                id: 'high__Pompeii',
+                category: 'high'
+            },
+
+
+            {
+                word: 'Melbourne',
+                translation: '墨尔本（澳大利亚东南部港市，维多利亚州首府）',
+                phonetic: '\'mɛlbən',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'All works are handmade in Melbourne, with sterling silver, human hair and human teeth.', cn: '所有的作品都以纯银、人的头发和牙齿在墨尔本手工制作而成。' },
+                    { en: 'Father and son even attended university together when Daniel began his masters degree in genetics, aged 15, and his dad studied mathematics and physics at the University of Melbourne.', cn: '这对父子甚至一起上大学：当15岁的达尼埃尔在墨尔本大学开始攻读遗传学硕士的时候，他父亲正在学习数学和物理学。' },
+                    { en: 'We went to bed to rise early the next day and set off along the Great Ocean Road, which stretches for around 160 miles along the coast between Adelaide and Melbourne.', cn: '我们早早上床睡觉，第二天早起后出发驶上大洋路，这条路从阿德雷德到墨尔本，沿着海岸线延伸160英里。' }
+                ],
+                id: 'high__Melbourne',
+                category: 'high'
+            },
+
+            {
+                word: 'Adelaide',
+                translation: '阿德莱德（澳大利亚东南部港市，南澳大利亚前首府）',
+                phonetic: '\'ædəleid',
+                partOfSpeech: '',
+                examples: [
+                    { en: '"We were lucky to find a site like that, " said lead study author Wolfgang Haak, from the University of Adelaide in Australia.', cn: '“能找到这样的遗址我们真是太幸运了，”来自澳洲阿德莱德大学的主要研究员沃夫冈·哈克说到。' }
+                ],
+                id: 'high__Adelaide',
+                category: 'high'
+            },
+
         ]
     },
     {
@@ -3309,7 +4497,267 @@ export default [
                 examples: [],
                 id: 'high__Mount Kilauea',
                 category: 'high'
-            }
+            },
+            {
+                word: 'Papa Westray',
+                translation: '帕帕韦斯特雷岛',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Papa Westray has a population of just 70 and no secondary school.', cn: '帕帕韦斯特雷岛人口只有70，岛上没有中学。' }
+                ],
+                id: 'primary__Papa Westray',
+                category: 'primary'
+            },
+
+            {
+                word: 'Penang Hill',
+                translation: '马来西亚槟榔山（升旗山）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'middle__Penang Hill',
+                category: 'middle'
+            },
+
+            {
+                word: 'Thunder Bay',
+                translation: '桑德湾',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Lake is the main port of Duluth United States and Canada Thunder Bay, and so on.', cn: '主要湖港有美国的德卢斯和加拿大的桑德贝等。' }
+                ],
+                id: 'high__Thunder Bay',
+                category: 'high'
+            },
+
+            {
+                word: 'Lake Superior',
+                translation: '苏必利尔湖',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The Lake Superior National Marine Conservation Area offers unparalleled waters for trout, whitefish, lake herring, and walleye.', cn: '苏必利尔湖国家海洋保护区为鳟鱼，白鱼，湖鲱鱼，角膜白斑提供了无与伦比的水域。' },
+                    { en: 'Travel to Algoma Country on the northern part of Lake Superior then bait-up, cast your line and wait for something juicy to bite which can then be cooked a crackling fire.', cn: '首先前往苏必利尔湖北面的艾柯玛县，接下来你就可以上饵、放线，然后等着那鲜美多汁的家伙上钩，最后用一堆柴火烹制你的佳肴啦。' },
+                    { en: 'The result is a narrow lake 410 miles (660 kilometers) long—60 miles (97 kilometers) longer than Lake Superior—and 3, 600 feet (1, 100 meters) wide, twice the width of the natural river channel.', cn: '蓄水完成后，将形成一个长度达440英里（660公里），宽3600英尺（1100米）的狭长型大湖，其长度比苏必利尔湖长处60英里（97公里），宽度是长江自然河道的两倍。' }
+                ],
+                id: 'high__Lake Superior',
+                category: 'high'
+            },
+
+            {
+                word: 'St Lawrence River',
+                translation: '圣劳伦斯河',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'As they sat in a café looking over the broad St Lawrence River, a young man sat down with them.', cn: '正当她们坐在咖啡馆里向外瞭望宽阔的圣劳伦斯河的时候，一个年轻人和他们坐到了一起。' },
+                    { en: 'The capital of Francophone Canada offers an annual Winter Carnival with snow sculptures, an Ice Palace and tower and a legendary canoe race along the St Lawrence River.', cn: '雪雕，冰宫，冰塔都是冬季嘉年华上必不可少的项目。 还会有著名的圣劳伦斯河独木舟比赛。' }
+                ],
+                id: 'high__St Lawrence River',
+                category: 'high'
+            },
+
+            {
+                word: 'River Avon',
+                translation: '埃文河',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__River Avon',
+                category: 'high'
+            },
+
+            {
+                word: 'River Thames',
+                translation: '泰晤士河',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The skeleton of a whale which died after becoming stranded swimming up the River Thames is going on public display.', cn: '这具鲸鱼骨架是一条在英国泰晤士河中因搁浅致死的鲸鱼的骨架，目前它被公开展出。' },
+                    { en: 'Researchers working in the Black Sea have found currents of water 350 times greater than the River Thames flowing along the sea bed, carving out channels much like a river on the land.', cn: '在黑海进行研究工作的科研人员发现了在海床上奔涌的水流，它们的流量是泰晤士河的350倍，如同陆地上的河流一样冲刷蚀刻出水道。' },
+                    { en: 'After his conviction of piracy and murder charges in a sensational London trial, he was left to hang over the River Thames for two years.', cn: '在伦敦，他被认定海盗和谋杀罪成立的审判轰动一时，之后他的尸体被悬在泰晤士河长达两年。' }
+                ],
+                id: 'high__River Thames',
+                category: 'high'
+            },
+
+            {
+                word: 'River Severn',
+                translation: '塞文河',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Shrewsbury also suffered flooding after the River Severn burst its banks.', cn: '在塞文河的河水漫过堤岸后，什鲁斯伯里市也遭遇了洪水袭击。' }
+                ],
+                id: 'high__River Severn',
+                category: 'high'
+            },
+
+            {
+                word: 'Sicily',
+                translation: '西西里岛（意大利南部）',
+                phonetic: '\'sisili',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'A group of wealthy friends are cruising the sea near Sicily on a yacht.', cn: '一群有钱人开着游艇在西西里岛附近的海上游弋。' }
+                ],
+                id: 'high__Sicily',
+                category: 'high'
+            },
+
+            {
+                word: 'Mount Vesuvius',
+                translation: '维苏威火山',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The protesters were demonstrating against the opening of a new dump on the slopes of Mount Vesuvius.', cn: '反对者们抗议在维苏威火山的半坡上启用一处新的垃圾场。' }
+                ],
+                id: 'high__Mount Vesuvius',
+                category: 'high'
+            },
+
+            {
+                word: 'Lake Titicaca',
+                translation: '的的喀喀湖',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'A girl runs on one ofthe Uros floating islands on Lake Titicaca in Puno, Peru, on May 29, 2011.', cn: '2011年5月29日，秘鲁普诺市的的喀喀湖上的漂流岛，一个女孩正在奔跑。' },
+                    { en: 'Ubinas is one of many volcanoes that dot the high desert plateau east of Lake Titicaca in southern Peru.', cn: '乌比纳斯火山是众多火山群中的一个，这些火山群位于秘鲁南部，的的喀喀湖以东的沙漠高原上。' },
+                    { en: 'Theprotesters oppose the Canadian Santa Ana silver mining project they say willpollute the Desaguadero River and Lake Titicaca.', cn: '抗议者反对加拿大圣安娜银矿开采项目，声称该项目会污染德萨瓜德罗河和的的喀喀湖。' }
+                ],
+                id: 'high__Lake Titicaca',
+                category: 'high'
+            },
+
+            {
+                word: 'Machu Picchu',
+                translation: '马丘比丘（秘鲁）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'The next day the Espinar water strike spreads to communities near Machu Picchu.', cn: '第二天，埃斯皮纳水罢工扩大到马丘比丘附近的社区。' },
+                    { en: 'Machu Picchu in Peru, which means ‘Old Peak, ” is one of the most enigmatic ancient sites in the world.', cn: '马丘比丘在秘鲁是“古老的顶峰”的意思。 这是世界上最具神秘色彩的古老建筑。' },
+                    { en: 'As archaeologists learn more about what happened here, new questions continue to arise, guaranteeing that Machu Picchu will remain a place of mystery for years to come.', cn: '作为考古学家了解这里发生的事情更多，新的问题继续出现，马丘比丘将在未来几年保持它神秘的面貌。' }
+                ],
+                id: 'high__Machu Picchu',
+                category: 'high'
+            },
+
+            {
+                word: 'Angel Island',
+                translation: '天使岛',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Angel Island Company offers a number of activities, such as bicycling , sailing and surfing.', cn: '天使岛公司提供许多活动，例如骑单车、出帆和冲浪。' },
+                    { en: 'Invitingly green Angel Island, once a military installation, contains meandering trails and picnic spots ideal for a day\'s excursion.', cn: '迷人的天使岛郁郁葱葱，小径蜿蜒，是一日游的理想野餐场所。但在它却是军事基地。（名词短语分译）' }
+                ],
+                id: 'high__Angel Island',
+                category: 'high'
+            },
+
+            {
+                word: 'Bering',
+                translation: '白令海峡',
+                phonetic: '\'bɛriŋ',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'I first came to North American in prehistoric times when I crossed the Bering Strait land bridge from Eurasia.', cn: '在史前时期，我从欧亚大陆穿越白令海峡、走过陆地、桥第一次来到了北美。' },
+                    { en: 'As they report online this week in Nature Geoscience, the model shows that the Bering Strait\'s status was directly responsible for the ice-sheet oscillations.', cn: '他们在本周《自然-地球科学》杂志在线版上报道：模拟显示，白令海峡的状况是造成冰盖振荡的直接原因。' },
+                    { en: 'Its modern distribution suggests that Japanese sailors were the first people to reach the Americas, millennia before Siberians wandered across the Bering Strait.', cn: '其现代分布表明，日本船员首先到达美洲，比西伯利亚人越过白令海峡早了一千年。' }
+                ],
+                id: 'high__Bering',
+                category: 'high'
+            },
+
+            {
+                word: 'Tahiti',
+                translation: '塔西提岛（位于太平洋）',
+                phonetic: 'tɑ:\'hi:ti; tə-',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Tahiti lies in the South Pacific.', cn: '塔希提岛位于南太平洋。' },
+                    { en: 'The hulls were built by Choco Indians in the Darien Providence of Panama and shipped to Tahiti.', cn: '它的船身是在巴拿马的达里恩省由巧克族印第安人做的，然后运到塔希提岛来。' },
+                    { en: 'How about a 55-day round trip from California to Australia and New Zealand via Tahiti and Mexico?', cn: '从加州途径塔希提岛和墨西哥前往澳大利亚和新西兰往返55天的行程怎么样？' }
+                ],
+                id: 'high__Tahiti',
+                category: 'high'
+            },
+
+            {
+                word: 'Timor',
+                translation: '帝汶岛（位于东南亚）',
+                phonetic: '\'ti:mɔ:; \'tai-; ti\'mɔ:',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Although Timor Leste is a new country, it is already part of the international sport scene.', cn: '东帝汶虽然是一个新国家，但是它已经是国际体育运动的一部分了。' }
+                ],
+                id: 'high__Timor',
+                category: 'high'
+            },
+
+            {
+                word: 'Shetland Islands',
+                translation: '设得兰群岛（位于英国苏格兰北部）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Shetland Islands',
+                category: 'high'
+            },
+
+            {
+                word: 'Kakadu',
+                translation: '卡卡杜湾',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Many of its world-renowned attractions are specific, such as the Great Barrier Reef, Ayers Rock, Kakadu National Park, and Sydney Opera House.', cn: '澳大利亚世界闻名的景点中有许多是其独有的，如大堡礁、艾尔斯巨石、卡卡杜国家公园和悉尼歌剧院等。' }
+                ],
+                id: 'high__Kakadu',
+                category: 'high'
+            },
+
+            {
+                word: 'Uluru',
+                translation: '乌卢鲁，埃尔斯岩（Ayres Rock）的土著名',
+                phonetic: '\'u:ləru:',
+                partOfSpeech: '',
+                id: 'high__Uluru',
+                category: 'high'
+            },
+
+            {
+                word: 'Great Barrier Reef',
+                translation: '大堡礁',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Great Barrier Reef',
+                category: 'high'
+            },
+
+            {
+                word: 'Kosciuszko',
+                translation: '科西阿斯科山（位于澳大利亚东南部）',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Kosciuszko',
+                category: 'high'
+            },
+
+            {
+                word: 'Nullarbor',
+                translation: '纳拉伯平原（位于澳大利亚西南部，火箭制造基地和试验场）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'We needed it, for the last leg was the toughest of all: the Nullarbor Plain, which stretches across the south of the country.', cn: '我们需要这么做，因为我们最后一段路程是最艰难的，那就是绵延在澳大利亚南部的纳拉伯平原。' }
+                ],
+                id: 'high__Nullarbor',
+                category: 'high'
+            },
+
         ]
     },
     {
@@ -3421,7 +4869,43 @@ export default [
                 ],
                 id: 'middle__Central Park',
                 category: 'middle'
-            }
+            },
+            {
+                word: 'Mona Lisa',
+                translation: '蒙娜•丽莎（达•芬奇所作的一幅著名肖像画）',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Almost everyone knows the painting, Mona Lisa, but not everyone knows of its bizarre history.', cn: '每个人都知道蒙娜·丽莎这幅画，可是并非人人了解她的离奇的历史。' },
+                    { en: 'And he painted her portrait--one of the great paintings of all time, right up there with the "Mona Lisa"--as a final, loving tribute.', cn: '他还为她画了肖像，作为最后的爱的信物。 这张肖像一直被认为是一幅伟大的杰作，和蒙娜·丽莎齐名。' },
+                    { en: 'The true identity of Mona Lisa and her enigmatic smile have intrigued art lovers around the world.', cn: '蒙娜丽莎的真实身份和她神秘的微笑令全世界的艺术爱好者为之着迷。' }
+                ],
+                id: 'high__Mona Lisa',
+                category: 'high'
+            },
+
+            {
+                word: 'Guiness Book of World Records',
+                translation: '《吉尼斯世界纪录大全》',
+                phonetic: '',
+                partOfSpeech: '',
+                id: 'high__Guiness Book of World Records',
+                category: 'high'
+            },
+
+            {
+                word: 'King Lear',
+                translation: '李尔王',
+                phonetic: '',
+                partOfSpeech: '',
+                examples: [
+                    { en: 'Land rose from its womb, usurped its throne, and ever since the maddened old creature, with hoary crest of foam, wails and laments continually, like King Lear exposed to the fury of the elements.', cn: '大地从它的腹中隆起，篡夺了它的王位。 从那以后，暴怒的老家伙就开始顶着灰白色的泡沫不断的哀号恸哭，一如暴风骤雨之中的李尔王。' },
+                    { en: 'The original ending of King Lear wasn’t performed for nearly 150 years because it was thought too upsetting.', cn: '《李尔王》的原始结尾在长达150年的时间里没有上演过，因为人们认为它太悲伤了。' }
+                ],
+                id: 'high__King Lear',
+                category: 'high'
+            },
+
         ]
     }
 ];

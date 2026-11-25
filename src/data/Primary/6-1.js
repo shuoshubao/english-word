@@ -597,42 +597,6 @@ export default [
         ]
     },
     {
-        word: 'Munich',
-        translation: '慕尼黑',
-        phonetic: "'mju:nik",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'And then we went to Munich.',
-                cn: '然后我们去了慕尼黑。'
-            },
-            {
-                en: 'She urgently phones her contact, and he orders her to go to Munich and remain untraceable.',
-                cn: '她急切地打电话给她的联络人，对方指令她前往慕尼黑，并保持不被他人找到。'
-            }
-        ]
-    },
-    {
-        word: 'Alaska',
-        translation: '阿拉斯加州',
-        phonetic: "ə'læskə",
-        partOfSpeech: 'n',
-        examples: [
-            {
-                en: 'Like I said, perfect, if you live in Alaska.',
-                cn: '像我说过的，完美，如果你住在阿拉斯加的话。'
-            },
-            {
-                en: 'Alaska and Hawaii were dependencies of the United States.',
-                cn: '阿拉斯加和夏威夷过去是美国的属地。'
-            },
-            {
-                en: 'Once they went camping with friends who had moved to Alaska.',
-                cn: '有一次，他们和几个搬到阿拉斯加的朋友去野营。'
-            }
-        ]
-    },
-    {
         word: 'sled',
         translation: '雪橇',
         phonetic: 'slɛd',
@@ -689,38 +653,6 @@ export default [
             {
                 en: 'It is windy today,so it would be difficult to put the ferry boat across.',
                 cn: '今天刮风，要摆渡到对岸不容易。'
-            }
-        ]
-    },
-    {
-        word: 'Papa Westray',
-        translation: '帕帕韦斯特雷岛',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Papa Westray has a population of just 70 and no secondary school.',
-                cn: '帕帕韦斯特雷岛人口只有70，岛上没有中学。'
-            }
-        ]
-    },
-    {
-        word: 'Scotland',
-        translation: '苏格兰',
-        phonetic: "'skɔtlənd",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'He traveled Scotland last year.',
-                cn: '他去年在苏格兰旅行。'
-            },
-            {
-                en: 'England, Scotland and Wales compose the island of Great Britain.',
-                cn: '英格兰、苏格兰和威尔士组成大不列颠岛国。'
-            },
-            {
-                en: 'Why should they not go on to Scotland, if that had been the case?',
-                cn: '要是真象你所想的那样，那他们干吗不到苏格兰去呢？'
             }
         ]
     },
@@ -1309,26 +1241,6 @@ export default [
             {
                 en: 'It was my wife’s idea to move house.',
                 cn: '要搬家是我妻子的主意。'
-            }
-        ]
-    },
-    {
-        word: 'Canberra',
-        translation: '堪培拉',
-        phonetic: "'kænbərə",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'In Australia, climate change is a political football, kicked about in the power game played in Canberra.',
-                cn: '在澳大利亚，气候变化是政治足球，在堪培拉的权力游戏中被踢来踢去。'
-            },
-            {
-                en: 'Canberra needs the relationship - and the guarantees of military assistance that go with it - far more than Washington does.',
-                cn: '堪培拉需要这种关系，以及随之而来的军援保证，远远超过华盛顿对这种关系的需要。'
-            },
-            {
-                en: 'Kylie Catchpole, a research fellow at the Australian National University in Canberra, says the design is promising because it works over a broad band of the spectrum.',
-                cn: '凯莉·卡崔布尔，堪培拉的澳洲国立大学的一名女研究员，说道这项设计很有前景因为研究的是宽频带的光谱。'
             }
         ]
     },

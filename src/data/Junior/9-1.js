@@ -575,22 +575,6 @@ export default [
         ]
     },
     {
-        word: 'Alexander Graham Bell',
-        translation: '亚历山大 • 格雷厄姆 • 贝尔',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'It is the story of Alexander Graham Bell.',
-                cn: '这就是亚历山大·格雷厄姆·贝尔的故事。'
-            },
-            {
-                en: 'WHEN Alexander Graham Bell invented the telephone in 1876, he could never have predicted what it would be able to do in the future.',
-                cn: '在1876年亚历山大·格雷厄姆·贝尔发明电话之时，他绝对不会料到电话在未来能做何用途。'
-            }
-        ]
-    },
-    {
         word: 'lantern',
         translation: 'n. 灯笼',
         phonetic: "'læntɚn",
@@ -1175,18 +1159,6 @@ export default [
             {
                 en: 'Papers and photos were spread across the floor.',
                 cn: '地板上摊满了报纸和照片。'
-            }
-        ]
-    },
-    {
-        word: 'Macao',
-        translation: '澳门',
-        phonetic: "mə'kau",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'These are ferries that ply between Hong Kong and Macao.',
-                cn: '这些是往返香港和澳门间的渡轮。'
             }
         ]
     },
@@ -3603,18 +3575,6 @@ export default [
         ]
     },
     {
-        word: 'Chelsea Lanmon',
-        translation: '切尔西 • 兰曼',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Jamie Ellsworth',
-        translation: '杰米 • 埃尔斯沃恩',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'smoke',
         translation: 'v. 吸烟；冒烟; n. 烟',
         phonetic: 'smok',
@@ -4757,12 +4717,6 @@ export default [
         ]
     },
     {
-        word: 'Paul Stoker',
-        translation: '保罗 • 斯托克',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'prefer',
         translation: 'v. 更喜欢',
         phonetic: "prɪ'fɝ",
@@ -5355,12 +5309,6 @@ export default [
         ]
     },
     {
-        word: 'Dan',
-        translation: '丹 • 德维什',
-        phonetic: 'dæn',
-        partOfSpeech: ''
-    },
-    {
         word: 'custom',
         translation: 'n. 风俗；习俗',
         phonetic: "'kʌstəm",
@@ -5923,46 +5871,6 @@ export default [
             {
                 en: 'Any suggestions would be welcome.',
                 cn: '任何建议都欢迎。'
-            }
-        ]
-    },
-    {
-        word: 'Brazil',
-        translation: '巴西',
-        phonetic: "brə'zil",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Brazil has a big surplus of coffee.',
-                cn: '巴西有很多剩余咖啡。'
-            },
-            {
-                en: "Today's football match is France versus Brazil.",
-                cn: '今天的足球赛是法国队对巴西队。'
-            },
-            {
-                en: 'Brazil has thrown up many world-famous footballers.',
-                cn: '巴西出了许多闻名世界的足球运动员。'
-            }
-        ]
-    },
-    {
-        word: 'Norway',
-        translation: '挪威',
-        phonetic: "'nɔrweɪ",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Sweden borders Norway and Finland.',
-                cn: '瑞典与挪威、芬兰接壤。'
-            },
-            {
-                en: 'They tried to chart the sea area between Norway and Denmark.',
-                cn: '他们企图绘制挪威与丹麦之间的海域图。'
-            },
-            {
-                en: 'Now we know that someone from Norway can do it.',
-                cn: '现在我们知道挪威的某些人可以这么做。'
             }
         ]
     },
@@ -7043,12 +6951,6 @@ export default [
                 cn: '已知在火星上存在的大量火山'
             }
         ]
-    },
-    {
-        word: 'Orson',
-        translation: '奥森',
-        phonetic: "'ɔ:sən",
-        partOfSpeech: ''
     },
     {
         word: 'litter',

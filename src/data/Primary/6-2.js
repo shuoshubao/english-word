@@ -1051,18 +1051,6 @@ export default [
         ]
     },
     {
-        word: 'Turpan',
-        translation: '吐鲁番',
-        phonetic: "'tuə'pɑ:n",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Ahmed then took me for a drive outside Turpan to a small Uyghur village at the foot of a mountain where I could see their style of housing, farming, etc.',
-                cn: '然后，艾哈迈德载我去吐鲁番郊外的、山脚下的一个维族小村庄，在那我可以看到他们的建筑风格，以及农事等等。'
-            }
-        ]
-    },
-    {
         word: 'could',
         translation: '能',
         phonetic: 'kəd; kʊd',

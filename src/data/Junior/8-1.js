@@ -793,20 +793,8 @@ export default [
         ]
     },
     {
-        word: 'Georgetown',
-        translation: '乔治城（圭亚那首都）',
-        phonetic: "'dʒɔdʒtaun",
-        partOfSpeech: ''
-    },
-    {
         word: 'Weld Quay',
         translation: '海乾街/码头, 位于马来西亚槟城岛(州)',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
-        word: 'Penang Hill',
-        translation: '马来西亚槟榔山（升旗山）',
         phonetic: '',
         partOfSpeech: ''
     },

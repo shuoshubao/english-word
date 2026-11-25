@@ -1333,22 +1333,6 @@ export default [
         ]
     },
     {
-        word: 'Noah Webster',
-        translation: '诺厄•韦伯斯特（美国词典编纂家）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Fifty years later across the pond Noah Webster produced his first dictionary.',
-                cn: '五十年后，诺亚·韦伯斯特在海洋之外的另一片大陆上编成了他的第一本词典。'
-            },
-            {
-                en: 'First published in 1783, this reference book by the American man of letters Noah Webster (1758-1843) remained a bestseller in the U.S. throughout the 19th century.',
-                cn: '1783年初版后，这本由研究语言文字的美国男子诺亚·韦伯斯特(1758-1843)编写的参考书在整个19世界都一直占据美国畅销书榜。'
-            }
-        ]
-    },
-    {
         word: 'latter',
         translation: 'adj. 较后的；后半的；（两者中）后者的',
         phonetic: "'lætɚ",
@@ -3717,12 +3701,6 @@ export default [
         ]
     },
     {
-        word: 'William Tyndale',
-        translation: '威廉•廷代尔（英国早期新教改革者）',
-        phonetic: '',
-        partOfSpeech: ''
-    },
-    {
         word: 'Bible',
         translation: 'n. 《圣经》',
         phonetic: "'baɪbl",
@@ -3731,18 +3709,6 @@ export default [
             {
                 en: '...a publisher of bibles and hymn books.',
                 cn: '…一家《圣经》册本和圣歌集出版商。'
-            }
-        ]
-    },
-    {
-        word: 'Norman Bethune',
-        translation: '诺曼•白求恩（加拿大胸外科医师）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Norman Bethune was a well-known international human itarian.',
-                cn: '诺尔曼·白求恩是众所周知的国际友人。'
             }
         ]
     },
@@ -3835,18 +3801,6 @@ export default [
             {
                 en: 'Bates says he will lose his livelihood if his driving licence is taken away.',
                 cn: '贝茨说，如果驾照被吊销，他就没有了谋生的手段。'
-            }
-        ]
-    },
-    {
-        word: 'Mohandas Gandhi',
-        translation: '莫罕达斯•甘地（印度国民大会党领袖）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'In India, a Hindu extremist assassinates Mohandas Gandhi, the spiritual and political leader.',
-                cn: '在印度，一名印度教极端分子刺杀了精神及政治领袖莫汉达斯·甘地。'
             }
         ]
     },
@@ -4523,26 +4477,6 @@ export default [
             {
                 en: 'Later, believing all mankind to be equal, he devoted himself to stopping the unfair anti-black laws.',
                 cn: '后来，因为相信所有人类都是生来平等，他全身心投入到废除不平等的反黑人法律工作中。'
-            }
-        ]
-    },
-    {
-        word: 'Cape Town',
-        translation: '开普敦（南非立法首都）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'I travelled from Cairo to Cape Town in 2002.',
-                cn: '2002年，我从开罗一路旅行到了开普敦。'
-            },
-            {
-                en: 'Given that Capello refused to back Green after the game, Hart should get his chance against Algeria in Cape Town on Friday.',
-                cn: '假定卡佩罗在赛后不支持格林，那哈特就有机会参加星期五开普敦与阿尔及利亚的比赛。'
-            },
-            {
-                en: 'But their confidence never wavered as Blatter remarked during the team draw in Cape Town six months ago. "You are ready. I am ready.',
-                cn: '但是他们的信心从未动摇，布拉特六个月前在开普敦小组抽签时重申：“你们准备好了，我准备好了。'
             }
         ]
     },

@@ -577,26 +577,6 @@ export default [
         ]
     },
     {
-        word: 'Mona Lisa',
-        translation: '蒙娜•丽莎（达•芬奇所作的一幅著名肖像画）',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Almost everyone knows the painting, Mona Lisa, but not everyone knows of its bizarre history.',
-                cn: '每个人都知道蒙娜·丽莎这幅画，可是并非人人了解她的离奇的历史。'
-            },
-            {
-                en: 'And he painted her portrait--one of the great paintings of all time, right up there with the "Mona Lisa"--as a final, loving tribute.',
-                cn: '他还为她画了肖像，作为最后的爱的信物。 这张肖像一直被认为是一幅伟大的杰作，和蒙娜·丽莎齐名。'
-            },
-            {
-                en: 'The true identity of Mona Lisa and her enigmatic smile have intrigued art lovers around the world.',
-                cn: '蒙娜丽莎的真实身份和她神秘的微笑令全世界的艺术爱好者为之着迷。'
-            }
-        ]
-    },
-    {
         word: 'carve',
         translation: 'v. 雕刻；刻记',
         phonetic: 'kɑrv',
@@ -967,26 +947,6 @@ export default [
             {
                 en: 'fragrant flowers',
                 cn: '芳香的花朵'
-            }
-        ]
-    },
-    {
-        word: 'Whitney',
-        translation: '惠特尼',
-        phonetic: "'hwɪtni",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'That may be extreme, but Ms. Whitney argues that the boom years are not coming back anytime soon.',
-                cn: '这也许有点极端，但是惠特尼女士还是坚持繁荣的年代还没有到来的观点。'
-            },
-            {
-                en: 'Prof. CROSS: You know the - you remember that song that Whitney Houston wrote, "The Greatest Love of All"?',
-                cn: '克洛斯教授：你知道——你记得惠特尼休斯顿写的那首歌《最伟大的爱》吗？'
-            },
-            {
-                en: 'And now there’s a brand new paper in Psychological Science by Faraz Farzin, Susan Rivera and David Whitney that provides some of the best evidence yet for the lantern hypothesis.',
-                cn: '法拉兹-法曾，苏珊-里维拉和大卫-惠特尼在"心理科学"杂志上有一篇新论文，为灯笼的假设提供了到目前为止最好的证据。'
             }
         ]
     },
@@ -3635,12 +3595,6 @@ export default [
         ]
     },
     {
-        word: 'Foster',
-        translation: '福斯特（姓或男名）',
-        phonetic: "'fɔstɚ",
-        partOfSpeech: ''
-    },
-    {
         word: 'methane',
         translation: 'n. 甲烷；沼气',
         phonetic: "'mɛθen",
@@ -3725,18 +3679,6 @@ export default [
             {
                 en: 'The cost has gone up to $1.95 a minute.',
                 cn: '价格已涨到了一分钟$1.95。'
-            }
-        ]
-    },
-    {
-        word: 'Charles Keeling',
-        translation: '查尔斯•基林',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'It was Charles Keeling who measured the carbon dioxide content in the atmosphere between 1957 and 1997.',
-                cn: '是查尔斯。奎林把1957-1997年期间大气层中二氧化碳的含量作了精确的统计。'
             }
         ]
     },
@@ -3881,18 +3823,6 @@ export default [
             {
                 en: 'A million people are facing famine .',
                 cn: '一百万人正面临饥荒。'
-            }
-        ]
-    },
-    {
-        word: 'George Hambley',
-        translation: '乔治•汗布利',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'On the other hand, there are those, like George Hambley, who are opposed to this view, believe that we should not worry about high levels of carbon dioxide in the air.',
-                cn: '另一方面，还有一些人，像科学家乔治治·汉布利，反对上面的观点，他们认为我们不必担心空气中会有高含量的二氧化碳。'
             }
         ]
     },
@@ -5005,18 +4935,6 @@ export default [
         ]
     },
     {
-        word: 'Sicily',
-        translation: '西西里岛（意大利南部）',
-        phonetic: "'sisili",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'A group of wealthy friends are cruising the sea near Sicily on a yacht.',
-                cn: '一群有钱人开着游艇在西西里岛附近的海上游弋。'
-            }
-        ]
-    },
-    {
         word: 'sample',
         translation: 'n. 样品；样本',
         phonetic: "'sæmpl",
@@ -5037,18 +4955,6 @@ export default [
             {
                 en: 'a presidential candidate',
                 cn: '总统候选人'
-            }
-        ]
-    },
-    {
-        word: 'Mount Vesuvius',
-        translation: '维苏威火山',
-        phonetic: '',
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'The protesters were demonstrating against the opening of a new dump on the slopes of Mount Vesuvius.',
-                cn: '反对者们抗议在维苏威火山的半坡上启用一处新的垃圾场。'
             }
         ]
     },
@@ -5109,22 +5015,6 @@ export default [
             {
                 en: 'Belinda and Clive, who worked on the railways, moved to a bungalow not far from Barry Island.',
                 cn: '贝琳达和克里夫在铁路工作，并且搬到离巴厘岛不远的一处平房居住。'
-            }
-        ]
-    },
-    {
-        word: 'Pompeii',
-        translation: '庞培（意大利古都）',
-        phonetic: "pɔm'peii:; -'pei",
-        partOfSpeech: '',
-        examples: [
-            {
-                en: 'Pompeii was a cultural center and vacation destination for Roman high society until it was destroyed in 79 A.D. by the eruption of Mount Vesuvius.',
-                cn: '公元79年维苏威火山爆发并摧毁该城市以前，意大利古城庞培一直是罗马帝国上流社会贵族们的度假天堂，也是罗马帝国的文化中心。'
-            },
-            {
-                en: 'Mount Nyiragongo is one of the most dangerous volcanoes in the world - and scientists say it is only a matter of time before it makes the city below a modern day Pompeii.',
-                cn: '尼拉贡戈火山是世界上最危险的火山之一，科学家表示，山脚下的城镇重现庞培古城的悲剧只是时间的问题。'
             }
         ]
     },
