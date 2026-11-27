@@ -1,0 +1,1673 @@
+[
+    {
+        "word": "younger",
+        "ph_en": "/ˈjʌŋɡə(r)/",
+        "ph_am": "/ˈjʌŋɡər/",
+        "parts": [{ "pos": "adj.", "means": ["较年轻的", "年纪较小的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My brother is younger than me.", "dst": "我弟弟比我小。" },
+            { "src": "She has a younger sister.", "dst": "她有一个妹妹。" },
+            { "src": "Tom looks younger than his age.", "dst": "汤姆看起来比他的实际年龄年轻。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["older"],
+        "confuse": [{ "word": "young", "diff": "young 是原级，younger 是比较级。" }]
+    },
+    {
+        "word": "older",
+        "ph_en": "/ˈəʊldə(r)/",
+        "ph_am": "/ˈoʊldər/",
+        "parts": [{ "pos": "adj.", "means": ["较老的", "年纪较大的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My sister is older than me.", "dst": "我姐姐比我大。" },
+            { "src": "This tree is older than that one.", "dst": "这棵树比那棵树老。" },
+            { "src": "He has an older brother.", "dst": "他有一个哥哥。" }
+        ],
+        "synonyms": ["elder"],
+        "antonyms": ["younger"],
+        "confuse": [{ "word": "old", "diff": "old 是原级，older 是比较级。" }]
+    },
+    {
+        "word": "taller",
+        "ph_en": "/ˈtɔːlə(r)/",
+        "ph_am": "/ˈtɔːlər/",
+        "parts": [{ "pos": "adj.", "means": ["更高的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Mike is taller than Tom.", "dst": "迈克比汤姆高。" },
+            { "src": "My father is taller than my mother.", "dst": "我爸爸比我妈妈高。" },
+            { "src": "You are taller than last year.", "dst": "你比去年高了。" }
+        ],
+        "synonyms": ["higher"],
+        "antonyms": ["shorter"],
+        "confuse": [{ "word": "higher", "diff": "taller 多指人或细长物体的身高；higher 多指高度、位置高。" }]
+    },
+    {
+        "word": "shorter",
+        "ph_en": "/ˈʃɔːtə(r)/",
+        "ph_am": "/ˈʃɔːrtər/",
+        "parts": [{ "pos": "adj.", "means": ["更矮的", "更短的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I am shorter than my brother.", "dst": "我比我哥哥矮。" },
+            { "src": "This ruler is shorter than that one.", "dst": "这把尺子比那把短。" },
+            { "src": "Her hair is shorter now.", "dst": "她现在的头发更短了。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["taller", "longer"],
+        "confuse": [{ "word": "short", "diff": "short 是原级，shorter 是比较级。" }]
+    },
+    {
+        "word": "longer",
+        "ph_en": "/ˈlɒŋɡə(r)/",
+        "ph_am": "/ˈlɔːŋɡər/",
+        "parts": [
+            { "pos": "adj.", "means": ["更长的"] },
+            { "pos": "adv.", "means": ["更久地"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This rope is longer than that one.", "dst": "这根绳子比那根长。" },
+            { "src": "The river is longer than the road.", "dst": "这条河比这条路长。" },
+            { "src": "Please wait a little longer.", "dst": "请再等一会儿。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["shorter"],
+        "confuse": [{ "word": "long", "diff": "long 是原级，longer 是比较级。" }]
+    },
+    {
+        "word": "thinner",
+        "ph_en": "/ˈθɪnə(r)/",
+        "ph_am": "/ˈθɪnər/",
+        "parts": [{ "pos": "adj.", "means": ["更瘦的", "更薄的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Tom is thinner than Mike.", "dst": "汤姆比迈克瘦。" },
+            { "src": "This book is thinner than that one.", "dst": "这本书比那本薄。" },
+            { "src": "You look thinner than before.", "dst": "你看起来比以前瘦了。" }
+        ],
+        "synonyms": ["slimmer"],
+        "antonyms": ["fatter", "thicker"],
+        "confuse": [{ "word": "thinker", "diff": "thinner 是更瘦的；thinker 是思想家。" }]
+    },
+    {
+        "word": "heavier",
+        "ph_en": "/ˈhevɪə(r)/",
+        "ph_am": "/ˈheviər/",
+        "parts": [{ "pos": "adj.", "means": ["更重的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The elephant is heavier than the dog.", "dst": "大象比狗重。" },
+            { "src": "My bag is heavier than yours.", "dst": "我的包比你的重。" },
+            { "src": "Which box is heavier?", "dst": "哪个箱子更重？" }
+        ],
+        "synonyms": [],
+        "antonyms": ["lighter"],
+        "confuse": [{ "word": "heavy", "diff": "heavy 是原级，heavier 是比较级。" }]
+    },
+    {
+        "word": "bigger",
+        "ph_en": "/ˈbɪɡə(r)/",
+        "ph_am": "/ˈbɪɡər/",
+        "parts": [{ "pos": "adj.", "means": ["更大的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This room is bigger than that one.", "dst": "这个房间比那个大。" },
+            { "src": "A horse is bigger than a sheep.", "dst": "马比羊大。" },
+            { "src": "I want a bigger cake.", "dst": "我想要一个更大的蛋糕。" }
+        ],
+        "synonyms": ["larger"],
+        "antonyms": ["smaller"],
+        "confuse": [{ "word": "biggest", "diff": "bigger 是比较级；biggest 是最高级。" }]
+    },
+    {
+        "word": "smaller",
+        "ph_en": "/ˈsmɔːlə(r)/",
+        "ph_am": "/ˈsmɔːlər/",
+        "parts": [{ "pos": "adj.", "means": ["更小的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My feet are smaller than yours.", "dst": "我的脚比你的小。" },
+            { "src": "A mouse is smaller than a cat.", "dst": "老鼠比猫小。" },
+            { "src": "Do you have a smaller size?", "dst": "你们有小一点的尺码吗？" }
+        ],
+        "synonyms": [],
+        "antonyms": ["bigger", "larger"],
+        "confuse": [{ "word": "small", "diff": "small 是原级，smaller 是比较级。" }]
+    },
+    {
+        "word": "stronger",
+        "ph_en": "/ˈstrɒŋɡə(r)/",
+        "ph_am": "/ˈstrɔːŋɡər/",
+        "parts": [{ "pos": "adj.", "means": ["更强壮的", "更强的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Tom is stronger than me.", "dst": "汤姆比我强壮。" },
+            { "src": "An elephant is stronger than a horse.", "dst": "大象比马更强壮。" },
+            { "src": "I want to get stronger.", "dst": "我想变得更强壮。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["weaker"],
+        "confuse": [{ "word": "strong", "diff": "strong 是原级，stronger 是比较级。" }]
+    },
+    {
+        "word": "dinosaur",
+        "ph_en": "/ˈdaɪnəsɔː(r)/",
+        "ph_am": "/ˈdaɪnəsɔːr/",
+        "parts": [{ "pos": "n.", "means": ["恐龙"] }],
+        "exchange": { "pl": "dinosaurs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Dinosaurs lived millions of years ago.", "dst": "恐龙生活在数百万年前。" },
+            { "src": "I saw a dinosaur model in the museum.", "dst": "我在博物馆里看到了一个恐龙模型。" },
+            { "src": "My brother likes dinosaurs very much.", "dst": "我弟弟非常喜欢恐龙。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "dragon", "diff": "dinosaur 是真实存在过的恐龙；dragon 是传说中的龙。" }]
+    },
+    {
+        "word": "hall",
+        "ph_en": "/hɔːl/",
+        "ph_am": "/hɔːl/",
+        "parts": [{ "pos": "n.", "means": ["大厅", "礼堂", "门厅"] }],
+        "exchange": { "pl": "halls", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The school hall is very big.", "dst": "学校礼堂很大。" },
+            { "src": "We have a meeting in the hall.", "dst": "我们在大厅里开会。" },
+            { "src": "Please wait in the hall.", "dst": "请在大厅里等候。" }
+        ],
+        "synonyms": ["auditorium"],
+        "antonyms": [],
+        "confuse": [{ "word": "hole", "diff": "hall 是大厅；hole 是洞。" }]
+    },
+    {
+        "word": "metre",
+        "ph_en": "/ˈmiːtə(r)/",
+        "ph_am": "/ˈmiːtər/",
+        "parts": [{ "pos": "n.", "means": ["米", "公尺"] }],
+        "exchange": { "pl": "metres", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The pool is fifty metres long.", "dst": "这个游泳池长五十米。" },
+            { "src": "He can jump two metres.", "dst": "他能跳两米远。" },
+            { "src": "The tree is ten metres tall.", "dst": "这棵树有十米高。" }
+        ],
+        "synonyms": ["meter"],
+        "antonyms": [],
+        "confuse": [{ "word": "meter", "diff": "metre 是英式拼写的长度单位；meter 在美式中表示米，也可指仪表。" }]
+    },
+    {
+        "word": "meter",
+        "ph_en": "/ˈmiːtə(r)/",
+        "ph_am": "/ˈmiːtər/",
+        "parts": [{ "pos": "n.", "means": ["米（美式拼写）", "仪表", "计量器"] }],
+        "exchange": { "pl": "meters", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The wall is three meters high.", "dst": "这堵墙有三米高。" },
+            { "src": "He ran one hundred meters.", "dst": "他跑了一百米。" },
+            { "src": "The taxi meter shows ten yuan.", "dst": "出租车计价器显示十元。" }
+        ],
+        "synonyms": ["metre"],
+        "antonyms": [],
+        "confuse": [{ "word": "metre", "diff": "meter 是美式拼写；metre 是英式拼写。" }]
+    },
+    {
+        "word": "than",
+        "ph_en": "/ðæn/",
+        "ph_am": "/ðæn/",
+        "parts": [
+            { "pos": "conj.", "means": ["比", "与……相比"] },
+            { "pos": "prep.", "means": ["比"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I am taller than my sister.", "dst": "我比我姐姐高。" },
+            { "src": "This book is more interesting than that one.", "dst": "这本书比那本有趣。" },
+            { "src": "He runs faster than me.", "dst": "他跑得比我快。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "then", "diff": "than 用于比较；then 表示那时、然后。" }]
+    },
+    {
+        "word": "both",
+        "ph_en": "/bəʊθ/",
+        "ph_am": "/boʊθ/",
+        "parts": [
+            { "pos": "pron.", "means": ["两者都", "双方"] },
+            { "pos": "adj.", "means": ["两个的"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Both of them like music.", "dst": "他们两个都喜欢音乐。" },
+            { "src": "I have two brothers, and both are tall.", "dst": "我有两个哥哥，他们都很高。" },
+            { "src": "She held the box with both hands.", "dst": "她用双手拿着盒子。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["neither"],
+        "confuse": [{ "word": "all", "diff": "both 指两者都；all 指三者或三者以上都。" }]
+    },
+    {
+        "word": "kilogram",
+        "ph_en": "/ˈkɪləɡræm/",
+        "ph_am": "/ˈkɪləɡræm/",
+        "parts": [{ "pos": "n.", "means": ["千克", "公斤"] }],
+        "exchange": { "pl": "kilograms", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The bag weighs two kilograms.", "dst": "这个包重两千克。" },
+            { "src": "I bought a kilogram of apples.", "dst": "我买了一公斤苹果。" },
+            { "src": "How many kilograms do you weigh?", "dst": "你有多少公斤重？" }
+        ],
+        "synonyms": ["kilo"],
+        "antonyms": [],
+        "confuse": [{ "word": "kilometre", "diff": "kilogram 是重量单位千克；kilometre 是长度单位千米。" }]
+    },
+    {
+        "word": "countryside",
+        "ph_en": "/ˈkʌntrisaɪd/",
+        "ph_am": "/ˈkʌntrisaɪd/",
+        "parts": [{ "pos": "n.", "means": ["乡下", "农村"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My grandparents live in the countryside.", "dst": "我的祖父母住在乡下。" },
+            { "src": "The air in the countryside is fresh.", "dst": "乡下的空气很清新。" },
+            { "src": "We went to the countryside last weekend.", "dst": "上周末我们去了乡下。" }
+        ],
+        "synonyms": ["country"],
+        "antonyms": ["city"],
+        "confuse": [{ "word": "country", "diff": "countryside 指乡村地区；country 可指国家，也可指乡村。" }]
+    },
+    {
+        "word": "lower",
+        "ph_en": "/ˈləʊə(r)/",
+        "ph_am": "/ˈloʊər/",
+        "parts": [
+            { "pos": "adj.", "means": ["较低的", "下面的"] },
+            { "pos": "v.", "means": ["降低", "放低"] }
+        ],
+        "exchange": { "pl": "", "past": "lowered", "ing": "lowering" },
+        "examples": [
+            { "src": "The price is lower than before.", "dst": "价格比以前低了。" },
+            { "src": "Please lower your voice.", "dst": "请压低你的声音。" },
+            { "src": "The lower shelf is for books.", "dst": "下面的架子放书。" }
+        ],
+        "synonyms": ["reduce"],
+        "antonyms": ["higher", "raise"],
+        "confuse": [{ "word": "low", "diff": "low 是原级；lower 是比较级，也可作动词表示降低。" }]
+    },
+    {
+        "word": "shadow",
+        "ph_en": "/ˈʃædəʊ/",
+        "ph_am": "/ˈʃædoʊ/",
+        "parts": [{ "pos": "n.", "means": ["影子", "阴影"] }],
+        "exchange": { "pl": "shadows", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I can see my shadow on the ground.", "dst": "我能看到地上我的影子。" },
+            { "src": "The cat is sitting in the shadow of the tree.", "dst": "猫正坐在树的阴影里。" },
+            { "src": "Your shadow gets longer in the evening.", "dst": "傍晚你的影子会变长。" }
+        ],
+        "synonyms": ["shade"],
+        "antonyms": ["light"],
+        "confuse": [{ "word": "shade", "diff": "shadow 指物体投下的影子；shade 指遮阴处。" }]
+    },
+    {
+        "word": "smarter",
+        "ph_en": "/ˈsmɑːtə(r)/",
+        "ph_am": "/ˈsmɑːrtər/",
+        "parts": [{ "pos": "adj.", "means": ["更聪明的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Tom is smarter than Mike.", "dst": "汤姆比迈克聪明。" },
+            { "src": "Dolphins are smarter than many animals.", "dst": "海豚比很多动物聪明。" },
+            { "src": "She wants to be smarter.", "dst": "她想变得更聪明。" }
+        ],
+        "synonyms": ["cleverer"],
+        "antonyms": ["duller"],
+        "confuse": [{ "word": "smart", "diff": "smart 是原级；smarter 是比较级。" }]
+    },
+    {
+        "word": "become",
+        "ph_en": "/bɪˈkʌm/",
+        "ph_am": "/bɪˈkʌm/",
+        "parts": [{ "pos": "v.", "means": ["成为", "变得"] }],
+        "exchange": { "pl": "", "past": "became", "ing": "becoming" },
+        "examples": [
+            { "src": "I want to become a teacher.", "dst": "我想成为一名老师。" },
+            { "src": "It becomes cold in winter.", "dst": "冬天天气会变冷。" },
+            { "src": "The caterpillar becomes a butterfly.", "dst": "毛毛虫会变成蝴蝶。" }
+        ],
+        "synonyms": ["turn into", "get"],
+        "antonyms": [],
+        "confuse": [{ "word": "begin", "diff": "become 是成为、变得；begin 是开始。" }]
+    },
+    {
+        "word": "cleaned",
+        "ph_en": "/kliːnd/",
+        "ph_am": "/kliːnd/",
+        "parts": [{ "pos": "v.", "means": ["打扫了", "清洁了（clean 的过去式）"] }],
+        "exchange": { "pl": "", "past": "cleaned", "ing": "cleaning" },
+        "examples": [
+            { "src": "I cleaned my room yesterday.", "dst": "我昨天打扫了房间。" },
+            { "src": "She cleaned the window this morning.", "dst": "她今天早上擦了窗户。" },
+            { "src": "We cleaned the classroom after school.", "dst": "放学后我们打扫了教室。" }
+        ],
+        "synonyms": ["wiped"],
+        "antonyms": ["dirtied"],
+        "confuse": [{ "word": "cleaner", "diff": "cleaned 是过去式；cleaner 是更干净的，或清洁工。" }]
+    },
+    {
+        "word": "stayed",
+        "ph_en": "/steɪd/",
+        "ph_am": "/steɪd/",
+        "parts": [{ "pos": "v.", "means": ["停留了", "待了（stay 的过去式）"] }],
+        "exchange": { "pl": "", "past": "stayed", "ing": "staying" },
+        "examples": [
+            { "src": "I stayed at home last Sunday.", "dst": "上周日我待在家里。" },
+            { "src": "We stayed in a hotel in Beijing.", "dst": "我们在北京住了酒店。" },
+            { "src": "He stayed there for three days.", "dst": "他在那里待了三天。" }
+        ],
+        "synonyms": ["remained"],
+        "antonyms": ["left"],
+        "confuse": [{ "word": "stand", "diff": "stayed 是停留；stand 是站立。" }]
+    },
+    {
+        "word": "washed",
+        "ph_en": "/wɒʃt/",
+        "ph_am": "/wɑːʃt/",
+        "parts": [{ "pos": "v.", "means": ["洗了（wash 的过去式）"] }],
+        "exchange": { "pl": "", "past": "washed", "ing": "washing" },
+        "examples": [
+            { "src": "I washed my clothes yesterday.", "dst": "我昨天洗了衣服。" },
+            { "src": "She washed her hands before dinner.", "dst": "她饭前洗了手。" },
+            { "src": "Dad washed the car on Sunday.", "dst": "爸爸周日洗了车。" }
+        ],
+        "synonyms": ["cleaned"],
+        "antonyms": ["dirtied"],
+        "confuse": [{ "word": "watched", "diff": "washed 是洗了；watched 是看了。" }]
+    },
+    {
+        "word": "watched",
+        "ph_en": "/wɒtʃt/",
+        "ph_am": "/wɑːtʃt/",
+        "parts": [{ "pos": "v.", "means": ["观看了（watch 的过去式）"] }],
+        "exchange": { "pl": "", "past": "watched", "ing": "watching" },
+        "examples": [
+            { "src": "We watched a film last night.", "dst": "我们昨晚看了一部电影。" },
+            { "src": "He watched TV for an hour.", "dst": "他看了一个小时电视。" },
+            { "src": "I watched the birds in the park.", "dst": "我在公园里观察了小鸟。" }
+        ],
+        "synonyms": ["looked at"],
+        "antonyms": ["ignored"],
+        "confuse": [{ "word": "washed", "diff": "watched 是看了；washed 是洗了。" }]
+    },
+    {
+        "word": "had",
+        "ph_en": "/hæd/",
+        "ph_am": "/hæd/",
+        "parts": [{ "pos": "v.", "means": ["有；吃；度过（have 的过去式）"] }],
+        "exchange": { "pl": "", "past": "had", "ing": "having" },
+        "examples": [
+            { "src": "I had a good time yesterday.", "dst": "我昨天玩得很开心。" },
+            { "src": "She had noodles for lunch.", "dst": "她午饭吃了面条。" },
+            { "src": "We had a lot of homework last week.", "dst": "上周我们有很多作业。" }
+        ],
+        "synonyms": ["owned"],
+        "antonyms": [],
+        "confuse": [{ "word": "has", "diff": "had 是过去式；has 是第三人称单数现在时。" }]
+    },
+    {
+        "word": "had a cold",
+        "ph_en": "/hæd ə kəʊld/",
+        "ph_am": "/hæd ə koʊld/",
+        "parts": [{ "pos": "phr.", "means": ["感冒了"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I had a cold last week.", "dst": "我上周感冒了。" },
+            { "src": "Tom had a cold and stayed in bed.", "dst": "汤姆感冒了，躺在床上。" },
+            { "src": "She had a cold, so she didn't go to school.", "dst": "她感冒了，所以没去上学。" }
+        ],
+        "synonyms": ["caught a cold"],
+        "antonyms": [],
+        "confuse": [{ "word": "had a cough", "diff": "had a cold 是感冒了；had a cough 是咳嗽了。" }]
+    },
+    {
+        "word": "slept",
+        "ph_en": "/slept/",
+        "ph_am": "/slept/",
+        "parts": [{ "pos": "v.", "means": ["睡了（sleep 的过去式）"] }],
+        "exchange": { "pl": "", "past": "slept", "ing": "sleeping" },
+        "examples": [
+            { "src": "I slept for nine hours last night.", "dst": "我昨晚睡了九个小时。" },
+            { "src": "The baby slept all afternoon.", "dst": "婴儿睡了一下午。" },
+            { "src": "He slept late on Sunday.", "dst": "他周日睡得很晚。" }
+        ],
+        "synonyms": ["rested"],
+        "antonyms": ["woke"],
+        "confuse": [{ "word": "sleep", "diff": "slept 是过去式；sleep 是原形。" }]
+    },
+    {
+        "word": "read",
+        "ph_en": "/red/",
+        "ph_am": "/red/",
+        "parts": [{ "pos": "v.", "means": ["读了（read 的过去式）", "阅读"] }],
+        "exchange": { "pl": "", "past": "read", "ing": "reading" },
+        "examples": [
+            { "src": "I read a story book yesterday.", "dst": "我昨天读了一本故事书。" },
+            { "src": "She read the letter twice.", "dst": "她把信读了两遍。" },
+            { "src": "We read English every morning.", "dst": "我们每天早上读英语。" }
+        ],
+        "synonyms": ["looked through"],
+        "antonyms": [],
+        "confuse": [{ "word": "red", "diff": "read 过去式读 /red/；red 是红色。" }]
+    },
+    {
+        "word": "saw",
+        "ph_en": "/sɔː/",
+        "ph_am": "/sɔː/",
+        "parts": [
+            { "pos": "v.", "means": ["看见了（see 的过去式）"] },
+            { "pos": "n.", "means": ["锯"] }
+        ],
+        "exchange": { "pl": "saws", "past": "saw", "ing": "seeing" },
+        "examples": [
+            { "src": "I saw a panda at the zoo.", "dst": "我在动物园看到了一只熊猫。" },
+            { "src": "She saw her friend in the park.", "dst": "她在公园里看见了她的朋友。" },
+            { "src": "We saw a good film last Friday.", "dst": "上周五我们看了一部好电影。" }
+        ],
+        "synonyms": ["noticed"],
+        "antonyms": [],
+        "confuse": [{ "word": "see", "diff": "saw 是过去式；see 是原形。" }]
+    },
+    {
+        "word": "last",
+        "ph_en": "/lɑːst/",
+        "ph_am": "/læst/",
+        "parts": [
+            { "pos": "adj.", "means": ["上一个的", "最后的"] },
+            { "pos": "adv.", "means": ["最后"] },
+            { "pos": "v.", "means": ["持续"] }
+        ],
+        "exchange": { "pl": "", "past": "lasted", "ing": "lasting" },
+        "examples": [
+            { "src": "I went to Shanghai last week.", "dst": "我上周去了上海。" },
+            { "src": "He is the last person in the line.", "dst": "他是队伍里的最后一个人。" },
+            { "src": "The film lasted two hours.", "dst": "这部电影持续了两个小时。" }
+        ],
+        "synonyms": ["final"],
+        "antonyms": ["first"],
+        "confuse": [{ "word": "least", "diff": "last 是最后的、上一个的；least 是最少的。" }]
+    },
+    {
+        "word": "yesterday",
+        "ph_en": "/ˈjestədeɪ/",
+        "ph_am": "/ˈjestərdeɪ/",
+        "parts": [
+            { "pos": "n.", "means": ["昨天"] },
+            { "pos": "adv.", "means": ["在昨天"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I played football yesterday.", "dst": "我昨天踢了足球。" },
+            { "src": "Yesterday was Sunday.", "dst": "昨天是星期天。" },
+            { "src": "What did you do yesterday?", "dst": "你昨天做了什么？" }
+        ],
+        "synonyms": [],
+        "antonyms": ["tomorrow"],
+        "confuse": [{ "word": "today", "diff": "yesterday 是昨天；today 是今天。" }]
+    },
+    {
+        "word": "before",
+        "ph_en": "/bɪˈfɔː(r)/",
+        "ph_am": "/bɪˈfɔːr/",
+        "parts": [
+            { "pos": "prep.", "means": ["在……之前"] },
+            { "pos": "conj.", "means": ["在……以前"] },
+            { "pos": "adv.", "means": ["以前"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Wash your hands before dinner.", "dst": "饭前要洗手。" },
+            { "src": "I have seen this film before.", "dst": "我以前看过这部电影。" },
+            { "src": "Brush your teeth before you go to bed.", "dst": "睡觉前要刷牙。" }
+        ],
+        "synonyms": ["earlier"],
+        "antonyms": ["after"],
+        "confuse": [{ "word": "after", "diff": "before 是在……之前；after 是在……之后。" }]
+    },
+    {
+        "word": "drank",
+        "ph_en": "/dræŋk/",
+        "ph_am": "/dræŋk/",
+        "parts": [{ "pos": "v.", "means": ["喝了（drink 的过去式）"] }],
+        "exchange": { "pl": "", "past": "drank", "ing": "drinking" },
+        "examples": [
+            { "src": "I drank a glass of milk this morning.", "dst": "我今天早上喝了一杯牛奶。" },
+            { "src": "He drank some water after the game.", "dst": "比赛后他喝了点水。" },
+            { "src": "We drank orange juice at the party.", "dst": "我们在聚会上喝了橙汁。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["ate"],
+        "confuse": [{ "word": "drunk", "diff": "drank 是过去式；drunk 是过去分词，也可表示喝醉的。" }]
+    },
+    {
+        "word": "show",
+        "ph_en": "/ʃəʊ/",
+        "ph_am": "/ʃoʊ/",
+        "parts": [
+            { "pos": "n.", "means": ["表演", "节目"] },
+            { "pos": "v.", "means": ["展示", "给……看"] }
+        ],
+        "exchange": { "pl": "shows", "past": "showed", "ing": "showing" },
+        "examples": [
+            { "src": "We watched a magic show.", "dst": "我们看了一场魔术表演。" },
+            { "src": "Please show me your picture.", "dst": "请给我看看你的画。" },
+            { "src": "The TV show starts at eight.", "dst": "这个电视节目八点开始。" }
+        ],
+        "synonyms": ["display"],
+        "antonyms": ["hide"],
+        "confuse": [{ "word": "shower", "diff": "show 是展示或表演；shower 是淋浴或阵雨。" }]
+    },
+    {
+        "word": "magazine",
+        "ph_en": "/ˌmæɡəˈziːn/",
+        "ph_am": "/ˈmæɡəziːn/",
+        "parts": [{ "pos": "n.", "means": ["杂志"] }],
+        "exchange": { "pl": "magazines", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I read a magazine on the train.", "dst": "我在火车上读了一本杂志。" },
+            { "src": "This magazine is for children.", "dst": "这本杂志是给孩子看的。" },
+            { "src": "She bought a fashion magazine.", "dst": "她买了一本时尚杂志。" }
+        ],
+        "synonyms": ["journal"],
+        "antonyms": [],
+        "confuse": [{ "word": "newspaper", "diff": "magazine 是杂志；newspaper 是报纸。" }]
+    },
+    {
+        "word": "better",
+        "ph_en": "/ˈbetə(r)/",
+        "ph_am": "/ˈbetər/",
+        "parts": [
+            { "pos": "adj.", "means": ["更好的"] },
+            { "pos": "adv.", "means": ["更好地"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This book is better than that one.", "dst": "这本书比那本好。" },
+            { "src": "I feel better today.", "dst": "我今天感觉好些了。" },
+            { "src": "She sings better than me.", "dst": "她唱歌比我唱得好。" }
+        ],
+        "synonyms": ["superior"],
+        "antonyms": ["worse"],
+        "confuse": [{ "word": "best", "diff": "better 是比较级；best 是最高级。" }]
+    },
+    {
+        "word": "faster",
+        "ph_en": "/ˈfɑːstə(r)/",
+        "ph_am": "/ˈfæstər/",
+        "parts": [
+            { "pos": "adj.", "means": ["更快的"] },
+            { "pos": "adv.", "means": ["更快地"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "A car is faster than a bike.", "dst": "汽车比自行车快。" },
+            { "src": "He runs faster than me.", "dst": "他跑得比我快。" },
+            { "src": "Can you walk a little faster?", "dst": "你能走快一点吗？" }
+        ],
+        "synonyms": ["quicker"],
+        "antonyms": ["slower"],
+        "confuse": [{ "word": "fastest", "diff": "faster 是比较级；fastest 是最高级。" }]
+    },
+    {
+        "word": "hotel",
+        "ph_en": "/həʊˈtel/",
+        "ph_am": "/hoʊˈtel/",
+        "parts": [{ "pos": "n.", "means": ["旅馆", "酒店"] }],
+        "exchange": { "pl": "hotels", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We stayed in a big hotel.", "dst": "我们住在一家大酒店。" },
+            { "src": "The hotel is near the beach.", "dst": "这家酒店靠近海滩。" },
+            { "src": "There is a restaurant in the hotel.", "dst": "酒店里有一家餐厅。" }
+        ],
+        "synonyms": ["inn"],
+        "antonyms": [],
+        "confuse": [{ "word": "hostel", "diff": "hotel 是酒店；hostel 是青年旅社。" }]
+    },
+    {
+        "word": "fixed",
+        "ph_en": "/fɪkst/",
+        "ph_am": "/fɪkst/",
+        "parts": [
+            { "pos": "v.", "means": ["修理了（fix 的过去式）"] },
+            { "pos": "adj.", "means": ["固定的"] }
+        ],
+        "exchange": { "pl": "", "past": "fixed", "ing": "fixing" },
+        "examples": [
+            { "src": "Dad fixed my bike yesterday.", "dst": "爸爸昨天修好了我的自行车。" },
+            { "src": "He fixed the broken lamp.", "dst": "他修好了坏掉的台灯。" },
+            { "src": "The meeting has a fixed time.", "dst": "这个会议有固定的时间。" }
+        ],
+        "synonyms": ["repaired", "mended"],
+        "antonyms": ["broke"],
+        "confuse": [{ "word": "fix", "diff": "fixed 是过去式；fix 是原形。" }]
+    },
+    {
+        "word": "broken",
+        "ph_en": "/ˈbrəʊkən/",
+        "ph_am": "/ˈbroʊkən/",
+        "parts": [{ "pos": "adj.", "means": ["坏了的", "破碎的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The window is broken.", "dst": "窗户碎了。" },
+            { "src": "I have a broken toy.", "dst": "我有一个坏了的玩具。" },
+            { "src": "His leg is broken.", "dst": "他的腿骨折了。" }
+        ],
+        "synonyms": ["damaged"],
+        "antonyms": ["fixed", "whole"],
+        "confuse": [{ "word": "broke", "diff": "broken 是过去分词或形容词；broke 是 break 的过去式。" }]
+    },
+    {
+        "word": "lamp",
+        "ph_en": "/læmp/",
+        "ph_am": "/læmp/",
+        "parts": [{ "pos": "n.", "means": ["灯", "台灯"] }],
+        "exchange": { "pl": "lamps", "past": "", "ing": "" },
+        "examples": [
+            { "src": "There is a lamp on the desk.", "dst": "书桌上有一盏台灯。" },
+            { "src": "Please turn on the lamp.", "dst": "请打开台灯。" },
+            { "src": "The lamp is broken.", "dst": "这盏灯坏了。" }
+        ],
+        "synonyms": ["light"],
+        "antonyms": [],
+        "confuse": [{ "word": "lap", "diff": "lamp 是灯；lap 是大腿上部或跑道一圈。" }]
+    },
+    {
+        "word": "loud",
+        "ph_en": "/laʊd/",
+        "ph_am": "/laʊd/",
+        "parts": [
+            { "pos": "adj.", "means": ["大声的", "响亮的"] },
+            { "pos": "adv.", "means": ["大声地"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The music is too loud.", "dst": "音乐声太大了。" },
+            { "src": "He has a loud voice.", "dst": "他的声音很大。" },
+            { "src": "Don't speak so loud in the library.", "dst": "不要在图书馆里这么大声说话。" }
+        ],
+        "synonyms": ["noisy"],
+        "antonyms": ["quiet", "soft"],
+        "confuse": [{ "word": "cloud", "diff": "loud 是大声的；cloud 是云。" }]
+    },
+    {
+        "word": "enjoy",
+        "ph_en": "/ɪnˈdʒɔɪ/",
+        "ph_am": "/ɪnˈdʒɔɪ/",
+        "parts": [{ "pos": "v.", "means": ["喜欢", "享受"] }],
+        "exchange": { "pl": "", "past": "enjoyed", "ing": "enjoying" },
+        "examples": [
+            { "src": "I enjoy reading books.", "dst": "我喜欢读书。" },
+            { "src": "We enjoyed the trip very much.", "dst": "我们非常喜欢这次旅行。" },
+            { "src": "Enjoy your meal!", "dst": "祝你用餐愉快！" }
+        ],
+        "synonyms": ["like", "love"],
+        "antonyms": ["hate"],
+        "confuse": [{ "word": "enjoyable", "diff": "enjoy 是动词，享受；enjoyable 是形容词，令人愉快的。" }]
+    },
+    {
+        "word": "stay",
+        "ph_en": "/steɪ/",
+        "ph_am": "/steɪ/",
+        "parts": [
+            { "pos": "v.", "means": ["停留", "待", "暂住"] },
+            { "pos": "n.", "means": ["逗留"] }
+        ],
+        "exchange": { "pl": "stays", "past": "stayed", "ing": "staying" },
+        "examples": [
+            { "src": "I will stay at home today.", "dst": "我今天要待在家里。" },
+            { "src": "They stay in a hotel.", "dst": "他们住在酒店里。" },
+            { "src": "Please stay here for a moment.", "dst": "请在这里待一会儿。" }
+        ],
+        "synonyms": ["remain"],
+        "antonyms": ["leave"],
+        "confuse": [{ "word": "stand", "diff": "stay 是停留；stand 是站立。" }]
+    },
+    {
+        "word": "went",
+        "ph_en": "/went/",
+        "ph_am": "/went/",
+        "parts": [{ "pos": "v.", "means": ["去了（go 的过去式）"] }],
+        "exchange": { "pl": "", "past": "went", "ing": "going" },
+        "examples": [
+            { "src": "I went to the park yesterday.", "dst": "我昨天去了公园。" },
+            { "src": "She went home by bus.", "dst": "她坐公交车回家了。" },
+            { "src": "We went to Hainan last summer.", "dst": "去年夏天我们去了海南。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["came"],
+        "confuse": [{ "word": "want", "diff": "went 是去了；want 是想要。" }]
+    },
+    {
+        "word": "camp",
+        "ph_en": "/kæmp/",
+        "ph_am": "/kæmp/",
+        "parts": [
+            { "pos": "n.", "means": ["营地", "夏令营"] },
+            { "pos": "v.", "means": ["露营"] }
+        ],
+        "exchange": { "pl": "camps", "past": "camped", "ing": "camping" },
+        "examples": [
+            { "src": "We set up a camp by the lake.", "dst": "我们在湖边搭了一个营地。" },
+            { "src": "He went to a summer camp.", "dst": "他去参加了夏令营。" },
+            { "src": "They camp in the mountains every year.", "dst": "他们每年都去山里露营。" }
+        ],
+        "synonyms": ["campsite"],
+        "antonyms": [],
+        "confuse": [{ "word": "cap", "diff": "camp 是营地；cap 是帽子。" }]
+    },
+    {
+        "word": "went camping",
+        "ph_en": "/went ˈkæmpɪŋ/",
+        "ph_am": "/went ˈkæmpɪŋ/",
+        "parts": [{ "pos": "phr.", "means": ["去露营了"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We went camping last weekend.", "dst": "上周末我们去露营了。" },
+            { "src": "He went camping with his father.", "dst": "他和爸爸一起去露营了。" },
+            { "src": "They went camping by the river.", "dst": "他们去河边露营了。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "went fishing", "diff": "went camping 是去露营；went fishing 是去钓鱼。" }]
+    },
+    {
+        "word": "fish",
+        "ph_en": "/fɪʃ/",
+        "ph_am": "/fɪʃ/",
+        "parts": [
+            { "pos": "n.", "means": ["鱼", "鱼肉"] },
+            { "pos": "v.", "means": ["钓鱼"] }
+        ],
+        "exchange": { "pl": "fish", "past": "fished", "ing": "fishing" },
+        "examples": [
+            { "src": "There are many fish in the river.", "dst": "河里有很多鱼。" },
+            { "src": "I like fish for dinner.", "dst": "我晚饭喜欢吃鱼。" },
+            { "src": "My grandpa often fishes by the lake.", "dst": "我爷爷常常在湖边钓鱼。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "fresh", "diff": "fish 是鱼；fresh 是新鲜的。" }]
+    },
+    {
+        "word": "went fishing",
+        "ph_en": "/went ˈfɪʃɪŋ/",
+        "ph_am": "/went ˈfɪʃɪŋ/",
+        "parts": [{ "pos": "phr.", "means": ["去钓鱼了"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My father went fishing yesterday.", "dst": "我爸爸昨天去钓鱼了。" },
+            { "src": "We went fishing by the lake.", "dst": "我们去湖边钓鱼了。" },
+            { "src": "She went fishing with her grandpa.", "dst": "她和爷爷去钓鱼了。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "went camping", "diff": "went fishing 是去钓鱼；went camping 是去露营。" }]
+    },
+    {
+        "word": "rode",
+        "ph_en": "/rəʊd/",
+        "ph_am": "/roʊd/",
+        "parts": [{ "pos": "v.", "means": ["骑了（ride 的过去式）"] }],
+        "exchange": { "pl": "", "past": "rode", "ing": "riding" },
+        "examples": [
+            { "src": "I rode a horse last summer.", "dst": "去年夏天我骑了马。" },
+            { "src": "He rode his bike to school.", "dst": "他骑自行车去了学校。" },
+            { "src": "We rode a bus to the zoo.", "dst": "我们坐公交车去了动物园。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "road", "diff": "rode 是骑了；road 是道路。" }]
+    },
+    {
+        "word": "hurt",
+        "ph_en": "/hɜːt/",
+        "ph_am": "/hɜːrt/",
+        "parts": [
+            { "pos": "v.", "means": ["受伤", "伤害", "疼痛"] },
+            { "pos": "adj.", "means": ["受伤的"] }
+        ],
+        "exchange": { "pl": "", "past": "hurt", "ing": "hurting" },
+        "examples": [
+            { "src": "I hurt my leg yesterday.", "dst": "我昨天伤了腿。" },
+            { "src": "My head hurts.", "dst": "我头疼。" },
+            { "src": "Be careful, or you will get hurt.", "dst": "小心，否则你会受伤的。" }
+        ],
+        "synonyms": ["injure"],
+        "antonyms": ["heal"],
+        "confuse": [{ "word": "hunt", "diff": "hurt 是受伤；hunt 是打猎。" }]
+    },
+    {
+        "word": "ate",
+        "ph_en": "/et/",
+        "ph_am": "/eɪt/",
+        "parts": [{ "pos": "v.", "means": ["吃了（eat 的过去式）"] }],
+        "exchange": { "pl": "", "past": "ate", "ing": "eating" },
+        "examples": [
+            { "src": "I ate an apple this morning.", "dst": "我今天早上吃了一个苹果。" },
+            { "src": "She ate noodles for lunch.", "dst": "她午饭吃了面条。" },
+            { "src": "We ate a lot of food at the party.", "dst": "我们在聚会上吃了很多食物。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["drank"],
+        "confuse": [{ "word": "eight", "diff": "ate 是吃了；eight 是数字八，两者发音相近。" }]
+    },
+    {
+        "word": "took",
+        "ph_en": "/tʊk/",
+        "ph_am": "/tʊk/",
+        "parts": [{ "pos": "v.", "means": ["拿了", "带了", "花费（take 的过去式）"] }],
+        "exchange": { "pl": "", "past": "took", "ing": "taking" },
+        "examples": [
+            { "src": "I took a bus to school.", "dst": "我坐公交车去了学校。" },
+            { "src": "She took her bag and left.", "dst": "她拿着包离开了。" },
+            { "src": "It took me an hour to finish it.", "dst": "我花了一个小时完成它。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["gave"],
+        "confuse": [{ "word": "look", "diff": "took 是 take 的过去式；look 是看。" }]
+    },
+    {
+        "word": "took pictures",
+        "ph_en": "/tʊk ˈpɪktʃəz/",
+        "ph_am": "/tʊk ˈpɪktʃərz/",
+        "parts": [{ "pos": "phr.", "means": ["拍照了"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We took pictures at the zoo.", "dst": "我们在动物园拍了照片。" },
+            { "src": "He took pictures of the flowers.", "dst": "他给花拍了照片。" },
+            { "src": "I took many pictures on the trip.", "dst": "我在旅途中拍了很多照片。" }
+        ],
+        "synonyms": ["took photos"],
+        "antonyms": [],
+        "confuse": [{ "word": "drew pictures", "diff": "took pictures 是拍照；drew pictures 是画画。" }]
+    },
+    {
+        "word": "bought",
+        "ph_en": "/bɔːt/",
+        "ph_am": "/bɔːt/",
+        "parts": [{ "pos": "v.", "means": ["买了（buy 的过去式）"] }],
+        "exchange": { "pl": "", "past": "bought", "ing": "buying" },
+        "examples": [
+            { "src": "I bought a new bag yesterday.", "dst": "我昨天买了一个新书包。" },
+            { "src": "Mom bought some fruit.", "dst": "妈妈买了一些水果。" },
+            { "src": "He bought a gift for his friend.", "dst": "他给朋友买了一份礼物。" }
+        ],
+        "synonyms": ["purchased"],
+        "antonyms": ["sold"],
+        "confuse": [{ "word": "brought", "diff": "bought 是买了；brought 是带来了。" }]
+    },
+    {
+        "word": "gift",
+        "ph_en": "/ɡɪft/",
+        "ph_am": "/ɡɪft/",
+        "parts": [{ "pos": "n.", "means": ["礼物", "天赋"] }],
+        "exchange": { "pl": "gifts", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This is a gift for you.", "dst": "这是给你的礼物。" },
+            { "src": "She got a nice gift on her birthday.", "dst": "她生日时收到了一份漂亮的礼物。" },
+            { "src": "I bought a gift for my mother.", "dst": "我给妈妈买了一份礼物。" }
+        ],
+        "synonyms": ["present"],
+        "antonyms": [],
+        "confuse": [{ "word": "give", "diff": "gift 是名词，礼物；give 是动词，给。" }]
+    },
+    {
+        "word": "fell",
+        "ph_en": "/fel/",
+        "ph_am": "/fel/",
+        "parts": [{ "pos": "v.", "means": ["摔倒了", "落下了（fall 的过去式）"] }],
+        "exchange": { "pl": "", "past": "fell", "ing": "falling" },
+        "examples": [
+            { "src": "I fell off my bike yesterday.", "dst": "我昨天从自行车上摔了下来。" },
+            { "src": "The leaves fell from the tree.", "dst": "树叶从树上落了下来。" },
+            { "src": "He fell and hurt his arm.", "dst": "他摔倒了，伤到了胳膊。" }
+        ],
+        "synonyms": ["dropped"],
+        "antonyms": ["rose"],
+        "confuse": [{ "word": "feel", "diff": "fell 是摔倒了；feel 是感觉。" }]
+    },
+    {
+        "word": "off",
+        "ph_en": "/ɒf/",
+        "ph_am": "/ɔːf/",
+        "parts": [
+            { "pos": "prep.", "means": ["从……下来", "离开"] },
+            { "pos": "adv.", "means": ["离开", "关掉"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "He fell off the chair.", "dst": "他从椅子上摔了下来。" },
+            { "src": "Please turn off the light.", "dst": "请关灯。" },
+            { "src": "Take off your hat.", "dst": "把你的帽子摘下来。" }
+        ],
+        "synonyms": ["away"],
+        "antonyms": ["on"],
+        "confuse": [{ "word": "of", "diff": "off 表示离开、关掉；of 表示……的。" }]
+    },
+    {
+        "word": "Labour Day",
+        "ph_en": "/ˈleɪbə deɪ/",
+        "ph_am": "/ˈleɪbər deɪ/",
+        "parts": [{ "pos": "n.", "means": ["劳动节"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Labour Day is on May 1st.", "dst": "劳动节是五月一日。" },
+            { "src": "We went to the beach on Labour Day.", "dst": "劳动节那天我们去了海滩。" },
+            { "src": "I have a holiday on Labour Day.", "dst": "劳动节我有假期。" }
+        ],
+        "synonyms": ["May Day"],
+        "antonyms": [],
+        "confuse": [{ "word": "Children's Day", "diff": "Labour Day 是劳动节；Children's Day 是儿童节。" }]
+    },
+    {
+        "word": "mule",
+        "ph_en": "/mjuːl/",
+        "ph_am": "/mjuːl/",
+        "parts": [{ "pos": "n.", "means": ["骡子"] }],
+        "exchange": { "pl": "mules", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The mule carried a heavy bag.", "dst": "骡子驮着一个很重的包。" },
+            { "src": "We saw a mule on the mountain.", "dst": "我们在山上看到了一头骡子。" },
+            { "src": "A mule is a strong animal.", "dst": "骡子是一种强壮的动物。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "mole", "diff": "mule 是骡子；mole 是鼹鼠或痣。" }]
+    },
+    {
+        "word": "could",
+        "ph_en": "/kʊd/",
+        "ph_am": "/kʊd/",
+        "parts": [{ "pos": "modal v.", "means": ["能（can 的过去式）", "可以"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I could swim when I was five.", "dst": "我五岁时就会游泳了。" },
+            { "src": "Could you help me, please?", "dst": "请问你能帮我吗？" },
+            { "src": "She could not find her key.", "dst": "她找不到她的钥匙。" }
+        ],
+        "synonyms": ["was able to"],
+        "antonyms": ["couldn't"],
+        "confuse": [{ "word": "should", "diff": "could 表示能够；should 表示应该。" }]
+    },
+    {
+        "word": "till",
+        "ph_en": "/tɪl/",
+        "ph_am": "/tɪl/",
+        "parts": [
+            { "pos": "prep.", "means": ["直到"] },
+            { "pos": "conj.", "means": ["直到……时"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I waited till six o'clock.", "dst": "我一直等到六点钟。" },
+            { "src": "Stay here till I come back.", "dst": "待在这里，直到我回来。" },
+            { "src": "She studied till late at night.", "dst": "她学习到深夜。" }
+        ],
+        "synonyms": ["until"],
+        "antonyms": [],
+        "confuse": [{ "word": "tell", "diff": "till 是直到；tell 是告诉。" }]
+    },
+    {
+        "word": "beach",
+        "ph_en": "/biːtʃ/",
+        "ph_am": "/biːtʃ/",
+        "parts": [{ "pos": "n.", "means": ["海滩", "沙滩"] }],
+        "exchange": { "pl": "beaches", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We played on the beach.", "dst": "我们在海滩上玩耍。" },
+            { "src": "The beach is very clean.", "dst": "这片海滩非常干净。" },
+            { "src": "They walked along the beach.", "dst": "他们沿着海滩散步。" }
+        ],
+        "synonyms": ["seaside"],
+        "antonyms": [],
+        "confuse": [{ "word": "bench", "diff": "beach 是海滩；bench 是长凳。" }]
+    },
+    {
+        "word": "basket",
+        "ph_en": "/ˈbɑːskɪt/",
+        "ph_am": "/ˈbæskɪt/",
+        "parts": [{ "pos": "n.", "means": ["篮子", "筐"] }],
+        "exchange": { "pl": "baskets", "past": "", "ing": "" },
+        "examples": [
+            { "src": "There are apples in the basket.", "dst": "篮子里有苹果。" },
+            { "src": "She carried a basket of flowers.", "dst": "她提着一篮花。" },
+            { "src": "Put the toys in the basket.", "dst": "把玩具放进篮子里。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "basketball", "diff": "basket 是篮子；basketball 是篮球。" }]
+    },
+    {
+        "word": "part",
+        "ph_en": "/pɑːt/",
+        "ph_am": "/pɑːrt/",
+        "parts": [{ "pos": "n.", "means": ["部分", "角色"] }],
+        "exchange": { "pl": "parts", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This is the best part of the film.", "dst": "这是电影最精彩的部分。" },
+            { "src": "I took part in the school party.", "dst": "我参加了学校的聚会。" },
+            { "src": "She plays a part in the play.", "dst": "她在这出戏里演一个角色。" }
+        ],
+        "synonyms": ["piece"],
+        "antonyms": ["whole"],
+        "confuse": [{ "word": "party", "diff": "part 是部分；party 是聚会。" }]
+    },
+    {
+        "word": "licked",
+        "ph_en": "/lɪkt/",
+        "ph_am": "/lɪkt/",
+        "parts": [{ "pos": "v.", "means": ["舔了（lick 的过去式）"] }],
+        "exchange": { "pl": "", "past": "licked", "ing": "licking" },
+        "examples": [
+            { "src": "The dog licked my hand.", "dst": "小狗舔了我的手。" },
+            { "src": "He licked his ice cream.", "dst": "他舔了舔他的冰淇淋。" },
+            { "src": "The cat licked the milk.", "dst": "猫舔了牛奶。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "liked", "diff": "licked 是舔了；liked 是喜欢了。" }]
+    },
+    {
+        "word": "laughed",
+        "ph_en": "/lɑːft/",
+        "ph_am": "/læft/",
+        "parts": [{ "pos": "v.", "means": ["笑了（laugh 的过去式）"] }],
+        "exchange": { "pl": "", "past": "laughed", "ing": "laughing" },
+        "examples": [
+            { "src": "We laughed at the funny story.", "dst": "我们被这个有趣的故事逗笑了。" },
+            { "src": "She laughed happily.", "dst": "她开心地笑了。" },
+            { "src": "Everyone laughed at his joke.", "dst": "大家都被他的笑话逗笑了。" }
+        ],
+        "synonyms": ["giggled"],
+        "antonyms": ["cried"],
+        "confuse": [{ "word": "laugh", "diff": "laughed 是过去式；laugh 是原形。" }]
+    },
+    {
+        "word": "dining hall",
+        "ph_en": "/ˈdaɪnɪŋ hɔːl/",
+        "ph_am": "/ˈdaɪnɪŋ hɔːl/",
+        "parts": [{ "pos": "n.", "means": ["食堂", "餐厅"] }],
+        "exchange": { "pl": "dining halls", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We have lunch in the dining hall.", "dst": "我们在食堂吃午饭。" },
+            { "src": "The dining hall is very big.", "dst": "食堂很大。" },
+            { "src": "Let's meet at the dining hall.", "dst": "我们在食堂见面吧。" }
+        ],
+        "synonyms": ["canteen"],
+        "antonyms": [],
+        "confuse": [{ "word": "dining room", "diff": "dining hall 是大食堂；dining room 是家里的餐厅。" }]
+    },
+    {
+        "word": "grass",
+        "ph_en": "/ɡrɑːs/",
+        "ph_am": "/ɡræs/",
+        "parts": [{ "pos": "n.", "means": ["草", "草地"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The grass is green.", "dst": "草是绿色的。" },
+            { "src": "We sat on the grass.", "dst": "我们坐在草地上。" },
+            { "src": "Don't walk on the grass.", "dst": "请勿踩踏草地。" }
+        ],
+        "synonyms": ["lawn"],
+        "antonyms": [],
+        "confuse": [{ "word": "glass", "diff": "grass 是草；glass 是玻璃或玻璃杯。" }]
+    },
+    {
+        "word": "gym",
+        "ph_en": "/dʒɪm/",
+        "ph_am": "/dʒɪm/",
+        "parts": [{ "pos": "n.", "means": ["健身房", "体育馆"] }],
+        "exchange": { "pl": "gyms", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We have PE class in the gym.", "dst": "我们在体育馆上体育课。" },
+            { "src": "My father goes to the gym on Sundays.", "dst": "我爸爸周日去健身房。" },
+            { "src": "The gym is next to the playground.", "dst": "体育馆在操场旁边。" }
+        ],
+        "synonyms": ["gymnasium"],
+        "antonyms": [],
+        "confuse": [{ "word": "gum", "diff": "gym 是健身房；gum 是口香糖。" }]
+    },
+    {
+        "word": "ago",
+        "ph_en": "/əˈɡəʊ/",
+        "ph_am": "/əˈɡoʊ/",
+        "parts": [{ "pos": "adv.", "means": ["以前", "……前"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I saw him two days ago.", "dst": "我两天前见过他。" },
+            { "src": "She came here a year ago.", "dst": "她一年前来到这里。" },
+            { "src": "They left ten minutes ago.", "dst": "他们十分钟前离开了。" }
+        ],
+        "synonyms": ["before"],
+        "antonyms": ["later"],
+        "confuse": [{ "word": "before", "diff": "ago 从现在往前算，如 two days ago；before 可从过去某时往前算。" }]
+    },
+    {
+        "word": "cycling",
+        "ph_en": "/ˈsaɪklɪŋ/",
+        "ph_am": "/ˈsaɪklɪŋ/",
+        "parts": [{ "pos": "n.", "means": ["骑自行车运动"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Cycling is good for your health.", "dst": "骑自行车对健康有好处。" },
+            { "src": "I like cycling in the park.", "dst": "我喜欢在公园里骑车。" },
+            { "src": "They enjoy cycling at the weekend.", "dst": "他们周末喜欢骑车。" }
+        ],
+        "synonyms": ["biking"],
+        "antonyms": [],
+        "confuse": [{ "word": "cycle", "diff": "cycling 是骑车这项活动；cycle 是循环或自行车。" }]
+    },
+    {
+        "word": "go cycling",
+        "ph_en": "/ɡəʊ ˈsaɪklɪŋ/",
+        "ph_am": "/ɡoʊ ˈsaɪklɪŋ/",
+        "parts": [{ "pos": "phr.", "means": ["去骑自行车"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Let's go cycling this Sunday.", "dst": "这个周日我们去骑车吧。" },
+            { "src": "I often go cycling with my father.", "dst": "我常常和爸爸一起去骑车。" },
+            { "src": "They go cycling by the river.", "dst": "他们在河边骑车。" }
+        ],
+        "synonyms": ["go biking"],
+        "antonyms": [],
+        "confuse": [{ "word": "go camping", "diff": "go cycling 是去骑车；go camping 是去露营。" }]
+    },
+    {
+        "word": "ice-skate",
+        "ph_en": "/ˈaɪs skeɪt/",
+        "ph_am": "/ˈaɪs skeɪt/",
+        "parts": [{ "pos": "v.", "means": ["滑冰"] }],
+        "exchange": { "pl": "", "past": "ice-skated", "ing": "ice-skating" },
+        "examples": [
+            { "src": "I like to ice-skate in winter.", "dst": "我冬天喜欢滑冰。" },
+            { "src": "They ice-skate on the lake.", "dst": "他们在湖面上滑冰。" },
+            { "src": "Can you ice-skate?", "dst": "你会滑冰吗？" }
+        ],
+        "synonyms": ["skate"],
+        "antonyms": [],
+        "confuse": [{ "word": "roller-skate", "diff": "ice-skate 是在冰上滑；roller-skate 是穿轮滑鞋滑。" }]
+    },
+    {
+        "word": "badminton",
+        "ph_en": "/ˈbædmɪntən/",
+        "ph_am": "/ˈbædmɪntən/",
+        "parts": [{ "pos": "n.", "means": ["羽毛球"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I play badminton every Sunday.", "dst": "我每周日打羽毛球。" },
+            { "src": "She is good at badminton.", "dst": "她擅长打羽毛球。" },
+            { "src": "Let's play badminton after school.", "dst": "放学后我们打羽毛球吧。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "tennis", "diff": "badminton 是羽毛球；tennis 是网球。" }]
+    },
+    {
+        "word": "star",
+        "ph_en": "/stɑː(r)/",
+        "ph_am": "/stɑːr/",
+        "parts": [{ "pos": "n.", "means": ["星星", "明星"] }],
+        "exchange": { "pl": "stars", "past": "", "ing": "" },
+        "examples": [
+            { "src": "There are many stars in the sky.", "dst": "天空中有很多星星。" },
+            { "src": "She wants to be a movie star.", "dst": "她想成为一名电影明星。" },
+            { "src": "The stars are bright tonight.", "dst": "今晚的星星很亮。" }
+        ],
+        "synonyms": ["celebrity"],
+        "antonyms": [],
+        "confuse": [{ "word": "stair", "diff": "star 是星星；stair 是楼梯台阶。" }]
+    },
+    {
+        "word": "easy",
+        "ph_en": "/ˈiːzi/",
+        "ph_am": "/ˈiːzi/",
+        "parts": [{ "pos": "adj.", "means": ["容易的", "轻松的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This question is easy.", "dst": "这个问题很容易。" },
+            { "src": "English is not easy for me.", "dst": "英语对我来说不容易。" },
+            { "src": "It is easy to make a cake.", "dst": "做蛋糕很容易。" }
+        ],
+        "synonyms": ["simple"],
+        "antonyms": ["difficult", "hard"],
+        "confuse": [{ "word": "easily", "diff": "easy 是形容词；easily 是副词，容易地。" }]
+    },
+    {
+        "word": "look up",
+        "ph_en": "/lʊk ʌp/",
+        "ph_am": "/lʊk ʌp/",
+        "parts": [{ "pos": "phr.", "means": ["查阅", "查找", "抬头看"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Look up the word in the dictionary.", "dst": "在词典里查一下这个单词。" },
+            { "src": "I looked up the answer on the Internet.", "dst": "我在网上查了答案。" },
+            { "src": "Look up at the stars.", "dst": "抬头看星星。" }
+        ],
+        "synonyms": ["search for"],
+        "antonyms": ["look down"],
+        "confuse": [{ "word": "look for", "diff": "look up 是查阅；look for 是寻找。" }]
+    },
+    {
+        "word": "Internet",
+        "ph_en": "/ˈɪntənet/",
+        "ph_am": "/ˈɪntərnet/",
+        "parts": [{ "pos": "n.", "means": ["互联网", "因特网"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I find information on the Internet.", "dst": "我在网上查找信息。" },
+            { "src": "He surfs the Internet every evening.", "dst": "他每天晚上上网。" },
+            { "src": "We can learn a lot from the Internet.", "dst": "我们可以从互联网上学到很多东西。" }
+        ],
+        "synonyms": ["the Net", "the web"],
+        "antonyms": [],
+        "confuse": [{ "word": "intranet", "diff": "Internet 是全球互联网；intranet 是内部网络。" }]
+    },
+    {
+        "word": "different",
+        "ph_en": "/ˈdɪfrənt/",
+        "ph_am": "/ˈdɪfrənt/",
+        "parts": [{ "pos": "adj.", "means": ["不同的", "不一样的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We have different hobbies.", "dst": "我们有不同的爱好。" },
+            { "src": "This bag is different from that one.", "dst": "这个包和那个不一样。" },
+            { "src": "Every day is different.", "dst": "每一天都不一样。" }
+        ],
+        "synonyms": ["unlike"],
+        "antonyms": ["same", "similar"],
+        "confuse": [{ "word": "difficult", "diff": "different 是不同的；difficult 是困难的。" }]
+    },
+    {
+        "word": "active",
+        "ph_en": "/ˈæktɪv/",
+        "ph_am": "/ˈæktɪv/",
+        "parts": [{ "pos": "adj.", "means": ["积极的", "活跃的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "He is an active boy.", "dst": "他是一个活泼的男孩。" },
+            { "src": "She is active in class.", "dst": "她在课堂上很积极。" },
+            { "src": "Active people stay healthy.", "dst": "爱运动的人保持健康。" }
+        ],
+        "synonyms": ["lively"],
+        "antonyms": ["lazy", "inactive"],
+        "confuse": [{ "word": "actor", "diff": "active 是积极的；actor 是男演员。" }]
+    },
+    {
+        "word": "race",
+        "ph_en": "/reɪs/",
+        "ph_am": "/reɪs/",
+        "parts": [
+            { "pos": "n.", "means": ["比赛", "赛跑"] },
+            { "pos": "v.", "means": ["赛跑", "竞赛"] }
+        ],
+        "exchange": { "pl": "races", "past": "raced", "ing": "racing" },
+        "examples": [
+            { "src": "We had a running race.", "dst": "我们进行了一场赛跑。" },
+            { "src": "He won the race.", "dst": "他赢得了比赛。" },
+            { "src": "I raced my brother to the gate.", "dst": "我和弟弟比赛跑到大门。" }
+        ],
+        "synonyms": ["competition"],
+        "antonyms": [],
+        "confuse": [{ "word": "rice", "diff": "race 是比赛；rice 是米饭。" }]
+    },
+    {
+        "word": "nothing",
+        "ph_en": "/ˈnʌθɪŋ/",
+        "ph_am": "/ˈnʌθɪŋ/",
+        "parts": [{ "pos": "pron.", "means": ["没有东西", "没什么"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "There is nothing in the box.", "dst": "盒子里什么也没有。" },
+            { "src": "I have nothing to say.", "dst": "我没什么要说的。" },
+            { "src": "Nothing is impossible.", "dst": "没有什么是不可能的。" }
+        ],
+        "synonyms": ["none"],
+        "antonyms": ["everything", "something"],
+        "confuse": [{ "word": "nobody", "diff": "nothing 指没有东西；nobody 指没有人。" }]
+    },
+    {
+        "word": "thought",
+        "ph_en": "/θɔːt/",
+        "ph_am": "/θɔːt/",
+        "parts": [
+            { "pos": "v.", "means": ["想了", "认为（think 的过去式）"] },
+            { "pos": "n.", "means": ["想法", "思考"] }
+        ],
+        "exchange": { "pl": "thoughts", "past": "thought", "ing": "thinking" },
+        "examples": [
+            { "src": "I thought it was easy.", "dst": "我以为这很容易。" },
+            { "src": "She thought about her trip.", "dst": "她想着她的旅行。" },
+            { "src": "That is a good thought.", "dst": "那是个好想法。" }
+        ],
+        "synonyms": ["idea"],
+        "antonyms": [],
+        "confuse": [{ "word": "though", "diff": "thought 是想；though 是虽然。" }]
+    },
+    {
+        "word": "felt",
+        "ph_en": "/felt/",
+        "ph_am": "/felt/",
+        "parts": [{ "pos": "v.", "means": ["感觉到（feel 的过去式）"] }],
+        "exchange": { "pl": "", "past": "felt", "ing": "feeling" },
+        "examples": [
+            { "src": "I felt tired after the race.", "dst": "比赛后我感到很累。" },
+            { "src": "She felt happy yesterday.", "dst": "她昨天很开心。" },
+            { "src": "He felt cold in the room.", "dst": "他在房间里觉得冷。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "fell", "diff": "felt 是感觉到；fell 是摔倒了。" }]
+    },
+    {
+        "word": "cheetah",
+        "ph_en": "/ˈtʃiːtə/",
+        "ph_am": "/ˈtʃiːtə/",
+        "parts": [{ "pos": "n.", "means": ["猎豹"] }],
+        "exchange": { "pl": "cheetahs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "A cheetah can run very fast.", "dst": "猎豹跑得非常快。" },
+            { "src": "We saw a cheetah at the zoo.", "dst": "我们在动物园看到了一只猎豹。" },
+            { "src": "The cheetah is faster than a horse.", "dst": "猎豹比马跑得快。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "leopard", "diff": "cheetah 是猎豹，身材修长；leopard 是豹子，身体更粗壮。" }]
+    },
+    {
+        "word": "trip",
+        "ph_en": "/trɪp/",
+        "ph_am": "/trɪp/",
+        "parts": [{ "pos": "n.", "means": ["旅行", "出行"] }],
+        "exchange": { "pl": "trips", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We had a trip to Beijing.", "dst": "我们去北京旅行了一趟。" },
+            { "src": "The school trip was fun.", "dst": "学校的郊游很有趣。" },
+            { "src": "Have a nice trip!", "dst": "祝你旅途愉快！" }
+        ],
+        "synonyms": ["journey"],
+        "antonyms": [],
+        "confuse": [{ "word": "tip", "diff": "trip 是旅行；tip 是小费或提示。" }]
+    },
+    {
+        "word": "woke",
+        "ph_en": "/wəʊk/",
+        "ph_am": "/woʊk/",
+        "parts": [{ "pos": "v.", "means": ["醒了（wake 的过去式）"] }],
+        "exchange": { "pl": "", "past": "woke", "ing": "waking" },
+        "examples": [
+            { "src": "I woke up at six this morning.", "dst": "我今天早上六点醒了。" },
+            { "src": "The noise woke the baby.", "dst": "噪音把婴儿吵醒了。" },
+            { "src": "He woke up late yesterday.", "dst": "他昨天很晚才醒。" }
+        ],
+        "synonyms": [],
+        "antonyms": ["slept"],
+        "confuse": [{ "word": "work", "diff": "woke 是醒了；work 是工作。" }]
+    },
+    {
+        "word": "dream",
+        "ph_en": "/driːm/",
+        "ph_am": "/driːm/",
+        "parts": [
+            { "pos": "n.", "means": ["梦", "梦想"] },
+            { "pos": "v.", "means": ["做梦", "梦想"] }
+        ],
+        "exchange": { "pl": "dreams", "past": "dreamed", "ing": "dreaming" },
+        "examples": [
+            { "src": "I had a strange dream last night.", "dst": "我昨晚做了一个奇怪的梦。" },
+            { "src": "My dream is to be a doctor.", "dst": "我的梦想是成为一名医生。" },
+            { "src": "She dreamed about a big house.", "dst": "她梦见了一座大房子。" }
+        ],
+        "synonyms": ["wish"],
+        "antonyms": [],
+        "confuse": [{ "word": "drain", "diff": "dream 是梦；drain 是排水、排水管。" }]
+    },
+    {
+        "word": "straight",
+        "ph_en": "/streɪt/",
+        "ph_am": "/streɪt/",
+        "parts": [
+            { "pos": "adv.", "means": ["笔直地", "一直"] },
+            { "pos": "adj.", "means": ["直的"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Go straight and turn left.", "dst": "一直走，然后左转。" },
+            { "src": "Draw a straight line.", "dst": "画一条直线。" },
+            { "src": "The road is straight.", "dst": "这条路是笔直的。" }
+        ],
+        "synonyms": ["direct"],
+        "antonyms": ["curved", "bent"],
+        "confuse": [{ "word": "strait", "diff": "straight 是笔直的；strait 是海峡。" }]
+    },
+    {
+        "word": "right",
+        "ph_en": "/raɪt/",
+        "ph_am": "/raɪt/",
+        "parts": [
+            { "pos": "adj.", "means": ["对的", "右边的"] },
+            { "pos": "adv.", "means": ["向右", "正好"] },
+            { "pos": "n.", "means": ["右边", "权利"] }
+        ],
+        "exchange": { "pl": "rights", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Turn right at the corner.", "dst": "在拐角处向右转。" },
+            { "src": "Your answer is right.", "dst": "你的答案是对的。" },
+            { "src": "I write with my right hand.", "dst": "我用右手写字。" }
+        ],
+        "synonyms": ["correct"],
+        "antonyms": ["wrong", "left"],
+        "confuse": [{ "word": "write", "diff": "right 是对的、右边；write 是写，两者发音相同。" }]
+    },
+    {
+        "word": "ask",
+        "ph_en": "/ɑːsk/",
+        "ph_am": "/æsk/",
+        "parts": [{ "pos": "v.", "means": ["问", "询问", "请求"] }],
+        "exchange": { "pl": "", "past": "asked", "ing": "asking" },
+        "examples": [
+            { "src": "I want to ask a question.", "dst": "我想问一个问题。" },
+            { "src": "She asked me the way to the hotel.", "dst": "她向我问去酒店的路。" },
+            { "src": "Ask your teacher for help.", "dst": "请向你的老师求助。" }
+        ],
+        "synonyms": ["inquire"],
+        "antonyms": ["answer", "reply"],
+        "confuse": [{ "word": "answer", "diff": "ask 是问；answer 是回答。" }]
+    },
+    {
+        "word": "sir",
+        "ph_en": "/sɜː(r)/",
+        "ph_am": "/sɜːr/",
+        "parts": [{ "pos": "n.", "means": ["先生", "阁下（对男子的尊称）"] }],
+        "exchange": { "pl": "sirs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Excuse me, sir.", "dst": "打扰一下，先生。" },
+            { "src": "Can I help you, sir?", "dst": "先生，需要帮忙吗？" },
+            { "src": "Yes, sir.", "dst": "是的，先生。" }
+        ],
+        "synonyms": ["mister"],
+        "antonyms": ["madam"],
+        "confuse": [{ "word": "madam", "diff": "sir 是对男士的尊称；madam 是对女士的尊称。" }]
+    },
+    {
+        "word": "interesting",
+        "ph_en": "/ˈɪntrəstɪŋ/",
+        "ph_am": "/ˈɪntrəstɪŋ/",
+        "parts": [{ "pos": "adj.", "means": ["有趣的", "令人感兴趣的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This is an interesting book.", "dst": "这是一本有趣的书。" },
+            { "src": "The story is very interesting.", "dst": "这个故事非常有趣。" },
+            { "src": "Science is interesting to me.", "dst": "我觉得科学很有趣。" }
+        ],
+        "synonyms": ["fun", "exciting"],
+        "antonyms": ["boring"],
+        "confuse": [{ "word": "interested", "diff": "interesting 是令人感兴趣的；interested 是感兴趣的。" }]
+    },
+    {
+        "word": "restaurant",
+        "ph_en": "/ˈrestrɒnt/",
+        "ph_am": "/ˈrestərɑːnt/",
+        "parts": [{ "pos": "n.", "means": ["餐馆", "饭店"] }],
+        "exchange": { "pl": "restaurants", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We had dinner in a restaurant.", "dst": "我们在一家餐馆吃了晚饭。" },
+            { "src": "The restaurant is near my school.", "dst": "这家餐馆离我的学校很近。" },
+            { "src": "There is a new restaurant on the street.", "dst": "街上有一家新餐馆。" }
+        ],
+        "synonyms": ["diner"],
+        "antonyms": [],
+        "confuse": [{ "word": "canteen", "diff": "restaurant 是对外营业的餐馆；canteen 是学校或单位的食堂。" }]
+    },
+    {
+        "word": "pizza",
+        "ph_en": "/ˈpiːtsə/",
+        "ph_am": "/ˈpiːtsə/",
+        "parts": [{ "pos": "n.", "means": ["比萨饼", "披萨"] }],
+        "exchange": { "pl": "pizzas", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I like pizza very much.", "dst": "我非常喜欢比萨。" },
+            { "src": "We ordered a big pizza.", "dst": "我们点了一个大比萨。" },
+            { "src": "She ate two pieces of pizza.", "dst": "她吃了两块比萨。" }
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "confuse": [{ "word": "pasta", "diff": "pizza 是比萨饼；pasta 是意大利面。" }]
+    },
+    {
+        "word": "street",
+        "ph_en": "/striːt/",
+        "ph_am": "/striːt/",
+        "parts": [{ "pos": "n.", "means": ["街道", "马路"] }],
+        "exchange": { "pl": "streets", "past": "", "ing": "" },
+        "examples": [
+            { "src": "There are many shops on this street.", "dst": "这条街上有很多商店。" },
+            { "src": "Don't play in the street.", "dst": "不要在马路上玩耍。" },
+            { "src": "My home is on Green Street.", "dst": "我家在绿色街。" }
+        ],
+        "synonyms": ["road"],
+        "antonyms": [],
+        "confuse": [{ "word": "straight", "diff": "street 是街道；straight 是笔直的。" }]
+    },
+    {
+        "word": "get",
+        "ph_en": "/ɡet/",
+        "ph_am": "/ɡet/",
+        "parts": [{ "pos": "v.", "means": ["得到", "获得", "到达", "变得"] }],
+        "exchange": { "pl": "", "past": "got", "ing": "getting" },
+        "examples": [
+            { "src": "I get up at six every day.", "dst": "我每天六点起床。" },
+            { "src": "She got a gift from her friend.", "dst": "她收到了朋友的一份礼物。" },
+            { "src": "It gets dark early in winter.", "dst": "冬天天黑得早。" }
+        ],
+        "synonyms": ["obtain", "receive"],
+        "antonyms": ["lose"],
+        "confuse": [{ "word": "got", "diff": "get 是原形；got 是过去式。" }]
+    },
+    {
+        "word": "GPS",
+        "ph_en": "/ˌdʒiː piː ˈes/",
+        "ph_am": "/ˌdʒiː piː ˈes/",
+        "parts": [{ "pos": "n.", "means": ["全球定位系统"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We use GPS to find the way.", "dst": "我们用全球定位系统找路。" },
+            { "src": "The GPS shows a shorter road.", "dst": "导航显示有一条更近的路。" },
+            { "src": "My father turned on the GPS in the car.", "dst": "我爸爸打开了车里的导航。" }
+        ],
+        "synonyms": ["navigation system"],
+        "antonyms": [],
+        "confuse": [{ "word": "map", "diff": "GPS 是电子定位导航系统；map 是地图。" }]
+    },
+    {
+        "word": "gave",
+        "ph_en": "/ɡeɪv/",
+        "ph_am": "/ɡeɪv/",
+        "parts": [{ "pos": "v.", "means": ["给了（give 的过去式）"] }],
+        "exchange": { "pl": "", "past": "gave", "ing": "giving" },
+        "examples": [
+            { "src": "She gave me a pen.", "dst": "她给了我一支钢笔。" },
+            { "src": "Dad gave me a book for my birthday.", "dst": "爸爸送了我一本书作为生日礼物。" },
+            { "src": "He gave the dog some water.", "dst": "他给小狗喂了些水。" }
+        ],
+        "synonyms": ["handed"],
+        "antonyms": ["took"],
+        "confuse": [{ "word": "give", "diff": "gave 是过去式；give 是原形。" }]
+    },
+    {
+        "word": "feature",
+        "ph_en": "/ˈfiːtʃə(r)/",
+        "ph_am": "/ˈfiːtʃər/",
+        "parts": [
+            { "pos": "n.", "means": ["特征", "特点", "功能"] },
+            { "pos": "v.", "means": ["以……为特色"] }
+        ],
+        "exchange": { "pl": "features", "past": "featured", "ing": "featuring" },
+        "examples": [
+            { "src": "This phone has a new feature.", "dst": "这部手机有一个新功能。" },
+            { "src": "The main feature of the room is a big window.", "dst": "这个房间的主要特点是有一扇大窗户。" },
+            { "src": "Long ears are a feature of rabbits.", "dst": "长耳朵是兔子的特征。" }
+        ],
+        "synonyms": ["characteristic"],
+        "antonyms": [],
+        "confuse": [{ "word": "future", "diff": "feature 是特征；future 是未来。" }]
+    },
+    {
+        "word": "follow",
+        "ph_en": "/ˈfɒləʊ/",
+        "ph_am": "/ˈfɑːloʊ/",
+        "parts": [{ "pos": "v.", "means": ["跟随", "遵循", "接着"] }],
+        "exchange": { "pl": "", "past": "followed", "ing": "following" },
+        "examples": [
+            { "src": "Follow me, please.", "dst": "请跟我来。" },
+            { "src": "The dog followed the boy home.", "dst": "小狗跟着男孩回了家。" },
+            { "src": "Follow the rules at school.", "dst": "在学校要遵守规则。" }
+        ],
+        "synonyms": ["go after"],
+        "antonyms": ["lead"],
+        "confuse": [{ "word": "fellow", "diff": "follow 是跟随；fellow 是同伴、家伙。" }]
+    },
+    {
+        "word": "far",
+        "ph_en": "/fɑː(r)/",
+        "ph_am": "/fɑːr/",
+        "parts": [
+            { "pos": "adv.", "means": ["远", "遥远地"] },
+            { "pos": "adj.", "means": ["远的"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "How far is it from here to the park?", "dst": "从这里到公园有多远？" },
+            { "src": "My school is not far from my home.", "dst": "我的学校离家不远。" },
+            { "src": "They live far away.", "dst": "他们住得很远。" }
+        ],
+        "synonyms": ["distant"],
+        "antonyms": ["near", "close"],
+        "confuse": [{ "word": "farm", "diff": "far 是远；farm 是农场。" }]
+    },
+    {
+        "word": "tell",
+        "ph_en": "/tel/",
+        "ph_am": "/tel/",
+        "parts": [{ "pos": "v.", "means": ["告诉", "讲述"] }],
+        "exchange": { "pl": "", "past": "told", "ing": "telling" },
+        "examples": [
+            { "src": "Please tell me your name.", "dst": "请告诉我你的名字。" },
+            { "src": "She tells a story to the children.", "dst": "她给孩子们讲故事。" },
+            { "src": "Can you tell me the way to the station?", "dst": "你能告诉我去车站的路吗？" }
+        ],
+        "synonyms": ["inform"],
+        "antonyms": ["ask"],
+        "confuse": [{ "word": "talk", "diff": "tell 是告诉，后接内容或对象；talk 是交谈。" }]
+    }
+]

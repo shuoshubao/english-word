@@ -1,0 +1,1388 @@
+[
+    {
+        "word": "classroom",
+        "ph_en": "/ˈklɑːsruːm/",
+        "ph_am": "/ˈklæsruːm/",
+        "parts": [{ "pos": "n.", "means": ["教室；课堂"] }],
+        "exchange": { "pl": "classrooms", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Our classroom is clean and bright.", "dst": "我们的教室干净又明亮。" },
+            { "src": "The students are in the classroom.", "dst": "学生们在教室里。" },
+            { "src": "There is a clock in our classroom.", "dst": "我们教室里有一个钟。" }
+        ],
+        "synonyms": ["schoolroom"],
+        "antonyms": [],
+        "confuse": [{ "word": "class", "diff": "classroom 是教室；class 是班级或课。" }]
+    },
+    {
+        "word": "window",
+        "ph_en": "/ˈwɪndəʊ/",
+        "ph_am": "/ˈwɪndoʊ/",
+        "parts": [{ "pos": "n.", "means": ["窗户；窗口"] }],
+        "exchange": { "pl": "windows", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Please open the window.", "dst": "请打开窗户。" },
+            { "src": "The cat is sitting by the window.", "dst": "猫正坐在窗边。" },
+            { "src": "There are two windows in the room.", "dst": "房间里有两扇窗户。" }
+        ],
+        "synonyms": ["pane", "opening"],
+        "antonyms": [],
+        "confuse": [{ "word": "wind", "diff": "window 是窗户；wind 是风，词尾不同。" }]
+    },
+    {
+        "word": "blackboard",
+        "ph_en": "/ˈblækbɔːd/",
+        "ph_am": "/ˈblækbɔːrd/",
+        "parts": [{ "pos": "n.", "means": ["黑板"] }],
+        "exchange": { "pl": "blackboards", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The teacher writes on the blackboard.", "dst": "老师在黑板上写字。" },
+            { "src": "Look at the blackboard, please.", "dst": "请看黑板。" },
+            { "src": "There is a map beside the blackboard.", "dst": "黑板旁边有一张地图。" }
+        ],
+        "synonyms": ["chalkboard"],
+        "antonyms": [],
+        "confuse": [{ "word": "board", "diff": "blackboard 是黑板；board 可指板子或委员会。" }]
+    },
+    {
+        "word": "light",
+        "ph_en": "/laɪt/",
+        "ph_am": "/laɪt/",
+        "parts": [
+            { "pos": "n.", "means": ["光；灯"] },
+            { "pos": "adj.", "means": ["明亮的；轻的；浅色的"] },
+            { "pos": "v.", "means": ["点燃；照亮"] }
+        ],
+        "exchange": { "pl": "lights", "past": "lit/lighted", "ing": "lighting" },
+        "examples": [
+            { "src": "Turn on the light, please.", "dst": "请把灯打开。" },
+            { "src": "The room is full of light.", "dst": "房间里充满了光亮。" },
+            { "src": "This bag is light and easy to carry.", "dst": "这个包很轻，容易携带。" }
+        ],
+        "synonyms": ["lamp", "bright"],
+        "antonyms": ["dark", "heavy"],
+        "confuse": [{ "word": "night", "diff": "light 是光或灯；night 是夜晚，只差首字母。" }]
+    },
+    {
+        "word": "picture",
+        "ph_en": "/ˈpɪktʃə(r)/",
+        "ph_am": "/ˈpɪktʃər/",
+        "parts": [
+            { "pos": "n.", "means": ["图画；照片；图片"] },
+            { "pos": "v.", "means": ["想象；描述"] }
+        ],
+        "exchange": { "pl": "pictures", "past": "pictured", "ing": "picturing" },
+        "examples": [
+            { "src": "I drew a picture of my family.", "dst": "我画了一张全家福。" },
+            { "src": "There is a picture on the wall.", "dst": "墙上有一幅画。" },
+            { "src": "Can you take a picture of us?", "dst": "你能给我们拍张照片吗？" }
+        ],
+        "synonyms": ["image", "photo"],
+        "antonyms": [],
+        "confuse": [{ "word": "paint", "diff": "picture 是图画或照片；paint 是颜料或绘画。" }]
+    },
+    {
+        "word": "door",
+        "ph_en": "/dɔː(r)/",
+        "ph_am": "/dɔːr/",
+        "parts": [{ "pos": "n.", "means": ["门；出入口"] }],
+        "exchange": { "pl": "doors", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Please close the door.", "dst": "请把门关上。" },
+            { "src": "The dog is waiting at the door.", "dst": "狗正在门口等着。" },
+            { "src": "Our classroom has a blue door.", "dst": "我们的教室有一扇蓝色的门。" }
+        ],
+        "synonyms": ["entrance", "gateway"],
+        "antonyms": [],
+        "confuse": [{ "word": "floor", "diff": "door 是门；floor 是地板或楼层，发音相近。" }]
+    },
+    {
+        "word": "teacher's desk",
+        "ph_en": "/ˈtiːtʃəz desk/",
+        "ph_am": "/ˈtiːtʃərz desk/",
+        "parts": [{ "pos": "n.", "means": ["讲台；教师的办公桌"] }],
+        "exchange": { "pl": "teacher's desks", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The teacher's desk is near the blackboard.", "dst": "讲台在黑板旁边。" },
+            { "src": "There is a book on the teacher's desk.", "dst": "讲台上有一本书。" },
+            { "src": "Please put the papers on the teacher's desk.", "dst": "请把这些纸放在老师的办公桌上。" }
+        ],
+        "synonyms": ["teacher's table"],
+        "antonyms": [],
+        "confuse": [{ "word": "student's desk", "diff": "teacher's desk 是老师的办公桌；student's desk 是学生的课桌。" }]
+    },
+    {
+        "word": "computer",
+        "ph_en": "/kəmˈpjuːtə(r)/",
+        "ph_am": "/kəmˈpjuːtər/",
+        "parts": [{ "pos": "n.", "means": ["电脑；计算机"] }],
+        "exchange": { "pl": "computers", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I use a computer to do my homework.", "dst": "我用电脑做作业。" },
+            { "src": "The computer is on the desk.", "dst": "电脑在书桌上。" },
+            { "src": "We have a computer in our classroom.", "dst": "我们教室里有一台电脑。" }
+        ],
+        "synonyms": ["PC", "machine"],
+        "antonyms": [],
+        "confuse": [{ "word": "calculator", "diff": "computer 是电脑；calculator 是计算器。" }]
+    },
+    {
+        "word": "fan",
+        "ph_en": "/fæn/",
+        "ph_am": "/fæn/",
+        "parts": [
+            { "pos": "n.", "means": ["风扇；电扇", "狂热爱好者；粉丝"] },
+            { "pos": "v.", "means": ["扇风；煽动"] }
+        ],
+        "exchange": { "pl": "fans", "past": "fanned", "ing": "fanning" },
+        "examples": [
+            { "src": "Please turn on the fan.", "dst": "请把风扇打开。" },
+            { "src": "The fan keeps the room cool.", "dst": "风扇让房间保持凉爽。" },
+            { "src": "I am a fan of this football team.", "dst": "我是这支足球队的球迷。" }
+        ],
+        "synonyms": ["admirer", "supporter"],
+        "antonyms": [],
+        "confuse": [{ "word": "fun", "diff": "fan 是风扇或粉丝；fun 是乐趣，只差一个字母。" }]
+    },
+    {
+        "word": "wall",
+        "ph_en": "/wɔːl/",
+        "ph_am": "/wɔːl/",
+        "parts": [
+            { "pos": "n.", "means": ["墙；墙壁"] },
+            { "pos": "v.", "means": ["用墙围住"] }
+        ],
+        "exchange": { "pl": "walls", "past": "walled", "ing": "walling" },
+        "examples": [
+            { "src": "There is a clock on the wall.", "dst": "墙上有一个钟。" },
+            { "src": "The walls are white.", "dst": "墙壁是白色的。" },
+            { "src": "Don't write on the wall.", "dst": "不要在墙上写字。" }
+        ],
+        "synonyms": ["barrier", "partition"],
+        "antonyms": [],
+        "confuse": [{ "word": "walk", "diff": "wall 是墙；walk 是走路，拼写相近。" }]
+    },
+    {
+        "word": "floor",
+        "ph_en": "/flɔː(r)/",
+        "ph_am": "/flɔːr/",
+        "parts": [
+            { "pos": "n.", "means": ["地板；地面", "楼层"] },
+            { "pos": "v.", "means": ["铺地板；击倒"] }
+        ],
+        "exchange": { "pl": "floors", "past": "floored", "ing": "flooring" },
+        "examples": [
+            { "src": "The ball is on the floor.", "dst": "球在地板上。" },
+            { "src": "Our classroom is on the second floor.", "dst": "我们的教室在二楼。" },
+            { "src": "Please sweep the floor.", "dst": "请扫地。" }
+        ],
+        "synonyms": ["ground", "storey"],
+        "antonyms": [],
+        "confuse": [{ "word": "flower", "diff": "floor 是地板或楼层；flower 是花，二者同音。" }]
+    },
+    {
+        "word": "really",
+        "ph_en": "/ˈrɪəli/",
+        "ph_am": "/ˈriːəli/",
+        "parts": [{ "pos": "adv.", "means": ["确实；真正地", "非常；很"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "This classroom is really big.", "dst": "这个教室真的很大。" },
+            { "src": "Do you really like bananas?", "dst": "你真的喜欢香蕉吗？" },
+            { "src": "I am really happy to see you.", "dst": "见到你我真的很开心。" }
+        ],
+        "synonyms": ["truly", "actually"],
+        "antonyms": [],
+        "confuse": [{ "word": "real", "diff": "really 是副词，修饰形容词或动词；real 是形容词。" }]
+    },
+    {
+        "word": "near",
+        "ph_en": "/nɪə(r)/",
+        "ph_am": "/nɪr/",
+        "parts": [
+            { "pos": "prep.", "means": ["在……附近"] },
+            { "pos": "adj.", "means": ["近的；接近的"] },
+            { "pos": "adv.", "means": ["在附近；接近"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The library is near our school.", "dst": "图书馆在我们学校附近。" },
+            { "src": "Come and sit near me.", "dst": "过来坐在我附近。" },
+            { "src": "My home is near the park.", "dst": "我家在公园附近。" }
+        ],
+        "synonyms": ["close to", "nearby"],
+        "antonyms": ["far"],
+        "confuse": [{ "word": "hear", "diff": "near 是附近；hear 是听见，二者押韵。" }]
+    },
+    {
+        "word": "TV",
+        "ph_en": "/ˌtiː ˈviː/",
+        "ph_am": "/ˌtiː ˈviː/",
+        "parts": [{ "pos": "n.", "means": ["电视；电视机（television 的缩写）"] }],
+        "exchange": { "pl": "TVs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We watch TV after dinner.", "dst": "我们晚饭后看电视。" },
+            { "src": "The TV is in the living room.", "dst": "电视机在客厅里。" },
+            { "src": "Please turn off the TV.", "dst": "请把电视关掉。" }
+        ],
+        "synonyms": ["television", "television set"],
+        "antonyms": [],
+        "confuse": [{ "word": "DVD", "diff": "TV 是电视；DVD 是播放影碟的设备或光盘格式。" }]
+    },
+    {
+        "word": "clean",
+        "ph_en": "/kliːn/",
+        "ph_am": "/kliːn/",
+        "parts": [
+            { "pos": "adj.", "means": ["干净的；清洁的"] },
+            { "pos": "v.", "means": ["打扫；清洁"] },
+            { "pos": "adv.", "means": ["完全地；干净地"] }
+        ],
+        "exchange": { "pl": "", "past": "cleaned", "ing": "cleaning" },
+        "examples": [
+            { "src": "Keep your desk clean.", "dst": "保持你的书桌干净。" },
+            { "src": "I clean my room every Saturday.", "dst": "我每周六打扫房间。" },
+            { "src": "Please clean the blackboard.", "dst": "请把黑板擦干净。" }
+        ],
+        "synonyms": ["tidy", "wash"],
+        "antonyms": ["dirty"],
+        "confuse": [{ "word": "clear", "diff": "clean 是干净的或打扫；clear 是清楚的或清除。" }]
+    },
+    {
+        "word": "help",
+        "ph_en": "/help/",
+        "ph_am": "/help/",
+        "parts": [
+            { "pos": "v.", "means": ["帮助；援助"] },
+            { "pos": "n.", "means": ["帮助；援助"] }
+        ],
+        "exchange": { "pl": "helps", "past": "helped", "ing": "helping" },
+        "examples": [
+            { "src": "Can you help me, please?", "dst": "你能帮帮我吗？" },
+            { "src": "I help my mother at home.", "dst": "我在家帮妈妈。" },
+            { "src": "Thank you for your help.", "dst": "谢谢你的帮助。" }
+        ],
+        "synonyms": ["assist", "aid"],
+        "antonyms": ["hinder"],
+        "confuse": [{ "word": "hello", "diff": "help 是帮助；hello 是你好，开头发音相近。" }]
+    },
+    {
+        "word": "schoolbag",
+        "ph_en": "/ˈskuːlbæɡ/",
+        "ph_am": "/ˈskuːlbæɡ/",
+        "parts": [{ "pos": "n.", "means": ["书包"] }],
+        "exchange": { "pl": "schoolbags", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My schoolbag is under the desk.", "dst": "我的书包在书桌下面。" },
+            { "src": "I put my books in my schoolbag.", "dst": "我把书放进书包里。" },
+            { "src": "She has a new red schoolbag.", "dst": "她有一个新的红色书包。" }
+        ],
+        "synonyms": ["schoolbag", "backpack"],
+        "antonyms": [],
+        "confuse": [{ "word": "school bag", "diff": "schoolbag 是常见合写形式；school bag 分开写也表示书包。" }]
+    },
+    {
+        "word": "maths book",
+        "ph_en": "/mæθs bʊk/",
+        "ph_am": "/mæθs bʊk/",
+        "parts": [{ "pos": "n.", "means": ["数学书"] }],
+        "exchange": { "pl": "maths books", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My maths book is on the desk.", "dst": "我的数学书在书桌上。" },
+            { "src": "Open your maths book to page five.", "dst": "把数学书翻到第五页。" },
+            { "src": "I do my homework in my maths book.", "dst": "我在数学书上做作业。" }
+        ],
+        "synonyms": ["mathematics book"],
+        "antonyms": [],
+        "confuse": [{ "word": "math book", "diff": "maths book 是英式常用说法；math book 是美式常用说法。" }]
+    },
+    {
+        "word": "English book",
+        "ph_en": "/ˈɪŋɡlɪʃ bʊk/",
+        "ph_am": "/ˈɪŋɡlɪʃ bʊk/",
+        "parts": [{ "pos": "n.", "means": ["英语书；英语课本"] }],
+        "exchange": { "pl": "English books", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I have an English book in my bag.", "dst": "我的包里有一本英语书。" },
+            { "src": "The English book is new.", "dst": "这本英语书是新的。" },
+            { "src": "We read a story in our English book.", "dst": "我们在英语书里读了一个故事。" }
+        ],
+        "synonyms": ["English textbook"],
+        "antonyms": [],
+        "confuse": [{ "word": "English class", "diff": "English book 是英语书；English class 是英语课。" }]
+    },
+    {
+        "word": "Chinese book",
+        "ph_en": "/ˌtʃaɪˈniːz bʊk/",
+        "ph_am": "/ˌtʃaɪˈniːz bʊk/",
+        "parts": [{ "pos": "n.", "means": ["中文书；语文书"] }],
+        "exchange": { "pl": "Chinese books", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My Chinese book is in my schoolbag.", "dst": "我的语文书在书包里。" },
+            { "src": "She is reading a Chinese book.", "dst": "她正在读一本中文书。" },
+            { "src": "Please bring your Chinese book tomorrow.", "dst": "请明天带上你的语文书。" }
+        ],
+        "synonyms": ["Chinese textbook"],
+        "antonyms": [],
+        "confuse": [{ "word": "China book", "diff": "Chinese book 表示中文书或语文书；China 是中国，不能直接作这里的形容词。" }]
+    },
+    {
+        "word": "storybook",
+        "ph_en": "/ˈstɔːribʊk/",
+        "ph_am": "/ˈstɔːribʊk/",
+        "parts": [{ "pos": "n.", "means": ["故事书"] }],
+        "exchange": { "pl": "storybooks", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I read a storybook before bed.", "dst": "我睡前读一本故事书。" },
+            { "src": "This storybook has many pictures.", "dst": "这本故事书有很多图片。" },
+            { "src": "The little girl likes her new storybook.", "dst": "小女孩喜欢她的新故事书。" }
+        ],
+        "synonyms": ["story book", "tale"],
+        "antonyms": [],
+        "confuse": [{ "word": "textbook", "diff": "storybook 是故事书；textbook 是教科书。" }]
+    },
+    {
+        "word": "candy",
+        "ph_en": "/ˈkændi/",
+        "ph_am": "/ˈkændi/",
+        "parts": [{ "pos": "n.", "means": ["糖果；巧克力糖"] }],
+        "exchange": { "pl": "candies", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The children share the candy.", "dst": "孩子们分享糖果。" },
+            { "src": "I have a piece of candy.", "dst": "我有一颗糖。" },
+            { "src": "Too much candy is bad for your teeth.", "dst": "吃太多糖对牙齿不好。" }
+        ],
+        "synonyms": ["sweet", "sweets"],
+        "antonyms": [],
+        "confuse": [{ "word": "candle", "diff": "candy 是糖果；candle 是蜡烛，拼写相近。" }]
+    },
+    {
+        "word": "notebook",
+        "ph_en": "/ˈnəʊtbʊk/",
+        "ph_am": "/ˈnoʊtbʊk/",
+        "parts": [{ "pos": "n.", "means": ["笔记本；练习本"] }],
+        "exchange": { "pl": "notebooks", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Write the new words in your notebook.", "dst": "把新单词写在你的笔记本里。" },
+            { "src": "My notebook is blue.", "dst": "我的笔记本是蓝色的。" },
+            { "src": "I keep a notebook in my schoolbag.", "dst": "我在书包里放了一本笔记本。" }
+        ],
+        "synonyms": ["notepad", "exercise book"],
+        "antonyms": [],
+        "confuse": [{ "word": "textbook", "diff": "notebook 是用来记录的本子；textbook 是课本。" }]
+    },
+    {
+        "word": "toy",
+        "ph_en": "/tɔɪ/",
+        "ph_am": "/tɔɪ/",
+        "parts": [
+            { "pos": "n.", "means": ["玩具"] },
+            { "pos": "adj.", "means": ["玩具的；小型的"] }
+        ],
+        "exchange": { "pl": "toys", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The boy has a toy car.", "dst": "这个男孩有一辆玩具汽车。" },
+            { "src": "Put your toys in the box.", "dst": "把你的玩具放进盒子里。" },
+            { "src": "This toy is for the baby.", "dst": "这个玩具是给宝宝的。" }
+        ],
+        "synonyms": ["plaything"],
+        "antonyms": [],
+        "confuse": [{ "word": "boy", "diff": "toy 是玩具；boy 是男孩，只差首字母。" }]
+    },
+    {
+        "word": "key",
+        "ph_en": "/kiː/",
+        "ph_am": "/kiː/",
+        "parts": [
+            { "pos": "n.", "means": ["钥匙", "答案；关键"] },
+            { "pos": "adj.", "means": ["关键的；主要的"] },
+            { "pos": "v.", "means": ["输入；键入"] }
+        ],
+        "exchange": { "pl": "keys", "past": "keyed", "ing": "keying" },
+        "examples": [
+            { "src": "I can't find my house key.", "dst": "我找不到家门钥匙了。" },
+            { "src": "This is the key to the front door.", "dst": "这是前门的钥匙。" },
+            { "src": "The answer key is at the back of the book.", "dst": "答案在书的后面。" }
+        ],
+        "synonyms": ["opener", "solution"],
+        "antonyms": [],
+        "confuse": [{ "word": "kite", "diff": "key 是钥匙；kite 是风筝。" }]
+    },
+    {
+        "word": "wow",
+        "ph_en": "/waʊ/",
+        "ph_am": "/waʊ/",
+        "parts": [
+            { "pos": "interj.", "means": ["哇；呀（表示惊讶或赞叹）"] },
+            { "pos": "v.", "means": ["使惊叹"] }
+        ],
+        "exchange": { "pl": "", "past": "wowed", "ing": "wowing" },
+        "examples": [
+            { "src": "Wow, your kite is beautiful!", "dst": "哇，你的风筝真漂亮！" },
+            { "src": "Wow! That is a big watermelon.", "dst": "哇！那是一个大西瓜。" },
+            { "src": "The show really wowed the children.", "dst": "这场表演真的让孩子们惊叹不已。" }
+        ],
+        "synonyms": ["amazing", "great"],
+        "antonyms": [],
+        "confuse": [{ "word": "how", "diff": "wow 表示惊叹；how 用来询问方式或程度。" }]
+    },
+    {
+        "word": "lost",
+        "ph_en": "/lɒst/",
+        "ph_am": "/lɔːst/",
+        "parts": [
+            { "pos": "adj.", "means": ["迷路的；丢失的"] },
+            { "pos": "v.", "means": ["lose 的过去式和过去分词"] }
+        ],
+        "exchange": { "pl": "", "past": "lost", "ing": "losing" },
+        "examples": [
+            { "src": "I am lost. Can you help me?", "dst": "我迷路了。你能帮我吗？" },
+            { "src": "She lost her keys yesterday.", "dst": "她昨天把钥匙弄丢了。" },
+            { "src": "The lost puppy is looking for its home.", "dst": "走失的小狗正在寻找自己的家。" }
+        ],
+        "synonyms": ["missing", "misplaced"],
+        "antonyms": ["found"],
+        "confuse": [{ "word": "last", "diff": "lost 表示丢失或迷路；last 表示最后的或持续。" }]
+    },
+    {
+        "word": "so much",
+        "ph_en": "/səʊ mʌtʃ/",
+        "ph_am": "/soʊ mʌtʃ/",
+        "parts": [
+            { "pos": "det.", "means": ["这么多；如此多"] },
+            { "pos": "adv.", "means": ["非常；这么多"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Thank you so much.", "dst": "非常感谢你。" },
+            { "src": "I have so much homework today.", "dst": "我今天有这么多作业。" },
+            { "src": "She likes her puppy so much.", "dst": "她非常喜欢她的小狗。" }
+        ],
+        "synonyms": ["a lot", "very much"],
+        "antonyms": ["very little"],
+        "confuse": [{ "word": "too much", "diff": "so much 表示“这么多”或“非常”；too much 常表示“过多”。" }]
+    },
+    {
+        "word": "cute",
+        "ph_en": "/kjuːt/",
+        "ph_am": "/kjuːt/",
+        "parts": [{ "pos": "adj.", "means": ["可爱的；讨人喜欢的", "机灵的；精明的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The puppy is very cute.", "dst": "这只小狗非常可爱。" },
+            { "src": "What a cute baby!", "dst": "多可爱的宝宝啊！" },
+            { "src": "She has a cute little bag.", "dst": "她有一个可爱的小包。" }
+        ],
+        "synonyms": ["adorable", "sweet"],
+        "antonyms": ["ugly"],
+        "confuse": [{ "word": "cut", "diff": "cute 是可爱的；cut 是切，cute 结尾有不发音的 e。" }]
+    },
+    {
+        "word": "strong",
+        "ph_en": "/strɒŋ/",
+        "ph_am": "/strɔːŋ/",
+        "parts": [{ "pos": "adj.", "means": ["强壮的；强大的", "坚固的；强烈的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My father is strong.", "dst": "我爸爸很强壮。" },
+            { "src": "The strong wind moved the kite.", "dst": "强风吹动了风筝。" },
+            { "src": "This table is strong and safe.", "dst": "这张桌子结实又安全。" }
+        ],
+        "synonyms": ["powerful", "sturdy"],
+        "antonyms": ["weak"],
+        "confuse": [{ "word": "strength", "diff": "strong 是形容词“强壮的”；strength 是名词“力量”。" }]
+    },
+    {
+        "word": "friendly",
+        "ph_en": "/ˈfrendli/",
+        "ph_am": "/ˈfrendli/",
+        "parts": [{ "pos": "adj.", "means": ["友好的；友善的"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Our new teacher is friendly.", "dst": "我们的新老师很友好。" },
+            { "src": "The dog is friendly to children.", "dst": "这只狗对孩子们很友善。" },
+            { "src": "She has a friendly smile.", "dst": "她有友善的笑容。" }
+        ],
+        "synonyms": ["kind", "welcoming"],
+        "antonyms": ["unfriendly"],
+        "confuse": [{ "word": "friend", "diff": "friendly 是形容词“友好的”；friend 是名词“朋友”。" }]
+    },
+    {
+        "word": "quiet",
+        "ph_en": "/ˈkwaɪət/",
+        "ph_am": "/ˈkwaɪət/",
+        "parts": [
+            { "pos": "adj.", "means": ["安静的；轻声的", "平静的"] },
+            { "pos": "n.", "means": ["安静；平静"] },
+            { "pos": "v.", "means": ["使安静"] }
+        ],
+        "exchange": { "pl": "quiets", "past": "quieted", "ing": "quieting" },
+        "examples": [
+            { "src": "Please be quiet in the library.", "dst": "请在图书馆里保持安静。" },
+            { "src": "The classroom is quiet now.", "dst": "教室现在很安静。" },
+            { "src": "We found a quiet place to read.", "dst": "我们找到了一个安静的地方读书。" }
+        ],
+        "synonyms": ["silent", "peaceful"],
+        "antonyms": ["noisy"],
+        "confuse": [{ "word": "quite", "diff": "quiet 是安静的；quite 是相当、非常，拼写相近。" }]
+    },
+    {
+        "word": "hair",
+        "ph_en": "/heə(r)/",
+        "ph_am": "/her/",
+        "parts": [{ "pos": "n.", "means": ["头发；毛发"] }],
+        "exchange": { "pl": "hairs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "She has long black hair.", "dst": "她有一头乌黑的长发。" },
+            { "src": "My hair is wet after swimming.", "dst": "游泳后我的头发湿了。" },
+            { "src": "He has a hair on his shirt.", "dst": "他的衬衫上有一根头发。" }
+        ],
+        "synonyms": ["locks", "tresses"],
+        "antonyms": [],
+        "confuse": [{ "word": "hare", "diff": "hair 是头发；hare 是野兔，二者同音。" }]
+    },
+    {
+        "word": "shoe",
+        "ph_en": "/ʃuː/",
+        "ph_am": "/ʃuː/",
+        "parts": [
+            { "pos": "n.", "means": ["鞋"] },
+            { "pos": "v.", "means": ["给……穿鞋；装蹄铁"] }
+        ],
+        "exchange": { "pl": "shoes", "past": "shod", "ing": "shoeing" },
+        "examples": [
+            { "src": "My shoes are under the bed.", "dst": "我的鞋在床下面。" },
+            { "src": "These shoes are too big for me.", "dst": "这双鞋对我来说太大了。" },
+            { "src": "Please take off your shoes at the door.", "dst": "请在门口脱鞋。" }
+        ],
+        "synonyms": ["footwear"],
+        "antonyms": [],
+        "confuse": [{ "word": "sock", "diff": "shoe 是鞋；sock 是袜子。" }]
+    },
+    {
+        "word": "glasses",
+        "ph_en": "/ˈɡlɑːsɪz/",
+        "ph_am": "/ˈɡlæsɪz/",
+        "parts": [{ "pos": "n.", "means": ["眼镜", "玻璃杯（glass 的复数）"] }],
+        "exchange": { "pl": "glasses", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My grandfather wears glasses.", "dst": "我爷爷戴眼镜。" },
+            { "src": "I can't read without my glasses.", "dst": "不戴眼镜我就看不了书。" },
+            { "src": "There are two glasses on the table.", "dst": "桌上有两个玻璃杯。" }
+        ],
+        "synonyms": ["spectacles", "eyeglasses"],
+        "antonyms": [],
+        "confuse": [{ "word": "glass", "diff": "glasses 可指一副眼镜；glass 可指玻璃或一个玻璃杯。" }]
+    },
+    {
+        "word": "his",
+        "ph_en": "/hɪz/",
+        "ph_am": "/hɪz/",
+        "parts": [
+            { "pos": "det.", "means": ["他的"] },
+            { "pos": "pron.", "means": ["他的；属于他的"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "His schoolbag is black.", "dst": "他的书包是黑色的。" },
+            { "src": "This is his book.", "dst": "这是他的书。" },
+            { "src": "The red cap is his.", "dst": "那顶红帽子是他的。" }
+        ],
+        "synonyms": ["belonging to him"],
+        "antonyms": [],
+        "confuse": [{ "word": "he's", "diff": "his 表示“他的”；he's 是 he is 或 he has 的缩写。" }]
+    },
+    {
+        "word": "or",
+        "ph_en": "/ɔː(r)/",
+        "ph_am": "/ɔːr/",
+        "parts": [{ "pos": "conj.", "means": ["或者；还是", "否则"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Would you like tea or water?", "dst": "你想要茶还是水？" },
+            { "src": "Is the bag red or blue?", "dst": "这个包是红色还是蓝色？" },
+            { "src": "Hurry up, or you will be late.", "dst": "快点，否则你会迟到。" }
+        ],
+        "synonyms": ["alternatively"],
+        "antonyms": ["and"],
+        "confuse": [{ "word": "our", "diff": "or 表示“或者”；our 表示“我们的”，二者读音不同。" }]
+    },
+    {
+        "word": "right",
+        "ph_en": "/raɪt/",
+        "ph_am": "/raɪt/",
+        "parts": [
+            { "pos": "adj.", "means": ["正确的；右边的"] },
+            { "pos": "adv.", "means": ["正确地；向右"] },
+            { "pos": "n.", "means": ["右边；权利"] },
+            { "pos": "interj.", "means": ["对；好"] }
+        ],
+        "exchange": { "pl": "rights", "past": "righted", "ing": "righting" },
+        "examples": [
+            { "src": "Turn right at the next street.", "dst": "在下一条街向右转。" },
+            { "src": "Your answer is right.", "dst": "你的答案是正确的。" },
+            { "src": "The school is on the right.", "dst": "学校在右边。" }
+        ],
+        "synonyms": ["correct", "proper"],
+        "antonyms": ["wrong", "left"],
+        "confuse": [{ "word": "write", "diff": "right 可表示右边或正确；write 是“写”，二者同音。" }]
+    },
+    {
+        "word": "hat",
+        "ph_en": "/hæt/",
+        "ph_am": "/hæt/",
+        "parts": [
+            { "pos": "n.", "means": ["帽子"] },
+            { "pos": "v.", "means": ["给……戴帽"] }
+        ],
+        "exchange": { "pl": "hats", "past": "hatted", "ing": "hatting" },
+        "examples": [
+            { "src": "She is wearing a yellow hat.", "dst": "她戴着一顶黄色帽子。" },
+            { "src": "Put your hat on before you go out.", "dst": "出门前把帽子戴上。" },
+            { "src": "The hat is hanging on the wall.", "dst": "帽子挂在墙上。" }
+        ],
+        "synonyms": ["cap", "headwear"],
+        "antonyms": [],
+        "confuse": [{ "word": "hot", "diff": "hat 是帽子；hot 是热的，只差一个字母。" }]
+    },
+    {
+        "word": "her",
+        "ph_en": "/hɜː(r)/",
+        "ph_am": "/hɜːr/",
+        "parts": [
+            { "pos": "pron.", "means": ["她；她的（宾格）"] },
+            { "pos": "det.", "means": ["她的"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I gave her a book.", "dst": "我给了她一本书。" },
+            { "src": "Her bedroom is very tidy.", "dst": "她的卧室很整洁。" },
+            { "src": "This is her new schoolbag.", "dst": "这是她的新书包。" }
+        ],
+        "synonyms": ["belonging to her"],
+        "antonyms": [],
+        "confuse": [{ "word": "hers", "diff": "her 可作宾格或名词前的“她的”；hers 是不接名词的物主代词。" }]
+    },
+    {
+        "word": "bedroom",
+        "ph_en": "/ˈbedruːm/",
+        "ph_am": "/ˈbedruːm/",
+        "parts": [{ "pos": "n.", "means": ["卧室；寝室"] }],
+        "exchange": { "pl": "bedrooms", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My bedroom has a big window.", "dst": "我的卧室有一扇大窗户。" },
+            { "src": "I clean my bedroom every week.", "dst": "我每周打扫卧室。" },
+            { "src": "The baby is sleeping in the bedroom.", "dst": "宝宝正在卧室里睡觉。" }
+        ],
+        "synonyms": ["sleeping room"],
+        "antonyms": [],
+        "confuse": [{ "word": "bathroom", "diff": "bedroom 是卧室；bathroom 是浴室或卫生间。" }]
+    },
+    {
+        "word": "living room",
+        "ph_en": "/ˈlɪvɪŋ ruːm/",
+        "ph_am": "/ˈlɪvɪŋ ruːm/",
+        "parts": [{ "pos": "n.", "means": ["客厅；起居室"] }],
+        "exchange": { "pl": "living rooms", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The sofa is in the living room.", "dst": "沙发在客厅里。" },
+            { "src": "We watch TV in the living room.", "dst": "我们在客厅看电视。" },
+            { "src": "My family is sitting in the living room.", "dst": "我的家人正坐在客厅里。" }
+        ],
+        "synonyms": ["sitting room", "lounge"],
+        "antonyms": [],
+        "confuse": [{ "word": "bedroom", "diff": "living room 是客厅；bedroom 是卧室。" }]
+    },
+    {
+        "word": "study",
+        "ph_en": "/ˈstʌdi/",
+        "ph_am": "/ˈstʌdi/",
+        "parts": [
+            { "pos": "n.", "means": ["书房；学习"] },
+            { "pos": "v.", "means": ["学习；研究"] }
+        ],
+        "exchange": { "pl": "studies", "past": "studied", "ing": "studying" },
+        "examples": [
+            { "src": "My father is reading in the study.", "dst": "我爸爸正在书房里看书。" },
+            { "src": "I study English every day.", "dst": "我每天学习英语。" },
+            { "src": "She has a small study at home.", "dst": "她家里有一间小书房。" }
+        ],
+        "synonyms": ["learn", "research"],
+        "antonyms": [],
+        "confuse": [{ "word": "student", "diff": "study 是学习或书房；student 是学生。" }]
+    },
+    {
+        "word": "kitchen",
+        "ph_en": "/ˈkɪtʃɪn/",
+        "ph_am": "/ˈkɪtʃɪn/",
+        "parts": [{ "pos": "n.", "means": ["厨房"] }],
+        "exchange": { "pl": "kitchens", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Mum is cooking in the kitchen.", "dst": "妈妈正在厨房做饭。" },
+            { "src": "The kitchen is next to the dining room.", "dst": "厨房在餐厅旁边。" },
+            { "src": "Please wash your hands in the kitchen.", "dst": "请在厨房洗手。" }
+        ],
+        "synonyms": ["cookroom"],
+        "antonyms": [],
+        "confuse": [{ "word": "chicken", "diff": "kitchen 是厨房；chicken 是鸡或鸡肉，发音相近。" }]
+    },
+    {
+        "word": "bathroom",
+        "ph_en": "/ˈbɑːθruːm/",
+        "ph_am": "/ˈbæθruːm/",
+        "parts": [{ "pos": "n.", "means": ["浴室；卫生间"] }],
+        "exchange": { "pl": "bathrooms", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The bathroom is clean.", "dst": "浴室很干净。" },
+            { "src": "There is a shower in the bathroom.", "dst": "浴室里有一个淋浴间。" },
+            { "src": "The bathroom is next to my bedroom.", "dst": "卫生间在我卧室旁边。" }
+        ],
+        "synonyms": ["washroom", "restroom"],
+        "antonyms": [],
+        "confuse": [{ "word": "bedroom", "diff": "bathroom 是浴室或卫生间；bedroom 是卧室。" }]
+    },
+    {
+        "word": "bed",
+        "ph_en": "/bed/",
+        "ph_am": "/bed/",
+        "parts": [
+            { "pos": "n.", "means": ["床；床铺", "花坛；河床"] },
+            { "pos": "v.", "means": ["把……放置；上床"] }
+        ],
+        "exchange": { "pl": "beds", "past": "bedded", "ing": "bedding" },
+        "examples": [
+            { "src": "The cat is sleeping on the bed.", "dst": "猫正在床上睡觉。" },
+            { "src": "I go to bed at nine.", "dst": "我九点上床睡觉。" },
+            { "src": "There are flowers in the garden bed.", "dst": "花坛里有花。" }
+        ],
+        "synonyms": ["cot", "bunk"],
+        "antonyms": [],
+        "confuse": [{ "word": "bad", "diff": "bed 是床；bad 是坏的，元音发音不同。" }]
+    },
+    {
+        "word": "phone",
+        "ph_en": "/fəʊn/",
+        "ph_am": "/foʊn/",
+        "parts": [
+            { "pos": "n.", "means": ["电话；电话机"] },
+            { "pos": "v.", "means": ["打电话"] }
+        ],
+        "exchange": { "pl": "phones", "past": "phoned", "ing": "phoning" },
+        "examples": [
+            { "src": "My phone is on the table.", "dst": "我的电话在桌上。" },
+            { "src": "Please phone me after school.", "dst": "请放学后给我打电话。" },
+            { "src": "She has a new phone.", "dst": "她有一部新手机。" }
+        ],
+        "synonyms": ["telephone", "mobile"],
+        "antonyms": [],
+        "confuse": [{ "word": "photo", "diff": "phone 是电话；photo 是照片，开头发音相近。" }]
+    },
+    {
+        "word": "table",
+        "ph_en": "/ˈteɪbəl/",
+        "ph_am": "/ˈteɪbəl/",
+        "parts": [
+            { "pos": "n.", "means": ["桌子；餐桌", "表格；目录"] },
+            { "pos": "v.", "means": ["提交讨论；搁置"] }
+        ],
+        "exchange": { "pl": "tables", "past": "tabled", "ing": "tabling" },
+        "examples": [
+            { "src": "The bowl is on the table.", "dst": "碗在桌子上。" },
+            { "src": "We eat dinner at the table.", "dst": "我们在餐桌旁吃晚饭。" },
+            { "src": "There are four chairs around the table.", "dst": "桌子周围有四把椅子。" }
+        ],
+        "synonyms": ["desk", "surface"],
+        "antonyms": [],
+        "confuse": [{ "word": "tablet", "diff": "table 是桌子；tablet 是平板电脑或药片。" }]
+    },
+    {
+        "word": "sofa",
+        "ph_en": "/ˈsəʊfə/",
+        "ph_am": "/ˈsoʊfə/",
+        "parts": [{ "pos": "n.", "means": ["沙发"] }],
+        "exchange": { "pl": "sofas", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The dog is on the sofa.", "dst": "狗在沙发上。" },
+            { "src": "We sit on the sofa and watch TV.", "dst": "我们坐在沙发上看电视。" },
+            { "src": "There is a blue sofa in the living room.", "dst": "客厅里有一张蓝色沙发。" }
+        ],
+        "synonyms": ["couch", "settee"],
+        "antonyms": [],
+        "confuse": [{ "word": "soft", "diff": "sofa 是沙发；soft 是柔软的，发音相近。" }]
+    },
+    {
+        "word": "fridge",
+        "ph_en": "/frɪdʒ/",
+        "ph_am": "/frɪdʒ/",
+        "parts": [{ "pos": "n.", "means": ["冰箱（refrigerator 的非正式说法）"] }],
+        "exchange": { "pl": "fridges", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The milk is in the fridge.", "dst": "牛奶在冰箱里。" },
+            { "src": "Please put the fruit in the fridge.", "dst": "请把水果放进冰箱。" },
+            { "src": "Our fridge is full of food.", "dst": "我们的冰箱里装满了食物。" }
+        ],
+        "synonyms": ["refrigerator"],
+        "antonyms": [],
+        "confuse": [{ "word": "bridge", "diff": "fridge 是冰箱；bridge 是桥，只有首字母不同。" }]
+    },
+    {
+        "word": "find",
+        "ph_en": "/faɪnd/",
+        "ph_am": "/faɪnd/",
+        "parts": [
+            { "pos": "v.", "means": ["找到；发现", "认为；感到"] },
+            { "pos": "n.", "means": ["发现物；发现"] }
+        ],
+        "exchange": { "pl": "", "past": "found", "ing": "finding" },
+        "examples": [
+            { "src": "Can you find my keys?", "dst": "你能找到我的钥匙吗？" },
+            { "src": "I found a puppy in the garden.", "dst": "我在花园里发现了一只小狗。" },
+            { "src": "She finds English easy.", "dst": "她觉得英语很容易。" }
+        ],
+        "synonyms": ["discover", "locate"],
+        "antonyms": ["lose"],
+        "confuse": [{ "word": "fine", "diff": "find 是找到；fine 是好的或罚款，发音不同。" }]
+    },
+    {
+        "word": "them",
+        "ph_en": "/ðəm/",
+        "ph_am": "/ðəm/",
+        "parts": [{ "pos": "pron.", "means": ["他们；她们；它们（宾格）"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I can see them in the classroom.", "dst": "我能看见他们在教室里。" },
+            { "src": "Please give them the books.", "dst": "请把书给他们。" },
+            { "src": "We like these apples. Let's buy them.", "dst": "我们喜欢这些苹果。咱们买下来吧。" }
+        ],
+        "synonyms": ["those people or things"],
+        "antonyms": [],
+        "confuse": [{ "word": "they", "diff": "them 作宾语；they 作主语。" }]
+    },
+    {
+        "word": "beef",
+        "ph_en": "/biːf/",
+        "ph_am": "/biːf/",
+        "parts": [
+            { "pos": "n.", "means": ["牛肉", "抱怨；牢骚"] },
+            { "pos": "v.", "means": ["抱怨；加强"] }
+        ],
+        "exchange": { "pl": "beefs", "past": "beefed", "ing": "beefing" },
+        "examples": [
+            { "src": "We are having beef for dinner.", "dst": "我们晚餐吃牛肉。" },
+            { "src": "The beef soup smells delicious.", "dst": "牛肉汤闻起来很香。" },
+            { "src": "He ordered beef and noodles.", "dst": "他点了牛肉和面条。" }
+        ],
+        "synonyms": ["cow meat"],
+        "antonyms": [],
+        "confuse": [{ "word": "brief", "diff": "beef 是牛肉；brief 是简短的，拼写相近。" }]
+    },
+    {
+        "word": "chicken",
+        "ph_en": "/ˈtʃɪkɪn/",
+        "ph_am": "/ˈtʃɪkɪn/",
+        "parts": [
+            { "pos": "n.", "means": ["鸡；鸡肉"] },
+            { "pos": "adj.", "means": ["胆小的"] }
+        ],
+        "exchange": { "pl": "chickens", "past": "chickened", "ing": "chickening" },
+        "examples": [
+            { "src": "The chicken is in the yard.", "dst": "鸡在院子里。" },
+            { "src": "We had chicken soup for lunch.", "dst": "我们午餐喝了鸡汤。" },
+            { "src": "I like chicken with rice.", "dst": "我喜欢吃鸡肉配米饭。" }
+        ],
+        "synonyms": ["hen", "poultry"],
+        "antonyms": [],
+        "confuse": [{ "word": "kitchen", "diff": "chicken 是鸡或鸡肉；kitchen 是厨房，读音相近。" }]
+    },
+    {
+        "word": "noodles",
+        "ph_en": "/ˈnuːdəlz/",
+        "ph_am": "/ˈnuːdəlz/",
+        "parts": [{ "pos": "n.", "means": ["面条（常用复数）"] }],
+        "exchange": { "pl": "noodles", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I like noodles with vegetables.", "dst": "我喜欢吃蔬菜面。" },
+            { "src": "The noodles are ready for lunch.", "dst": "午餐的面条准备好了。" },
+            { "src": "She is eating a bowl of noodles.", "dst": "她正在吃一碗面条。" }
+        ],
+        "synonyms": ["pasta", "noodle dish"],
+        "antonyms": [],
+        "confuse": [{ "word": "noodle", "diff": "noodles 通常指面条；noodle 是单数形式，也可指一根面条。" }]
+    },
+    {
+        "word": "soup",
+        "ph_en": "/suːp/",
+        "ph_am": "/suːp/",
+        "parts": [{ "pos": "n.", "means": ["汤；羹"] }],
+        "exchange": { "pl": "soups", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The soup is hot.", "dst": "汤很烫。" },
+            { "src": "Would you like some chicken soup?", "dst": "你想喝点鸡汤吗？" },
+            { "src": "Mum made soup for dinner.", "dst": "妈妈做了汤当晚餐。" }
+        ],
+        "synonyms": ["broth", "stew"],
+        "antonyms": [],
+        "confuse": [{ "word": "soap", "diff": "soup 是汤；soap 是肥皂，元音不同。" }]
+    },
+    {
+        "word": "vegetable",
+        "ph_en": "/ˈvedʒtəbəl/",
+        "ph_am": "/ˈvedʒtəbəl/",
+        "parts": [{ "pos": "n.", "means": ["蔬菜；植物"] }],
+        "exchange": { "pl": "vegetables", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Carrots are my favorite vegetable.", "dst": "胡萝卜是我最喜欢的蔬菜。" },
+            { "src": "Eat more vegetables every day.", "dst": "每天多吃蔬菜。" },
+            { "src": "She bought fresh vegetables at the market.", "dst": "她在市场买了新鲜蔬菜。" }
+        ],
+        "synonyms": ["produce", "greens"],
+        "antonyms": [],
+        "confuse": [{ "word": "fruit", "diff": "vegetable 是蔬菜；fruit 是水果。" }]
+    },
+    {
+        "word": "chopsticks",
+        "ph_en": "/ˈtʃɒpstɪks/",
+        "ph_am": "/ˈtʃɑːpstɪks/",
+        "parts": [{ "pos": "n.", "means": ["筷子（常用复数）"] }],
+        "exchange": { "pl": "chopsticks", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Can you use chopsticks?", "dst": "你会用筷子吗？" },
+            { "src": "Please give me a pair of chopsticks.", "dst": "请给我一双筷子。" },
+            { "src": "She eats noodles with chopsticks.", "dst": "她用筷子吃面条。" }
+        ],
+        "synonyms": ["eating sticks"],
+        "antonyms": [],
+        "confuse": [{ "word": "sticks", "diff": "chopsticks 是筷子；sticks 是普通的棍子或枝条。" }]
+    },
+    {
+        "word": "bowl",
+        "ph_en": "/bəʊl/",
+        "ph_am": "/boʊl/",
+        "parts": [
+            { "pos": "n.", "means": ["碗；一碗的量"] },
+            { "pos": "v.", "means": ["打保龄球；投球"] }
+        ],
+        "exchange": { "pl": "bowls", "past": "bowled", "ing": "bowling" },
+        "examples": [
+            { "src": "There is a bowl of rice on the table.", "dst": "桌上有一碗米饭。" },
+            { "src": "I eat soup from a small bowl.", "dst": "我用一个小碗喝汤。" },
+            { "src": "Please wash the bowls after dinner.", "dst": "晚饭后请把碗洗了。" }
+        ],
+        "synonyms": ["dish", "basin"],
+        "antonyms": [],
+        "confuse": [{ "word": "ball", "diff": "bowl 是碗；ball 是球，拼写相近但发音不同。" }]
+    },
+    {
+        "word": "fork",
+        "ph_en": "/fɔːk/",
+        "ph_am": "/fɔːrk/",
+        "parts": [
+            { "pos": "n.", "means": ["叉子；餐叉", "岔路；分叉"] },
+            { "pos": "v.", "means": ["分叉；分歧"] }
+        ],
+        "exchange": { "pl": "forks", "past": "forked", "ing": "forking" },
+        "examples": [
+            { "src": "I eat the noodles with a fork.", "dst": "我用叉子吃面条。" },
+            { "src": "Put the fork beside your plate.", "dst": "把叉子放在盘子旁边。" },
+            { "src": "Turn left at the fork in the road.", "dst": "在岔路口向左转。" }
+        ],
+        "synonyms": ["eating utensil"],
+        "antonyms": [],
+        "confuse": [{ "word": "form", "diff": "fork 是叉子；form 是表格或形式，首音相同但结尾不同。" }]
+    },
+    {
+        "word": "knife",
+        "ph_en": "/naɪf/",
+        "ph_am": "/naɪf/",
+        "parts": [
+            { "pos": "n.", "means": ["刀；餐刀"] },
+            { "pos": "v.", "means": ["用刀切；划伤"] }
+        ],
+        "exchange": { "pl": "knives", "past": "knifed", "ing": "knifing" },
+        "examples": [
+            { "src": "Be careful with the sharp knife.", "dst": "小心这把锋利的刀。" },
+            { "src": "He cut the bread with a knife.", "dst": "他用刀切面包。" },
+            { "src": "The knife is next to the fork.", "dst": "刀在叉子旁边。" }
+        ],
+        "synonyms": ["blade", "cutter"],
+        "antonyms": [],
+        "confuse": [{ "word": "life", "diff": "knife 是刀；life 是生命，二者同韵。" }]
+    },
+    {
+        "word": "spoon",
+        "ph_en": "/spuːn/",
+        "ph_am": "/spuːn/",
+        "parts": [
+            { "pos": "n.", "means": ["勺子；汤匙"] },
+            { "pos": "v.", "means": ["用勺舀；亲密依偎"] }
+        ],
+        "exchange": { "pl": "spoons", "past": "spooned", "ing": "spooning" },
+        "examples": [
+            { "src": "I eat soup with a spoon.", "dst": "我用勺子喝汤。" },
+            { "src": "Please give me a clean spoon.", "dst": "请给我一把干净的勺子。" },
+            { "src": "The baby has a small spoon.", "dst": "宝宝有一把小勺子。" }
+        ],
+        "synonyms": ["tablespoon", "scoop"],
+        "antonyms": [],
+        "confuse": [{ "word": "soon", "diff": "spoon 是勺子；soon 是很快，开头辅音不同。" }]
+    },
+    {
+        "word": "dinner",
+        "ph_en": "/ˈdɪnə(r)/",
+        "ph_am": "/ˈdɪnər/",
+        "parts": [{ "pos": "n.", "means": ["正餐；晚餐"] }],
+        "exchange": { "pl": "dinners", "past": "", "ing": "" },
+        "examples": [
+            { "src": "Dinner is ready.", "dst": "晚餐准备好了。" },
+            { "src": "We have dinner at six.", "dst": "我们六点吃晚饭。" },
+            { "src": "What do you want for dinner?", "dst": "你晚餐想吃什么？" }
+        ],
+        "synonyms": ["evening meal", "supper"],
+        "antonyms": [],
+        "confuse": [{ "word": "lunch", "diff": "dinner 常指晚餐或一天中的正餐；lunch 指午餐。" }]
+    },
+    {
+        "word": "ready",
+        "ph_en": "/ˈredi/",
+        "ph_am": "/ˈredi/",
+        "parts": [
+            { "pos": "adj.", "means": ["准备好的；准备完毕的", "愿意的；乐意的"] },
+            { "pos": "v.", "means": ["做好准备"] }
+        ],
+        "exchange": { "pl": "", "past": "readied", "ing": "readying" },
+        "examples": [
+            { "src": "Are you ready for dinner?", "dst": "你准备好吃晚饭了吗？" },
+            { "src": "The food is ready.", "dst": "饭菜准备好了。" },
+            { "src": "Get ready to go to school.", "dst": "准备好去上学。" }
+        ],
+        "synonyms": ["prepared", "set"],
+        "antonyms": ["unprepared"],
+        "confuse": [{ "word": "already", "diff": "ready 是准备好的；already 是已经。" }]
+    },
+    {
+        "word": "help yourself",
+        "ph_en": "/help jəˈself/",
+        "ph_am": "/help jərˈself/",
+        "parts": [{ "pos": "phrase", "means": ["请自便；请随意取用", "自己动手"] }],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The fruit is on the table. Help yourself.", "dst": "水果在桌上，请自便。" },
+            { "src": "Help yourself to some soup.", "dst": "请随意喝些汤。" },
+            { "src": "Please help yourself to the cookies.", "dst": "请随意拿些饼干。" }
+        ],
+        "synonyms": ["serve yourself"],
+        "antonyms": [],
+        "confuse": [{ "word": "help someone", "diff": "help yourself 是请自己取用；help someone 是帮助别人。" }]
+    },
+    {
+        "word": "pass",
+        "ph_en": "/pɑːs/",
+        "ph_am": "/pæs/",
+        "parts": [
+            { "pos": "v.", "means": ["递；传递", "经过；通过", "及格"] },
+            { "pos": "n.", "means": ["通行证；关口；传球"] }
+        ],
+        "exchange": { "pl": "passes", "past": "passed", "ing": "passing" },
+        "examples": [
+            { "src": "Please pass me the bowl.", "dst": "请把碗递给我。" },
+            { "src": "We pass the school on our way home.", "dst": "我们回家路上会经过学校。" },
+            { "src": "He passed the English test.", "dst": "他通过了英语考试。" }
+        ],
+        "synonyms": ["hand", "give", "go by"],
+        "antonyms": ["fail"],
+        "confuse": [{ "word": "past", "diff": "pass 是动词“经过、递”；past 常作“过去”或“经过”的介词。" }]
+    },
+    {
+        "word": "try",
+        "ph_en": "/traɪ/",
+        "ph_am": "/traɪ/",
+        "parts": [
+            { "pos": "v.", "means": ["尝试；努力", "试用；品尝"] },
+            { "pos": "n.", "means": ["尝试"] }
+        ],
+        "exchange": { "pl": "tries", "past": "tried", "ing": "trying" },
+        "examples": [
+            { "src": "Try this soup. It is delicious.", "dst": "尝尝这汤，很好喝。" },
+            { "src": "I will try to help you.", "dst": "我会尽力帮助你。" },
+            { "src": "She tried the new shoes on.", "dst": "她试穿了这双新鞋。" }
+        ],
+        "synonyms": ["attempt", "test"],
+        "antonyms": [],
+        "confuse": [{ "word": "dry", "diff": "try 是尝试；dry 是干燥的，只差首字母。" }]
+    },
+    {
+        "word": "parents",
+        "ph_en": "/ˈpeərənts/",
+        "ph_am": "/ˈperənts/",
+        "parts": [{ "pos": "n.", "means": ["父母；双亲（parent 的复数）"] }],
+        "exchange": { "pl": "parents", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My parents are at home.", "dst": "我父母在家。" },
+            { "src": "I love my parents very much.", "dst": "我非常爱我的父母。" },
+            { "src": "Her parents work at a school.", "dst": "她的父母在一所学校工作。" }
+        ],
+        "synonyms": ["mother and father", "folks"],
+        "antonyms": [],
+        "confuse": [{ "word": "parent", "diff": "parents 是复数“父母”；parent 是单数“父亲或母亲”。" }]
+    },
+    {
+        "word": "cousin",
+        "ph_en": "/ˈkʌzən/",
+        "ph_am": "/ˈkʌzən/",
+        "parts": [{ "pos": "n.", "means": ["堂兄弟姐妹；表兄弟姐妹"] }],
+        "exchange": { "pl": "cousins", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My cousin is coming to visit us.", "dst": "我的表亲要来看我们。" },
+            { "src": "I play football with my cousin.", "dst": "我和表兄一起踢足球。" },
+            { "src": "She has three cousins.", "dst": "她有三个堂表兄弟姐妹。" }
+        ],
+        "synonyms": ["relative", "family member"],
+        "antonyms": [],
+        "confuse": [{ "word": "cousin's", "diff": "cousin 是堂表兄弟姐妹；cousin's 表示“堂表亲的”。" }]
+    },
+    {
+        "word": "uncle",
+        "ph_en": "/ˈʌŋkəl/",
+        "ph_am": "/ˈʌŋkəl/",
+        "parts": [{ "pos": "n.", "means": ["叔叔；伯伯；舅舅；姑父；姨父"] }],
+        "exchange": { "pl": "uncles", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My uncle lives near the school.", "dst": "我叔叔住在学校附近。" },
+            { "src": "We visit Uncle Tom on Sunday.", "dst": "星期天我们去看汤姆叔叔。" },
+            { "src": "Her uncle is a doctor.", "dst": "她的舅舅是一名医生。" }
+        ],
+        "synonyms": ["family member"],
+        "antonyms": [],
+        "confuse": [{ "word": "ankle", "diff": "uncle 是叔叔或舅舅；ankle 是脚踝，发音相近。" }]
+    },
+    {
+        "word": "aunt",
+        "ph_en": "/ɑːnt/",
+        "ph_am": "/ænt/",
+        "parts": [{ "pos": "n.", "means": ["姑姑；姨妈；伯母；婶婶；舅妈"] }],
+        "exchange": { "pl": "aunts", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My aunt is a nurse.", "dst": "我姑姑是一名护士。" },
+            { "src": "We are having dinner with Aunt May.", "dst": "我们要和梅姨一起吃晚饭。" },
+            { "src": "Her aunt gave her a beautiful toy.", "dst": "她的阿姨送给她一个漂亮的玩具。" }
+        ],
+        "synonyms": ["family member"],
+        "antonyms": [],
+        "confuse": [{ "word": "ant", "diff": "aunt 是姑姑或姨妈；ant 是蚂蚁，二者同音。" }]
+    },
+    {
+        "word": "baby brother",
+        "ph_en": "/ˈbeɪbi ˈbrʌðə(r)/",
+        "ph_am": "/ˈbeɪbi ˈbrʌðər/",
+        "parts": [{ "pos": "n.", "means": ["小弟弟；年幼的弟弟"] }],
+        "exchange": { "pl": "baby brothers", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My baby brother is sleeping.", "dst": "我的小弟弟正在睡觉。" },
+            { "src": "I help Mum take care of my baby brother.", "dst": "我帮妈妈照顾小弟弟。" },
+            { "src": "My baby brother likes his toy car.", "dst": "我的小弟弟喜欢他的玩具汽车。" }
+        ],
+        "synonyms": ["little brother", "younger brother"],
+        "antonyms": [],
+        "confuse": [{ "word": "baby sister", "diff": "baby brother 是年幼的弟弟；baby sister 是年幼的妹妹。" }]
+    },
+    {
+        "word": "doctor",
+        "ph_en": "/ˈdɒktə(r)/",
+        "ph_am": "/ˈdɑːktər/",
+        "parts": [
+            { "pos": "n.", "means": ["医生；大夫", "博士"] },
+            { "pos": "v.", "means": ["篡改；修理"] }
+        ],
+        "exchange": { "pl": "doctors", "past": "doctored", "ing": "doctoring" },
+        "examples": [
+            { "src": "The doctor helps sick people.", "dst": "医生帮助生病的人。" },
+            { "src": "I want to be a doctor when I grow up.", "dst": "我长大后想当医生。" },
+            { "src": "We went to see the doctor yesterday.", "dst": "我们昨天去看医生了。" }
+        ],
+        "synonyms": ["physician", "medic"],
+        "antonyms": [],
+        "confuse": [{ "word": "driver", "diff": "doctor 是医生；driver 是司机。" }]
+    },
+    {
+        "word": "cook",
+        "ph_en": "/kʊk/",
+        "ph_am": "/kʊk/",
+        "parts": [
+            { "pos": "v.", "means": ["烹饪；煮"] },
+            { "pos": "n.", "means": ["厨师"] }
+        ],
+        "exchange": { "pl": "cooks", "past": "cooked", "ing": "cooking" },
+        "examples": [
+            { "src": "My father can cook dinner.", "dst": "我爸爸会做晚饭。" },
+            { "src": "The cook is making soup.", "dst": "厨师正在做汤。" },
+            { "src": "I like to cook with my mother.", "dst": "我喜欢和妈妈一起做饭。" }
+        ],
+        "synonyms": ["prepare food", "chef"],
+        "antonyms": [],
+        "confuse": [{ "word": "cookie", "diff": "cook 是烹饪或厨师；cookie 是曲奇饼干。" }]
+    },
+    {
+        "word": "driver",
+        "ph_en": "/ˈdraɪvə(r)/",
+        "ph_am": "/ˈdraɪvər/",
+        "parts": [{ "pos": "n.", "means": ["司机；驾驶员"] }],
+        "exchange": { "pl": "drivers", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The bus driver is friendly.", "dst": "公交车司机很友好。" },
+            { "src": "My uncle is a taxi driver.", "dst": "我叔叔是一名出租车司机。" },
+            { "src": "The driver stopped the car.", "dst": "司机停下了汽车。" }
+        ],
+        "synonyms": ["chauffeur", "motorist"],
+        "antonyms": [],
+        "confuse": [{ "word": "drive", "diff": "driver 是司机；drive 是驾驶。" }]
+    },
+    {
+        "word": "farmer",
+        "ph_en": "/ˈfɑːmə(r)/",
+        "ph_am": "/ˈfɑːrmər/",
+        "parts": [{ "pos": "n.", "means": ["农民；农场主"] }],
+        "exchange": { "pl": "farmers", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The farmer grows vegetables.", "dst": "农民种蔬菜。" },
+            { "src": "A farmer works on a farm.", "dst": "农场主在农场工作。" },
+            { "src": "The farmer has a cow and a puppy.", "dst": "农场主有一头奶牛和一只小狗。" }
+        ],
+        "synonyms": ["grower", "agriculturalist"],
+        "antonyms": [],
+        "confuse": [{ "word": "farmer's", "diff": "farmer 是农民；farmer's 表示“农民的”。" }]
+    },
+    {
+        "word": "nurse",
+        "ph_en": "/nɜːs/",
+        "ph_am": "/nɜːrs/",
+        "parts": [
+            { "pos": "n.", "means": ["护士；护理人员"] },
+            { "pos": "v.", "means": ["护理；照料"] }
+        ],
+        "exchange": { "pl": "nurses", "past": "nursed", "ing": "nursing" },
+        "examples": [
+            { "src": "The nurse takes care of the baby.", "dst": "护士照顾这个宝宝。" },
+            { "src": "My aunt is a nurse at the hospital.", "dst": "我阿姨是医院的护士。" },
+            { "src": "The nurse helped the sick man.", "dst": "护士帮助了那位病人。" }
+        ],
+        "synonyms": ["caregiver", "medical assistant"],
+        "antonyms": [],
+        "confuse": [{ "word": "purse", "diff": "nurse 是护士；purse 是钱包，发音相近。" }]
+    },
+    {
+        "word": "people",
+        "ph_en": "/ˈpiːpəl/",
+        "ph_am": "/ˈpiːpəl/",
+        "parts": [
+            { "pos": "n.", "means": ["人；人们", "民族；人民"] },
+            { "pos": "v.", "means": ["居住于；使住满"] }
+        ],
+        "exchange": { "pl": "people/peoples", "past": "peopled", "ing": "peopling" },
+        "examples": [
+            { "src": "Many people are in the park.", "dst": "公园里有很多人。" },
+            { "src": "People need food and water.", "dst": "人们需要食物和水。" },
+            { "src": "There are five people in my family.", "dst": "我家有五口人。" }
+        ],
+        "synonyms": ["persons", "humans"],
+        "antonyms": [],
+        "confuse": [{ "word": "person", "diff": "people 通常是 person 的复数“人们”；person 是单数“一个人”。" }]
+    },
+    {
+        "word": "but",
+        "ph_en": "/bət/",
+        "ph_am": "/bət/",
+        "parts": [
+            { "pos": "conj.", "means": ["但是；然而"] },
+            { "pos": "prep.", "means": ["除了"] },
+            { "pos": "adv.", "means": ["仅仅；只"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "I like apples, but I don't like pears.", "dst": "我喜欢苹果，但是不喜欢梨。" },
+            { "src": "He is small but strong.", "dst": "他个子小但是很强壮。" },
+            { "src": "Everyone came but Tom.", "dst": "除了汤姆，大家都来了。" }
+        ],
+        "synonyms": ["however", "yet"],
+        "antonyms": ["and"],
+        "confuse": [{ "word": "buy", "diff": "but 是“但是”；buy 是“买”，二者读音不同。" }]
+    },
+    {
+        "word": "little",
+        "ph_en": "/ˈlɪtəl/",
+        "ph_am": "/ˈlɪtəl/",
+        "parts": [
+            { "pos": "adj.", "means": ["小的；年幼的", "少量的"] },
+            { "pos": "det.", "means": ["很少的；少量的"] },
+            { "pos": "pron.", "means": ["少量；不多"] }
+        ],
+        "exchange": { "pl": "", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The little puppy is sleeping.", "dst": "小狗正在睡觉。" },
+            { "src": "I have a little water in my cup.", "dst": "我的杯子里有一点水。" },
+            { "src": "Her little brother is cute.", "dst": "她的小弟弟很可爱。" }
+        ],
+        "synonyms": ["small", "tiny"],
+        "antonyms": ["big", "much"],
+        "confuse": [{ "word": "a little", "diff": "little 单独使用常表示几乎没有；a little 表示有一点。" }]
+    },
+    {
+        "word": "puppy",
+        "ph_en": "/ˈpʌpi/",
+        "ph_am": "/ˈpʌpi/",
+        "parts": [{ "pos": "n.", "means": ["小狗；幼犬"] }],
+        "exchange": { "pl": "puppies", "past": "", "ing": "" },
+        "examples": [
+            { "src": "The puppy is playing with a ball.", "dst": "小狗正在玩球。" },
+            { "src": "My puppy has a long tail.", "dst": "我的小狗有一条长尾巴。" },
+            { "src": "The children love the little puppy.", "dst": "孩子们很喜欢这只小狗。" }
+        ],
+        "synonyms": ["young dog", "pup"],
+        "antonyms": [],
+        "confuse": [{ "word": "poppy", "diff": "puppy 是小狗；poppy 是罂粟花，拼写相近。" }]
+    },
+    {
+        "word": "football player",
+        "ph_en": "/ˈfʊtbɔːl ˈpleɪə(r)/",
+        "ph_am": "/ˈfʊtbɔːl ˈpleɪər/",
+        "parts": [{ "pos": "n.", "means": ["足球运动员；足球选手"] }],
+        "exchange": { "pl": "football players", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My brother wants to be a football player.", "dst": "我哥哥想成为一名足球运动员。" },
+            { "src": "The football player is very strong.", "dst": "这名足球运动员非常强壮。" },
+            { "src": "She is a good football player.", "dst": "她是一名优秀的足球运动员。" }
+        ],
+        "synonyms": ["footballer", "soccer player"],
+        "antonyms": [],
+        "confuse": [{ "word": "basketball player", "diff": "football player 踢足球；basketball player 打篮球。" }]
+    },
+    {
+        "word": "job",
+        "ph_en": "/dʒɒb/",
+        "ph_am": "/dʒɑːb/",
+        "parts": [{ "pos": "n.", "means": ["工作；职业", "任务；事情"] }],
+        "exchange": { "pl": "jobs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "My mother has a new job.", "dst": "我妈妈有了一份新工作。" },
+            { "src": "A doctor's job is to help sick people.", "dst": "医生的工作是帮助病人。" },
+            { "src": "You did a good job.", "dst": "你做得很好。" }
+        ],
+        "synonyms": ["work", "occupation"],
+        "antonyms": ["unemployment"],
+        "confuse": [{ "word": "work", "diff": "job 指一份具体的工作；work 可泛指工作或劳动。" }]
+    },
+    {
+        "word": "basketball",
+        "ph_en": "/ˈbɑːskɪtbɔːl/",
+        "ph_am": "/ˈbæskɪtbɔːl/",
+        "parts": [{ "pos": "n.", "means": ["篮球运动", "篮球"] }],
+        "exchange": { "pl": "basketballs", "past": "", "ing": "" },
+        "examples": [
+            { "src": "We play basketball after school.", "dst": "我们放学后打篮球。" },
+            { "src": "The basketball is under the chair.", "dst": "篮球在椅子下面。" },
+            { "src": "My friend is a good basketball player.", "dst": "我的朋友是一名优秀的篮球运动员。" }
+        ],
+        "synonyms": ["hoops"],
+        "antonyms": [],
+        "confuse": [{ "word": "football", "diff": "basketball 是篮球；football 是足球。" }]
+    }
+]
