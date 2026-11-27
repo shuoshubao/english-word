@@ -1,7 +1,7 @@
 // 百度智能云 TTS(短文本在线合成 text2audio), 用于整句朗读与 SSML 调试.
-// 本地走 Vite 代理(/baidu-aip /baidu-tts), 线上走 Vercel 转发(/proxy/aip /proxy/bdaitts).
+// 本地走 Vite 代理(/baidu-aip /baidu-tts), 线上走 Vercel 转发(/aip /bdaitts).
 // 凭证: API Key / Secret Key 从百度智能云控制台获取, 与百度网盘开放平台是两套.
-const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
+const VERCEL_PROXY = 'https://truethy.vercel.app';
 const isLocal = window.location.hostname === 'localhost';
 const PREFIX = { aip: '/baidu-aip', tts: '/baidu-tts' };
 const TARGET = { aip: 'aip', tts: 'bdaitts' };

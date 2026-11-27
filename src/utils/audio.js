@@ -4,7 +4,7 @@ import { Modal } from 'antd';
 import { getSentenceTtsSource, hasSentenceTtsConfig, readSentenceTtsInfo, synthesizeSentence } from '@/utils/sentence-tts';
 import { getVoiceSource } from '@/utils/settings';
 
-const PROXY = 'https://truethy.vercel.app/proxy';
+const PROXY = 'https://truethy.vercel.app';
 const youdaoUrl = text => `${PROXY}/youdao/dictvoice?audio=${encodeURIComponent(text)}&type=2`;
 const baiduTtsUrl = text => `${PROXY}/fanyi/gettts?lan=uk&text=${encodeURIComponent(text)}&spd=3&source=web`;
 

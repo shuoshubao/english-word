@@ -2,7 +2,7 @@
 // 应用根目录 /apps/EnglishWord, 备份存其下 progress/, 文件名: <毫秒时间戳>.json
 import { createBackup } from './backup-file';
 
-const VERCEL_PROXY = 'https://truethy.vercel.app/proxy';
+const VERCEL_PROXY = 'https://truethy.vercel.app';
 export const isLocal = window.location.hostname === 'localhost';
 // 本地前缀对应 vite.config.js 的 proxy, 线上 target 对应 Vercel proxy/config.js
 const API_PREFIX = { pan: '/baidu-api', upload: '/baidu-upload' };
