@@ -14,7 +14,7 @@ import {
     ShakeOutlined,
     SoundOutlined
 } from '@ant-design/icons';
-import { Button, Input, Listy, message, Progress, Segmented, Space, Table, Tooltip } from 'antd';
+import { Button, Input, Listy, message, Progress, Segmented, Space, Table, Tag, Tooltip } from 'antd';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { speak, speakSentence } from '@/utils/audio';
 import { hasRecord } from '@/utils/records';
@@ -40,6 +40,110 @@ const toLines = text =>
         .split('\n')
         .map(item => item.trim().replace(/;+$/, '').trim())
         .filter(Boolean);
+
+// 新结构词条: { ph_en, ph_am, parts, exchange, examples: [{ src, dst }], synonyms, antonyms, confuse }
+// 旧结构词条(主题/特殊单词等): { phonetic, partOfSpeech, translation, examples: [{ en, cn }] }
+const getMeaningLines = record => {
+    if (record.parts) {
+        return record.parts.map(part => part.means.join('; '));
+    }
+    return toLines(record.translation);
+};
+
+const getExchangeItems = record => {
+    const { pl, past, ing } = record.exchange ?? {};
+    return [
+        ['复数', pl],
+        ['过去式', past],
+        ['ing', ing]
+    ].filter(([, value]) => value);
+};
+
+const hasDetail = record => {
+    return Boolean(
+        record.examples?.length || record.synonyms?.length || record.antonyms?.length || record.confuse?.length || getExchangeItems(record).length
+    );
+};
+
+const renderPhonetic = record => {
+    if (record.ph_en || record.ph_am) {
+        return (
+            <span className="inline-flex flex-wrap items-baseline gap-x-3 text-[#6652d1] text-sm">
+                {record.ph_en ? <span>英 {record.ph_en}</span> : null}
+                {record.ph_am ? <span>美 {record.ph_am}</span> : null}
+            </span>
+        );
+    }
+    return record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null;
+};
+
+const renderWordTags = (label, list) => {
+    if (!list?.length) {
+        return null;
+    }
+    return (
+        <div className="flex flex-wrap items-center gap-1.5 pl-4">
+            <span className="text-[12px] text-[#666]">{label}</span>
+            {list.map(item => {
+                return <Tag key={item}>{item}</Tag>;
+            })}
+        </div>
+    );
+};
+
+const renderDetail = record => {
+    const exchangeItems = getExchangeItems(record);
+    return (
+        <div className="ml-[100px] pr-4 py-2 bg-white flex flex-col gap-4">
+            {exchangeItems.length ? (
+                <div className="text-[13px] text-[#1f1a33] pl-4">
+                    {exchangeItems.map(([label, value]) => {
+                        return (
+                            <span key={label} className="mr-4">
+                                <span className="text-[12px] text-[#666]">{label} </span>
+                                {value}
+                            </span>
+                        );
+                    })}
+                </div>
+            ) : null}
+            {renderWordTags('近义词', record.synonyms)}
+            {renderWordTags('反义词', record.antonyms)}
+            {record.confuse?.length ? (
+                <div className="flex flex-col gap-0.5 pl-4">
+                    {record.confuse.map(item => {
+                        return (
+                            <div key={item.word} className="text-[13px]">
+                                <span className="text-[12px] text-[#666]">易混 </span>
+                                <span className="font-semibold text-[#1f1a33]">{item.word}</span>
+                                <span className="text-[#333]"> {item.diff}</span>
+                            </div>
+                        );
+                    })}
+                </div>
+            ) : null}
+            {record.examples?.length ? (
+                <Listy
+                    items={record.examples}
+                    rowKey={(ex, i) => i}
+                    itemRender={ex => {
+                        const english = ex.src ?? ex.en;
+                        const chinese = ex.dst ?? ex.cn;
+                        return (
+                            <div className="flex items-start gap-1 cursor-pointer rounded-lg" onClick={() => english && speakSentence(english)}>
+                                <SoundOutlined className="mt-1 shrink-0 text-[#6652d1] text-sm" />
+                                <div className="min-w-0 flex-1">
+                                    <div className="text-[13px] leading-relaxed text-[#1f1a33]">{english}</div>
+                                    {chinese ? <div className="text-[12px]">{chinese}</div> : null}
+                                </div>
+                            </div>
+                        );
+                    }}
+                />
+            ) : null}
+        </div>
+    );
+};
 
 // 桌面版单词列表: 顶部工具栏 + antd Table(例句可展开)
 export default function WordListView({ words, filterable = true, showMeaningToggle = false, meaningKey, quizEnabled = false }) {
@@ -203,16 +307,16 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
         {
             title: '单词',
             dataIndex: 'word',
-            width: 240,
+            width: 300,
             render: (word, record) => {
                 if (quizMode) {
                     if (revealedWords.has(record.id)) {
                         return (
                             <div className="flex items-center gap-2">
-                                <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speakWord(record)}>
+                                <span className="inline-flex flex-wrap items-baseline gap-x-2.5 cursor-pointer" onClick={() => speakWord(record)}>
                                     <SoundOutlined style={{ color: '#6652d1' }} />
                                     <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
-                                    {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
+                                    {renderPhonetic(record)}
                                 </span>
                                 <Tooltip title="收起单词">
                                     <Button type="text" icon={<EyeInvisibleOutlined />} onClick={() => toggleRevealWord(record.id)} />
@@ -227,10 +331,10 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     );
                 }
                 return (
-                    <span className="inline-flex items-baseline gap-2.5 cursor-pointer" onClick={() => speakWord(record)}>
+                    <span className="inline-flex flex-wrap items-baseline gap-x-2.5 cursor-pointer" onClick={() => speakWord(record)}>
                         <SoundOutlined style={{ color: '#6652d1' }} />
                         <span className="text-base font-semibold text-[#1f1a33]">{word}</span>
-                        {record.phonetic ? <span className="text-[#6652d1] text-sm">/{record.phonetic}/</span> : null}
+                        {renderPhonetic(record)}
                     </span>
                 );
             }
@@ -267,9 +371,20 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
             : []),
         {
             title: '词性',
-            dataIndex: 'partOfSpeech',
+            key: 'pos',
             width: 90,
-            render: v => <span>{v || '-'}</span>
+            render: (_, record) => {
+                if (!record.parts) {
+                    return <span>{record.partOfSpeech || '-'}</span>;
+                }
+                return (
+                    <div className="leading-relaxed">
+                        {record.parts.map((part, index) => {
+                            return <div key={index}>{part.pos}</div>;
+                        })}
+                    </div>
+                );
+            }
         },
         {
             title: '中文释义',
@@ -283,7 +398,7 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                         </Button>
                     );
                 }
-                const lines = toLines(record.translation);
+                const lines = getMeaningLines(record);
                 return <div className="leading-relaxed">{lines.length ? lines.map((item, index) => <div key={index}>{item}</div>) : '暂无释义'}</div>;
             }
         },
@@ -376,24 +491,8 @@ export default function WordListView({ words, filterable = true, showMeaningTogg
                     quizMode
                         ? undefined
                         : {
-                              rowExpandable: record => Boolean(record.examples?.length),
-                              expandedRowRender: record => (
-                                  <div className="ml-[100px] pr-4 bg-white">
-                                      <Listy
-                                          items={record.examples}
-                                          rowKey={(ex, i) => i}
-                                          itemRender={ex => (
-                                              <div className="flex items-start gap-1 cursor-pointer rounded-lg" onClick={() => ex.en && speakSentence(ex.en)}>
-                                                  <SoundOutlined className="mt-1 shrink-0 text-[#6652d1] text-sm" />
-                                                  <div className="min-w-0 flex-1">
-                                                      <div className="text-[13px] leading-relaxed text-[#1f1a33]">{ex.en}</div>
-                                                      {ex.cn ? <div className="text-[12px]">{ex.cn}</div> : null}
-                                                  </div>
-                                              </div>
-                                          )}
-                                      />
-                                  </div>
-                              )
+                              rowExpandable: hasDetail,
+                              expandedRowRender: renderDetail
                           }
                 }
                 pagination={{

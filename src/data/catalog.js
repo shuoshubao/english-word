@@ -1,15 +1,15 @@
 // 词库目录与加载器
 // - 小学(Primary)静态打进主包; 初中/高中/四六级/PTE 放分包, 运行时「分包异步化」按需加载.
-// - data/<Stage>/*.js 每条词形如 { word, translation, phonetic, partOfSpeech, examples? }, 不含 id;
+// - 词书是 data/<Stage>/*.json, 每条词形如 { word, ph_en, ph_am, parts, exchange, examples: [{ src, dst }], synonyms, antonyms, confuse }, 不含 id;
 //   加载时在 decorate 里合成 id = `${category}__${word}`(与改版前一致, 保证已有学习进度不丢).
-import p31 from '@/data/Primary/3-1.js';
-import p32 from '@/data/Primary/3-2.js';
-import p41 from '@/data/Primary/4-1.js';
-import p42 from '@/data/Primary/4-2.js';
-import p51 from '@/data/Primary/5-1.js';
-import p52 from '@/data/Primary/5-2.js';
-import p61 from '@/data/Primary/6-1.js';
-import p62 from '@/data/Primary/6-2.js';
+import p31 from '@/data/Primary/3-1.json';
+import p32 from '@/data/Primary/3-2.json';
+import p41 from '@/data/Primary/4-1.json';
+import p42 from '@/data/Primary/4-2.json';
+import p51 from '@/data/Primary/5-1.json';
+import p52 from '@/data/Primary/5-2.json';
+import p61 from '@/data/Primary/6-1.json';
+import p62 from '@/data/Primary/6-2.json';
 
 export const vocabularyCatalog = [
     {
@@ -266,65 +266,47 @@ const mainBooks = {
 // 分包词书: 动态 import() 按需加载(自动代码分割)
 const pick = mod => (mod?.default ? mod.default : mod);
 const subLoaders = {
-    'm7-1': () => import('./Junior/7-1.js'),
-    'm7-2': () => import('./Junior/7-2.js'),
-    'm8-1': () => import('./Junior/8-1.js'),
-    'm8-2': () => import('./Junior/8-2.js'),
-    'm9-1': () => import('./Junior/9-1.js'),
-    'h-bx1': () => import('./Senior/bixiu-1.js'),
-    'h-bx2': () => import('./Senior/bixiu-2.js'),
-    'h-bx3': () => import('./Senior/bixiu-3.js'),
-    'h-bx4': () => import('./Senior/bixiu-4.js'),
-    'h-bx5': () => import('./Senior/bixiu-5.js'),
-    'h-xx6': () => import('./Senior/xuanxiu-6.js'),
-    'h-xx7': () => import('./Senior/xuanxiu-7.js'),
-    'h-xx8': () => import('./Senior/xuanxiu-8.js'),
-    'h-xx9': () => import('./Senior/xuanxiu-9.js'),
-    'h-xx10': () => import('./Senior/xuanxiu-10.js'),
-    'h-xx11': () => import('./Senior/xuanxiu-11.js'),
-    cet4: () => import('./CET/CET4/index.js'),
-    cet6: () => import('./CET/CET6/index.js'),
-    'pte-junior': () => import('./PTE/junior.js'),
-    'pte-senior': () => import('./PTE/senior.js'),
-    'pte-fib-r-junior': () => import('./PTE/fib-r-junior.js'),
-    'pte-fib-r-senior': () => import('./PTE/fib-r-senior.js'),
-    'pte-wfd': () => import('./PTE2/wfd.js'),
-    'pte-fib-l': () => import('./PTE2/fib-l.js'),
-    'pte-basic': () => import('./PTE2/basic.js'),
-    'pte-advanced': () => import('./PTE2/advanced.js'),
-    'pte-read': () => import('./PTE2/read.js'),
-    'pte-listening': () => import('./PTE2/listening.js'),
-    'pte-phrases': () => import('./PTE2/phrases.js')
+    'm7-1': () => import('./Junior/7-1.json'),
+    'm7-2': () => import('./Junior/7-2.json'),
+    'm8-1': () => import('./Junior/8-1.json'),
+    'm8-2': () => import('./Junior/8-2.json'),
+    'm9-1': () => import('./Junior/9-1.json'),
+    'h-bx1': () => import('./Senior/bixiu-1.json'),
+    'h-bx2': () => import('./Senior/bixiu-2.json'),
+    'h-bx3': () => import('./Senior/bixiu-3.json'),
+    'h-bx4': () => import('./Senior/bixiu-4.json'),
+    'h-bx5': () => import('./Senior/bixiu-5.json'),
+    'h-xx6': () => import('./Senior/xuanxiu-6.json'),
+    'h-xx7': () => import('./Senior/xuanxiu-7.json'),
+    'h-xx8': () => import('./Senior/xuanxiu-8.json'),
+    'h-xx9': () => import('./Senior/xuanxiu-9.json'),
+    'h-xx10': () => import('./Senior/xuanxiu-10.json'),
+    'h-xx11': () => import('./Senior/xuanxiu-11.json'),
+    cet4: () => import('./CET/CET4/index.json'),
+    cet6: () => import('./CET/CET6/index.json'),
+    'pte-junior': () => import('./PTE/junior.json'),
+    'pte-senior': () => import('./PTE/senior.json'),
+    'pte-fib-r-junior': () => import('./PTE/fib-r-junior.json'),
+    'pte-fib-r-senior': () => import('./PTE/fib-r-senior.json'),
+    'pte-wfd': () => import('./PTE2/wfd.json'),
+    'pte-fib-l': () => import('./PTE2/fib-l.json'),
+    'pte-basic': () => import('./PTE2/basic.json'),
+    'pte-advanced': () => import('./PTE2/advanced.json'),
+    'pte-read': () => import('./PTE2/read.json'),
+    'pte-listening': () => import('./PTE2/listening.json'),
+    'pte-phrases': () => import('./PTE2/phrases.json')
 };
 
 // id 前缀 = 改版前的 category(保证旧进度 id 仍能命中): 小学 primary / 初中 middle / 高中 high / 四六级 cet4|cet6
 const categoryOf = id => (id[0] === 'p' ? 'primary' : id[0] === 'm' ? 'middle' : id[0] === 'h' ? 'high' : id);
 
-// 多音/变体音标清洗: 源数据里有的词(多为名/动不同重音, 如 survey、record, 或美音变体)把多个读音
-// 塞进一个字符串, 形如 "ˈsɝˌve; (for v.) sɝˈve"、"(for v.) rɪˈkɔrd; (for n.) ˈrɛkɚd"、"dʌv; dov".
-// 业界词典会分词性列多个读音, 但背单词类 App 通常只展示一个"主读音"保持简洁.
-// 这里取第一个读音并去掉 (for v.)/(also)/strong form 等注释与斜杠, 只保留一条干净 IPA.
-const cleanPhonetic = raw => {
-    let s = String(raw || '').trim();
-    if (!s) {
-        return '';
-    }
-    s = s
-        .replace(/\([^)]*\)/g, ' ')
-        .replace(/strong form/gi, ' ')
-        .replace(/\bor\b/gi, ';');
-    s = s.split(/[;,]/)[0]; // 取第一个读音
-    return s.replace(/\//g, '').replace(/\s+/g, ' ').trim();
-};
-
-// 给原始词条补上运行期字段: 合成 id、category、categoryLabel; 音标清洗成单一主读音
+// 给原始词条补上运行期字段: 合成 id、category、categoryLabel
 // category 优先取词书显式声明的(PTE 每分类一个独立一级 key), 否则按 id 前缀推断(保证旧进度 id 命中).
 const decorate = (words, book) => {
     const category = book.category || categoryOf(book.id);
     return words.map(item => {
         return {
             ...item,
-            phonetic: cleanPhonetic(item.phonetic),
             id: `${category}__${item.word}`,
             category,
             categoryLabel: book.stage
